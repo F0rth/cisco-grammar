@@ -22,9 +22,9 @@ class Parser
 			scan = StringScanner.new(@config[index])
 			if scan.scan(token_regexp) == @token
 				@tokens_list << @config[index]
-				index +=1
-				scan = StringScanner.new(@config[index])
 			end
+
+
 		}
 	end
 	
@@ -58,7 +58,7 @@ class Parser
 end
 
 z = Parser.new
-z.token = "interface"
+z.token = "ip route"
 z.find_lines
 pp z.tokens_list
 #z.parse_lines
