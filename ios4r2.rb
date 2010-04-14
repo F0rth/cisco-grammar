@@ -6,8 +6,8 @@ require 'treetop'
 
 class Parser
 
-	attr_accessor :config, :token, :tokens_list, :parsed_hashes, :token_instruction, :token_instruction_subconf
-	
+	attr_accessor :config, :token, :tokens_list, :parsed_hashes, :token_instruction, :token_instruction_subconf, :index, :grammar
+	@parser
 	
 	def initialize
 	@config = IO.readlines(ARGV[0])
@@ -53,22 +53,16 @@ class Parser
 	end
 					
 	
-	def parse_lines
+	def load_grammar
 		dir = File.dirname(__FILE__)
-		
-		if @token.include? " "
-			grammar = @token.gsub(/ /,'_')
-		else
-			grammar = @token
-		end
-
-		Treetop.load dir + "/parser/" + grammar
+		Treetop.load dir  + "/" + grammar
 		parsername = grammar.capitalize + "Parser"
-		parser = Object.module_eval("::#{parsername}").new
-
-		@tokens_list.each {|line|
-		result = parser.parse(line)
-
+		@parser = Object.module_eval("::#{parsername}").new
+	end
+	
+	def use_grammar_on(an_array)
+		an_array.each {|line|
+		result = @parser.parse(line)
 		values = Hash.new
 		result.singleton_methods.each {|method| 
 			begin
@@ -78,17 +72,35 @@ class Parser
 		}
 		@parsed_hashes << values
 		}
+	
 	end
+	
+	def find_grammar
+		if @token.include? " " or  @token.include? "-"
+			# limitations de TreeTop
+			@grammar = @token.gsub(/ /,'_').gsub(/-/,'_')
+		else
+			@grammar = @token
+		end
+	end
+		
 
 end
 
 z = Parser.new
 z.token = "ip access-list extended"
 z.find_lines
-pp z.tokens_list
 z.token_instruction = z.tokens_list[2]
 p z.token_instruction
 z.find_token_instruction_subconf
 pp z.token_instruction_subconf
-z.parse_lines
+#z.find_grammar
+#z.load_grammar
+#z.use_grammar_on(z.tokens_list[2])
+z.grammar = "ios_acl"
+z.load_grammar
+p z.token_instruction_subconf[1]
+z.use_grammar_on(z.token_instruction_subconf[1]) 
 pp z.parsed_hashes
+
+
