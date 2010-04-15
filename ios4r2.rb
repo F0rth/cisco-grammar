@@ -12,8 +12,8 @@ class Parser
 	def initialize
 	@config = IO.readlines(ARGV[0])
 	@tokens_list = Array.new
-	@parsed_hashes = Array.new
-	@token_instruction_subconf = Array.new
+	@parsed_hashes = Hash.new
+	@token_instruction_subconf = Hash.new
 	
 	end
 	
@@ -39,7 +39,7 @@ class Parser
 							token_regexp = Regexp.new(@token)
 							scan2 = StringScanner.new(@config[pointer])
 							until scan2.scan(token_regexp) == @token do
-							@token_instruction_subconf << @config[pointer]
+							@token_instruction_subconf.update({pointer+1 => @config[pointer]})
 							pointer += 1
 							scan2 = StringScanner.new(@config[pointer])
 							end
@@ -61,8 +61,8 @@ class Parser
 	end
 	
 	def use_grammar_on(an_array)
-		an_array.each {|line|
-		result = @parser.parse(line)
+		an_array.each_pair {|key, value|
+		result = @parser.parse(value)
 		values = Hash.new
 		result.singleton_methods.each {|method| 
 			begin
@@ -70,7 +70,7 @@ class Parser
 				values.update(value)
 			end
 		}
-		@parsed_hashes << values
+		@parsed_hashes.update({key => values})
 		}
 	
 	end
@@ -83,6 +83,14 @@ class Parser
 			@grammar = @token
 		end
 	end
+	
+	def grammar_fail
+		@parsed_hashes.each_pair{|key, value|
+		if value.to_s == ""
+			p "can't parse '#{@token_instruction_subconf[key]}' at line number '#{key}'"
+		end	
+		}
+	end
 		
 
 end
@@ -90,17 +98,20 @@ end
 z = Parser.new
 z.token = "ip access-list extended"
 z.find_lines
-z.token_instruction = z.tokens_list[2]
-p z.token_instruction
+z.token_instruction = z.tokens_list[3]
+#p z.token_instruction
 z.find_token_instruction_subconf
-pp z.token_instruction_subconf
+#pp z.token_instruction_subconf
 #z.find_grammar
 #z.load_grammar
 #z.use_grammar_on(z.tokens_list[2])
 z.grammar = "ios_acl"
 z.load_grammar
-p z.token_instruction_subconf[1]
-z.use_grammar_on(z.token_instruction_subconf[1]) 
+#p z.token_instruction_subconf
+z.use_grammar_on(z.token_instruction_subconf) 
+z.grammar_fail
+
 pp z.parsed_hashes
+
 
 
