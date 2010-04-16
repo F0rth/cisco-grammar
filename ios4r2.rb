@@ -99,29 +99,19 @@ end
 
 class Storage
 	
-	attr_accessor :db_file, :db
+	attr_accessor :db
 	
-	def initialize
-		if File::exist?(@db_file)
-			@db = Rufus::Tokyo::Table.open(@db_file)
+	def initialize(db_file)
+		if File::exist?(db_file)
+			@db = Rufus::Tokyo::Table.open(db_file)
 		else
-			@db = Rufus::Tokyo::Table.new(@db_file)
+			@db = Rufus::Tokyo::Table.new(db_file)
 		end
-		
-		ObjectSpace.define_finalizer(self, Storage.finalize(@db))
-	
 	end
 	
 	def add(hash_data)
-		# génère un identiant unique
+		# genuid génère un identiant unique
 		@db[@db.genuid] = hash_data
-	end
-	
-	
-	
-	
-	def self.finalize(@db)
-		lambda { @db.close }
 	end
 		
 end
@@ -129,7 +119,7 @@ end
 z = Parser.new
 z.token = "ip access-list extended"
 z.find_lines
-z.token_instruction = z.tokens_list[3]
+z.token_instruction = z.tokens_list[4]
 #p z.token_instruction
 z.find_token_instruction_subconf
 #pp z.token_instruction_subconf
@@ -142,7 +132,27 @@ z.load_grammar
 z.use_grammar_on(z.token_instruction_subconf) 
 z.grammar_fail
 
-pp z.parsed_hashes
+#pp z.parsed_hashes
+
+s = Storage.new('ios.tct')
+
+@temp1 = Hash.new
 
 
+z.parsed_hashes.each_pair{|key, value|
+	@temp1.update({"index" => key})
+	value.each_pair{|key2, value2|
+		@temp1.update({key2 => value2})
+		}
+		@temp1.update({'parent' => z.token_instruction})
+		@temp1.update({'type' => 'acl'})
+	s.add(@temp1)
+	}
+
+  pp s.db.query { |q|
+    q.add_condition 'type', :equals, 'acl'
+    q.order_by 'index'
+  }
+
+s.db.close
 
