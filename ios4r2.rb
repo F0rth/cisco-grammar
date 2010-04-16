@@ -3,6 +3,7 @@ require 'yaml'
 require 'pp'
 require 'rubygems'
 require 'treetop'
+require 'rufus/tokyo'
 
 class Parser
 
@@ -93,6 +94,36 @@ class Parser
 	end
 		
 
+end
+
+
+class Storage
+	
+	attr_accessor :db_file, :db
+	
+	def initialize
+		if File::exist?(@db_file)
+			@db = Rufus::Tokyo::Table.open(@db_file)
+		else
+			@db = Rufus::Tokyo::Table.new(@db_file)
+		end
+		
+		ObjectSpace.define_finalizer(self, Storage.finalize(@db))
+	
+	end
+	
+	def add(hash_data)
+		# génère un identiant unique
+		@db[@db.genuid] = hash_data
+	end
+	
+	
+	
+	
+	def self.finalize(@db)
+		lambda { @db.close }
+	end
+		
 end
 
 z = Parser.new
