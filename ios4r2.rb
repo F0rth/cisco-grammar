@@ -40,7 +40,6 @@ class Parser
 							token_regexp = Regexp.new(@token)
 							scan2 = StringScanner.new(@config[pointer])
 							until scan2.scan(token_regexp) == @token or @config[pointer].include? "!" do
-							p @config[pointer]
 							@token_instruction_subconf.update({pointer+1 => @config[pointer]})
 							pointer += 1
 							scan2 = StringScanner.new(@config[pointer])
@@ -112,23 +111,22 @@ class Storage
 	
 	def add(hash_data)
 		# genuid génère un identiant unique
-		pp hash_data
 		@db[@db.genuid] = hash_data
 	end
 		
 end
 
+s = Storage.new('ios.tct')
+
 z = Parser.new
 z.token = "ip access-list extended"
 z.find_lines
-#z.tokens_list.each{|token|
-#z.token_instruction = token
-
-z.token_instruction = z.tokens_list[7]
-
-p z.token_instruction
+z.tokens_list.each{|token|
+z.token_instruction = token
+#z.token_instruction = z.tokens_list[7]
+#p z.token_instruction
 z.find_token_instruction_subconf
-pp z.token_instruction_subconf
+#pp z.token_instruction_subconf
 #z.find_grammar
 #z.load_grammar
 #z.use_grammar_on(z.tokens_list[2])
@@ -141,27 +139,28 @@ z.grammar_fail
 
 #pp z.parsed_hashes
 
-#s = Storage.new('ios.tct')
-
-#@temp1 = Hash.new
 
 
-#z.parsed_hashes.each_pair{|key, value|
-#	@temp1.update({"index" => key})
-#	value.each_pair{|key2, value2|
-#		@temp1.update({key2 => value2})
-#		}
-#		@temp1.update({'parent' => z.token_instruction})
-#		@temp1.update({'type' => 'acl'})
-#	s.add(@temp1)
-#	}
+@temp1 = Hash.new
+
+z.parsed_hashes.each_pair{|key, value|
+	@temp1.update({"index" => key})
+	value.each_pair{|key2, value2|
+		@temp1.update({key2 => value2})
+		}
+		@temp1.update({'parent' => z.token_instruction})
+		@temp1.update({'type' => 'acl'})
+		@temp1.update({'time' => Time.now.to_i})
+		@temp1.update({'file' => ARGV[0]})
+	s.add(@temp1)
+	}
 
 
 
+}
+#  pp s.db.query { |q|
+#   q.add_condition 'type', :equals, 'acl'
+#    q.order_by 'index'
 #}
- # pp s.db.query { |q|
- #   q.add_condition 'type', :equals, 'acl'
- #   q.order_by 'index'
-#}
-#s.db.close
+s.db.close
 
