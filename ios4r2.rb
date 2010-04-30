@@ -158,9 +158,9 @@ z.parsed_hashes.each_pair{|key, value|
 
 
 }
-#  pp s.db.query { |q|
-#   q.add_condition 'type', :equals, 'acl'
-#    q.order_by 'index'
-#}
+  pp s.db.query { |q|
+   q.add_condition 'type', :equals, 'acl'
+    q.order_by 'destination_ip'
+}
 s.db.close
 
