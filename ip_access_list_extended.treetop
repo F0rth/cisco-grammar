@@ -1,0 +1,28 @@
+require 'ip'
+
+grammar Ip_access_list_extended
+
+	include IP
+	
+	rule ip_access_list_extended
+		espace? 'ip access' '-' 'list extended' name espace? eol?
+	end
+	
+	
+	rule name
+		[^\x0A]*
+	end
+	
+	rule comment
+		'!'? espace [^\x0A]*
+	end
+
+	rule eol
+		[\x0A]
+	end
+	
+	rule espace
+		[" "]*
+	end
+		
+end
