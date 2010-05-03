@@ -5,35 +5,35 @@ class Router
 
 	attr_accessor :interfaces, :routing_table, :decision_tree
 	
-	def initialize
+	def initialize(interfaces, routing_table)
+		@interfaces = interface
+		@routing_table = routing_table
 		@decision_tree = Patricia.new
 		
 		@interfaces.each {|interface|
 			add_interface(interface)
 			}
-			
-		
+		load_routing_table
+	end
+	
+	def add_outgoing_interface(ip_src, interface_name)
+		@decision_tree.add(ip_src, interface_name)
 	end
 	
 	def add_interface(interface)
-		@decision_tree.add(interface.ip_address, interface.name)
+		add_outgoing_interface(interface.ip_address, interface.name)
 	end
 	
-#	def load_routing_table(routing_table)
-#		pt = Patricia.new
-#		routing_table.each{|route|
-#			pt.add(route.
-		
+	def load_routing_table(routing_table)
+		routing_table.each{|route|
+		interface_name = process_packet(route.ip_dst)
+		add_outgoing_interface(route.ip_src, interface_name)
+		}
 		
 	end
 	
 	def process_packet(packet)
 		if node = @decision_tree.search_best(packet.ip_dst)
-		else {
-			pt = Patricia.new
-				routing_table.each{|route|
-					pt.add(route.ip_src, route.ip_dst)
-					
 		return node.data
 	end
 end
