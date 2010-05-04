@@ -21,29 +21,31 @@ class Router
 	end
 
 	def add_interface(interface)
-		@decision_tree.add(interface.ip_address, interface.name)
+		interface.ip_addresses.each {|adress|
+			add_table([adress, interface.name])
+		}
 	end
 	
-	def add_route(route)
-		@decision_tree.add(route.ip_src, route.ip_dst)
+	def add_table(table)
+		@decision_tree.add(table.first, table.last)
 	end
 	
 	def load_routing_table
 		@routing_table.each{|route|
-				add_route(route)
+				add_table([route.ip_src, route.ip_dst])
 		}		
 	end
 	
 	def process_packet(packet)
 		# tant que l'on a une adresse ip en sortie, on cherche l'interface
-		node = @decision_tree.search_best(packet.predicat.ip_dst)
+		node = @decision_tree.search_best(packet.next_hop)
 		begin
 			while node.data.to_ip.is_a? IPAddr
-				packet.predicat.ip_dst = node.data
-				process_packet(packet)
+				packet.next_hop = node.data
+				node = @decision_tree.search_best(packet.next_hop)
+				#process_packet(packet)
 			end
 		rescue
-			packet.next_hop = node.prefix
 			packet.if_out = node.data
 		end
 		
@@ -51,7 +53,7 @@ class Router
 end
 
 class Interface
-	attr_accessor :name, :ip_address, :acl
+	attr_accessor :name, :ip_addresses, :acl
 end
 
 
@@ -68,7 +70,14 @@ class Route
 end
 
 class Packet
-	attr_accessor :predicat, :next_hop, :if_in, :if_out 
+	attr_accessor :predicat, :next_hop, :if_in, :if_out
+	
+	def initialize(predicat)
+		@predicat = predicat
+		if @next_hop.nil?
+			@next_hop = @predicat.ip_dst
+		end
+	end
 end
 
 class Predicat
@@ -77,37 +86,41 @@ end
 
 
 predi = Predicat.new
-predi.ip_src = "192.168.1.3/32"
-predi.ip_dst = "192.168.3.4/32"
+predi.ip_src = "192.168.1.5/32"
+predi.ip_dst = "192.168.6.61/32"
 
-pac = Packet.new
-pac.predicat = predi
+pac = Packet.new(predi)
 
 eth0 = Interface.new
 eth1 = Interface.new
 
 eth0.name = "eth0"
-eth0.ip_address = "192.168.3.254/24"
+eth0.ip_addresses = ["192.168.6.254/24", "192.168.0.7/24"]
 
 eth1.name = "eth1"
-eth1.ip_address = "192.168.30.254/24"
+eth1.ip_addresses = ["192.168.6.4/24"]
 
 
 
 route1 = Route.new
 route2 = Route.new
 
-route1.ip_src = "192.168.5.0/24"
-route1.ip_dst = "192.168.3.18"
+route1.ip_src = "192.168.40.0/24"
+route1.ip_dst = "192.168.6.28"
 
-route2.ip_src = "192.168.6.0/24"
-route2.ip_dst = "192.168.7.34"
+route2.ip_src = "192.168.9.0/24"
+route2.ip_dst = "192.168.0.34"
 
-rou = Router.new([eth0, eth1], [route1, route2])
+rou = Router.new([eth0, eth1], [route2, route1])
 
 
 # rou.decision_tree.show_nodes
 
 rou.process_packet(pac)
+
 p pac.if_out
 p pac.next_hop
+p rou.routing_table
+p rou.decision_tree.show_nodes
+
+
