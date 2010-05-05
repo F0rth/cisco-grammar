@@ -36,7 +36,7 @@ class Router
 		}		
 	end
 	
-	def process_packet(packet)
+	def find_route(packet)
 		# tant que l'on a une adresse ip en sortie, on cherche l'interface
 		node = @decision_tree.search_best(packet.next_hop)
 		begin
@@ -59,6 +59,13 @@ end
 
 class Acl
 	attr_accessor :action, :predicat
+
+	def match(acl)
+		
+	
+	
+	end
+	
 end
 
 class RoutingTable
@@ -116,7 +123,7 @@ rou = Router.new([eth0, eth1], [route2, route1])
 
 # rou.decision_tree.show_nodes
 
-rou.process_packet(pac)
+rou.find_route(pac)
 
 p pac.if_out
 p pac.next_hop
