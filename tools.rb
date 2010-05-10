@@ -21,14 +21,28 @@ module ArrayExtensions
 	end
 end
 
+# retourne false si l'intersection est vide sinon retoune le resultat sous forme de tableau
 module RangeExtensions
 	def intersec?(range)
-		self.to_a & range.to_a
+		result = self.to_a & range.to_a
+		result == [] ? false : result
 	end
 end
 
+# retourne false si l'intersection est vide sinon retoune le resultat sous forme d'objet IPAddr
+
 module IPAddrExtensions
-	alias intersec? |
+	def intersec?(arg)
+		if self.include? arg
+			self.~
+			arg
+		elsif arg.include? self
+			arg.~
+			self
+		else
+			false
+		end
+	end
 end
 
 end

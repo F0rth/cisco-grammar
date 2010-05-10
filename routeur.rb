@@ -1,6 +1,7 @@
 require 'ipaddr'
 require 'ipaddr_extensions'
 require 'rpatricia'
+require 'tools'
 
 class Router
 
@@ -58,13 +59,34 @@ end
 
 
 class Acl
-	attr_accessor :action, :predicat
+#
+# @action action de l'acl : allow ou deny
+# @predicat contient un prédicat définit dans la classe Predicat
+# @coeff_correl coefficient de corrélation en décimal (de 0 à 31)
+# @binary_array_correl tableau contenant le bits du coefficient de corrélation
+# @intersec_array tableau des intersestions
+#
+
+	attr_accessor :action, :predicat, :coeff_correl, :binary_array_correl, :intersec_array
 
 	def match(acl)
-		
-	
-	
 	end
+
+	
+	
+	def coeff_correl(acl)
+		self.predicat.instance_variables.each_index {|index|
+			attribut = self.predicat.instance_variables[index]
+			correl = self.predicat.instance_variable_get(attribut).intersec? acl.instance_variable_get(attribut)
+			@intersec_array[index] = correl
+			if !correl.nil?
+				@binary_array_correl[index] = 1
+			end
+		}
+		@coeff_correl = @binary_array_correl.to_i
+	end
+
+	
 	
 end
 
