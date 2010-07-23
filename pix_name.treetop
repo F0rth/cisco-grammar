@@ -1,0 +1,6 @@
+require 'ip'
+
+grammar Pix_name
+	
+	include IP
+end
