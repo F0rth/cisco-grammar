@@ -3,4 +3,25 @@ require 'ip'
 grammar Pix_name
 	
 	include IP
+	
+	rule name
+		espace? 'name' espace? ip_address espace? alias espace? eol?
+	end
+		
+	rule alias
+	 [0-9a-zA-Z\-\_]+
+	end
+	
+	rule ip_address
+		IPv4address
+	end
+	
+	rule eol
+	 [\x0D] [\x0A]
+	end
+	
+	rule espace
+	 [" "]*
+	end
+	
 end

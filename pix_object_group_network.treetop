@@ -1,0 +1,53 @@
+require 'ip'
+
+grammar Pix_object_group_network
+	
+	include IP
+	
+	rule root
+		object
+	end
+	
+
+	rule object
+		espace? 'network-object' espace network_range espace? eol?
+	end
+	
+	rule network_object
+		network_range
+	end
+	
+	rule alias
+		text espace? mask?
+	end
+	
+	
+	rule ip_address
+		IPv4address
+	end
+	
+	rule single_host
+	 'host' espace ip_address
+	end
+	
+	rule network_range
+	 ip_address espace mask
+	end
+	
+	rule mask
+	 ip_address
+	end
+
+	
+	rule text
+	 [0-9a-zA-Z\-\_]+
+	end
+
+	rule eol
+	 [\x0D] [\x0A]
+	end
+	
+	rule espace
+	 [" "]*
+	end
+end
