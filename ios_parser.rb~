@@ -1,0 +1,10 @@
+require "rubygems"
+require "treetop"
+
+
+Treetop.load File.dirname(__FILE__) + "/parser/ip"
+Treetop.load File.dirname(__FILE__) + "/parser/ios"
+
+parser = IosParser.new
+parser.parse(ARGV[0])
+puts #parser

@@ -1,0 +1,24 @@
+grammar Ios
+	rule route_ipv4
+	'ip route'
+	end
+
+	rule ip_v4
+	IPv4address
+	end
+	
+
+	rule source
+	ip_v4
+	end
+
+	rule mask
+	ip_v4
+	end
+
+	rule gateway
+	 ip_v4 / 'Null0' 
+	end
+
+
+end

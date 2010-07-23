@@ -1,0 +1,96 @@
+require 'ip'
+
+grammar Ios_acl
+	
+	include IP
+	
+	rule root
+		acl / acl
+	end
+	
+	rule acl
+	 espace? action espace? proto espace? source_ip espace? source_port espace? destination_ip espace? destination_port espace? eol?
+	end
+	
+	rule action
+	 'permit' / 'deny'
+	end
+	
+	rule proto
+	 'tcp' / 'udp' / 'esp' / 'ip' / 'icmp' / 'igmp' / 'any'
+	end
+	
+	rule source_ip
+	single_host / network_range / 'any'
+	end
+	
+# attention si 'echo' en premier, ne match jamaie 'echo-reply' ensuite
+	
+	rule icmp
+		'echo-reply' / 'echo' / 'time-exceeded' / 'packet-too-big' / 'traceroute' / 'unreachable' 
+	end
+	
+	rule ip_address
+		IPv4address
+	end
+	
+	rule single_host
+	 'host' espace ip_address
+	end
+	
+	rule network_range
+	 ip_address espace mask
+	end
+	
+	rule mask
+	 ip_address
+	end
+	
+	rule destination_ip
+	 source_ip
+	end
+	
+	
+	rule source_port
+	 single_port / port_range / icmp / other / ''
+	end
+	
+	rule other
+		'ack' / 'log'
+	end
+	
+	rule destination_port
+	 source_port
+	end
+	
+	
+	rule single_port
+	 ('eq' / 'gt') espace ( port_number / port_name )
+	end
+	
+	rule port_range
+	 'range' espace ( port_number / port_name ) espace ( port_number / port_name )
+	end
+	
+	rule port_number
+	 [0-9]+
+	end
+	
+	rule port_name
+	 [0-9a-zA-Z\-\_]+
+	end
+	
+	
+	
+	rule comment
+	  '!'? espace [^\x0A]*
+	end
+
+	rule eol
+	 [\x0D] [\x0A]
+	end
+	
+	rule espace
+	 [" "]*
+	end
+end

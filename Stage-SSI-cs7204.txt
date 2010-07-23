@@ -1,0 +1,1264 @@
+
+!
+! Last configuration change at 13:21:27 MET Wed Mar 3 2010
+! NVRAM config last updated at 13:21:43 MET Wed Mar 3 2010
+!
+version 12.4
+service timestamps debug datetime localtime
+service timestamps log datetime localtime
+service password-encryption
+!
+hostname cs7204-gw
+!
+boot-start-marker
+boot host tftp cs7204-gw-confg 129.20.129.1
+boot system flash disk2:c7200-adventerprisek9-mz.124-6.T6.bin
+boot-end-marker
+!
+logging queue-limit 100
+no logging buffered
+no logging console
+enable secret 5 $1$p6Ex$KsaZHZnzLsR66aCqiXb7.1
+!
+no aaa new-model
+!
+resource policy
+!
+clock timezone MET 1
+clock summer-time MET-DST recurring last Sun Mar 2:00 last Sun Oct 3:00
+no ip source-route
+ip cef
+ip telnet source-interface GigabitEthernet0/1
+!
+!
+!
+!
+ip flow-cache timeout active 5
+ip domain name univ-rennes1.fr
+ip name-server 129.20.254.1
+ip multicast cache-headers
+ip inspect one-minute high 900
+ip inspect one-minute low 800
+ip inspect udp idle-time 10
+ip inspect dns-timeout 10
+ip inspect tcp idle-time 14400
+ip inspect name CBAC_VISIO_IN h323
+ip inspect name CBAC_VISIO_IN realaudio
+ip inspect name CBAC_VISIO_OUT h323
+ip inspect name CBAC_VISIO_OUT realaudio
+ip inspect name CBAC_INTERNE_IN sip
+ip inspect name CBAC_INTERNE_IN streamworks
+ip inspect name CBAC_INTERNE_IN h323
+ip inspect name CBAC_INTERNE_IN realaudio
+ip inspect name CBAC_INTERNE_IN tftp
+ip inspect name CBAC_INTERNE_OUT h323
+ip inspect name CBAC_INTERNE_OUT realaudio
+!
+ipv6 unicast-routing
+ipv6 cef
+ipv6 cef accounting prefix-length 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+archive
+ log config
+  hidekeys
+!
+!
+class-map type stack match-all IP_TCP_CLASS
+ description "match TCP over IP packets"
+class-map match-any P2P
+ match protocol fasttrack file-transfer "*"
+ match protocol gnutella file-transfer "*"
+class-map match-all FORCE_QOS_REC_IUTSB
+ match access-group 2003
+class-map type access-control match-all SKYPE
+ match start l3-start offset 0 size 4 eq 0x17030100
+!
+!
+policy-map type access-control SKYPE-POLICY
+ class SKYPE
+   drop
+   log
+policy-map type access-control FPM_POLICY_SKYPE
+ class IP_TCP_CLASS
+  service-policy SKYPE-POLICY
+policy-map FORCE_QOS_REC_IUTSB
+ class FORCE_QOS_REC_IUTSB
+  set ip precedence 1
+ class class-default
+  set ip precedence 0
+policy-map BLOCK-P2P
+ class P2P
+   drop
+!
+! 
+!
+!
+!
+!
+!
+interface Tunnel0
+ ip unnumbered GigabitEthernet0/1
+ ip dvmrp unicast-routing
+ ip sap listen
+ shutdown
+ tunnel source GigabitEthernet0/1
+ tunnel destination 129.20.251.1
+!
+interface GigabitEthernet0/1
+ description GigabitEthernet0/1 : RESEAU_INTERNE
+ ip address 129.20.253.254 255.255.255.0
+ ip flow ingress
+ ip inspect CBAC_INTERNE_IN in
+ ip inspect CBAC_INTERNE_OUT out
+ ip sap listen
+ duplex full
+ speed 1000
+ media-type gbic
+ negotiation auto
+ ipv6 address 2001:660:7307:1:1::F/80
+ ipv6 enable
+ ipv6 traffic-filter IPV6INTERNE_IN in
+ no mop enabled
+ service-policy input BLOCK-P2P
+ service-policy output BLOCK-P2P
+!
+interface GigabitEthernet0/2
+ description GigabitEthernet0/2 : RENATER_3
+ no ip address
+ ip flow ingress
+ ip policy route-map POLICY-DSCP-RENATER
+ duplex auto
+ speed auto
+ media-type gbic
+ negotiation auto
+ no cdp enable
+ service-policy type access-control output FPM_POLICY_SKYPE
+!
+interface GigabitEthernet0/2.454
+ description RENATER_3_IPV4
+ encapsulation dot1Q 454
+ ip address 193.51.184.25 255.255.255.248
+ ip access-group RENATER_IN in
+ ip access-group RENATER_OUT out
+ ip nbar protocol-discovery
+ ip flow ingress
+ ip policy route-map POLICY-DSCP-RENATER
+ no snmp trap link-status
+ no cdp enable
+!
+interface GigabitEthernet0/2.456
+ description RENATER_3_IPV6
+ encapsulation dot1Q 456
+ ip flow ingress
+ no snmp trap link-status
+ ipv6 address 2001:660:7300:1005:38:0:6:5097/64
+ ipv6 enable
+ ipv6 traffic-filter IPV6RENATER_IN in
+ ipv6 traffic-filter IPV6RENATER_OUT out
+ ipv6 flow ingress
+ no cdp enable
+!
+interface GigabitEthernet0/3
+ description GigabitEthernet0/3 : IRISA
+ ip address 129.20.9.254 255.255.255.0
+ ip flow ingress
+ ip policy route-map POLICY-DSCP-0
+ ip dvmrp unicast-routing
+ ip sap listen
+ duplex auto
+ speed auto
+ media-type gbic
+ no negotiation auto
+ no cdp enable
+ no mop enabled
+!
+interface FastEthernet1/0
+ description FastEthernet1/0 : CRU
+ ip address 195.220.94.34 255.255.255.240
+ ip flow ingress
+ ip policy route-map POLICY-DSCP-0
+ duplex auto
+ speed auto
+ no mop enabled
+!
+interface FastEthernet1/1
+ description FastEthernet1/1 : PUBLIC_CRU
+ ip address 195.220.94.164 255.255.255.128
+ ip access-group PUBLIC_CRU_OUT out
+ ip flow ingress
+ rate-limit input access-group 2200 224000 8000 8000 conform-action transmit exceed-action drop
+ ip policy route-map POLICY-DSCP-0
+ duplex auto
+ speed auto
+ no mop enabled
+!
+interface FastEthernet2/0
+ description FastEthernet2/0 : IPv6 Point6
+ ip address 129.20.246.254 255.255.255.0
+ ip access-group IPV4POINT6_OUT out
+ ip flow ingress
+ ip policy route-map POLICY-DSCP-RENATER
+ duplex full
+ speed auto
+ ipv6 address 2001:660:7307:6::F/64
+ ipv6 address 2001:660:7307:22::F/64
+ ipv6 enable
+ ipv6 traffic-filter IPV6POINT6_IN in
+ ipv6 traffic-filter IPV6POINT6_OUT out
+ ipv6 flow ingress
+ no cdp enable
+ no mop enabled
+!
+interface FastEthernet2/1
+ description FastEthernet2/1 : PUBLIC_UR1
+ ip address 129.20.254.254 255.255.255.0
+ ip access-group PUBLIC_UR1_OUT out
+ ip helper-address 129.20.128.39
+ ip helper-address 129.20.128.2
+ ip flow ingress
+ ip policy route-map POLICY-DSCP-0
+ duplex auto
+ speed auto
+ ipv6 address 2001:660:7307:A::F/64
+ ipv6 address 2001:660:7307:31::F/64
+ ipv6 enable
+ ipv6 traffic-filter IPV6PUBLICUR1_OUT out
+ ipv6 flow ingress
+ no cdp enable
+ no mop enabled
+!
+interface Ethernet3/0
+ description Ethernet3/0 : libre (ex Megalis visio)
+ no ip address
+ ip flow ingress
+ shutdown
+ duplex half
+ no cdp enable
+ no mop enabled
+!
+interface Ethernet3/1
+ description Ethernet3/1 : PUBLIC_UR1
+ no ip address
+ ip access-group PUBLIC_UR1_OUT out
+ ip helper-address 129.20.128.2
+ ip helper-address 129.20.128.39
+ ip flow ingress
+ ip inspect CBAC_VISIO_IN in
+ ip policy route-map POLICY-DSCP-0
+ shutdown
+ duplex half
+ ipv6 enable
+ ipv6 traffic-filter IPV6PUBLICUR1_OUT out
+ ipv6 flow ingress
+ no mop enabled
+!
+interface Ethernet3/2
+ description Ethernet3/2 : libre
+ no ip address
+ ip flow ingress
+ shutdown
+ duplex full
+ no cdp enable
+ no mop enabled
+!
+interface Ethernet3/3
+ description Ethernet3/3 : LIBRE
+ no ip address
+ ip access-group RENATER_IN in
+ ip access-group RENATER_OUT out
+ ip flow ingress
+ ip policy route-map POLICY-DSCP-0
+ shutdown
+ duplex full
+ no cdp enable
+ no mop enabled
+!
+interface Ethernet3/4
+ description Ethernet3/4 : VISIO
+ ip address 192.168.250.254 255.255.255.0 secondary
+ ip address 193.52.56.222 255.255.255.240
+ ip access-group VISIO_OUT out
+ ip flow ingress
+ ip inspect CBAC_VISIO_IN in
+ ip inspect CBAC_VISIO_OUT out
+ ip policy route-map POLICY-DSCP-VISIO
+ duplex full
+ no cdp enable
+ no mop enabled
+!
+interface Ethernet3/5
+ description Ethernet3/5 : tests acces exterieurs
+ ip address 192.168.17.254 255.255.255.0
+ ip access-group RENATER_IN in
+ ip access-group RENATER_OUT out
+ ip flow ingress
+ ip policy route-map POLICY-DSCP-0
+ shutdown
+ duplex half
+ no cdp enable
+ no mop enabled
+!
+interface Ethernet3/6
+ description Ethernet3/6 : IPV6 INTERNE (termine' le 01/06/09)
+ no ip address
+ no ip redirects
+ ip flow ingress
+ shutdown
+ duplex full
+ no cdp enable
+ no mop enabled
+!
+interface Ethernet3/6.500
+ encapsulation dot1Q 500
+ ip flow ingress
+ shutdown
+ no snmp trap link-status
+ ipv6 address 2001:660:7307:1080::F/64
+ ipv6 enable
+!
+interface Ethernet3/7
+ description Ethernet3/7 : IPv6 mobilite
+ no ip address
+ ip flow ingress
+ ip policy route-map POLICY-DSCP-0
+ shutdown
+ duplex full
+ ipv6 address 2001:660:7307:F::F/64
+ ipv6 enable
+ ipv6 traffic-filter IPV6MOBILITE_IN in
+ ipv6 traffic-filter IPV6MOBILITE_OUT out
+ ipv6 flow ingress
+ no cdp enable
+ no mop enabled
+!
+router bgp 65097
+ bgp log-neighbor-changes
+ neighbor 2001:660:7300:1005:0:38:0:2200 remote-as 2200
+ neighbor 2001:660:7300:1005:0:38:0:2200 description Renater-IPv6
+ neighbor 193.51.184.26 remote-as 2200
+ neighbor 193.51.184.26 password 7 12485135353B41566B
+ neighbor 193.51.184.26 version 4
+ !
+ address-family ipv4
+ no neighbor 2001:660:7300:1005:0:38:0:2200 activate
+ neighbor 193.51.184.26 activate
+ neighbor 193.51.184.26 soft-reconfiguration inbound
+ neighbor 193.51.184.26 filter-list 1 in
+ no auto-summary
+ no synchronization
+ network 129.20.0.0
+ network 148.60.0.0
+ network 193.52.12.0
+ network 193.52.37.0
+ network 193.52.56.0
+ network 193.52.60.0
+ network 195.220.94.0
+ exit-address-family
+ !
+ address-family ipv6
+ neighbor 2001:660:7300:1005:0:38:0:2200 activate
+ neighbor 2001:660:7300:1005:0:38:0:2200 soft-reconfiguration inbound
+ network 2001:660:7307::/48
+ exit-address-family
+!
+ip default-network 193.48.0.0
+ip route 129.20.0.0 255.255.0.0 129.20.253.1
+ip route 129.20.0.0 255.255.248.0 Null0
+ip route 129.20.12.0 255.255.255.0 Null0
+ip route 129.20.13.0 255.255.255.0 Null0
+ip route 129.20.14.0 255.255.255.0 Null0
+ip route 129.20.15.0 255.255.255.0 Null0
+ip route 129.20.18.0 255.255.255.0 Null0
+ip route 129.20.19.0 255.255.255.0 Null0
+ip route 129.20.20.0 255.255.255.0 Null0
+ip route 129.20.21.0 255.255.255.0 Null0
+ip route 129.20.22.0 255.255.255.0 Null0
+ip route 129.20.23.0 255.255.255.0 Null0
+ip route 129.20.24.0 255.255.255.0 Null0
+ip route 129.20.26.0 255.255.255.0 Null0
+ip route 129.20.28.0 255.255.255.0 Null0
+ip route 129.20.29.0 255.255.255.0 Null0
+ip route 129.20.30.0 255.255.255.0 Null0
+ip route 129.20.31.0 255.255.255.0 Null0
+ip route 129.20.34.0 255.255.255.0 Null0
+ip route 129.20.35.0 255.255.255.0 Null0
+ip route 129.20.46.0 255.255.255.0 Null0
+ip route 129.20.47.0 255.255.255.0 Null0
+ip route 129.20.56.0 255.255.255.0 Null0
+ip route 129.20.57.0 255.255.255.0 Null0
+ip route 129.20.58.0 255.255.255.0 Null0
+ip route 129.20.59.0 255.255.255.0 Null0
+ip route 129.20.60.0 255.255.255.0 Null0
+ip route 129.20.62.0 255.255.255.0 Null0
+ip route 129.20.63.0 255.255.255.0 Null0
+ip route 129.20.66.0 255.255.255.0 Null0
+ip route 129.20.68.0 255.255.255.0 Null0
+ip route 129.20.69.0 255.255.255.0 Null0
+ip route 129.20.90.0 255.255.255.0 Null0
+ip route 129.20.92.0 255.255.255.0 Null0
+ip route 129.20.96.0 255.255.255.0 Null0
+ip route 129.20.99.0 255.255.255.0 Null0
+ip route 129.20.101.0 255.255.255.0 Null0
+ip route 129.20.103.0 255.255.255.0 Null0
+ip route 129.20.104.0 255.255.255.0 Null0
+ip route 129.20.105.0 255.255.255.0 Null0
+ip route 129.20.113.0 255.255.255.0 Null0
+ip route 129.20.114.0 255.255.255.0 Null0
+ip route 129.20.115.0 255.255.255.0 Null0
+ip route 129.20.116.0 255.255.255.0 Null0
+ip route 129.20.117.0 255.255.255.0 Null0
+ip route 129.20.118.0 255.255.255.0 Null0
+ip route 129.20.119.0 255.255.255.0 Null0
+ip route 129.20.120.0 255.255.255.0 Null0
+ip route 129.20.121.0 255.255.255.0 Null0
+ip route 129.20.122.0 255.255.255.0 Null0
+ip route 129.20.123.0 255.255.255.0 Null0
+ip route 129.20.124.0 255.255.255.0 Null0
+ip route 129.20.125.0 255.255.255.0 Null0
+ip route 129.20.127.0 255.255.255.0 Null0
+ip route 129.20.132.0 255.255.255.0 Null0
+ip route 129.20.134.0 255.255.255.0 Null0
+ip route 129.20.137.0 255.255.255.0 Null0
+ip route 129.20.139.0 255.255.255.0 Null0
+ip route 129.20.140.0 255.255.255.0 Null0
+ip route 129.20.141.0 255.255.255.0 Null0
+ip route 129.20.142.0 255.255.255.0 Null0
+ip route 129.20.143.0 255.255.255.0 Null0
+ip route 129.20.146.0 255.255.255.0 Null0
+ip route 129.20.147.0 255.255.255.0 Null0
+ip route 129.20.148.0 255.255.255.0 Null0
+ip route 129.20.149.0 255.255.255.0 Null0
+ip route 129.20.150.0 255.255.255.0 Null0
+ip route 129.20.151.0 255.255.255.0 Null0
+ip route 129.20.164.0 255.255.255.0 Null0
+ip route 129.20.170.0 255.255.255.0 Null0
+ip route 129.20.171.0 255.255.255.0 Null0
+ip route 129.20.172.0 255.255.255.0 Null0
+ip route 129.20.173.0 255.255.255.0 Null0
+ip route 129.20.175.0 255.255.255.0 Null0
+ip route 129.20.176.0 255.255.255.0 Null0
+ip route 129.20.177.0 255.255.255.0 Null0
+ip route 129.20.181.0 255.255.255.0 Null0
+ip route 129.20.185.0 255.255.255.0 Null0
+ip route 129.20.197.0 255.255.255.0 Null0
+ip route 129.20.199.0 255.255.255.0 Null0
+ip route 129.20.201.0 255.255.255.0 Null0
+ip route 129.20.203.0 255.255.255.0 Null0
+ip route 129.20.242.0 255.255.255.0 Null0
+ip route 129.20.243.0 255.255.255.0 Null0
+ip route 129.20.244.0 255.255.255.0 Null0
+ip route 129.20.248.0 255.255.255.0 Null0
+ip route 129.20.250.0 255.255.255.0 Null0
+ip route 129.20.255.0 255.255.255.0 Null0
+ip route 131.254.0.0 255.255.0.0 129.20.9.1
+ip route 148.60.0.0 255.255.0.0 129.20.253.1
+ip route 192.168.1.0 255.255.255.0 129.20.253.1
+ip route 192.168.2.0 255.255.255.0 129.20.253.1
+ip route 193.52.12.0 255.255.255.0 129.20.253.1
+ip route 193.52.37.0 255.255.255.0 129.20.253.1
+ip route 193.52.56.0 255.255.255.0 192.168.250.1
+ip route 193.52.60.0 255.255.255.0 129.20.253.1
+ip route 195.220.94.0 255.255.255.0 195.220.94.33
+no ip http server
+no ip http secure-server
+!
+ip as-path access-list 1 deny _1938_
+ip as-path access-list 1 permit .*
+ip flow-export source GigabitEthernet0/1
+ip flow-export version 9
+ip flow-export interface-names
+ip flow-export destination 129.20.131.186 9990
+!
+ip pim rp-address 131.254.180.5
+ip mroute 0.0.0.0 0.0.0.0 129.20.9.1 1
+!
+ip access-list extended IPV4POINT6_IN
+ permit icmp any any
+ permit ip any any
+ip access-list extended IPV4POINT6_OUT
+ permit icmp any any
+ permit tcp any any ack
+ permit udp any any eq domain
+ permit tcp any any eq domain
+ permit tcp any any eq 22
+ permit tcp any any eq www
+ permit udp any any eq 1701
+ permit udp any eq domain any
+ permit udp any host 129.20.246.1 eq 1812
+ deny   ip any any
+ip access-list extended PUBLIC_CRU_OUT
+ deny   ip host 217.169.21.184 any
+ deny   tcp any host 195.220.94.165 eq 3306
+ deny   tcp any host 195.220.94.166 eq 32774
+ deny   tcp 165.193.0.0 0.0.255.255 host 195.220.94.169 eq www
+ deny   tcp 165.193.0.0 0.0.255.255 host 195.220.94.169 eq 443
+ deny   tcp host 208.111.154.15 host 195.220.94.169
+ deny   tcp host 208.111.154.16 host 195.220.94.169
+ deny   ip host 194.206.242.132 host 195.220.94.163
+ deny   ip host 85.93.198.89 host 195.220.94.163
+ deny   ip host 195.25.225.72 host 195.220.94.163
+ deny   ip host 85.93.201.158 host 195.220.94.163
+ deny   ip host 217.128.65.19 host 195.220.94.163
+ deny   ip host 82.224.1.141 host 195.220.94.163
+ deny   ip host 83.99.34.181 host 195.220.94.163
+ deny   ip 70.0.0.0 1.255.255.255 host 195.220.94.163
+ deny   ip 72.0.0.0 0.255.255.255 host 195.220.94.163
+ deny   ip 80.90.0.0 0.0.255.255 host 195.220.94.163
+ deny   ip host 81.52.142.3 any
+ deny   ip host 81.52.143.15 any
+ deny   ip host 81.52.143.16 any
+ deny   ip host 81.52.143.26 any
+ deny   ip host 193.252.149.15 any
+ deny   ip host 193.252.149.16 any
+ deny   ip host 193.252.149.72 any
+ permit tcp any any ack
+ permit udp any host 195.220.94.130 range 1812 1815
+ permit udp any host 195.220.94.180 eq 1194
+ deny   udp any host 195.220.94.180 eq ntp
+ deny   udp any host 195.220.94.182 eq ntp
+ deny   udp any host 195.220.94.180 eq syslog
+ deny   udp any host 195.220.94.182 eq syslog
+ deny   udp any host 195.220.94.180 eq 2526
+ deny   udp any host 195.220.94.182 eq 2526
+ permit udp any host 195.220.94.180 eq domain
+ permit tcp any host 195.220.94.180 eq www
+ permit tcp any host 195.220.94.180 eq 443
+ permit udp any host 195.220.94.180
+ permit udp any host 195.220.94.182
+ permit tcp any host 195.220.94.183 eq www
+ permit tcp any host 195.220.94.183 eq 443
+ permit tcp any host 195.220.94.183 eq 8443
+ permit tcp host 129.20.128.60 195.220.94.128 0.0.0.63 eq 2525
+ permit udp host 129.20.128.60 195.220.94.128 0.0.0.63 eq 2526
+ permit udp any eq domain host 195.220.94.135 eq domain
+ permit udp any eq domain host 195.220.94.165 eq domain
+ permit udp any eq domain host 195.220.94.166 eq domain
+ permit udp any host 195.220.94.139 eq domain
+ permit tcp any host 195.220.94.139 eq domain
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ permit icmp any any time-exceeded
+ permit icmp any any packet-too-big
+ permit icmp any any traceroute
+ permit icmp any any unreachable
+ deny   icmp any any
+ permit tcp host 130.79.124.33 host 195.220.94.166 eq 1873
+ permit tcp any host 195.220.94.166 eq ftp
+ permit tcp any host 195.220.94.166 eq ftp-data
+ permit tcp any host 195.220.94.166 eq 587
+ permit tcp host 134.206.1.196 host 195.220.94.166 eq 604
+ permit tcp host 134.206.1.159 host 195.220.94.166 eq 604
+ permit tcp host 134.206.1.151 host 195.220.94.166 eq 604
+ permit tcp host 134.206.1.158 host 195.220.94.166 eq 604
+ permit tcp host 134.206.1.217 host 195.220.94.166 eq 604
+ permit tcp host 134.206.1.199 host 195.220.94.166 eq 604
+ deny   tcp any host 195.220.94.166 eq 32768
+ deny   tcp any host 195.220.94.166 eq 32769
+ deny   tcp any host 195.220.94.166 eq 32771
+ permit tcp any host 195.220.94.166 gt 10000
+ permit tcp any host 195.220.94.165 eq 389
+ permit tcp 194.214.200.0 0.0.0.15 host 195.220.94.165 eq 389
+ permit tcp 194.214.201.0 0.0.0.15 host 195.220.94.165 eq 389
+ permit tcp 194.214.200.0 0.0.0.15 host 195.220.94.165 eq 636
+ permit tcp 194.214.201.0 0.0.0.15 host 195.220.94.165 eq 636
+ permit tcp any host 195.220.94.161 eq www
+ permit tcp any host 195.220.94.161 eq 8443
+ permit tcp any host 195.220.94.185 eq www
+ permit tcp any host 195.220.94.185 eq 443
+ permit tcp any host 195.220.94.184 eq www
+ permit tcp any host 195.220.94.184 eq 443
+ permit tcp any host 195.220.94.178 eq www
+ permit tcp any host 195.220.94.178 eq 443
+ permit tcp any host 195.220.94.179 eq www
+ permit tcp any host 195.220.94.179 eq 443
+ permit tcp any host 195.220.94.162 eq 443
+ permit tcp any host 195.220.94.165 eq www
+ permit tcp any host 195.220.94.165 eq 443
+ permit tcp any host 195.220.94.166 eq www
+ permit tcp any host 195.220.94.166 eq 443
+ permit tcp any host 195.220.94.170 eq www
+ permit tcp any host 195.220.94.170 eq 443
+ permit tcp any host 195.220.94.171 eq www
+ permit tcp any host 195.220.94.171 eq 443
+ permit tcp any host 195.220.94.172 eq www
+ permit tcp any host 195.220.94.172 eq 443
+ permit tcp any host 195.220.94.173 eq www
+ permit tcp any host 195.220.94.173 eq 443
+ permit tcp any host 195.220.94.175 eq www
+ permit tcp any host 195.220.94.175 eq 443
+ permit tcp any host 195.220.94.176 eq www
+ permit tcp any host 195.220.94.176 eq 443
+ permit tcp any host 195.220.94.169 eq www
+ permit tcp any host 195.220.94.169 eq 443
+ permit tcp any host 195.220.94.177 eq www
+ permit tcp any host 195.220.94.177 eq 443
+ permit tcp any host 195.220.94.188 eq www
+ permit tcp any host 195.220.94.188 eq 443
+ permit tcp any host 195.220.94.143 eq www
+ permit tcp any host 195.220.94.143 eq 443
+ permit tcp any host 195.220.94.177 eq 8443
+ permit tcp any host 195.220.94.180 eq 8443
+ permit tcp any host 195.220.94.166 eq 8443
+ permit tcp any host 195.220.94.166 eq 8444
+ permit tcp any host 195.220.94.161 eq 22
+ permit tcp any host 195.220.94.133 eq smtp
+ permit tcp any host 195.220.94.174 eq www
+ permit tcp host 193.49.159.16 host 195.220.94.165 eq smtp
+ permit tcp host 193.49.159.17 host 195.220.94.165 eq smtp
+ permit tcp host 193.49.159.18 host 195.220.94.165 eq smtp
+ permit udp any host 195.220.94.163 eq ntp
+ permit tcp 195.220.94.0 0.0.0.255 any eq 22
+ permit tcp host 148.60.10.131 host 195.220.94.169 eq 22
+ permit tcp host 81.56.142.118 host 195.220.94.169 eq 22
+ permit tcp host 148.60.4.18 host 195.220.94.169 eq 22
+ deny   ip any any
+ip access-list extended PUBLIC_UR1_OUT
+ permit icmp any any
+ permit tcp any any ack
+ permit tcp any host 129.20.254.1 eq domain
+ permit udp any host 129.20.254.1 eq domain
+ permit udp any eq domain host 129.20.254.1 gt 1023
+ permit udp any host 129.20.254.50 eq isakmp
+ permit esp any host 129.20.254.50
+ permit tcp any host 129.20.254.50 eq 443
+ permit ip host 217.128.81.111 host 129.20.254.50
+ permit ip host 129.20.55.60 host 129.20.254.50
+ permit ip 129.20.128.0 0.0.3.255 any
+ deny   ip any host 129.20.254.207
+ permit tcp any 129.20.254.200 0.0.0.7 eq www
+ permit tcp any 129.20.254.200 0.0.0.7 eq 443
+ permit tcp host 193.251.20.107 host 129.20.254.200 eq 22
+ permit udp host 193.252.62.95 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.71.211 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.14.125 host 129.20.254.3 range 1812 1814
+ permit udp host 80.13.55.69 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.119.107 host 129.20.254.3 range 1812 1814
+ permit udp host 193.253.249.64 host 129.20.254.3 range 1812 1814
+ permit udp host 80.13.61.161 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.254.246 host 129.20.254.3 range 1812 1814
+ permit udp host 80.11.11.7 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.81.111 host 129.20.254.3 range 1812 1814
+ permit udp host 193.51.20.250 host 129.20.254.3 range 1812 1814
+ permit udp host 193.251.34.5 host 129.20.254.3 range 1812 1814
+ permit udp host 194.2.178.132 host 129.20.254.3 range 1812 1814
+ permit udp host 80.14.96.227 host 129.20.254.3 range 1812 1814
+ permit udp host 86.64.163.242 host 129.20.254.3 range 1812 1814
+ permit udp host 193.251.27.190 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.141.58 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.137.128 host 129.20.254.3 range 1812 1814
+ permit udp host 82.127.43.220 host 129.20.254.3 range 1812 1814
+ permit udp host 193.251.186.219 host 129.20.254.3 range 1812 1814
+ permit udp host 193.251.33.207 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.89.160 host 129.20.254.3 range 1812 1814
+ permit udp host 62.161.112.102 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.144.171 host 129.20.254.3 range 1812 1814
+ permit udp host 193.252.221.204 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.71.111 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.99.161 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.234.222 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.71.110 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.254.166 host 129.20.254.3 range 1812 1814
+ permit udp host 80.13.135.87 host 129.20.254.3 range 1812 1814
+ permit udp host 193.251.181.199 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.235.136 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.175.192 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.98.157 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.90.235 host 129.20.254.3 range 1812 1814
+ permit udp host 193.251.186.218 host 129.20.254.3 range 1812 1814
+ permit udp host 90.80.27.226 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.175.195 host 129.20.254.3 range 1812 1814
+ permit udp host 193.252.58.153 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.134.154 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.175.93 host 129.20.254.3 range 1812 1814
+ permit udp host 193.252.211.169 host 129.20.254.3 range 1812 1814
+ permit udp host 193.251.186.223 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.96.52 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.67.146 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.172.156 host 129.20.254.3 range 1812 1814
+ permit udp host 80.13.128.67 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.95.126 host 129.20.254.3 range 1812 1814
+ permit udp host 193.252.176.152 host 129.20.254.3 range 1812 1814
+ permit udp host 80.13.20.154 host 129.20.254.3 range 1812 1814
+ permit udp host 193.253.178.24 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.96.204 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.175.196 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.71.64 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.175.194 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.105.206 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.175.191 host 129.20.254.3 range 1812 1814
+ permit udp host 77.74.213.76 host 129.20.254.3 range 1812 1814
+ permit udp host 193.252.63.108 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.195.147 host 129.20.254.3 range 1812 1814
+ permit udp host 195.221.66.4 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.248.222 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.41.79 host 129.20.254.3 range 1812 1814
+ permit udp host 193.251.16.60 host 129.20.254.3 range 1812 1814
+ permit udp host 193.252.206.234 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.124.228 host 129.20.254.3 range 1812 1814
+ permit udp host 193.253.62.52 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.171.208 host 129.20.254.3 range 1812 1814
+ permit udp host 62.160.182.9 host 129.20.254.3 range 1812 1814
+ permit udp host 81.80.29.75 host 129.20.254.3 range 1812 1814
+ permit udp host 81.53.23.116 host 129.20.254.3 range 1812 1814
+ permit udp host 217.128.177.172 host 129.20.254.3 range 1812 1814
+ permit udp host 81.252.186.116 host 129.20.254.3 range 1812 1814
+ permit udp host 212.234.175.173 host 129.20.254.3 range 1812 1814
+ permit udp host 193.253.201.24 host 129.20.254.3 range 1812 1814
+ permit udp host 213.56.52.182 host 129.20.254.3 range 1812 1814
+ permit udp host 193.253.236.125 host 129.20.254.3 range 1812 1814
+ permit udp host 129.20.55.200 host 129.20.254.3 range 1812 1814
+ permit udp host 194.214.150.19 host 129.20.254.3 range 1812 1814
+ permit udp host 195.83.247.242 host 129.20.254.3 range 1812 1814
+ permit udp host 193.52.64.248 host 129.20.254.3 range 1812 1814
+ permit udp host 193.52.32.144 host 129.20.254.3 range 1812 1814
+ permit udp host 195.221.67.53 host 129.20.254.3 range 1812 1814
+ deny   udp any host 129.20.254.3
+ permit tcp host 134.214.152.108 host 129.20.254.4 eq 22
+ permit tcp host 82.67.37.2 host 129.20.254.4 eq 22
+ permit tcp host 194.214.151.7 host 129.20.254.4 eq 22
+ permit tcp host 194.214.151.13 host 129.20.254.4 eq 22
+ permit tcp host 82.67.118.193 host 129.20.254.4 eq 22
+ permit tcp host 194.214.151.11 host 129.20.254.4 eq 22
+ permit tcp host 195.83.152.52 host 129.20.254.4 eq 22
+ permit tcp host 77.206.3.29 host 129.20.254.4 eq 22
+ permit tcp host 194.214.151.76 host 129.20.254.4 eq 22
+ permit tcp host 79.93.0.73 host 129.20.254.4 eq 22
+ permit tcp any host 129.20.254.4 eq www
+ permit tcp any host 129.20.254.4 eq 443
+ permit ip 129.20.55.0 0.0.0.255 host 129.20.254.2
+ permit tcp any host 129.20.254.2 eq 8080
+ permit tcp any host 129.20.254.2 eq 554
+ permit ip 129.20.55.0 0.0.0.255 host 129.20.254.5
+ permit tcp any host 129.20.254.5 eq 8080
+ permit tcp any host 129.20.254.5 eq 554
+ permit tcp host 129.20.126.9 host 129.20.254.5 eq 2049
+ permit udp host 129.20.126.9 host 129.20.254.5 eq 2049
+ permit tcp host 129.20.126.9 host 129.20.254.5 eq sunrpc
+ permit udp host 129.20.126.9 host 129.20.254.5 eq sunrpc
+ permit tcp host 129.20.126.9 host 129.20.254.5 eq 731
+ permit tcp host 129.20.126.9 host 129.20.254.5 eq 968
+ permit udp host 129.20.126.9 host 129.20.254.5 eq 728
+ permit udp host 129.20.126.9 host 129.20.254.5 eq 965
+ deny   ip any any
+ip access-list extended RENATER_IN
+ deny   ip 127.0.0.0 0.255.255.255 any
+ deny   ip 10.0.0.0 0.255.255.255 any
+ deny   ip 172.16.0.0 0.15.255.255 any
+ deny   ip 192.168.0.0 0.0.255.255 any
+ deny   ip any 0.0.0.255 255.255.255.0
+ deny   ip any 0.0.0.0 255.255.255.0
+ deny   ip 129.20.0.0 0.0.255.255 any
+ deny   ip 148.60.0.0 0.0.255.255 any
+ deny   ip 195.220.94.0 0.0.0.255 any
+ permit udp any any eq domain
+ permit udp any eq domain any gt 1023
+ deny   ip host 141.146.8.193 any
+ deny   ip host 142.205.233.80 any
+ deny   ip host 170.148.0.77 any
+ deny   ip host 198.64.146.50 any
+ deny   ip host 204.99.16.145 any
+ deny   ip host 212.118.48.21 any
+ deny   ip host 212.158.173.149 any
+ deny   ip host 216.49.88.20 any
+ deny   ip host 216.9.245.101 any
+ deny   ip host 217.12.97.63 any
+ deny   ip host 217.65.2.187 any
+ deny   ip host 63.245.209.120 any
+ deny   ip host 64.191.3.70 any
+ deny   ip host 64.233.183.63 any
+ deny   ip host 64.38.232.180 any
+ deny   ip host 66.179.111.12 any
+ deny   ip host 82.198.171.192 any
+ deny   ip host 84.19.191.55 any
+ deny   ip host 86.59.21.36 any
+ deny   ip host 87.106.254.245 any
+ deny   ip host 95.211.10.36 any
+ deny   ip host 95.211.6.170 any
+ deny   ip host 69.50.195.69 any
+ deny   ip host 216.139.227.91 any
+ deny   ip host 94.75.207.188 any
+ deny   ip host 94.75.233.163 any
+ deny   ip host 94.75.207.48 any
+ deny   ip host 125.65.112.216 any
+ deny   ip host 218.162.202.110 any
+ deny   ip host 148.244.169.85 any
+ deny   ip host 82.177.192.235 any
+ deny   ip host 217.20.118.175 any
+ deny   ip host 69.59.25.41 any
+ permit udp host 87.249.123.6 host 129.20.91.149
+ permit udp host 213.160.213.86 host 129.20.91.149
+ permit udp host 87.249.123.6 host 129.20.160.37
+ permit udp host 213.160.213.86 host 129.20.160.37
+ permit ip any 129.20.144.0 0.0.1.255
+ permit ip any 148.60.144.0 0.0.1.255
+ permit icmp any any echo-reply
+ permit icmp any host 129.20.251.1 echo
+ deny   ip any 129.20.251.0 0.0.0.255
+ deny   ip any 129.20.252.0 0.0.1.255
+ deny   ip any 129.20.0.254 0.0.255.1
+ permit ip any host 193.52.12.33
+ deny   ip any 193.52.12.0 0.0.0.255
+ permit icmp any 148.60.239.0 0.0.0.255
+ permit icmp any 148.60.0.0 0.0.15.255
+ permit icmp host 195.6.238.186 148.60.206.0 0.0.1.255
+ deny   icmp any 148.60.0.0 0.0.255.255
+ permit icmp any any echo
+ permit icmp any any time-exceeded
+ permit icmp any any packet-too-big
+ permit icmp any any traceroute
+ permit icmp any any unreachable
+ deny   icmp any any
+ permit ip any 193.52.56.0 0.0.0.255
+ deny   tcp any eq 2967 any
+ permit ip host 193.52.94.40 host 129.20.32.59
+ permit ip host 82.67.115.158 129.20.93.0 0.0.0.255
+ permit ip host 82.67.115.158 129.20.204.0 0.0.0.255
+ deny   udp any any range 135 netbios-ss
+ deny   tcp any any range 135 139
+ deny   tcp any any eq 445
+ deny   tcp any any eq 593
+ deny   udp any range 135 netbios-ss any
+ deny   tcp any range 135 139 any
+ deny   tcp any eq 445 any
+ deny   tcp any eq 593 any
+ deny   tcp any any eq 412
+ deny   tcp any any eq 1214
+ deny   tcp any any eq 3531
+ deny   tcp any any range 4662 4665
+ deny   tcp any any eq 4672
+ deny   tcp any any range 6346 6347
+ deny   tcp any any eq 6699
+ deny   tcp any any range 6881 6889
+ deny   tcp any any eq 4000
+ deny   tcp any any eq 32459
+ permit ip any 148.60.239.0 0.0.0.255
+ permit ip any host 129.20.222.4
+ permit udp any host 129.20.254.50 eq isakmp
+ permit udp any host 129.20.254.3 range 1812 1814
+ permit udp host 193.51.182.121 host 129.20.131.101 range 1812 1814
+ permit udp host 193.51.182.121 host 129.20.129.2 range 1812 1814
+ permit udp host 193.51.182.121 host 129.20.128.60 range 2525 2526
+ permit udp host 130.79.200.23 host 129.20.131.101 range 1812 1814
+ permit udp host 130.79.200.23 host 129.20.129.2 range 1812 1814
+ permit udp host 195.115.77.125 host 129.20.210.134 eq isakmp
+ permit udp host 212.157.97.209 host 129.20.48.127 eq isakmp
+ permit udp host 152.81.144.40 129.20.0.0 0.0.255.255 eq isakmp
+ permit udp host 128.93.1.111 129.20.0.0 0.0.255.255 eq isakmp
+ permit udp host 128.93.1.113 129.20.0.0 0.0.255.255 eq isakmp
+ permit udp host 132.203.244.151 148.60.0.0 0.0.255.255 eq isakmp
+ permit udp host 213.41.106.65 host 148.60.186.200 eq isakmp
+ permit udp any eq isakmp any
+ permit udp any eq 10000 any
+ permit udp host 193.175.73.100 eq 1194 any
+ permit udp any eq ntp any
+ permit udp any host 129.20.246.1 eq 1701
+ permit udp any host 129.20.246.1 eq 1812
+ permit udp any host 129.20.161.12
+ permit udp any host 129.20.25.140
+ permit udp any 195.220.94.0 0.0.0.255
+ permit udp host 193.52.92.157 range 1515 1516 any
+ permit ip host 193.52.92.157 host 129.20.80.83
+ permit udp host 81.56.187.30 host 129.20.233.52
+ permit udp any 129.20.0.0 0.0.255.255 eq 9940
+ permit udp any host 148.60.51.28 log
+ permit udp host 132.236.61.52 host 129.20.76.212
+ permit udp any gt 32767 any
+ deny   udp any any
+ permit ip any any
+ip access-list extended RENATER_OUT
+ deny   ip any host 141.146.8.193
+ deny   ip any host 142.205.233.80
+ deny   ip any host 170.148.0.77
+ deny   ip any host 198.64.146.50
+ deny   ip any host 204.99.16.145
+ deny   ip any host 212.118.48.21
+ deny   ip any host 212.158.173.149
+ deny   ip any host 216.49.88.20
+ deny   ip any host 216.9.245.101
+ deny   ip any host 217.12.97.63
+ deny   ip any host 217.65.2.187
+ deny   ip any host 63.245.209.120
+ deny   ip any host 64.191.3.70
+ deny   ip any host 64.233.183.63
+ deny   ip any host 64.38.232.180
+ deny   ip any host 66.179.111.12
+ deny   ip any host 82.198.171.192
+ deny   ip any host 84.19.191.55
+ deny   ip any host 86.59.21.36
+ deny   ip any host 87.106.254.245
+ deny   ip any host 95.211.10.36
+ deny   ip any host 95.211.6.170
+ deny   ip any host 69.50.195.69
+ deny   ip any host 216.139.227.91
+ deny   ip any host 94.75.207.188
+ deny   ip any host 94.75.233.163
+ deny   ip any host 94.75.207.48
+ permit ip host 129.20.32.59 host 193.52.94.40
+ deny   tcp 193.52.56.0 0.0.0.255 any range ftp-data ftp
+ permit ip 193.52.56.0 0.0.0.255 any
+ permit icmp any any
+ deny   tcp any any eq 2967
+ deny   tcp any any eq 5599
+ deny   udp any any range 135 netbios-ss
+ deny   tcp any any range 135 139
+ deny   tcp any any eq 445
+ deny   tcp any any eq 593
+ deny   tcp any 128.121.4.0 0.0.0.255 eq www
+ deny   tcp any 128.121.20.0 0.0.0.15 eq www
+ deny   tcp any any eq 412
+ deny   tcp any any eq 1214
+ deny   tcp any any eq 3531
+ deny   tcp any any range 4662 4665
+ deny   tcp any any eq 4672
+ deny   tcp any any range 6346 6347
+ deny   tcp any any eq 6699
+ deny   tcp any any range 6881 6889
+ deny   tcp any any eq 4000
+ deny   tcp any any eq 32459
+ deny   ip any 0.0.0.255 255.255.255.0
+ deny   ip any host 217.128.239.42
+ deny   ip any host 193.84.73.244
+ deny   ip any host 151.189.20.30
+ permit udp host 129.20.254.3 any range 1812 1813
+ permit ip 129.20.0.0 0.0.255.255 any
+ permit ip 148.60.0.0 0.0.255.255 any
+ permit ip 195.220.94.0 0.0.0.255 any
+ permit ip 193.52.37.0 0.0.0.255 any
+ permit ip 193.52.60.0 0.0.0.255 any
+ permit ip host 193.52.12.33 any
+ deny   ip any any
+ip access-list extended VISIO_IN
+ permit icmp any any
+ permit igmp any any
+ permit tcp any any eq domain
+ permit udp any any eq domain
+ permit tcp any any gt 1023
+ permit udp any any gt 1023
+ permit tcp any any eq www
+ permit tcp any any eq 443
+ permit tcp any host 129.20.55.20 eq 8081
+ permit tcp any 129.20.131.0 0.0.0.255 eq pop3
+ permit tcp any 129.20.0.0 0.0.255.255 ack
+ deny   ip any 129.20.0.0 0.0.255.255
+ deny   tcp any any eq 42
+ deny   udp any any range 135 netbios-ss
+ deny   tcp any any range 135 139
+ deny   tcp any any eq 445
+ deny   tcp any any eq 593
+ permit ip any any
+ip access-list extended VISIO_OUT
+ deny   ip any 193.52.56.14 0.0.0.240
+ deny   ip any host 193.52.56.128
+ deny   ip any host 193.52.56.191
+ permit icmp any any
+ permit tcp any any ack
+ permit tcp any any eq 1503
+ permit tcp any any range 1718 1731
+ permit tcp any any range 3230 3243
+ permit udp any any range 3230 3285
+ permit udp any 193.52.56.0 0.0.0.255 gt 32767
+ permit tcp 193.52.56.32 0.0.0.15 host 193.52.56.220 eq www
+ permit tcp host 193.52.60.230 host 193.52.56.220 eq www
+ permit tcp 129.20.128.0 0.0.3.255 host 193.52.56.220 eq www
+ deny   tcp any host 193.52.56.220 eq www
+ permit ip any 193.52.56.0 0.0.0.127
+ permit ip any host 193.52.56.210
+ permit ip any host 193.52.56.220
+ permit ip 193.52.56.0 0.0.0.255 any
+ permit ip 195.220.94.0 0.0.0.63 any
+ permit ip 129.20.0.0 0.0.255.255 any
+ deny   ip any any
+!
+logging history size 100
+logging history warnings
+logging alarm informational
+logging trap debugging
+logging facility local4
+logging 129.20.128.67
+access-list 80 permit 129.20.128.0 0.0.3.255
+access-list 80 deny   any
+access-list 90 permit 195.220.94.163
+access-list 90 deny   any
+access-list 91 permit 129.20.0.0 0.0.255.255
+access-list 91 permit 148.60.0.0 0.0.255.255
+access-list 91 permit 195.220.94.0 0.0.0.255
+access-list 91 permit 193.52.56.0 0.0.0.255
+access-list 91 permit 193.52.12.0 0.0.0.255
+access-list 91 deny   any
+access-list 2001 permit ip any 193.52.56.0 0.0.0.255
+access-list 2200 permit icmp any any echo-reply
+access-list 2200 permit icmp any any echo
+access-list compiled
+dialer-list 1 protocol ip permit
+dialer-list 1 protocol ipx permit
+snmp-server engineID local 00000009020000D0FFE4B400
+snmp-server community ***r*** RO
+snmp-server community ***w*** RW
+snmp-server community qos-saa RO
+snmp-server ifindex persist
+snmp-server trap link ietf
+snmp-server trap-source GigabitEthernet0/3
+snmp-server location Beaulieu/Bat 12D/1er etage/salle machine
+snmp-server contact "CRI"
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps vrrp
+snmp-server enable traps ds1
+snmp-server enable traps casa
+snmp-server enable traps tty
+snmp-server enable traps gatekeeper
+snmp-server enable traps eigrp
+snmp-server enable traps xgcp
+snmp-server enable traps flash insertion removal
+snmp-server enable traps srp
+snmp-server enable traps ds3
+snmp-server enable traps envmon
+snmp-server enable traps isdn call-information
+snmp-server enable traps isdn layer2
+snmp-server enable traps isdn chan-not-avail
+snmp-server enable traps isdn ietf
+snmp-server enable traps ima
+snmp-server enable traps gprs apn charging ggsn gdm
+snmp-server enable traps channel
+snmp-server enable traps ip local pool
+snmp-server enable traps aaa_server
+snmp-server enable traps atm subif
+snmp-server enable traps bgp
+snmp-server enable traps bstun
+snmp-server enable traps bulkstat collection transfer
+snmp-server enable traps memory bufferpeak
+snmp-server enable traps cnpd
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps dial
+snmp-server enable traps dlsw
+snmp-server enable traps dsp card-status
+snmp-server enable traps dsp oper-state
+snmp-server enable traps entity
+snmp-server enable traps fru-ctrl
+snmp-server enable traps event-manager
+snmp-server enable traps frame-relay
+snmp-server enable traps frame-relay subif
+snmp-server enable traps gtp
+snmp-server enable traps hsrp
+snmp-server enable traps ipmobile
+snmp-server enable traps ipmulticast
+snmp-server enable traps mpls ldp
+snmp-server enable traps mpls traffic-eng
+snmp-server enable traps mpls vpn
+snmp-server enable traps msdp
+snmp-server enable traps mvpn
+snmp-server enable traps ospf state-change
+snmp-server enable traps ospf errors
+snmp-server enable traps ospf retransmit
+snmp-server enable traps ospf lsa
+snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+snmp-server enable traps ospf cisco-specific state-change shamlink interface-old
+snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+snmp-server enable traps ospf cisco-specific errors
+snmp-server enable traps ospf cisco-specific retransmit
+snmp-server enable traps ospf cisco-specific lsa
+snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+snmp-server enable traps pppoe
+snmp-server enable traps cpu threshold
+snmp-server enable traps rsvp
+snmp-server enable traps rtr
+snmp-server enable traps stun
+snmp-server enable traps syslog
+snmp-server enable traps l2tun session
+snmp-server enable traps vsimaster
+snmp-server enable traps director server-up server-down
+snmp-server enable traps firewall serverstatus
+snmp-server enable traps isakmp policy add
+snmp-server enable traps isakmp policy delete
+snmp-server enable traps isakmp tunnel start
+snmp-server enable traps isakmp tunnel stop
+snmp-server enable traps ipsec cryptomap add
+snmp-server enable traps ipsec cryptomap delete
+snmp-server enable traps ipsec cryptomap attach
+snmp-server enable traps ipsec cryptomap detach
+snmp-server enable traps ipsec tunnel start
+snmp-server enable traps ipsec tunnel stop
+snmp-server enable traps ipsec too-many-sas
+snmp-server enable traps rf
+snmp-server enable traps alarms informational
+snmp-server enable traps ccme
+snmp-server enable traps srst
+snmp-server enable traps voice
+snmp-server enable traps dnis
+snmp-server host 129.20.129.3 ***r*** 
+!
+!
+ipv6 route 2001:660:7307:6000::/52 2001:660:7307:6::1
+ipv6 route 2001:660:7307::/48 2001:660:7307:1:1::1
+ipv6 route ::/0 2001:660:7300:1005:0:38:0:2200
+ipv6 neighbor 2001:660:7300:1005:0:38:0:2200 GigabitEthernet0/2.456 001b.0dee.5b40
+ipv6 neighbor 2001:660:7307:1:1::1 GigabitEthernet0/1 0003.47e3.d69a
+!
+ipv6 flow-export source GigabitEthernet0/1
+ipv6 flow-export destination 129.20.131.186 9990
+route-map POLICY-DSCP-0 permit 10
+ set ip precedence routine
+ set ip tos normal
+!
+route-map POLICY-DSCP-VISIO permit 10
+ set ip precedence critical
+ set ip tos normal
+!
+route-map POLICY-DSCP-RENATER permit 10
+ match ip address 2001
+ set ip precedence critical
+ set ip tos normal
+!
+route-map POLICY-DSCP-RENATER permit 20
+ set ip precedence routine
+ set ip tos normal
+!
+route-map visio permit 10
+ match ip address 100
+ set ip next-hop 192.168.250.254
+!
+!
+!
+snmp ifmib ifalias long
+!
+ipv6 access-list IPV6INTERNE_IN
+ permit icmp any any
+ permit tcp 2001:660:7307::/48 any reflect trafic_TCP
+ permit udp 2001:660:7307::/48 any reflect trafic_UDP
+!
+ipv6 access-list IPV6RENATER_IN
+ permit icmp any any
+ deny ipv6 2001:660:7307::/48 any
+ permit ipv6 any 2001:660:7307::/48
+ permit tcp host 2001:660:7300:1005:0:38:0:2200 host 2001:660:7300:1005:38:0:6:5097
+ deny ipv6 any any log
+!
+ipv6 access-list IPV6RENATER_OUT
+ permit icmp any anykaka$h1
+ 
+ permit ipv6 2001:660:7307::/48 any
+ permit ipv6 host 2001:660:7300:1005:38:0:6:5097 any
+ deny ipv6 any any
+!
+ipv6 access-list IPV6POINT6_IN
+ permit icmp any any
+ permit ipv6 any any
+!
+ipv6 access-list IPV6POINT6_OUT
+ permit icmp any any
+ permit ipv6 any any
+!
+ipv6 access-list IPV6PUBLICUR1_OUT
+ permit icmp any any
+ permit tcp any host 2001:660:7307:31:129:20:254:1 eq domain
+ permit udp any host 2001:660:7307:31:129:20:254:1 eq domain
+!
+ipv6 access-list IPV6MOBILITE_IN
+ permit icmp any any
+ permit tcp 2001:660:7307:1100::/56 any reflect trafic_TCP
+ permit udp 2001:660:7307:1100::/56 any reflect trafic_UDP
+ permit tcp 2001:660:7307:37::/64 any reflect trafic_TCP
+ permit udp 2001:660:7307:37::/64 any reflect trafic_UDP
+ permit tcp host 2001:660:7307:31:129:20:254:1 any reflect trafic_TCP
+ permit udp host 2001:660:7307:31:129:20:254:1 any reflect trafic_UDP
+ permit ipv6 host 2001:660:7307:31:129:20:254:1 any
+!
+ipv6 access-list IPV6MOBILITE_OUT
+ permit icmp any any
+ permit tcp any host 2001:660:7307:37::1 eq 22
+ evaluate trafic_TCP
+ evaluate trafic_UDP
+ deny ipv6 any any
+!
+ipv6 access-list V6-INSIDE-IN
+ permit ipv6 any any
+!
+ipv6 access-list V6-OUTSIDE-IN
+ permit ipv6 any any
+!
+ipv6 access-list V6-INSIDE-OUT
+ permit ipv6 any any
+!
+ipv6 access-list V6-IRMAR-IN
+ permit icmp any any
+ permit ipv6 any host 2001:660:7307:0:129:20:131:29
+ permit ipv6 any host 2001:660:7307:0:129:20:131:49
+ permit ipv6 any host 2001:660:7307:0:129:20:128:13
+ permit ipv6 any host 2001:660:7307:0:148:60:128:10
+ deny tcp any any eq 445
+ deny tcp any any eq 42
+ deny udp any any range 135 netbios-ss
+ deny tcp any any range 135 139
+ deny tcp any any eq 593
+ deny tcp any any eq 1433
+ permit ipv6 any any
+!
+ipv6 access-list IPV6INTERNE_OUT
+ permit icmp any any
+ evaluate trafic_TCP
+ evaluate trafic_UDP
+ deny ipv6 any any
+!
+control-plane
+!
+!
+!
+!
+dial-peer cor custom
+!
+!
+!
+!
+gatekeeper
+ shutdown
+!
+!
+line con 0
+ stopbits 1
+line aux 0
+ stopbits 1
+line vty 0 5
+ access-class 80 in
+ exec-timeout 480 0
+ password 7 020807484B565D72
+ login
+!
+exception core-file cs7204-crash.txt
+exception dump 129.20.129.1
+ntp clock-period 17179918
+ntp source GigabitEthernet0/1
+ntp access-group peer 90
+ntp access-group serve 91
+ntp master 2
+ntp update-calendar
+ntp server 195.220.94.163
+!
+webvpn context Default_context
+ ssl authenticate verify all
+ !
+ no inservice
+!
+time-range "huit_vingt"
+ periodic weekdays 8:00 to 20:00
+!
+time-range "semaine"
+ periodic weekdays 8:00 to 19:00
+!
+time-range huit_vingt
+ periodic weekdays 8:00 to 20:00
+!
+!
+end

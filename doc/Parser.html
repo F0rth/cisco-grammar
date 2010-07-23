@@ -1,0 +1,1132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=iso8859-15" />
+<title>Class: Parser</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (P)</a> &raquo; 
+    
+    
+    <span class="title">Parser</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Parser 
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Parser</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ios4r2.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+   
+    
+   
+    
+      <strong class="classes">Classes:</strong> <a href="Parser/Storage.html" title="Parser::Storage (class)">Storage</a>
+    
+  
+</p>
+
+
+  <h2>Instance Attribute Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config-instance_method" title="#config (instance method)">- (Object) <strong>config</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute config.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#grammar-instance_method" title="#grammar (instance method)">- (Object) <strong>grammar</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute grammar.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index-instance_method" title="#index (instance method)">- (Object) <strong>index</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute index.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parsed_hashes-instance_method" title="#parsed_hashes (instance method)">- (Object) <strong>parsed_hashes</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute parsed_hashes.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#token-instance_method" title="#token (instance method)">- (Object) <strong>token</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute token.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#token_instruction-instance_method" title="#token_instruction (instance method)">- (Object) <strong>token_instruction</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute token_instruction.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#token_instruction_subconf-instance_method" title="#token_instruction_subconf (instance method)">- (Object) <strong>token_instruction_subconf</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute token_instruction_subconf.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tokens_list-instance_method" title="#tokens_list (instance method)">- (Object) <strong>tokens_list</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute tokens_list.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+    <h2>Instance Method Summary</h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_lines-instance_method" title="#find_lines (instance method)">- (Object) <strong>find_lines</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_token_instruction_subconf-instance_method" title="#find_token_instruction_subconf (instance method)">- (Object) <strong>find_token_instruction_subconf</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Parser) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Parser.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="Parser (class)">Parser</a></tt>) <strong>initialize</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of Parser
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ios4r2.rb', line 13</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span>
+<span class='@config ivar id'>@config</span> <span class='assign token'>=</span> <span class='IO constant id'>IO</span><span class='dot token'>.</span><span class='readlines identifier id'>readlines</span><span class='lparen token'>(</span><span class='ARGV constant id'>ARGV</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+<span class='@tokens_list ivar id'>@tokens_list</span> <span class='assign token'>=</span> <span class='Array constant id'>Array</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+<span class='@parsed_hashes ivar id'>@parsed_hashes</span> <span class='assign token'>=</span> <span class='Hash constant id'>Hash</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+<span class='@token_instruction_subconf ivar id'>@token_instruction_subconf</span> <span class='assign token'>=</span> <span class='Hash constant id'>Hash</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="config=-instance_method"></span>
+      <span id="config-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="config-instance_method">
+  
+    - (<tt>Object</tt>) <strong>config</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute config
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ios4r2.rb', line 10</span>
+
+<span class='def def kw'>def</span> <span class='config identifier id'>config</span>
+  <span class='@config ivar id'>@config</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="grammar=-instance_method"></span>
+      <span id="grammar-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="grammar-instance_method">
+  
+    - (<tt>Object</tt>) <strong>grammar</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute grammar
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ios4r2.rb', line 10</span>
+
+<span class='def def kw'>def</span> <span class='grammar identifier id'>grammar</span>
+  <span class='@grammar ivar id'>@grammar</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="index=-instance_method"></span>
+      <span id="index-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="index-instance_method">
+  
+    - (<tt>Object</tt>) <strong>index</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute index
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ios4r2.rb', line 10</span>
+
+<span class='def def kw'>def</span> <span class='index identifier id'>index</span>
+  <span class='@index ivar id'>@index</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="parsed_hashes=-instance_method"></span>
+      <span id="parsed_hashes-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="parsed_hashes-instance_method">
+  
+    - (<tt>Object</tt>) <strong>parsed_hashes</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute parsed_hashes
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ios4r2.rb', line 10</span>
+
+<span class='def def kw'>def</span> <span class='parsed_hashes identifier id'>parsed_hashes</span>
+  <span class='@parsed_hashes ivar id'>@parsed_hashes</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="token=-instance_method"></span>
+      <span id="token-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="token-instance_method">
+  
+    - (<tt>Object</tt>) <strong>token</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute token
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ios4r2.rb', line 10</span>
+
+<span class='def def kw'>def</span> <span class='token identifier id'>token</span>
+  <span class='@token ivar id'>@token</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="token_instruction=-instance_method"></span>
+      <span id="token_instruction-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="token_instruction-instance_method">
+  
+    - (<tt>Object</tt>) <strong>token_instruction</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute token_instruction
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ios4r2.rb', line 10</span>
+
+<span class='def def kw'>def</span> <span class='token_instruction identifier id'>token_instruction</span>
+  <span class='@token_instruction ivar id'>@token_instruction</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="token_instruction_subconf=-instance_method"></span>
+      <span id="token_instruction_subconf-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="token_instruction_subconf-instance_method">
+  
+    - (<tt>Object</tt>) <strong>token_instruction_subconf</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute token_instruction_subconf
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ios4r2.rb', line 10</span>
+
+<span class='def def kw'>def</span> <span class='token_instruction_subconf identifier id'>token_instruction_subconf</span>
+  <span class='@token_instruction_subconf ivar id'>@token_instruction_subconf</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="tokens_list=-instance_method"></span>
+      <span id="tokens_list-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="tokens_list-instance_method">
+  
+    - (<tt>Object</tt>) <strong>tokens_list</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute tokens_list
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ios4r2.rb', line 10</span>
+
+<span class='def def kw'>def</span> <span class='tokens_list identifier id'>tokens_list</span>
+  <span class='@tokens_list ivar id'>@tokens_list</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="find_lines-instance_method">
+  
+    - (<tt>Object</tt>) <strong>find_lines</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ios4r2.rb', line 21</span>
+
+<span class='def def kw'>def</span> <span class='find_lines identifier id'>find_lines</span>
+  <span class='token_regexp identifier id'>token_regexp</span> <span class='assign token'>=</span> <span class='Regexp constant id'>Regexp</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='@token ivar id'>@token</span><span class='rparen token'>)</span>
+  <span class='@config ivar id'>@config</span><span class='dot token'>.</span><span class='each_index identifier id'>each_index</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='index identifier id'>index</span><span class='bitor op'>|</span>
+    <span class='scan identifier id'>scan</span> <span class='assign token'>=</span> <span class='StringScanner constant id'>StringScanner</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='@config ivar id'>@config</span><span class='lbrack token'>[</span><span class='index identifier id'>index</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='scan identifier id'>scan</span><span class='dot token'>.</span><span class='scan identifier id'>scan</span><span class='lparen token'>(</span><span class='token_regexp identifier id'>token_regexp</span><span class='rparen token'>)</span> <span class='eq op'>==</span> <span class='@token ivar id'>@token</span> 
+      <span class='@tokens_list ivar id'>@tokens_list</span> <span class='lshft op'>&lt;&lt;</span> <span class='@config ivar id'>@config</span><span class='lbrack token'>[</span><span class='index identifier id'>index</span><span class='rbrack token'>]</span>
+    <span class='end end kw'>end</span>
+  <span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="find_token_instruction_subconf-instance_method">
+  
+    - (<tt>Object</tt>) <strong>find_token_instruction_subconf</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ios4r2.rb', line 31</span>
+
+<span class='def def kw'>def</span> <span class='find_token_instruction_subconf identifier id'>find_token_instruction_subconf</span>
+      <span class='token_instruction_regexp identifier id'>token_instruction_regexp</span> <span class='assign token'>=</span> <span class='Regexp constant id'>Regexp</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='@token_instruction ivar id'>@token_instruction</span><span class='rparen token'>)</span>
+      <span class='index identifier id'>index</span> <span class='assign token'>=</span> <span class='integer val'>1</span>
+      <span class='until until kw'>until</span> <span class='index identifier id'>index</span> <span class='eq op'>==</span>  <span class='@config ivar id'>@config</span><span class='dot token'>.</span><span class='length identifier id'>length</span> <span class='do do kw'>do</span>
+      <span class='scan identifier id'>scan</span> <span class='assign token'>=</span> <span class='StringScanner constant id'>StringScanner</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='@config ivar id'>@config</span><span class='lbrack token'>[</span><span class='index identifier id'>index</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+        <span class='if if kw'>if</span> <span class='scan identifier id'>scan</span><span class='dot token'>.</span><span class='scan identifier id'>scan</span><span class='lparen token'>(</span><span class='token_instruction_regexp identifier id'>token_instruction_regexp</span><span class='rparen token'>)</span> <span class='eq op'>==</span> <span class='@token_instruction ivar id'>@token_instruction</span>
+          <span class='pointer identifier id'>pointer</span> <span class='assign token'>=</span> <span class='index identifier id'>index</span>
+          <span class='until until kw'>until</span> <span class='index identifier id'>index</span> <span class='eq op'>==</span> <span class='@config ivar id'>@config</span><span class='dot token'>.</span><span class='length identifier id'>length</span> <span class='do do kw'>do</span>         
+            <span class='pointer identifier id'>pointer</span> <span class='opasgn op'>+=</span><span class='integer val'>1</span>
+              <span class='token_regexp identifier id'>token_regexp</span> <span class='assign token'>=</span> <span class='Regexp constant id'>Regexp</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='@token ivar id'>@token</span><span class='rparen token'>)</span>
+              <span class='scan2 identifier id'>scan2</span> <span class='assign token'>=</span> <span class='StringScanner constant id'>StringScanner</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='@config ivar id'>@config</span><span class='lbrack token'>[</span><span class='pointer identifier id'>pointer</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+              <span class='until until kw'>until</span> <span class='scan2 identifier id'>scan2</span><span class='dot token'>.</span><span class='scan identifier id'>scan</span><span class='lparen token'>(</span><span class='token_regexp identifier id'>token_regexp</span><span class='rparen token'>)</span> <span class='eq op'>==</span> <span class='@token ivar id'>@token</span> <span class='or or kw'>or</span> <span class='@config ivar id'>@config</span><span class='lbrack token'>[</span><span class='pointer identifier id'>pointer</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='include? fid id'>include?</span> <span class='string val'>&quot;!&quot;</span> <span class='do do kw'>do</span>
+              <span class='@token_instruction_subconf ivar id'>@token_instruction_subconf</span><span class='dot token'>.</span><span class='update identifier id'>update</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='pointer identifier id'>pointer</span><span class='plus op'>+</span><span class='integer val'>1</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='@config ivar id'>@config</span><span class='lbrack token'>[</span><span class='pointer identifier id'>pointer</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+              <span class='pointer identifier id'>pointer</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
+              <span class='scan2 identifier id'>scan2</span> <span class='assign token'>=</span> <span class='StringScanner constant id'>StringScanner</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='@config ivar id'>@config</span><span class='lbrack token'>[</span><span class='pointer identifier id'>pointer</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+              <span class='end end kw'>end</span>
+              <span class='break break kw'>break</span>
+          <span class='end end kw'>end</span>
+          <span class='index identifier id'>index</span> <span class='assign token'>=</span> <span class='pointer identifier id'>pointer</span>
+        <span class='else else kw'>else</span>
+        <span class='index identifier id'>index</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
+        <span class='end end kw'>end</span>
+      <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+          
+  
+  <span class='def def kw'>def</span> <span class='load_grammar identifier id'>load_grammar</span>
+    <span class='dir identifier id'>dir</span> <span class='assign token'>=</span> <span class='File constant id'>File</span><span class='dot token'>.</span><span class='dirname identifier id'>dirname</span><span class='lparen token'>(</span><span class='__FILE__ __file__ kw'>__FILE__</span><span class='rparen token'>)</span>
+    <span class='Treetop constant id'>Treetop</span><span class='dot token'>.</span><span class='load identifier id'>load</span> <span class='dir identifier id'>dir</span>  <span class='plus op'>+</span> <span class='string val'>&quot;/&quot;</span> <span class='plus op'>+</span> <span class='grammar identifier id'>grammar</span>
+    <span class='parsername identifier id'>parsername</span> <span class='assign token'>=</span> <span class='grammar identifier id'>grammar</span><span class='dot token'>.</span><span class='capitalize identifier id'>capitalize</span> <span class='plus op'>+</span> <span class='string val'>&quot;Parser&quot;</span>
+    <span class='@parser ivar id'>@parser</span> <span class='assign token'>=</span> <span class='Object constant id'>Object</span><span class='dot token'>.</span><span class='module_eval identifier id'>module_eval</span><span class='lparen token'>(</span><span class='dstring node'>&quot;::#{parsername}&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='def def kw'>def</span> <span class='use_grammar_on identifier id'>use_grammar_on</span><span class='lparen token'>(</span><span class='an_array identifier id'>an_array</span><span class='rparen token'>)</span>
+    <span class='an_array identifier id'>an_array</span><span class='dot token'>.</span><span class='each_pair identifier id'>each_pair</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='key identifier id'>key</span><span class='comma token'>,</span> <span class='value identifier id'>value</span><span class='bitor op'>|</span>
+    <span class='result identifier id'>result</span> <span class='assign token'>=</span> <span class='@parser ivar id'>@parser</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='value identifier id'>value</span><span class='rparen token'>)</span>
+    <span class='values identifier id'>values</span> <span class='assign token'>=</span> <span class='Hash constant id'>Hash</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+    <span class='result identifier id'>result</span><span class='dot token'>.</span><span class='singleton_methods identifier id'>singleton_methods</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='method identifier id'>method</span><span class='bitor op'>|</span> 
+      <span class='begin begin kw'>begin</span>
+        <span class='value identifier id'>value</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='method identifier id'>method</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='result identifier id'>result</span><span class='dot token'>.</span><span class='send identifier id'>send</span><span class='lparen token'>(</span><span class='method identifier id'>method</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='text_value identifier id'>text_value</span><span class='rbrace token'>}</span> 
+        <span class='values identifier id'>values</span><span class='dot token'>.</span><span class='update identifier id'>update</span><span class='lparen token'>(</span><span class='value identifier id'>value</span><span class='rparen token'>)</span>
+      <span class='end end kw'>end</span>
+    <span class='rbrace token'>}</span>
+    <span class='@parsed_hashes ivar id'>@parsed_hashes</span><span class='dot token'>.</span><span class='update identifier id'>update</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='key identifier id'>key</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='values identifier id'>values</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+    <span class='rbrace token'>}</span>
+  
+  <span class='end end kw'>end</span>
+  
+  <span class='def def kw'>def</span> <span class='find_grammar identifier id'>find_grammar</span>
+    <span class='if if kw'>if</span> <span class='@token ivar id'>@token</span><span class='dot token'>.</span><span class='include? fid id'>include?</span> <span class='string val'>&quot; &quot;</span> <span class='or or kw'>or</span>  <span class='@token ivar id'>@token</span><span class='dot token'>.</span><span class='include? fid id'>include?</span> <span class='string val'>&quot;-&quot;</span>
+      <span class='comment val'># limitations de TreeTop</span>
+      <span class='@grammar ivar id'>@grammar</span> <span class='assign token'>=</span> <span class='@token ivar id'>@token</span><span class='dot token'>.</span><span class='gsub identifier id'>gsub</span><span class='lparen token'>(</span><span class='regexp val'>/ /</span><span class='comma token'>,</span><span class='string val'>'_'</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='gsub identifier id'>gsub</span><span class='lparen token'>(</span><span class='regexp val'>/-/</span><span class='comma token'>,</span><span class='string val'>'_'</span><span class='rparen token'>)</span>
+    <span class='else else kw'>else</span>
+      <span class='@grammar ivar id'>@grammar</span> <span class='assign token'>=</span> <span class='@token ivar id'>@token</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='def def kw'>def</span> <span class='grammar_fail identifier id'>grammar_fail</span>
+    <span class='@parsed_hashes ivar id'>@parsed_hashes</span><span class='dot token'>.</span><span class='each_pair identifier id'>each_pair</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='key identifier id'>key</span><span class='comma token'>,</span> <span class='value identifier id'>value</span><span class='bitor op'>|</span>
+    <span class='if if kw'>if</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span> <span class='eq op'>==</span> <span class='string val'>&quot;&quot;</span>
+      <span class='p identifier id'>p</span> <span class='dstring node'>&quot;can't parse '#{@token_instruction_subconf[key]}' at line number '#{key}'&quot;</span>
+    <span class='end end kw'>end</span> 
+    <span class='rbrace token'>}</span>
+  <span class='end end kw'>end</span>
+    
+
+<span class='end end kw'>end</span>
+
+
+<span class='class class kw'>class</span> <span class='Storage constant id'>Storage</span>
+  
+  <span class='attr_accessor identifier id'>attr_accessor</span> <span class='symbol val'>:db</span>
+  
+  <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='db_file identifier id'>db_file</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='File constant id'>File</span><span class='colon2 op'>::</span><span class='exist? fid id'>exist?</span><span class='lparen token'>(</span><span class='db_file identifier id'>db_file</span><span class='rparen token'>)</span>
+      <span class='@db ivar id'>@db</span> <span class='assign token'>=</span> <span class='Rufus constant id'>Rufus</span><span class='colon2 op'>::</span><span class='Tokyo constant id'>Tokyo</span><span class='colon2 op'>::</span><span class='Table constant id'>Table</span><span class='dot token'>.</span><span class='open identifier id'>open</span><span class='lparen token'>(</span><span class='db_file identifier id'>db_file</span><span class='rparen token'>)</span>
+    <span class='else else kw'>else</span>
+      <span class='@db ivar id'>@db</span> <span class='assign token'>=</span> <span class='Rufus constant id'>Rufus</span><span class='colon2 op'>::</span><span class='Tokyo constant id'>Tokyo</span><span class='colon2 op'>::</span><span class='Table constant id'>Table</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='db_file identifier id'>db_file</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='def def kw'>def</span> <span class='add identifier id'>add</span><span class='lparen token'>(</span><span class='hash_data identifier id'>hash_data</span><span class='rparen token'>)</span>
+    <span class='comment val'># genuid génère un identiant unique</span>
+    <span class='@db ivar id'>@db</span><span class='lbrack token'>[</span><span class='@db ivar id'>@db</span><span class='dot token'>.</span><span class='genuid identifier id'>genuid</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='hash_data identifier id'>hash_data</span>
+  <span class='end end kw'>end</span>
+    
+<span class='end end kw'>end</span>
+
+<span class='s identifier id'>s</span> <span class='assign token'>=</span> <span class='Storage constant id'>Storage</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>'ios.tct'</span><span class='rparen token'>)</span>
+
+<span class='z identifier id'>z</span> <span class='assign token'>=</span> <span class='Parser constant id'>Parser</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+<span class='z identifier id'>z</span><span class='dot token'>.</span><span class='token identifier id'>token</span> <span class='assign token'>=</span> <span class='string val'>&quot;ip access-list extended&quot;</span>
+<span class='z identifier id'>z</span><span class='dot token'>.</span><span class='find_lines identifier id'>find_lines</span>
+<span class='z identifier id'>z</span><span class='dot token'>.</span><span class='tokens_list identifier id'>tokens_list</span><span class='dot token'>.</span><span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='token identifier id'>token</span><span class='bitor op'>|</span>
+<span class='z identifier id'>z</span><span class='dot token'>.</span><span class='token_instruction identifier id'>token_instruction</span> <span class='assign token'>=</span> <span class='token identifier id'>token</span>
+<span class='comment val'>#z.token_instruction = z.tokens_list[7]</span>
+<span class='comment val'>#p z.token_instruction</span>
+<span class='z identifier id'>z</span><span class='dot token'>.</span><span class='find_token_instruction_subconf identifier id'>find_token_instruction_subconf</span>
+<span class='comment val'>#pp z.token_instruction_subconf</span>
+<span class='comment val'>#z.find_grammar</span>
+<span class='comment val'>#z.load_grammar</span>
+<span class='comment val'>#z.use_grammar_on(z.tokens_list[2])</span>
+<span class='z identifier id'>z</span><span class='dot token'>.</span><span class='grammar identifier id'>grammar</span> <span class='assign token'>=</span> <span class='string val'>&quot;ios_acl&quot;</span>
+<span class='z identifier id'>z</span><span class='dot token'>.</span><span class='load_grammar identifier id'>load_grammar</span>
+<span class='comment val'>#z.token_instruction = z.tokens_list[4]</span>
+<span class='comment val'>#p z.token_instruction_subconf</span>
+<span class='z identifier id'>z</span><span class='dot token'>.</span><span class='use_grammar_on identifier id'>use_grammar_on</span><span class='lparen token'>(</span><span class='z identifier id'>z</span><span class='dot token'>.</span><span class='token_instruction_subconf identifier id'>token_instruction_subconf</span><span class='rparen token'>)</span> 
+<span class='z identifier id'>z</span><span class='dot token'>.</span><span class='grammar_fail identifier id'>grammar_fail</span>
+
+<span class='comment val'>#pp z.parsed_hashes</span>
+
+
+
+<span class='@temp1 ivar id'>@temp1</span> <span class='assign token'>=</span> <span class='Hash constant id'>Hash</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+
+<span class='z identifier id'>z</span><span class='dot token'>.</span><span class='parsed_hashes identifier id'>parsed_hashes</span><span class='dot token'>.</span><span class='each_pair identifier id'>each_pair</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='key identifier id'>key</span><span class='comma token'>,</span> <span class='value identifier id'>value</span><span class='bitor op'>|</span>
+  <span class='@temp1 ivar id'>@temp1</span><span class='dot token'>.</span><span class='update identifier id'>update</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='string val'>&quot;index&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='key identifier id'>key</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='each_pair identifier id'>each_pair</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='key2 identifier id'>key2</span><span class='comma token'>,</span> <span class='value2 identifier id'>value2</span><span class='bitor op'>|</span>
+    <span class='@temp1 ivar id'>@temp1</span><span class='dot token'>.</span><span class='update identifier id'>update</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='key2 identifier id'>key2</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='value2 identifier id'>value2</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+    <span class='rbrace token'>}</span>
+    <span class='@temp1 ivar id'>@temp1</span><span class='dot token'>.</span><span class='update identifier id'>update</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='string val'>'parent'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='z identifier id'>z</span><span class='dot token'>.</span><span class='token_instruction identifier id'>token_instruction</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+    <span class='@temp1 ivar id'>@temp1</span><span class='dot token'>.</span><span class='update identifier id'>update</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='string val'>'type'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'acl'</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+    <span class='@temp1 ivar id'>@temp1</span><span class='dot token'>.</span><span class='update identifier id'>update</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='string val'>'time'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='Time constant id'>Time</span><span class='dot token'>.</span><span class='now identifier id'>now</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+    <span class='@temp1 ivar id'>@temp1</span><span class='dot token'>.</span><span class='update identifier id'>update</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='string val'>'file'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='ARGV constant id'>ARGV</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='s identifier id'>s</span><span class='dot token'>.</span><span class='add identifier id'>add</span><span class='lparen token'>(</span><span class='@temp1 ivar id'>@temp1</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+
+
+
+<span class='rbrace token'>}</span>
+  <span class='pp identifier id'>pp</span> <span class='s identifier id'>s</span><span class='dot token'>.</span><span class='db identifier id'>db</span><span class='dot token'>.</span><span class='query identifier id'>query</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='q identifier id'>q</span><span class='bitor op'>|</span>
+   <span class='q identifier id'>q</span><span class='dot token'>.</span><span class='add_condition identifier id'>add_condition</span> <span class='string val'>'type'</span><span class='comma token'>,</span> <span class='symbol val'>:equals</span><span class='comma token'>,</span> <span class='string val'>'acl'</span>
+    <span class='q identifier id'>q</span><span class='dot token'>.</span><span class='order_by identifier id'>order_by</span> <span class='string val'>'destination_ip'</span>
+<span class='rbrace token'>}</span>
+<span class='s identifier id'>s</span><span class='dot token'>.</span><span class='db identifier id'>db</span><span class='dot token'>.</span><span class='close identifier id'>close</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Mon May  3 10:05:35 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.4 (ruby-1.8.6).
+</div>
+
+  </body>
+</html>

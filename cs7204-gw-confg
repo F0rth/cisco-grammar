@@ -1,0 +1,865 @@
+! ============================================================================
+!                           CONFIG GENERALE
+! cs7204-gw-confg
+!
+! Fichier des commandes autres que les ACL sur les interfaces
+! Commande à entrer : gr mrt cs7204
+! puis 'conf n' avec le fichier cs7204-gw-confg
+!
+! Les modifications sont automatiquement introduites dans /tftpboot/z-modifs/
+! ============================================================================
+! INFOS
+! Réseaux IP
+!    0.0.0.0	     -			 ce réseau
+!    0.0.0.1	     -			 classe A
+!    128.0.0.0	     -			 classe B
+!    192.0.0.0	     -			 classe C
+!    224.0.0.0	     -			 classe D (multicast)
+!    240.0.0.0	     -			 autre
+! Réseaux privés
+!    127.0.0.0	     -	   0.255.255.255
+!    10.0.0.0	     -	   0.255.255.255  (10/8 prefix)
+!    172.16.0.0      -	   0.15.255.255   (172.16/12 prefix)
+!    192.168.0.0     -	   0.0.255.255	  (192.168/16 prefix)
+!
+! RESEAUX UR1
+!
+! recherche : 129.20
+! etudiant  : 148.60
+! medvisio (voir acl 100 : fichier acl100-7204-gw-confg)
+!    * Angers :     194.57.169.192/26 (masque 255.255.255.192)
+!    * Brest :      195.83.245.0/24 (masque 255.255.255.0)
+!    * Rennes :     193.52.56.0/24 (masque 255.255.255.0)
+!    * Nantes :     195.83.33.0/24 (masque 255.255.255.0)
+!    * Reims :      193.252.236.0/26 (masque 255.255.255.192)
+!    * Pont :       212.234.68.18
+!    * Passerelle : 212.234.68.19
+! ============================================================================
+
+no service config ! evite chargements de config network-confg, cisconet.cfg en broadcast ?
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+
+hostname cs7204-gw
+boot host cs7204-gw-confg 129.20.129.1
+enable secret 5 $1$p6Ex$KsaZHZnzLsR66aCqiXb7.1
+!enable password 
+
+service timestamps log datetime localtime
+service timestamps debug datetime localtime
+
+logging facility local4
+logging 129.20.128.67
+no logging buffered
+logging trap debugging
+logging history size 100
+logging history warnings
+
+exception core-file cs7204-crash.txt
+exception dump 129.20.129.1
+exception protocol tftp
+
+ip telnet source-interface GigabitEthernet0/1
+ip subnet-zero
+ip domain-name univ-rennes1.fr
+ip name-server 129.20.254.1
+no ip source-route
+no ip http server
+
+ip cef
+! ======
+! IPV6
+! ======
+ipv6 unicast-routing
+ipv6 cef accounting prefix-length
+ipv6 cef
+
+! ============
+!     QoS
+! ============
+!
+!Interface Renater: forcer DSCP 40 avec acl 2001 sur ce qui arrive de Renater et Megalis
+!                   (GigabitEthernet0/2 et Ethernet 3/0) 
+route-map POLICY-DSCP-RENATER permit 10
+ match ip address 2001
+ set ip precedence 5
+ set ip tos 0
+route-map POLICY-DSCP-RENATER permit 20
+ set ip precedence 0
+ set ip tos 0
+
+!Interface VISIO: forcer DSCP 40 sur interface VISIO (Ethernet 3/4)
+route-map POLICY-DSCP-VISIO permit 10
+ set ip precedence 5
+ set ip tos 0
+!
+
+no access-list 2001
+!access-list 2001 permit ip any 129.20.250.0 0.0.0.255    !viewstation.cru.fr
+access-list 2001 permit ip any 193.52.56.0 0.0.0.255     !Visio Rennes1
+
+!Pour les autres interfaces on force DSCP = 0 (sauf interface avec cs6509)
+route-map POLICY-DSCP-0 permit 10
+ set ip precedence 0
+ set ip tos 0
+
+! ============
+!  FIN   QoS
+! ============
+
+!Turbo access-list
+access-list compiled
+
+
+! ==========================
+! Traitement du peer to peer
+! ==========================
+!
+! Suppression de fasttrack et gnutella en provenance du réseau interne :
+! interface GigabitEthernet0/1
+!   service-policy input   BLOCK-P2P
+
+class-map type stack match-all IP_TCP_CLASS
+ description "match TCP over IP packets"
+ match field IP protocol eq 6 next TCP
+class-map type access-control match-all SKYPE
+ match start l3-start offset 0 size 4 eq 0x17030100
+ match start TCP payload-start offset 0 size 4 eq 0x17030100
+
+class-map match-any P2P
+  match protocol fasttrack file-transfer *
+  match protocol gnutella file-transfer *
+
+policy-map type access-control SKYPE-POLICY
+ class SKYPE
+   drop
+   log
+
+policy-map type access-control FPM_POLICY_SKYPE
+ class IP_TCP_CLASS
+  service-policy SKYPE-POLICY
+
+policy-map BLOCK-P2P
+  class P2P
+     drop
+
+! Protocole personnalise pour BitTorrent
+!no ip nbar port-map custom-01 tcp 5662 6881 6882 6883 6884 6885 6886 6887 6888 6889
+
+! Classe pour filtrer les protocoles P2P uniquement sur les réseaux P2P
+!class-map match-all P2P
+!  match access-group name reseauxP2P
+!  match class-map protocolesP2P
+!
+! Les exceptions (mettre en 'deny' les réseaux qui ne sont pas a filtrer)
+!ip access-list extended reseauxP2P
+!  deny ip any RESEAU MASQUE
+!  deny ip RESEAU MASQUE any
+!  permit ip any any
+
+
+! ==========================
+! FIN Traitement du peer to peer
+! ==========================
+
+
+! ============
+! Le multicast
+! ============
+! Adresses IP
+! ----------
+!   de 224.0.0.0 à 239.255.255.255
+!   de 239.0.0.0 à 239.255.255.255 réservées aux protocoles réseaux du LAN
+!   224.0.0.1  toutes les machines d'un sous-réseau
+!   224.0.0.2  tous les routeurs d'un sous-réseau
+!   224.0.0.5  routeurs OSPF
+!   224.0.0.5  routeurs OSPF "désignés"
+!   224.0.0.12 Agent DHCP (serveur/relais)
+!   de 224.0.1.0 à 238.255.255.255 adresses à portée globale (à travers l'Internet)
+!   de 239.0.0.0 à 239.255.255.255 adresses à portée limitée (AS)
+!   plus de détail : http://www.isi.edu/in-notes/iana/assignments/multicast-addresses
+
+! Protocoles
+! ----------
+!   Host    <--> Routeur : IGMP
+!   Routeur <--> Switch  : CGMP
+!   Routeur <--> Routeur : PIM
+!   Routeur <--> MBone	 : DVMRP
+!   PIM dense-mode : suppose que tous les routeurs veulent propager les paquets 
+!		     multicast; un routeur qui n'a ni voisin PIM, ni membre 
+!		     directement connecté envoie un message "prune" pour ne plus
+!		     recevoir les paquets.
+!   PIM sparse-mode :suppose que les routeurs ne veulent pas propager les 
+!		     paquets multicast, sauf requête explicite. Quand une 
+!		     machine rejoint un groupe, le routeur envoie un message 
+!		     PIM "join" au point de rendez-vous (rp-address).
+!   PIM sparse-dense mode
+!   DVMRP : construit un arbre de diffusion à partir de la source, supprimant
+!	    les chemins redondants. La propagation a lieu tant qu'il n'y a 
+!	    pas de message "prune" émis sur un chemin donné.
+!	    Cisco n'implémente pas DVMRP mais en connait suffisamment pour
+!	    propager les paquets vers des voisins DVMRP (à travers PIM ou 
+!	    des tunnels spécifiques).
+!   IGMP :  utilisé par les machines pour s'abonner à un groupe
+!   CGMP :  équivalent de IGMP pour les switches qui ne font pas la différence
+!	    entre des données multicast et des rapports IGMP
+! Commandes
+! ---------
+!   clear ip ...	remet à zéro les caches, tables et BdD.
+!   mrinfo		les voisins multicast
+!   mstat SOURCE
+!   mtrace SOURCE
+!   ping adresse
+!   sh ip dvmrp route
+!   sh ip igmp groups | int
+!   sh ip mcache | mpacket | mroute
+!   sh ip pim int | nei | rp 
+!   sh ip sdr
+
+no ip multicast-routing		! permet la propagation du multicast
+! Point de rendez-vous à l'IRISA (shared tree)
+ip pim rp-address 131.254.180.5 
+ip mroute 0.0.0.0 0.0.0.0 129.20.9.1 1 ! route statique du multicast vers l'IRISA
+ip multicast cache-headers	! cache des en-têtes pour info ulterieures (tampon circulaire)
+
+dialer-list 1 protocol ip permit
+dialer-list 1 protocol ipx permit
+snmp-server contact "CRI"
+snmp-server location Beaulieu/Bat 12D/1er etage/salle machine
+snmp-server engineID local 00000009020000D0FFE4B400
+snmp-server community ***r*** RO
+snmp-server community ***w*** RW
+snmp-server host 129.20.129.3 traps ***r***
+!Pour SAA
+snmp-server community qos-saa RO
+snmp-server enable traps
+snmp-server trap link ietf
+snmp ifmib ifalias long
+snmp-server trap-source GigabitEthernet0/3
+snmp-server ifindex persist
+! ===
+! NTP
+! ===
+! Notre serveur : chronos.cru.fr (ACL 90)
+! Nos clients	: les réseaux UR1 (ACL 91)
+! adresse source des paquets NTP : celle de l'interface du commutateur 6509
+clock timezone MET 1
+clock summer-time MET-DST recurring last Sun Mar 2:00 last Sun Oct 3:00
+ntp server 195.220.94.163
+ntp access-group peer 90
+ntp access-group serve 91
+ntp source GigabitEthernet0/1
+ntp master 2
+ntp update-calendar
+
+no access-list 90
+access-list 90 permit host 195.220.94.163
+access-list 90	deny any
+no access-list 91
+access-list 91 permit 129.20.0.0 0.0.255.255
+access-list 91 permit 148.60.0.0 0.0.255.255
+access-list 91 permit 195.220.94.0 0.0.0.255
+access-list 91 permit 193.52.56.0  0.0.0.255
+access-list 91 permit 193.52.12.0  0.0.0.255
+access-list 91	deny any
+
+! ===================
+! NetFlow 
+! ===================
+! Dionysos
+no ip flow-export destination 129.20.131.186 9990
+ip flow-export destination 129.20.131.186 9990
+!languard pour Paul Anthony
+no ip flow-export destination 129.20.128.47 2055
+no ip flow-export destination 129.20.128.47 2055
+!
+ip flow-export source GigabitEthernet0/1
+ip flow-export version 9
+ip flow-cache timeout active 5
+ip flow-export interface-names
+ipv6 flow-export source GigabitEthernet0/1
+no ipv6 flow-export destination 129.20.131.186 9990
+ipv6 flow-export destination 129.20.131.186 9990
+
+! ====
+! PING : limitation de ICMP echo
+! ====
+! ACL associée à la commande "rate-limit" à mettre sur une interface
+! rate-limit input access-group 2200 224000 8000 8000 conform-action transmit exceed-action drop
+no access-list 2200
+access-list 2200 permit icmp any any echo-reply
+access-list 2200 permit icmp any any echo 
+
+! ===============
+! Plages horaires
+! ===============
+! Le nom est utilisé dans les ACL
+
+time-range huit_vingt
+  periodic weekdays 08:00 to 20:00
+
+! =====================
+! TELNET sur les Ciscos
+! =====================
+! limité aux reseaux de Rennes1 (ACL 80)
+
+no access-list 80
+access-list 80 permit 129.20.128.0 0.0.3.255
+access-list 80	deny any
+
+
+! ================
+! BGP avec RENATER en in (ACL 1)
+! ================
+!on filtre les routes de l'AS de l'Irisa venant de RENATER
+!car on route le réseau de l'IRISA directement vers leur routeur (129.20.9.1)
+ip as-path access-list 1 deny _1938_
+ip as-path access-list 1 permit .*
+
+! ==============================================================
+!		      ACCESS-LIST
+! les ACL sur les services sont dans le fichier acs7204-gw-confg
+! ==============================================================
+
+
+interface Tunnel0
+  ip unnumbered GigabitEthernet0/1
+no  ip pim sparse-dense-mode
+  ip dvmrp unicast-routing
+  tunnel mode gre ip
+  tunnel source GigabitEthernet0/1
+  tunnel destination 129.20.251.1
+  shutdown
+
+interface GigabitEthernet0/1
+  description GigabitEthernet0/1 : RESEAU_INTERNE
+  ip address 129.20.253.254 255.255.255.0
+  no ip directed-broadcast
+   duplex full
+  speed 1000
+  media-type gbic
+  no ip cgmp
+  no ip multicast ttl-threshold 32
+  no ip dvmrp unicast-routing  
+  no mop enabled
+no  ip pim sparse-dense-mode
+  ip inspect CBAC_INTERNE_IN in
+  ip inspect CBAC_INTERNE_OUT out ! pour les appels entrants vers postes VISIO (193.52.56)
+  ipv6 address 2001:660:7307:1:1::F/80
+  ipv6 enable
+  ipv6 traffic-filter IPV6INTERNE_IN in
+  service-policy input BLOCK-P2P  
+  service-policy output  BLOCK-P2P
+  no ipv6 flow ingress
+  ip flow ingress
+  no shutdown
+!
+interface GigabitEthernet0/2
+  description GigabitEthernet0/2 : RENATER_3
+  no ip address
+  no ip directed-broadcast
+  duplex auto
+  speed auto
+  no cdp enable
+  media-type gbic
+  ip flow ingress
+  ip policy route-map POLICY-DSCP-RENATER
+!  ipv6 flow ingress ! message d'erreur "% IPv6 is not enabled on this interface" !!
+  service-policy type access-control output FPM_POLICY_SKYPE
+
+interface GigabitEthernet0/2.454
+  description RENATER_3_IPV4
+  encapsulation dot1Q 454
+  ip address 193.51.184.25  255.255.255.248
+  ip access-group RENATER_IN  in
+  ip access-group RENATER_OUT out
+  ip nbar protocol-discovery
+  ip policy route-map POLICY-DSCP-RENATER
+  no ipv6 flow ingress
+  ip flow ingress 
+
+interface GigabitEthernet0/2.456
+  description RENATER_3_IPV6
+  encapsulation dot1Q 456
+  ipv6 address 2001:660:7300:1005:38:0:6:5097/64
+  ipv6 enable
+  ipv6 traffic-filter IPV6RENATER_IN in
+  ipv6 traffic-filter IPV6RENATER_OUT out
+  ipv6 flow ingress
+  ip flow ingress
+
+interface GigabitEthernet0/3
+  description GigabitEthernet0/3 : IRISA
+  ip address 129.20.9.254 255.255.255.0
+  no ipv6 address 2001:660:7307:0003::f/64
+  no ipv6 enable
+  no ip directed-broadcast
+no  ip pim sparse-dense-mode
+  ip dvmrp unicast-routing
+  ip sdr listen
+  no mop enabled
+  ip policy route-map POLICY-DSCP-0
+  no cdp enable
+  media-type gbic
+  no ipv6 flow ingress
+  ip flow ingress
+  no shutdown
+
+interface FastEthernet1/0
+  description FastEthernet1/0 : CRU
+! interconnexion avec gate.cru.fr (reseau 195.220.94.32/28)
+! Les réseaux 195.220.94.64/26 et 195.220.94.192/26
+! sont derrière gate.cru.fr (195.220.94.33)
+  ip address 195.220.94.34 255.255.255.240
+  no ipv6 address 2001:660:7307:0004::f/64
+  no ipv6 enable
+no  ip pim sparse-dense-mode
+  no ip dvmrp unicast-routing  
+  no ip directed-broadcast
+  no mop enabled
+  ip policy route-map POLICY-DSCP-0
+  no ipv6 flow ingress
+  ip flow ingress
+  no shutdown
+
+
+interface FastEthernet1/1
+  description FastEthernet1/1 : PUBLIC_CRU
+! reseau 195.220.94.128/25
+  ip address 195.220.94.164 255.255.255.128
+  no ipv6 address 2001:660:7307:0005::f/64
+  no ipv6 enable
+  no ip directed-broadcast
+  no mop enabled
+  ip access-group PUBLIC_CRU_OUT out
+  rate-limit input access-group 2200 224000 8000 8000 conform-action transmit exceed-action drop
+  ip policy route-map POLICY-DSCP-0
+  no ipv6 flow ingress
+  ip flow ingress
+  no shutdown
+
+
+interface FastEthernet2/0
+  description FastEthernet2/0 : IPv6 Point6
+  ip address 129.20.246.254 255.255.255.0
+  ipv6 address 2001:660:7307:0006::f/64
+  ipv6 address 2001:660:7307:0022::f/64
+  ipv6 enable
+  duplex full
+  ipv6 flow ingress
+  ip flow ingress
+  no cdp enable
+  no mop enabled
+!  ip access-group IPV4POINT6_IN in
+  ip access-group IPV4POINT6_OUT out
+  ipv6 traffic-filter IPV6POINT6_IN in
+  ipv6 traffic-filter IPV6POINT6_OUT out
+  no shutdown
+
+
+interface FastEthernet2/1
+  description FastEthernet2/1 : PUBLIC_UR1
+  ip address 129.20.254.254 255.255.255.0
+  ipv6 address 2001:660:7307:A::F/64
+  ipv6 address 2001:660:7307:31::F/64
+  ipv6 enable
+  no ip directed-broadcast
+  no mop enabled
+  ip access-group PUBLIC_UR1_OUT out
+  ipv6 traffic-filter IPV6PUBLICUR1_OUT out
+  ip helper-address 129.20.128.39
+  ip helper-address 129.20.128.2
+  ip policy route-map POLICY-DSCP-0
+  ipv6 flow ingress
+  ip flow ingress
+no  shutdown
+
+
+interface Ethernet3/0
+  description Ethernet3/0 : libre (ex Megalis visio)
+  no ipv6 enable
+  no ip directed-broadcast
+  no cdp enable 
+  no mop enabled
+  ip flow ingress
+  shutdown
+
+
+interface Ethernet3/1
+  description Ethernet3/1 : PUBLIC_UR1
+no  ip address 129.20.254.254 255.255.255.0
+no  ipv6 address 2001:660:7307:A::F/64
+no  ipv6 address 2001:660:7307:31::F/64
+  ipv6 enable
+  no ip directed-broadcast
+  no mop enabled
+  ip inspect CBAC_VISIO_IN in
+  ip access-group PUBLIC_UR1_OUT out
+  ipv6 traffic-filter IPV6PUBLICUR1_OUT out
+  ip helper-address 129.20.128.39
+  ip helper-address 129.20.128.2
+  ip policy route-map POLICY-DSCP-0
+  ipv6 flow ingress
+  ip flow ingress
+no ip pim sparse-mode
+  shutdown
+
+
+interface Ethernet3/2
+  description Ethernet3/2 : libre
+!  ip address 193.50.69.156 255.255.255.248
+  no ipv6 address 2001:660:7307:0009::f/64
+  no ipv6 enable
+  no ip directed-broadcast
+  no cdp enable 
+  no mop enabled
+  no ipv6 flow ingress
+  ip flow ingress
+  shutdown ! remplacée par Ethernet3/4
+
+
+interface Ethernet3/3
+  description Ethernet3/3 : LIBRE
+  no ipv6 address 2001:660:7307:000b::f/64
+  no ipv6 enable
+  no ip directed-broadcast
+  no cdp enable 
+  no mop enabled
+  no ipv6 flow ingress
+  ip flow ingress
+  shutdown
+
+interface Ethernet3/4
+  description Ethernet3/4 : VISIO
+  ip address 193.52.56.222 255.255.255.240
+!  ip address 129.20.250.254 255.255.255.0 secondary
+  ip address 192.168.250.254 255.255.255.0 secondary
+  no ipv6 address 2001:660:7307:000c::f/64
+  no ipv6 enable
+  no ip directed-broadcast
+  no cdp enable
+  no mop enabled
+  duplex full
+  ip access-group VISIO_OUT out
+  ip inspect CBAC_VISIO_IN in
+  ip inspect CBAC_VISIO_OUT out
+  ip policy route-map POLICY-DSCP-VISIO
+  no ipv6 flow ingress
+  ip flow ingress
+  no shutdown
+
+
+interface Ethernet3/5
+  description Ethernet3/5 : tests acces exterieurs
+  ip address 192.168.17.254 255.255.255.0
+  no ipv6 address 2001:660:7307:000d::f/64
+  no ipv6 enable
+  no ip directed-broadcast
+  no cdp enable
+  no mop enabled
+  no ipv6 flow ingress
+  ip flow ingress
+  ip policy route-map POLICY-DSCP-0
+  ip access-group RENATER_IN  in
+  ip access-group RENATER_OUT out
+  ip flow ingress
+  shutdown
+
+
+interface Ethernet3/6
+  description Ethernet3/6 : IPV6 INTERNE (termine' le 01/06/09)
+  ip flow ingress
+  duplex full
+  no cdp enable
+  no mop enabled
+  shutdown
+!
+!interface Ethernet3/6.115
+!  description sous-interface VLAN CRI-SERVEURS 115
+!  encapsulation dot1Q 115
+!  ipv6 address 2001:660:7307::f/64 
+!  ipv6 address 2001:660:7307:A081::f/64
+!  ipv6 enable
+!  ipv6 traffic-filter IPV6INTERNE_IN in
+!  ipv6 traffic-filter IPV6INTERNE_OUT out
+!  ipv6 flow ingress
+!  ip flow ingress
+!  shutdown
+!
+!interface Ethernet3/6.500
+!  description sous-interface VLAN TEST
+! encapsulation dot1Q 500
+! ip flow ingress
+! shutdown
+! ipv6 address 2001:660:7307:1080::F/64
+! ipv6 enable
+!
+interface Ethernet3/7
+  description Ethernet3/7 : IPv6 mobilite
+  ipv6 address 2001:660:7307:000f::f/64
+  ipv6 enable
+  duplex full
+  ip flow ingress
+  no cdp enable
+  ipv6 flow ingress
+  ip flow ingress
+  no mop enabled
+  ipv6 traffic-filter IPV6MOBILITE_IN in
+  ipv6 traffic-filter IPV6MOBILITE_OUT out
+  shutdown
+
+
+! ========
+! ROUTAGES
+! ========
+
+router bgp 65097
+
+! Annonce des routes qui doivent être déclarées par des commandes "ip route" ou "ipv6 route"
+
+! IPv4
+! Reseau d'interconnexion avec RENATER : 193.51.184.24/29 (255.255.255.248)
+! 193.51.184.25 = notre adresse (cs7204-Gi0/2)
+! 193.51.184.26 = adresse du routeur de Renater
+! IPv6
+! Reseau d'interconnexion avec RENATER : 
+! 2001:660:7300:1005:38:0:6:5097/64 = notre adresse (cs7204-Gi0/2)
+! 2001:660:7300:1005:0:38::2200/64  = adresse du routeur de Renater
+
+ no synchronization
+ bgp log-neighbor-changes
+
+ neighbor 2001:660:7300:1005:0:38:0:2200 remote-as 2200
+ neighbor 2001:660:7300:1005:0:38:0:2200 description Renater-IPv6
+ neighbor 193.51.184.26 remote-as 2200
+ neighbor 193.51.184.26 password 14BGP-2!
+ neighbor 193.51.184.26 version 4
+ no auto-summary
+ !
+ address-family ipv4 multicast
+ no auto-summary
+ no synchronization
+ exit-address-family
+ !
+ address-family ipv4
+ neighbor 193.51.184.26 activate
+ neighbor 193.51.184.26 soft-reconfiguration inbound
+ neighbor 193.51.184.26 filter-list 1 in 
+ no auto-summary
+ no synchronization
+! Recherche
+ network 129.20.0.0
+! Etudiant
+ network 148.60.0.0
+! Projet Proteom
+ network 193.52.12.0
+! Visio
+ network 193.52.56.0
+! CHR
+ network 193.52.37.0
+! ENSSAT Lannion
+ network 193.52.60.0 ! dernier!!!
+! network 194.254.124.0
+! network 193.50.28.0
+! CRU
+ network 195.220.94.0
+ exit-address-family
+!
+ address-family ipv6
+ neighbor 2001:660:7300:1005:0:38:0:2200 activate
+ neighbor 2001:660:7300:1005:0:38:0:2200 soft-reconfiguration inbound
+ network 2001:660:7307::/48
+ exit-address-family
+
+! ----------------------
+! Déclaration des routes
+! ----------------------
+
+ip classless
+
+ipv6 route 0::/0  2001:660:7300:1005:0:38::2200        ! route par défaut
+ipv6 route 2001:660:7307:6000::/52 2001:660:7307:6::1  ! IPV6 POINT6 int FastEthernet 2/0
+ipv6 route 2001:660:7307::/48 2001:660:7307:1:1::1     ! router le réseau local vers le PIX
+
+! ip route 0.0.0.0 0.0.0.0 193.51.184.26 ! Tout vers Renater ?
+ip default-network 193.48.0.0 !!! 255.252.0.0  RENATER (14 bits)
+! ip default-network 193.51.176.0 !!  255.255.240.0  RENATER (20 bits)
+
+ip route 131.254.0.0 255.255.0.0 129.20.9.1         ! IRISA
+
+!ip route 195.220.94.64 255.255.255.192 195.220.94.35   ! CRU (pr-ext.cru.fr)
+ip route 195.220.94.0  255.255.255.0   195.220.94.33   ! CRU (gate.cru.fr)
+
+ip route 193.52.37.0 255.255.255.0   129.20.253.1   ! CHR (PUPH)
+
+! VISIO RENNES 1
+ ip route 193.52.56.0 255.255.255.0   192.168.250.1 ! vers MSFC (interco Visio) Ethernet 3/4
+! ip route 193.52.56.0   255.255.255.0   129.20.253.1  ! vers PIX
+!
+! supervision Retis de ce routeur (par cisco877) - nécessaire pour les réponses
+ ip route 192.168.2.0 255.255.255.0 129.20.253.1 ! DMZ du PIX
+
+! réseaux "locaux" (Rennes1/CHR/INSERM/Proteom) : vers PIX/MSFC
+ip route 129.20.0.0   255.255.0.0    129.20.253.1 ! recherche Rennes1
+ip route 148.60.0.0   255.255.0.0    129.20.253.1 ! enseignement Rennes1
+! Projet Proteom
+ip route 193.52.12.0 255.255.255.0   129.20.253.1
+! ANCIENS RESEAUX
+! ENSSAT Lannion
+ip route 193.52.60.0 255.255.255.0   129.20.253.1
+!
+! Réseaux non déclarés ou non routés (129.20)
+ip route 129.20.0.0  255.255.248.0 Null0 ! commutateurs/bornes (0-7)
+ip route 129.20.12.0 255.255.255.0 Null0
+ip route 129.20.13.0 255.255.255.0 Null0
+ip route 129.20.14.0 255.255.255.0 Null0
+ip route 129.20.15.0 255.255.255.0 Null0
+ip route 129.20.18.0 255.255.255.0 Null0
+ip route 129.20.19.0 255.255.255.0 Null0
+ip route 129.20.20.0 255.255.255.0 Null0
+ip route 129.20.21.0 255.255.255.0 Null0
+ip route 129.20.22.0 255.255.255.0 Null0
+ip route 129.20.23.0 255.255.255.0 Null0
+ip route 129.20.24.0 255.255.255.0 Null0
+ip route 129.20.26.0 255.255.255.0 Null0
+ip route 129.20.28.0 255.255.255.0 Null0
+ip route 129.20.29.0 255.255.255.0 Null0
+ip route 129.20.30.0 255.255.255.0 Null0
+ip route 129.20.31.0 255.255.255.0 Null0
+ip route 129.20.34.0 255.255.255.0 Null0
+ip route 129.20.35.0 255.255.255.0 Null0
+ip route 129.20.46.0 255.255.255.0 Null0
+ip route 129.20.47.0 255.255.255.0 Null0
+ip route 129.20.56.0 255.255.255.0 Null0
+ip route 129.20.57.0 255.255.255.0 Null0
+ip route 129.20.58.0 255.255.255.0 Null0
+ip route 129.20.59.0 255.255.255.0 Null0
+ip route 129.20.60.0 255.255.255.0 Null0
+ip route 129.20.62.0 255.255.255.0 Null0
+ip route 129.20.63.0 255.255.255.0 Null0
+ip route 129.20.66.0 255.255.255.0 Null0
+ip route 129.20.68.0 255.255.255.0 Null0
+ip route 129.20.69.0 255.255.255.0 Null0
+ip route 129.20.90.0 255.255.255.0 Null0
+ip route 129.20.92.0 255.255.255.0 Null0
+ip route 129.20.96.0 255.255.255.0 Null0
+ip route 129.20.99.0 255.255.255.0 Null0
+ip route 129.20.101.0 255.255.255.0 Null0
+ip route 129.20.103.0 255.255.255.0 Null0
+ip route 129.20.104.0 255.255.255.0 Null0
+ip route 129.20.105.0 255.255.255.0 Null0
+ip route 129.20.113.0 255.255.255.0 Null0
+ip route 129.20.114.0 255.255.255.0 Null0
+ip route 129.20.115.0 255.255.255.0 Null0
+ip route 129.20.116.0 255.255.255.0 Null0
+ip route 129.20.117.0 255.255.255.0 Null0
+ip route 129.20.118.0 255.255.255.0 Null0
+ip route 129.20.119.0 255.255.255.0 Null0
+ip route 129.20.120.0 255.255.255.0 Null0
+ip route 129.20.121.0 255.255.255.0 Null0
+ip route 129.20.122.0 255.255.255.0 Null0
+ip route 129.20.123.0 255.255.255.0 Null0
+ip route 129.20.124.0 255.255.255.0 Null0
+ip route 129.20.125.0 255.255.255.0 Null0
+ip route 129.20.127.0 255.255.255.0 Null0
+ip route 129.20.132.0 255.255.255.0 Null0
+ip route 129.20.134.0 255.255.255.0 Null0
+ip route 129.20.137.0 255.255.255.0 Null0
+ip route 129.20.139.0 255.255.255.0 Null0
+ip route 129.20.140.0 255.255.255.0 Null0
+ip route 129.20.141.0 255.255.255.0 Null0
+ip route 129.20.142.0 255.255.255.0 Null0
+ip route 129.20.143.0 255.255.255.0 Null0
+ip route 129.20.146.0 255.255.255.0 Null0
+ip route 129.20.147.0 255.255.255.0 Null0
+ip route 129.20.148.0 255.255.255.0 Null0
+ip route 129.20.149.0 255.255.255.0 Null0
+ip route 129.20.150.0 255.255.255.0 Null0
+ip route 129.20.151.0 255.255.255.0 Null0
+ip route 129.20.164.0 255.255.255.0 Null0
+ip route 129.20.170.0 255.255.255.0 Null0
+ip route 129.20.171.0 255.255.255.0 Null0
+ip route 129.20.172.0 255.255.255.0 Null0
+ip route 129.20.173.0 255.255.255.0 Null0
+ip route 129.20.175.0 255.255.255.0 Null0
+ip route 129.20.176.0 255.255.255.0 Null0
+ip route 129.20.177.0 255.255.255.0 Null0
+ip route 129.20.181.0 255.255.255.0 Null0
+ip route 129.20.185.0 255.255.255.0 Null0
+ip route 129.20.197.0 255.255.255.0 Null0
+ip route 129.20.199.0 255.255.255.0 Null0
+ip route 129.20.201.0 255.255.255.0 Null0
+ip route 129.20.203.0 255.255.255.0 Null0
+ip route 129.20.242.0 255.255.255.0 Null0
+ip route 129.20.243.0 255.255.255.0 Null0
+ip route 129.20.244.0 255.255.255.0 Null0
+ip route 129.20.248.0 255.255.255.0 Null0
+ip route 129.20.250.0 255.255.255.0 Null0
+ip route 129.20.255.0 255.255.255.0 Null0
+
+! Qos SAA
+!rtr responder
+!rtr 100
+! type jitter dest-ipaddr 193.52.8.4 dest-port 65005 source-ipaddr 129.20.253.254 num-packets 100
+! tag Rennes1 -> Rangueil
+!rtr schedule 100 start-time now life forever
+!rtr 101
+! type jitter dest-ipaddr 193.54.227.5 dest-port 65005 source-ipaddr 129.20.253.254 num-packets 100
+! tag Rennes1 -> IUT Blagnac
+!rtr schedule 101 start-time now life forever
+!rtr 102
+! type jitter dest-ipaddr 193.50.81.42 dest-port 65005 source-ipaddr 129.20.253.254 num-packets 100
+! tag Rennes1 -> IUT Luneville
+!rtr schedule 102 start-time now life forever
+!rtr 103
+! type jitter dest-ipaddr 193.50.193.42 dest-port 65005 source-ipaddr 129.20.253.254 num-packets 100
+! tag Rennes1 -> Valenciennes
+!rtr schedule 103 start-time now life forever
+!rtr 104
+! type jitter dest-ipaddr 193.50.20.78 dest-port 65005 source-ipaddr 129.20.253.254 num-packets 100
+! tag Rennes1 -> Rap
+!rtr schedule 104 start-time now life forever
+!rtr 200
+! type jitter dest-ipaddr 193.52.8.4 dest-port 65005 source-ipaddr 129.20.253.254 num-packets 100
+! tos 5
+! tag Rennes1 -> Rangueil
+!rtr schedule 200 start-time now life forever
+!rtr 201
+! type jitter dest-ipaddr 193.54.227.5 dest-port 65005 source-ipaddr 129.20.253.254 num-packets 100
+! tos 5
+! tag Rennes1 -> Blagnac
+!rtr schedule 201 start-time now life forever
+!rtr 202
+! type jitter dest-ipaddr 193.50.81.42 dest-port 65005 source-ipaddr 129.20.253.254 num-packets 100
+! tos 5
+! tag Rennes1 -> IUT Luneville
+!rtr schedule 202 start-time now life forever
+!rtr 203
+! type jitter dest-ipaddr 193.50.192.251 dest-port 65005 source-ipaddr 129.20.253.254 num-packets 100
+! tos 5
+! tag Rennes1 -> Valenciennes
+!rtr schedule 203 start-time now life forever
+!rtr 204
+! type jitter dest-ipaddr 193.50.20.78 dest-port 65005 source-ipaddr 129.20.253.254 num-packets 100
+! tos 5
+! tag Rennes1 -> Rap
+!rtr schedule 204 start-time now life forever
+
+
+! =======
+! Console
+! =======
+line con 0
+ stopbits 1
+line aux 0
+ stopbits 1
+line vty 0 5
+ access-class 80 in
+ exec-timeout 480 0
+ password 7 020807484B565D72
+ login
+
+
+end
+

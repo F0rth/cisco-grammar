@@ -67,7 +67,7 @@ class Acl
 # @intersec_array tableau des intersestions
 #
 
-	attr_accessor :action, :predicat, :coeff_correl, :binary_array_correl, :intersec_array
+	attr_accessor :action, :predicat
 
 	def match(acl)
 	end
@@ -104,19 +104,51 @@ class Packet
 	def initialize(predicat)
 		@predicat = predicat
 		if @next_hop.nil?
-			@next_hop = @predicat.ip_dst
+			@next_hop = @predicat.ip_dst.to_cidr
 		end
 	end
 end
 
 class Predicat
-	attr_accessor :protocol, :ip_src, :prt_dst, :ip_dst, :prt_src
+	attr_accessor :protocol, :ip_src, :prt_dst, :ip_dst, :prt_src, :coeff_correl, :binary_array_correl, :intersec_array
+	
+	def initialize(ip_src, prt_dst, ip_dst, prt_src)
+		@ip_src = IPAddr.new ip_src
+		@ip_dst = IPAddr.new ip_dst
+		
+		if prt_src == "any" 
+			@prt_src=(0..65535)
+		else 
+			@prt_src = prt_src
+		end
+		
+		if prt_dst == "any"
+			@prt_dst = (0..65535)
+		else 
+			@prt_dst = prt_dst
+		end
+		
+	end
+	
+	def coeff_correl(other)
+		self.instance_variables.each_index {|index|
+			attribut = self.instance_variables[index]
+			correl = self.instance_variable_get(attribut).intersec? other.instance_variable_get(attribut)
+			p correl
+			@intersec_array[index] = correl
+			if !correl.nil?
+				@binary_array_correl[index] = 1
+			end
+		}
+		@coeff_correl = @binary_array_correl.to_i
+	end		
+		
+		
+
 end
 
 
-predi = Predicat.new
-predi.ip_src = "192.168.1.5/32"
-predi.ip_dst = "192.168.6.61/32"
+predi = Predicat.new("192.168.1.5/32", "any", "192.168.6.61/32", "any")
 
 pac = Packet.new(predi)
 
@@ -151,5 +183,7 @@ p pac.if_out
 p pac.next_hop
 p rou.routing_table
 p rou.decision_tree.show_nodes
+
+p predi.coeff_correl(Predicat.new("192.168.1.5/32", "10", "192.168.6.61/32", "10"))
 
 

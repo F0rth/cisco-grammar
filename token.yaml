@@ -1,0 +1,4 @@
+---
+- ip route
+- interface
+- ip access-list extended

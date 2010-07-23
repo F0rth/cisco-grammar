@@ -1,0 +1,35 @@
+#ios.treetop
+require 'ip'
+
+grammar Ip_route
+	include IP
+
+	rule route_ipv4
+	 espace? 'ip route' espace? source espace? mask espace? gateway espace? comment eol?
+	end
+	
+	rule espace
+		[" "]*
+	end
+
+	rule source
+	 IPv4address
+	end
+
+	rule mask
+	 IPv4address
+	end
+
+	rule gateway
+	 IPv4address / 'Null0'
+	end
+	
+	rule comment
+	  '!'? espace [^\x0A]*
+	end
+
+	rule eol
+	 [\x0A]
+	end
+
+end
