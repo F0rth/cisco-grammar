@@ -4,8 +4,12 @@ grammar Pix_object_group_network
 	
 	include IP
 
+	rule root
+		object / object
+	end
+	
 	rule object
-		espace? 'network-object' espace network_range espace? eol?
+		espace 'network-object' espace network_range espace? eol?
 	end
 	
 	rule network_object
