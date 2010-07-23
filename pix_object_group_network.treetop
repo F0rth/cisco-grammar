@@ -5,7 +5,7 @@ grammar Pix_object_group_network
 	include IP
 	
 	rule object
-		espace? 'network-object' espace network_range espace? eol?
+		espace? 'network-object' espace? network_range espace? eol?
 	end
 	
 	
@@ -15,7 +15,7 @@ grammar Pix_object_group_network
 	
 	
 	rule network_range
-	 ip_address espace mask
+	 ip_address espace? mask
 	end
 	
 	rule mask
@@ -24,7 +24,7 @@ grammar Pix_object_group_network
 
 
 	rule eol
-	 [\x0D] [\x0A]
+	 [\x0D]*  [\x0A]* [\x0D]*
 	end
 	
 	rule espace
