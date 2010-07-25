@@ -9,7 +9,7 @@ grammar Pix_acl
 	end
 	
 	rule acl
-	 espace? 'access-list' espace? acl_name espace? 'extended' espace? action espace? proto espace? source_ip espace? source_port espace? destination_ip espace? destination_port espace? status espace? eol?
+	 espace? 'access-list' espace? acl_name espace? 'extended' espace? action espace? proto espace? source_ip espace? source_port espace? destination_ip espace? destination_port espace? log espace? status espace? eol?
 	end
 	
 	rule acl_name
@@ -21,11 +21,11 @@ grammar Pix_acl
 	end
 	
 	rule proto
-	 'tcp' / 'udp' / 'esp' / 'ip' / 'icmp' / 'igmp' / 'any'
+	 'any' / 'tcp' / 'udp' / 'esp' / 'ip' / 'icmp' / 'igmp' / 'gre'
 	end
 	
 	rule source_ip
-	single_host / network_range / object_group / 'any'
+		'any' / object_group / single_host / network_range
 	end
 	
 # attention si 'echo' en premier, ne match jamaie 'echo-reply' ensuite
@@ -39,11 +39,11 @@ grammar Pix_acl
 	end
 	
 	rule single_host
-	 'host' espace ip_address
+	 'host' espace ( ip_address / alias )
 	end
 	
 	rule network_range
-	 ip_address espace mask
+	 ( ip_address / alias ) espace mask
 	end
 	
 	rule mask
@@ -56,11 +56,15 @@ grammar Pix_acl
 	
 	
 	rule source_port
-	 single_port / port_range / icmp / other / ''
+	 single_port / port_range / icmp / other / object_group / ''
 	end
 	
 	rule other
-		'ack' / 'log'
+		'ack'
+	end
+	
+	rule log
+		'log' espace? text? / ''
 	end
 	
 	rule destination_port
@@ -69,7 +73,7 @@ grammar Pix_acl
 	
 	
 	rule single_port
-	 ('eq' / 'gt') espace ( port_number / port_name / object_group )
+	 ('eq' / 'gt') espace ( port_number / port_name )
 	end
 	
 	rule port_range
@@ -81,7 +85,7 @@ grammar Pix_acl
 	end
 	
 	rule port_name
-		text
+		[0-9a-zA-Z\-\_\.]+
 	end
 	
 	rule alias
@@ -89,7 +93,7 @@ grammar Pix_acl
 	end
 	
 	rule text
-	 [0-9a-zA-Z\-\_]+
+	 [0-9a-zA-Z\-\_\.]+ 
 	end
 	
 	rule status

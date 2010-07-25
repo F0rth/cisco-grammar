@@ -23,7 +23,7 @@ class Parser
 		@config.each_index {|index|
 			scan = StringScanner.new(@config[index])
 			if scan.scan(token_regexp) == @token 
-				@tokens_list.update({index => @config[index]})
+				@tokens_list.update({index+1 => @config[index]})
 			end
 		}
 	end
@@ -63,7 +63,6 @@ class Parser
 	
 	def use_grammar_on(an_array)
 		an_array.each_pair {|key, value|
-		p value
 		result = @parser.parse(value)
 		values = Hash.new
 		result.singleton_methods.each {|method| 
@@ -105,7 +104,7 @@ end
 z = Parser.new
 z.token = "access-list"
 z.find_lines
-pp z.tokens_list[1701]
+#pp z.tokens_list[1701]
 #z.tokens_list.each{|token|
 #z.token_instruction = token
 #z.token_instruction = z.tokens_list[1]
@@ -115,15 +114,20 @@ pp z.tokens_list[1701]
 #z.find_grammar
 z.grammar = "pix_acl"
 z.load_grammar
-z.use_grammar_on({1701 => z.tokens_list[1701]})
+z.use_grammar_on(z.tokens_list)
+#z.use_grammar_on({1899 => z.tokens_list[1899]})
 #z.grammar = "pix_acl"
 #z.load_grammar
 #z.token_instruction = z.tokens_list[4]
 #p z.token_instruction_subconf
 #z.use_grammar_on(z.token_instruction_subconf) 
-z.grammar_fail
-
-pp z.parsed_hashes
+#z.grammar_fail
+#pp z.parsed_hashes
+z.parsed_hashes.each_pair{|key, value|
+	if value.empty? and !z.tokens_list[key].include? "remark"
+		pp key.to_s + ' ' + z.tokens_list[key]
+	end
+}
 
 
 
