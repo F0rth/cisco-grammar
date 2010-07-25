@@ -4,11 +4,31 @@ require 'storage'
 
 
 
-#s = Storage.new('pix.tct')
+s = Storage.new('pix.tct')
 
 z = Parser.new
+z.config = IO.readlines("Stage-SSI-pix525")
 z.token = "access-list"
 z.find_lines
+z.grammar = "pix_acl"
+z.load_grammar
+z.use_grammar_on(z.tokens_list)
+
+
+@temp1 = Hash.new
+
+z.parsed_hashes.each_pair{|key, value|
+	@temp1.update({"index" => key})
+	value.each_pair{|key2, value2|
+		@temp1.update({key2 => value2})
+		}
+		@temp1.update({'type' => 'acl'})
+		@temp1.update({'time' => Time.now.to_i})
+		@temp1.update({'file' => ARGV[0]})
+		@temp1.update({'equipment' => 'pix'})
+	s.add(@temp1)
+	}
+
 #pp z.tokens_list[1701]
 #z.tokens_list.each{|token|
 #z.token_instruction = token
@@ -17,9 +37,7 @@ z.find_lines
 #z.find_token_instruction_subconf
 #pp z.token_instruction_subconf
 #z.find_grammar
-z.grammar = "pix_acl"
-z.load_grammar
-z.use_grammar_on(z.tokens_list)
+
 #z.use_grammar_on({1899 => z.tokens_list[1899]})
 #z.grammar = "pix_acl"
 #z.load_grammar
@@ -28,12 +46,12 @@ z.use_grammar_on(z.tokens_list)
 #z.use_grammar_on(z.token_instruction_subconf) 
 #z.grammar_fail
 #pp z.parsed_hashes
-z.parsed_hashes.each_pair{|key, value|
+#z.parsed_hashes.each_pair{|key, value|
 #	if value.empty? and !z.tokens_list[key].include? "remark"
-	if value.empty? 
-		pp key.to_s + ' ' + z.tokens_list[key]
-	end
-}
+#	if value.empty? 
+#		pp key.to_s + ' ' + z.tokens_list[key]
+#	end
+#}
 
 
 

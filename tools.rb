@@ -2,6 +2,11 @@ require 'ipaddr'
 require 'matrix'
 
 module Tools
+	def begin_with_a_space(a_string)
+		s = StringScanner.new(a_string)
+		return s.getch == " "
+	end
+
 # http://groups.google.com/group/comp.lang.ruby/browse_thread/thread/a8e4e2e860db9c45
 # transforme un entier en tableau de bits
 module IntegerExtensions

@@ -4,8 +4,11 @@ require 'pp'
 require 'rubygems'
 require 'treetop'
 #require 'storage'
+require 'tools'
 
 class Parser
+
+	include Tools
 
 	attr_accessor :config, :token, :tokens_list, :parsed_hashes, :token_instruction, :token_instruction_subconf, :index, :grammar
 	@parser
@@ -39,7 +42,7 @@ class Parser
 						pointer +=1
 							token_regexp = Regexp.new(@token)
 							scan2 = StringScanner.new(@config[pointer])
-							until scan2.scan(token_regexp) == @token or @config[pointer].include? "!" do
+							until scan2.scan(token_regexp) == @token or @config[pointer].include? "!" or not begin_with_a_space(@config[pointer]) do
 							@token_instruction_subconf.update({pointer+1 => @config[pointer]})
 							pointer += 1
 							scan2 = StringScanner.new(@config[pointer])
@@ -102,33 +105,33 @@ end
 #s = Storage.new('pix.tct')
 
 z = Parser.new
-z.token = "access-list"
+z.token = "object-group network"
 z.find_lines
 #pp z.tokens_list[1701]
 #z.tokens_list.each{|token|
 #z.token_instruction = token
-#z.token_instruction = z.tokens_list[1]
+z.token_instruction = z.tokens_list[1262]
 #p z.token_instruction
-#z.find_token_instruction_subconf
+z.find_token_instruction_subconf
 #pp z.token_instruction_subconf
 #z.find_grammar
-z.grammar = "pix_acl"
-z.load_grammar
-z.use_grammar_on(z.tokens_list)
-#z.use_grammar_on({1899 => z.tokens_list[1899]})
 #z.grammar = "pix_acl"
 #z.load_grammar
-#z.token_instruction = z.tokens_list[4]
-#p z.token_instruction_subconf
-#z.use_grammar_on(z.token_instruction_subconf) 
-#z.grammar_fail
-#pp z.parsed_hashes
-z.parsed_hashes.each_pair{|key, value|
+#z.use_grammar_on(z.tokens_list)
+#z.use_grammar_on({1899 => z.tokens_list[1899]})
+z.grammar = "pix_object_group_network"
+z.load_grammar
+#z.token_instruction = z.tokens_list[3]
+p z.token_instruction_subconf
+z.use_grammar_on(z.token_instruction_subconf) 
+z.grammar_fail
+pp z.parsed_hashes
+#z.parsed_hashes.each_pair{|key, value|
 #	if value.empty? and !z.tokens_list[key].include? "remark"
-	if value.empty? 
-		pp key.to_s + ' ' + z.tokens_list[key]
-	end
-}
+#	if value.empty? 
+#		pp key.to_s + ' ' + z.tokens_list[key]
+#	end
+#}
 
 
 

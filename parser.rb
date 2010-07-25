@@ -3,15 +3,18 @@ require 'yaml'
 require 'pp'
 require 'rubygems'
 require 'treetop'
+require 'tools'
 #require 'storage'
 
 class Parser
-
+		
+	include Tools
+	
 	attr_accessor :config, :token, :tokens_list, :parsed_hashes, :token_instruction, :token_instruction_subconf, :index, :grammar
 	@parser
 	
 	def initialize
-	@config = IO.readlines(ARGV[0])
+#	@config = IO.readlines(ARGV[0])
 	@tokens_list = Hash.new
 	@parsed_hashes = Hash.new
 	@token_instruction_subconf = Hash.new
@@ -39,7 +42,7 @@ class Parser
 						pointer +=1
 							token_regexp = Regexp.new(@token)
 							scan2 = StringScanner.new(@config[pointer])
-							until scan2.scan(token_regexp) == @token or @config[pointer].include? "!" do
+							until scan2.scan(token_regexp) == @token or @config[pointer].include? "!" or not begin_with_a_space(@config[pointer]) do
 							@token_instruction_subconf.update({pointer+1 => @config[pointer]})
 							pointer += 1
 							scan2 = StringScanner.new(@config[pointer])
@@ -92,67 +95,5 @@ class Parser
 		end	
 		}
 	end
-		
-
+	
 end
-
-
-
-
-#s = Storage.new('pix.tct')
-
-z = Parser.new
-z.token = "access-list"
-z.find_lines
-#pp z.tokens_list[1701]
-#z.tokens_list.each{|token|
-#z.token_instruction = token
-#z.token_instruction = z.tokens_list[1]
-#p z.token_instruction
-#z.find_token_instruction_subconf
-#pp z.token_instruction_subconf
-#z.find_grammar
-z.grammar = "pix_acl"
-z.load_grammar
-z.use_grammar_on(z.tokens_list)
-#z.use_grammar_on({1899 => z.tokens_list[1899]})
-#z.grammar = "pix_acl"
-#z.load_grammar
-#z.token_instruction = z.tokens_list[4]
-#p z.token_instruction_subconf
-#z.use_grammar_on(z.token_instruction_subconf) 
-#z.grammar_fail
-#pp z.parsed_hashes
-z.parsed_hashes.each_pair{|key, value|
-#	if value.empty? and !z.tokens_list[key].include? "remark"
-	if value.empty? 
-		pp key.to_s + ' ' + z.tokens_list[key]
-	end
-}
-
-
-
-#@temp1 = Hash.new
-
-#z.parsed_hashes.each_pair{|key, value|
-#	@temp1.update({"index" => key})
-#	value.each_pair{|key2, value2|
-#		@temp1.update({key2 => value2})
-#		}
-#		@temp1.update({'parent' => z.token_instruction})
-#		@temp1.update({'type' => 'acl'})
-#		@temp1.update({'time' => Time.now.to_i})
-#		@temp1.update({'file' => ARGV[0]})
-#	s.add(@temp1)
-#	}
-
-
-
-#}
-#  pp s.db.query { |q|
-#   q.add_condition 'type', :equals, 'acl'
-#    q.order_by 'destination_ip'
-#}
-#s.db.close
-
-
