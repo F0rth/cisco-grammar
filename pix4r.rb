@@ -63,6 +63,7 @@ class Parser
 	
 	def use_grammar_on(an_array)
 		an_array.each_pair {|key, value|
+		p value
 		result = @parser.parse(value)
 		values = Hash.new
 		result.singleton_methods.each {|method| 
@@ -104,7 +105,7 @@ end
 z = Parser.new
 z.token = "access-list"
 z.find_lines
-pp z.tokens_list
+pp z.tokens_list[1701]
 #z.tokens_list.each{|token|
 #z.token_instruction = token
 #z.token_instruction = z.tokens_list[1]
@@ -114,15 +115,15 @@ pp z.tokens_list
 #z.find_grammar
 z.grammar = "pix_acl"
 z.load_grammar
-z.use_grammar_on(z.tokens_list[2])
+z.use_grammar_on({1701 => z.tokens_list[1701]})
 #z.grammar = "pix_acl"
 #z.load_grammar
 #z.token_instruction = z.tokens_list[4]
 #p z.token_instruction_subconf
 #z.use_grammar_on(z.token_instruction_subconf) 
-#z.grammar_fail
+z.grammar_fail
 
-#pp z.parsed_hashes
+pp z.parsed_hashes
 
 
 

@@ -16,7 +16,7 @@ Treetop.load "pix_acl"
 parser = Pix_aclParser.new
 #input2 = IO.readlines(ARGV[0]).to_s
 #puts input2
-input = "access-list outside_acl_in extended permit tcp any object-group M-any-ssh eq ssh "
+input = "access-list outside_acl_in extended permit udp object-group M-syslogserver host 129.20.128.67 eq syslog \n"
 #puts input == input2
 result = parser.parse(input)
  #if parser.failure_reason
