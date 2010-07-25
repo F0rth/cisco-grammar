@@ -124,7 +124,8 @@ z.use_grammar_on(z.tokens_list)
 #z.grammar_fail
 #pp z.parsed_hashes
 z.parsed_hashes.each_pair{|key, value|
-	if value.empty? and !z.tokens_list[key].include? "remark"
+#	if value.empty? and !z.tokens_list[key].include? "remark"
+	if value.empty? 
 		pp key.to_s + ' ' + z.tokens_list[key]
 	end
 }
