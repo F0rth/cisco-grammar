@@ -12,7 +12,7 @@ class Parser
 	
 	def initialize
 	@config = IO.readlines(ARGV[0])
-	@tokens_list = Array.new
+	@tokens_list = Hash.new
 	@parsed_hashes = Hash.new
 	@token_instruction_subconf = Hash.new
 	
@@ -23,7 +23,7 @@ class Parser
 		@config.each_index {|index|
 			scan = StringScanner.new(@config[index])
 			if scan.scan(token_regexp) == @token 
-				@tokens_list << @config[index]
+				@tokens_list.update({index => @config[index]})
 			end
 		}
 	end
