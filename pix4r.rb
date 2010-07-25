@@ -3,7 +3,7 @@ require 'yaml'
 require 'pp'
 require 'rubygems'
 require 'treetop'
-require 'storage'
+#require 'storage'
 
 class Parser
 
@@ -102,25 +102,27 @@ end
 #s = Storage.new('pix.tct')
 
 z = Parser.new
-z.token = "object-group network"
+z.token = "access-list"
 z.find_lines
+pp z.tokens_list
 #z.tokens_list.each{|token|
 #z.token_instruction = token
-z.token_instruction = z.tokens_list[7]
+#z.token_instruction = z.tokens_list[1]
 #p z.token_instruction
-z.find_token_instruction_subconf
-pp z.token_instruction_subconf
+#z.find_token_instruction_subconf
+#pp z.token_instruction_subconf
 #z.find_grammar
-#z.load_grammar
-#z.use_grammar_on(z.tokens_list[2])
-z.grammar = "pix_object_group_network"
+z.grammar = "pix_acl"
 z.load_grammar
+z.use_grammar_on(z.tokens_list[2])
+#z.grammar = "pix_acl"
+#z.load_grammar
 #z.token_instruction = z.tokens_list[4]
 #p z.token_instruction_subconf
-z.use_grammar_on(z.token_instruction_subconf) 
-z.grammar_fail
+#z.use_grammar_on(z.token_instruction_subconf) 
+#z.grammar_fail
 
-pp z.parsed_hashes
+#pp z.parsed_hashes
 
 
 

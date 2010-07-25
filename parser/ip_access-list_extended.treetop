@@ -1,0 +1,91 @@
+require 'ip'
+ 
+grammar Ip_access_list_extended
+
+	include IP
+	
+	rule ip_access_list_extended
+	 espace? 'ip access' '-' 'list extended' name espace? eol espace? acl_list espace? eol
+	end
+	
+	rule acl
+	 espace? action proto source_ip source_port? destination_ip destination_port? espace? eol
+	end
+	
+	rule acl_list
+	 acl / acl_list
+	end
+	
+	rule action
+	 'permit' / 'deny'
+	end
+	
+	rule proto
+	 'tcp' / 'udp' / 'esp' / 'ip' / 'icmp'
+	end
+	
+	rule single_host
+	 'host' espace? IPv4address
+	end
+	
+	rule network_range
+	 IPv4adress espace? mask
+	end
+	
+	rule mask
+	 IPv4adress
+	end
+	
+	rule source_ip
+	single_host / network_range / any
+	end
+	
+	rule destination_ip
+	 source
+	end
+	
+	
+	rule source_port
+	 single_port / port_range
+	end
+	
+	rule destination_port
+	 source_port
+	end
+	
+	
+	rule single_port
+	 ('eq' / 'gt') ( port_nomber / port_name )
+	end
+	
+	rule port_range
+	 'range' ( port_nomber / port_name ) ( port_nomber / port_name )
+	end
+	
+	rule port_number
+	 [0-9]*
+	end
+	
+	rule port_name
+	 [a-zA-Z]*
+	end
+	
+	rule name
+	 [a-zA-Z]*
+	end
+	
+	
+	
+	rule comment
+	  '!'? espace [^\x0A]*
+	end
+
+	rule eol
+	 [\x0A]
+	end
+	
+	rule espace
+	 [" "]*
+	end
+	
+end

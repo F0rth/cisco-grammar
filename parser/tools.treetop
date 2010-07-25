@@ -1,0 +1,17 @@
+#!/usr/bin/env tt
+
+grammar Tools
+	
+	rule comment
+	  '!'? espace [^\x0A]*
+	end
+
+	rule eol
+	 [\x0A]
+	end
+	
+	rule espace
+	 [" "]*
+	end
+	
+end

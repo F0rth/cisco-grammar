@@ -1,0 +1,38 @@
+
+grammar Pix_object_group_service
+	
+	
+	rule object
+		espace? 'port-object' espace? port_object espace? eol?
+	end
+	
+	rule port_object
+		 single_port / port_range
+	end
+	
+	
+	rule port_range
+	 'range' espace port espace port
+	end
+	
+ 	
+	rule single_port
+	 ('eq' / 'gt') espace port
+	end
+ 
+ 	rule port
+ 		text
+ 	end
+ 
+	rule text
+	 [0-9a-zA-Z\-\_]+
+	end
+
+	rule eol
+	 [\x0D]*  [\x0A]* [\x0D]*
+	end
+	
+	rule espace
+	 [" "]*
+	end
+end
