@@ -70,7 +70,7 @@ z2.tokens_list.each_pair{|key,value|
 	}
 
 z2.parsed_hashes.each_pair{|key, value|
-	@temp2.update({"parent" => value})
+	@temp2.update({'parent' => z2.parents_hash[key]})
 	@temp2.update({"index" => key})
 	value.each_pair{|key2, value2|
 		@temp2.update({key2 => value2})
@@ -107,7 +107,7 @@ z3.tokens_list.each_pair{|key,value|
 	}
 
 z3.parsed_hashes.each_pair{|key, value|
-	@temp3.update({"parent" => value})
+	@temp3.update({'parent' => z3.parents_hash[key]})
 	@temp3.update({"index" => key})
 	value.each_pair{|key2, value2|
 		@temp3.update({key2 => value2})
