@@ -4,21 +4,19 @@ require 'pp'
 require 'rubygems'
 require 'treetop'
 require 'tools'
-#require 'storage'
 
 class Parser
 		
 	include Tools
 	
-	attr_accessor :config, :token, :tokens_list, :parsed_hashes, :token_instruction, :token_instruction_subconf, :index, :grammar
+	attr_accessor :config, :token, :tokens_list, :parsed_hashes, :token_instruction, :token_instruction_subconf, :index, :grammar, :parents_hash
 	@parser
 	
 	def initialize
-#	@config = IO.readlines(ARGV[0])
 	@tokens_list = Hash.new
 	@parsed_hashes = Hash.new
 	@token_instruction_subconf = Hash.new
-	
+	@parents_hash = Hash.new
 	end
 	
 	def find_lines
@@ -44,6 +42,7 @@ class Parser
 							scan2 = StringScanner.new(@config[pointer])
 							until scan2.scan(token_regexp) == @token or @config[pointer].include? "!" or not begin_with_a_space(@config[pointer]) do
 							@token_instruction_subconf.update({pointer+1 => @config[pointer]})
+							@parents_hash.update({pointer+1 => @token_instruction})
 							pointer += 1
 							scan2 = StringScanner.new(@config[pointer])
 							end

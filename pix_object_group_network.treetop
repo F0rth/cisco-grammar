@@ -29,11 +29,11 @@ grammar Pix_object_group_network
  	end
  	
 	rule single_host
-	 'host' espace ip_address
+	 'host' espace ( ip_address / text )
 	end
  
 	rule text
-	 [0-9a-zA-Z\-\_]+
+	 [0-9a-zA-Z\-\_\.]+
 	end
 
 	rule eol

@@ -16,7 +16,7 @@ Treetop.load "pix_object_group_network"
 parser = Pix_object_group_networkParser.new
 #input2 = IO.readlines(ARGV[0]).to_s
 #puts input2
-input = " network-object 129.20.161.4 255.255.255.255\n"
+input = "network-object host hepatoRenINSERM\n"
 #puts input == input2
 result = parser.parse(input)
  #if parser.failure_reason

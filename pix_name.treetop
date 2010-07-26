@@ -9,7 +9,7 @@ grammar Pix_name
 	end
 		
 	rule alias
-	 [0-9a-zA-Z\-\_]+
+	 [0-9a-zA-Z\-\_\.]+
 	end
 	
 	rule ip_address
@@ -17,7 +17,7 @@ grammar Pix_name
 	end
 	
 	rule eol
-	 [\x0D] [\x0A]
+	 [\x0D]* [\x0A]* [\x0D]*
 	end
 	
 	rule espace

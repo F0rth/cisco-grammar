@@ -139,11 +139,17 @@ z.parsed_hashes.each_pair{|key, value|
 	}
 
 
+z.parsed_hashes.each_pair{|key, value|
+	if value.empty?
+		pp key.to_s + ' ' + z.token_instruction_subconf[key]
+	end
+	}
+
 
 }
-  pp s.db.query { |q|
-   q.add_condition 'type', :equals, 'acl'
-    q.order_by 'destination_ip'
-}
+ # pp s.db.query { |q|
+  # q.add_condition 'type', :equals, 'acl'
+  #  q.order_by 'destination_ip'
+#}
 s.db.close
 

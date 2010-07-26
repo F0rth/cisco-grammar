@@ -105,34 +105,50 @@ end
 #s = Storage.new('pix.tct')
 
 z = Parser.new
-z.token = "object-group network"
+z.token = "name"
 z.find_lines
-#pp z.tokens_list[1701]
-#z.tokens_list.each{|token|
-#z.token_instruction = token
-z.token_instruction = z.tokens_list[1262]
+pp z.tokens_list
+z.grammar = "pix_name"
+z.load_grammar
+#z.tokens_list.each_pair{|key,value|
+#z.token_instruction = value
+#z.token_instruction = z.tokens_list
 #p z.token_instruction
-z.find_token_instruction_subconf
+#z.find_token_instruction_subconf
 #pp z.token_instruction_subconf
 #z.find_grammar
 #z.grammar = "pix_acl"
 #z.load_grammar
-#z.use_grammar_on(z.tokens_list)
+z.use_grammar_on(z.tokens_list)
 #z.use_grammar_on({1899 => z.tokens_list[1899]})
-z.grammar = "pix_object_group_network"
-z.load_grammar
+#z.grammar = "pix_object_group_network"
+#z.load_grammar
 #z.token_instruction = z.tokens_list[3]
-p z.token_instruction_subconf
-z.use_grammar_on(z.token_instruction_subconf) 
-z.grammar_fail
-pp z.parsed_hashes
-#z.parsed_hashes.each_pair{|key, value|
-#	if value.empty? and !z.tokens_list[key].include? "remark"
-#	if value.empty? 
-#		pp key.to_s + ' ' + z.tokens_list[key]
-#	end
+#p z.token_instruction_subconf
+#z.token_instruction_subconf.each{|key,value|
+#z.use_grammar_on({key=>value}) 
+#}#pp z.parsed_hashes
+
 #}
 
+## DEBUG ACL
+z.grammar_fail
+pp z.parsed_hashes
+z.parsed_hashes.each_pair{|key, value|
+#	if value.empty? and !z.tokens_list[key].include? "remark"
+	if value.empty? 
+		pp key.to_s + ' ' + z.tokens_list[key]
+	end
+}
+
+## DEBUG ALIAS
+
+#z.parsed_hashes.each_pair{|key, value|
+#	if value.empty? and !z.token_instruction_subconf[key].include? "description"
+	#if value.empty? 
+#		pp key.to_s + ' ' + z.token_instruction_subconf[key]
+#	end
+#	}
 
 
 #@temp1 = Hash.new

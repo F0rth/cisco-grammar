@@ -16,7 +16,7 @@ Treetop.load "pix_object_group_service"
 parser = Pix_object_group_serviceParser.new
 #input2 = IO.readlines(ARGV[0]).to_s
 #puts input2
-input = " port-object eq www"
+input = "port-object range 16384 16403\n"
 #puts input == input2
 result = parser.parse(input)
  #if parser.failure_reason

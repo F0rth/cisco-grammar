@@ -1,10 +1,31 @@
 require 'ipaddr'
+require 'netaddr'
 require 'matrix'
 
 module Tools
 	def begin_with_a_space(a_string)
 		s = StringScanner.new(a_string)
 		return s.getch == " "
+	end
+	
+	def netmask_to_cidr(a_string)
+		# 255.255.255.0 => /24
+		return NetAddr.i_to_bits(NetAddr.ip_to_i(a_string).to_i)
+	end
+	
+	def addr_to_cidr
+		# 192.168.1.1 255.255.255.0 => 192.168.1.1/24
+		return NetAddr::CIDR.create('192.168.1.1 255.255.255.0').to_s
+	end
+	
+	def	netaddr_to_cidr(a_string)
+		# 129.20.0.0 0.0.255.255 = > 129.20.0.0/24
+		
+		ipaddr = a_string.split(' ')[0]
+		wmask = a_string.split(' ')[1]
+		mask =  NetAddr::CIDR.create(ipaddr, :WildcardMask => [wmask, true]).wildcard_mask
+		cidr_mask = self.netmask_to_cidr(mask)
+		return ipaddr + '/' + cidr_mask.to_s
 	end
 
 # http://groups.google.com/group/comp.lang.ruby/browse_thread/thread/a8e4e2e860db9c45
@@ -61,7 +82,6 @@ module IPAddrExtensions
 		self.to_s + '/' + self.netmask
 	end
 	
-	
 end
 
 module StringExtensions
@@ -72,6 +92,10 @@ module StringExtensions
 							['udp', 'udp', nil, 'udp']
 							]
 		values.intersec?(self,arg)
+	end
+	
+	def is_ip?(arg)
+		return IPAddr.new(arg).is_a?(IPAddr)
 	end
 end
 				 

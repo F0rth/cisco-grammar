@@ -3,11 +3,15 @@ grammar Pix_object_group_service
 	
 	
 	rule object
-		espace? 'port-object' espace? port_object espace? eol?
+		espace? service_object  espace? eol?
+	end
+	
+	rule service_object
+		port_object / group_object
 	end
 	
 	rule port_object
-		 single_port / port_range
+		'port-object' espace ( single_port / port_range )
 	end
 	
 	
@@ -23,7 +27,11 @@ grammar Pix_object_group_service
  	rule port
  		text
  	end
- 
+ 	
+ 	rule group_object
+ 		'group-object' espace text
+ 	end
+ 	
 	rule text
 	 [0-9a-zA-Z\-\_]+
 	end
