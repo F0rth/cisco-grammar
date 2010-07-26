@@ -21,21 +21,21 @@ module Translator
 			return 'any'
 		#contient "object-group"
 		elsif a_string.include?('object-group')
-			return '$' + a_string.gsub('object-group', '').strip.chomp
+			return '$' + a_string.gsub('object-group', '').strip.chomp.gsub('-','_')
 		elsif a_string.include?('host') 
 			if clean_string.is_ipv4?
 				# contient une ip numérique
 				return clean_string
 			else
 				# contient un alias
-				return '$' + clean_string
+				return '$' + clean_string.gsub('-','_')
 			end
 		
 		# contient un réseau
 		elsif splited_string[0].is_ipv4?
 			return addr_to_cidr(a_string)
 		else
-			return '$' + splited_string[0].strip + '/' + netmask_to_cidr(splited_string[1]).to_s
+			return '$' + splited_string[0].strip.gsub('-','_') + '/' + netmask_to_cidr(splited_string[1]).to_s
 		end
 	end
 	
