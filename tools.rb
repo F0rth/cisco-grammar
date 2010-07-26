@@ -13,9 +13,9 @@ module Tools
 		return NetAddr.i_to_bits(NetAddr.ip_to_i(a_string).to_i)
 	end
 	
-	def addr_to_cidr
+	def addr_to_cidr(a_string)
 		# 192.168.1.1 255.255.255.0 => 192.168.1.1/24
-		return NetAddr::CIDR.create('192.168.1.1 255.255.255.0').to_s
+		return NetAddr::CIDR.create(a_string).to_s
 	end
 	
 	def	netaddr_to_cidr(a_string)
@@ -94,8 +94,10 @@ module StringExtensions
 		values.intersec?(self,arg)
 	end
 	
-	def is_ip?(arg)
-		return IPAddr.new(arg).is_a?(IPAddr)
+	def is_ipv4?
+		rxp = Regexp.new('\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b')
+		mtch = rxp.match(self)
+		return !mtch.nil?
 	end
 end
 				 

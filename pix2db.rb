@@ -94,7 +94,7 @@ z2.parsed_hashes.each_pair{|key, value|
 
 
 
-z3.token = "object-group netwwork"
+z3.token = "object-group network"
 z3.find_lines
 z3.grammar = "pix_object_group_network"
 z3.load_grammar

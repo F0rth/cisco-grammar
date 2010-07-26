@@ -15,16 +15,15 @@ module Translator
 	
 	
 	def pix_addr_translate(a_string)	
+		splited_string = a_string.split(' ')
+		clean_string = a_string.gsub('host','').strip.chomp
 		if a_string == 'any'
 			return 'any'
 		#contient "object-group"
-		elsif a_string.include?('object_group')
+		elsif a_string.include?('object-group')
 			return '$' + a_string.gsub('object-group', '').strip.chomp
-		
-		
-		elsif a.string.include?('host')
-			clean_string = a_string.gsub('host','').strip.chomp
-			if clean_string.is_ip?
+		elsif a_string.include?('host') 
+			if clean_string.is_ipv4?
 				# contient une ip numérique
 				return clean_string
 			else
@@ -33,11 +32,10 @@ module Translator
 			end
 		
 		# contient un réseau
-		splited_string = a_string.split(' ')
-		elsif splited_string[0].is_ip?
+		elsif splited_string[0].is_ipv4?
 			return addr_to_cidr(a_string)
 		else
-			return '$' + splited_string[0].strip + netmask_to_cidr[1]
+			return '$' + splited_string[0].strip + '/' + netmask_to_cidr(splited_string[1]).to_s
 		end
 	end
 	

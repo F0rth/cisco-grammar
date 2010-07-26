@@ -83,15 +83,94 @@ ios_acl.each{|acl|
 ### FIN CISCO ACL ###
 
 
-### PIX NAMES ###
-
-s = Storage.new('pix.tct')
-
+## PIX NAMES ###
 pix_names = s.db.query { |q|
-			q.add_condition 'proto', :equals, 'icmp'
+			q.add_condition 'type', :equals, 'name'
 			q.order_by 'index'
 			}
-s.db.close
 
-pix_service.each{|name|
-	pf = 
+
+pix_names.each{|name|
+	pf = '$' + name['alias'].gsub('-','_') + ' = ' + name['ip_address']
+	pp pf
+}
+
+### PIX SERVICES ###
+
+# on récupère la liste des services 
+pix_services = s.db.query { |q|
+			q.add_condition 'type', :equals, 'service'
+			q.order_by 'index'
+			}
+
+@services_array = Array.new
+ pix_services.each{|service|
+@services_array += service.select{|k, v|
+	k == 'parent'
+	}
+}
+@services_array.flatten!.delete("parent")
+
+## traitements
+
+@services_array.uniq.each{|service_name|
+
+pf = '$' + service_name.split(' ')[2].gsub('-','_') + " = '{"
+
+service_children = s.db.query { |q|
+			q.add_condition 'type', :equals, 'service'
+			q.add_condition 'parent', :equals, service_name
+			q.order_by 'index'
+			}
+service_children.each{|child|
+	pf += pix_port_translate(child['service_object'].gsub('port-object ',''))
+	if service_children.index(child) < (service_children.length)-1
+		pf += ', '
+	end
+	}
+	pf += "}'"
+pp pf
+}
+
+### PIX NETWORK ###
+
+# on récupère la liste des type network
+pix_networks = s.db.query { |q|
+			q.add_condition 'type', :equals, 'network'
+			q.order_by 'index'
+			}
+
+@networks_array = Array.new
+ pix_networks.each{|network|
+@networks_array += network.select{|k, v|
+	k == 'parent'
+	}
+}
+@networks_array.flatten!.delete("parent")
+
+## traitements
+
+@networks_array.uniq.each{|network_name|
+
+pf = '$' + network_name.split(' ')[2].gsub('-','_') + " = '{"
+
+network_children = s.db.query { |q|
+			q.add_condition 'type', :equals, 'network'
+			q.add_condition 'parent', :equals, network_name
+			q.order_by 'index'
+			}
+
+network_children.each{|child|
+	pp child['network_object']
+	pf += pix_addr_translate(child['network_object'].gsub('port-object ',''))
+	if network_children.index(child) < (network_children.length)-1
+		pf += ', '
+	end
+	}
+	pf += "}'"
+pp pf
+}
+
+### PIX ACL ###
+
+
