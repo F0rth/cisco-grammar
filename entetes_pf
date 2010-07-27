@@ -1,0 +1,5 @@
+RENATER = "em0"
+VISIO = "em3"
+INTERNE = "em1"
+PUBLIC_UR1 = "em2"
+PUBLIC_CRU = "bnx1"

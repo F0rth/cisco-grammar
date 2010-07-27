@@ -87,7 +87,7 @@ grammar Ios_acl
 	end
 
 	rule eol
-	 [\x0D] [\x0A]
+	 [\x0D]* [\x0A]* [\x0D]*
 	end
 	
 	rule espace

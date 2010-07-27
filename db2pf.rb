@@ -14,8 +14,8 @@ s_pix = Storage.new('pix.tct')
 
 @interfaces = Hash.new
 ### CISCO
-@interfaces.update({'IPV4POINT6_IN' => 'in quick on $IPV4POINT6'})
-@interfaces.update({'IPV4POINT6_OUT' => 'out quick on $IPV4POINT6'})
+#@interfaces.update({'IPV4POINT6_IN' => 'in quick on $IPV4POINT6'})
+#@interfaces.update({'IPV4POINT6_OUT' => 'out quick on $IPV4POINT6'})
 @interfaces.update({'PUBLIC_CRU_OUT' => 'out quick on $PUBLIC_CRU'})
 @interfaces.update({'PUBLIC_UR1_OUT' => 'out quick on $PUBLIC_UR1'})
 @interfaces.update({'RENATER_IN' => 'in quick on $RENATER'})
@@ -23,10 +23,10 @@ s_pix = Storage.new('pix.tct')
 @interfaces.update({'VISIO_IN' => 'in quick on $VISIO'})
 @interfaces.update({'VISIO_OUT' => 'out quick on $VISIO'})
 ### PIX
-@interfaces.update({"DMZ-PIX_access_in" => "in quick on $DMZ-PIX"})
-@interfaces.update({"FO-PIX_access_in" => "in quick on $FO-PIX"})
-@interfaces.update({"captacl" => "quick on $CAPTACL"})
-@interfaces.update({"http-mss-list1" => "quick on $HTTP-MSS-LIST1"})
+#@interfaces.update({"DMZ-PIX_access_in" => "in quick on $DMZ-PIX"})
+#@interfaces.update({"FO-PIX_access_in" => "in quick on $FO-PIX"})
+#@interfaces.update({"captacl" => "quick on $CAPTACL"})
+#@interfaces.update({"http-mss-list1" => "quick on $HTTP-MSS-LIST1"})
 @interfaces.update({"inside_access_in" => "in quick on $INTERNE"})
 @interfaces.update({"outside_acl_in" => "out quick on $INTERNE"})
 
@@ -36,12 +36,12 @@ s_pix = Storage.new('pix.tct')
 @action.update({'deny' => 'block'})
 
 @icmp_table = Hash.new
-@icmp_table.update({'echo-reply' =>'icmp-type echorep'})
-@icmp_table.update({'echo' =>'icmp-type echoreq'})
-@icmp_table.update({'time-exceeded' =>'icmp-type timex'})
-@icmp_table.update({'packet-too-big' =>'icmp-type redir code needfrag'})
-@icmp_table.update({'traceroute' =>'icmp-type trace'})
-@icmp_table.update({'unreachable' =>'icmp-type echorep code net-unr'})
+@icmp_table.update({'echo-reply' =>'icmp-type 0'})
+@icmp_table.update({'echo' =>'icmp-type 8'})
+@icmp_table.update({'time-exceeded' =>'icmp-type 11'})
+@icmp_table.update({'packet-too-big' =>'icmp-type 3 code 4'})
+@icmp_table.update({'traceroute' =>'icmp-type 30'})
+@icmp_table.update({'unreachable' =>'icmp-type 3 code 0'})
 
 
 #@prototype.update({'tcp' =>
@@ -49,10 +49,10 @@ s_pix = Storage.new('pix.tct')
 #@prototype.update({'esp'
 #@prototype.update({'ip'
 #@prototype.update({'icmp'
-##@prototype.update({'igmp'
+#@prototype.update({'igmp'
 #@prototype.update({'any'
 
-
+@pf_pix_names = String.new
 
 ## PIX NAMES ###
 pix_names = s_pix.db.query { |q|
@@ -62,8 +62,9 @@ pix_names = s_pix.db.query { |q|
 
 
 pix_names.each{|name|
-	pf = name['alias'].gsub('-','_').chomp + ' = ' + name['ip_address'].chomp
+	pf = name['alias'].gsub('-','_').gsub('.','_').chomp + ' = ' + name['ip_address'].chomp
 	@file.puts pf
+	@pf_pix_names += pf
 }
 
 ### PIX SERVICES ###
@@ -86,7 +87,7 @@ pix_services = s_pix.db.query { |q|
 
 @services_array.uniq.each{|service_name|
 
-pf = service_name.split(' ')[2].gsub('-','_') + " = '{"
+pf = service_name.split(' ')[2].gsub('-','_') + ' = "{" '
 
 service_children = s_pix.db.query { |q|
 			q.add_condition 'type', :equals, 'service'
@@ -95,11 +96,12 @@ service_children = s_pix.db.query { |q|
 			}
 service_children.each{|child|
 	pf += pix_port_translate(child['service_object'].gsub('port-object ',''))
-	if service_children.index(child) < (service_children.length)-1
-		pf += ', '
-	end
+	#if service_children.index(child) < (service_children.length)-1
+		#pf += ', '
+		pf += ' '
+	#end
 	}
-	pf += "}'"
+	pf += ' "}" '
 @file.puts pf
 }
 
@@ -123,7 +125,7 @@ pix_networks = s_pix.db.query { |q|
 
 @networks_array.uniq.each{|network_name|
 
-pf = network_name.split(' ')[2].gsub('-','_') + " = '{"
+pf = network_name.split(' ')[2].gsub('-','_') + ' = "{" '
 
 network_children = s_pix.db.query { |q|
 			q.add_condition 'type', :equals, 'network'
@@ -132,13 +134,22 @@ network_children = s_pix.db.query { |q|
 			}
 
 network_children.each{|child|
-	#pp child['network_object']
-	pf += pix_addr_translate(child['network_object'].gsub('port-object ',''))
-	if network_children.index(child) < (network_children.length)-1
-		pf += ', '
+	# on met entre "" le / du cidr
+	
+	addr = pix_addr_translate(child['network_object'].gsub('port-object ','')).split('/')
+
+	if addr.length == 2
+		 pf += addr[0] + ' "/' + addr[1] + '"'
+	else
+		pf += pix_addr_translate(child['network_object'].gsub('port-object ',''))
+
 	end
+	#if network_children.index(child) < (network_children.length)-1
+		#pf += ', ' EVIL
+		pf += ' '
+	#end
 	}
-	pf += "}'"
+	pf += ' "}"'
 @file.puts pf
 }
 
@@ -149,11 +160,23 @@ ios_acl = s_ios.db.query { |q|
 
 ios_acl.each{|acl|
 	
-	pf = @action[acl['action']] + ' ' + @interfaces[acl['parent'].split(' ')[3]]
+	
+	
+	if @interfaces.key? acl['parent'].split(' ')[3] 
+		then begin
+		pf = @action[acl['action']] 
+		
+		pf += ' ' + @interfaces[acl['parent'].split(' ')[3]]
+	
+	if acl['proto'] == 'icmp'
+		pf += ' ' + 'inet'
+	end
 	
 	if acl['proto'] != 'ip'
 		pf += ' ' + 'proto'  + ' ' + acl['proto']
 	end
+	
+
 	
 	pf += ' ' + 'from' + ' ' + ios_addr_translate(acl['source_ip'])
 	
@@ -167,17 +190,21 @@ ios_acl.each{|acl|
 	
 	
 	if acl['destination_port'] == "ack"
-		pf += ' ' + 'port' + ' ' + 'ack'
+		# pf += ' ' + 'port' + ' ' + 'ack'
 	
 	elsif acl['proto'] == "icmp" and acl['destination_port'] != ""
 		pf +=  ' ' + @icmp_table[acl['destination_port']]
 	elsif  acl['destination_port'] != "" and acl['destination_port'] != "log"
 		pf += ' ' + 'port' + ' ' + ios_port_translate(acl['destination_port'])
 	end
+		end
 	
+	end
 	# debug de la traduction
 	#pp acl
+	if not pf.nil?
 	@file.puts pf
+	end
 }
 
 
@@ -191,7 +218,17 @@ pix_acl = s_pix.db.query { |q|
 			
 pix_acl.each{|acl|
 	
-	pf = @action[acl['action']] + ' ' + @interfaces[acl['acl_name']]
+	 
+	
+	if @interfaces.key? acl['acl_name'] and not acl['status'] == "inactive"
+		then begin
+		pf = @action[acl['action']]
+		
+		pf += ' ' + @interfaces[acl['acl_name']]
+	
+	if acl['proto'] == 'icmp'
+		pf += ' ' + 'inet'
+	end
 	
 	if acl['proto'] != 'ip'
 		pf += ' ' + 'proto'  + ' ' + acl['proto']
@@ -209,7 +246,7 @@ pix_acl.each{|acl|
 	
 	
 	if acl['destination_port'] == "ack"
-		pf += ' ' + 'port' + ' ' + 'ack'
+		# pf += ' ' + 'port' + ' ' + 'ack'
 	
 	elsif acl['proto'] == "icmp" and acl['destination_port'] != ""
 		pf +=  ' ' + @icmp_table[acl['destination_port']]
@@ -217,9 +254,15 @@ pix_acl.each{|acl|
 		pf += ' ' + 'port' + ' ' + pix_port_translate(acl['destination_port'])
 	end
 	
+	end	
+	
+	end
+	
 	# debug de la traduction
 	#pp acl
+	if not pf.nil?
 	@file.puts pf
+	end
 }
 
 s_ios.db.close

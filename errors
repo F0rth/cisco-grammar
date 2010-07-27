@@ -1,0 +1,110 @@
+./pf_de_test.conf:522: macro 'IPV4POINT6' not defined
+./pf_de_test.conf:522: syntax error
+./pf_de_test.conf:547: unknown port ack
+./pf_de_test.conf:574: unknown icmp-code needfrag
+./pf_de_test.conf:576: unknown icmp-code net-unr
+./pf_de_test.conf:649: unknown port ack
+./pf_de_test.conf:838: unknown icmp-code needfrag
+./pf_de_test.conf:840: unknown icmp-code net-unr
+./pf_de_test.conf:847: unknown port netbios-ss
+./pf_de_test.conf:851: unknown port netbios-ss
+./pf_de_test.conf:932: unknown port netbios-ss
+./pf_de_test.conf:970: unknown port ack
+./pf_de_test.conf:973: unknown port netbios-ss
+./pf_de_test.conf:982: unknown port ack
+./pf_de_test.conf:1005: unknown port pcanywhere-data
+./pf_de_test.conf:1028: syntax error
+./pf_de_test.conf:1038: unknown icmp-code net-unr
+./pf_de_test.conf:1044: syntax error
+./pf_de_test.conf:1051: syntax error
+./pf_de_test.conf:1056: syntax error
+./pf_de_test.conf:1065: unknown port imap4
+./pf_de_test.conf:1066: unknown port imap4
+./pf_de_test.conf:1072: syntax error
+./pf_de_test.conf:1092: unknown icmp-code net-unr
+no IP address found for serv_gm.cachan
+./pf_de_test.conf:1094: could not parse host specification
+no IP address found for ar.gbba.usb.ve
+./pf_de_test.conf:1098: could not parse host specification
+./pf_de_test.conf:1116: unknown port h323
+./pf_de_test.conf:1117: unknown port h323
+./pf_de_test.conf:1118: unknown port h323
+./pf_de_test.conf:1121: macro 'csd_ext' not defined
+./pf_de_test.conf:1121: syntax error
+./pf_de_test.conf:1122: macro 'M_T' not defined
+./pf_de_test.conf:1126: macro 'www' not defined
+./pf_de_test.conf:1126: syntax error
+./pf_de_test.conf:1130: unknown port h323
+./pf_de_test.conf:1131: unknown port h323
+./pf_de_test.conf:1136: unknown port pcanywhere-data
+./pf_de_test.conf:1144: macro 'gate' not defined
+./pf_de_test.conf:1144: syntax error
+./pf_de_test.conf:1152: syntax error
+./pf_de_test.conf:1168: syntax error
+./pf_de_test.conf:1173: syntax error
+./pf_de_test.conf:1174: syntax error
+./pf_de_test.conf:1175: syntax error
+./pf_de_test.conf:1176: unknown port sqlnet
+./pf_de_test.conf:1177: unknown port sqlnet
+./pf_de_test.conf:1178: syntax error
+./pf_de_test.conf:1181: unknown port sqlnet
+./pf_de_test.conf:1239: syntax error
+./pf_de_test.conf:1248: syntax error
+./pf_de_test.conf:1249: syntax error
+./pf_de_test.conf:1264: unknown port pcanywhere-data
+./pf_de_test.conf:1267: unknown port pcanywhere-data
+./pf_de_test.conf:1279: unknown port lpd
+./pf_de_test.conf:1280: unknown port imap4
+./pf_de_test.conf:1282: syntax error
+./pf_de_test.conf:1283: syntax error
+./pf_de_test.conf:1299: syntax error
+./pf_de_test.conf:1301: syntax error
+./pf_de_test.conf:1306: syntax error
+./pf_de_test.conf:1308: unknown port sqlnet
+./pf_de_test.conf:1310: syntax error
+./pf_de_test.conf:1314: syntax error
+./pf_de_test.conf:1316: syntax error
+./pf_de_test.conf:1317: unknown port imap4
+./pf_de_test.conf:1323: unknown port rsh
+./pf_de_test.conf:1340: syntax error
+./pf_de_test.conf:1347: syntax error
+./pf_de_test.conf:1354: unknown port h323
+./pf_de_test.conf:1359: syntax error
+./pf_de_test.conf:1365: unknown port lpd
+./pf_de_test.conf:1392: unknown port rsh
+./pf_de_test.conf:1398: syntax error
+./pf_de_test.conf:1402: unknown port rsh
+./pf_de_test.conf:1403: unknown port rsh
+./pf_de_test.conf:1404: unknown port lpd
+./pf_de_test.conf:1407: unknown port citrix-ica
+./pf_de_test.conf:1409: unknown port citrix-ica
+./pf_de_test.conf:1423: syntax error
+./pf_de_test.conf:1424: syntax error
+no IP address found for kar.gbba.usb.ve
+./pf_de_test.conf:1425: could not parse host specification
+no IP address found for wei.gbba.usb.ve
+./pf_de_test.conf:1426: could not parse host specification
+./pf_de_test.conf:1431: unknown port rsh
+./pf_de_test.conf:1432: unknown port lpd
+./pf_de_test.conf:1433: unknown port rsh
+./pf_de_test.conf:1434: unknown port rsh
+./pf_de_test.conf:1435: unknown port lpd
+./pf_de_test.conf:1436: unknown port rsh
+./pf_de_test.conf:1447: syntax error
+no IP address found for csd_ext.inist.fr
+./pf_de_test.conf:1448: could not parse host specification
+./pf_de_test.conf:1454: syntax error
+./pf_de_test.conf:1458: syntax error
+./pf_de_test.conf:1459: syntax error
+./pf_de_test.conf:1460: syntax error
+./pf_de_test.conf:1477: syntax error
+no IP address found for serv_gm.cachan
+./pf_de_test.conf:1486: could not parse host specification
+no IP address found for serv_gm.cachan
+./pf_de_test.conf:1487: could not parse host specification
+./pf_de_test.conf:1498: unknown port h323
+./pf_de_test.conf:1500: unknown port h323
+./pf_de_test.conf:1536: syntax error
+./pf_de_test.conf:1537: syntax error
+./pf_de_test.conf:1538: unknown port h323
+./pf_de_test.conf:1552: syntax error

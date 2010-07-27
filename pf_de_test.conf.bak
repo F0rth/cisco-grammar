@@ -1,0 +1,1569 @@
+RENATER = "em0"
+VISIO = "em3"
+INTERNE = "em1"
+PUBLIC_UR1 = "em2"
+PUBLIC_CRU = "bnx1"
+buckdannyUPARIS3 = 193.55.108.10
+wwwLextensoCom = 193.108.167.68
+nwtIopPublishCom = 193.131.119.1
+nwtIopPubshinCom = 193.131.119.3
+beowulfCsiUllEs = 193.145.100.161
+dxcalcLnfInfnIt = 193.206.84.36
+WANADOORENNES_1 = 193.250.83.0
+WANADOORENNES_2 = 193.250.27.0
+FontenayWANADOO = 193.251.4.31
+RennesWANADOO = 193.251.66.60
+hypophyse_157IRISA = 131.254.157.36
+wwwPagesJaunesCo = 193.252.242.142
+wwwPagesProCom = 193.252.242.160
+wwwEdpscienceCom = 194.2.231.150
+wwwEMATH = 194.2.231.153
+pc10CaesCNRS = 194.57.123.10
+linkSpringerDe = 194.94.42.41
+Retis = 194.98.180.44
+dirwdXs4allNl = 194.109.27.62
+labtechnoRenINRA = 194.167.73.70
+gdindonRenINRA = 194.167.74.214
+ipLexbase = 62.23.8.146
+deserableINSA = 194.199.184.172
+UNANTES = 194.214.59.0
+wwwCnamPAYSDLL = 194.214.232.115
+INSERM_CHR = 194.254.78.0
+hepatoRenINSERM = 194.254.78.100
+diumediaULILLE2 = 194.254.118.11
+pareFeuMinFinanc = 195.6.68.93
+fraiseUBO = 195.83.123.25
+epsilonUTC = 195.83.155.15
+CINES = 195.83.180.0
+wwwIndexpresse = 62.193.198.15
+reblochonAMUE = 195.83.191.20
+tipunchMtplrCPU = 195.83.191.35
+epoissesMtplrCPU = 195.83.191.104
+pcChbMtplrCPU = 195.83.191.217
+cacaoUBO = 195.83.247.36
+freewindUBO = 195.83.247.90
+CRU = 195.220.94.0
+CRU_INTERNE = 195.220.94.64
+homeCRU = 195.220.94.79
+citrixCRU = 195.220.94.92
+lnsThProxadNet = 81.56.219.41
+sparePkiCRU = 195.220.94.97
+listesCRU = 195.220.94.165
+wwwCRU = 195.220.94.166
+sourcesupCRU = 195.220.94.169
+secCRU = 195.220.94.180
+vpn1ACRENNES = 195.221.66.5
+racineACRENNES = 195.221.66.10
+escal1ACRENNES = 195.221.67.18
+icc120UCLERMONT = 195.221.122.120
+wIntrsciWileyCom = 208.215.179.82
+amsRiceEdu = 128.42.5.70
+wwwEbscoCom = 208.247.102.69
+wwwSocieteCom = 212.27.33.29
+tigerChemUwEduPl = 212.87.2.253
+RainPont = 212.234.68.18
+RainPasserelle = 212.234.68.19
+smtpLaposteNet = 213.30.181.11
+wAnnuLaposteNet = 81.80.188.145
+m14AdelaideEduAu = 129.127.98.14
+m196AdelaidEduAu = 129.127.98.196
+m129PlatfCompLSF = 192.219.104.129
+rocqrasINRIA = 128.93.1.111
+m130PlatfCompLSF = 192.219.104.130
+r1935028ENSSAT = 193.50.28.0
+r193CHR = 193.52.37.0
+OneSrchUkOclcOrg = 194.81.79.156
+s227iuem229UBO = 194.167.227.229
+r194ENSSAT = 194.254.124.0
+m37LiecUfscarBr = 200.136.226.37
+m110LiecUfscarBr = 200.136.226.110
+m111LiecUfscarBr = 200.136.226.111
+gateIntranodeCom = 212.234.62.11
+HeartUclaEdu = 128.97.89.198
+tandbergUROUEN = 195.220.138.40
+nonameIRISA = 131.254.52.52
+pandragonIRISA = 131.254.21.69
+titusINIST = 193.54.110.3
+kappaUTC = 195.83.155.100
+clustDfiUchileCl = 146.83.10.105
+heleneUBREST = 194.167.225.98
+lm2eUBREST = 194.167.225.95
+pchyper6INSAREN = 193.52.94.36
+biofluxUBREST = 194.167.225.88
+TUWIEN_AC_AT = 128.130.0.0
+posteSteAde = 81.255.59.1
+preside1UBS = 195.83.159.219
+mig194JouyINRA = 138.102.22.194
+kar.gbba.usb.ve = 159.90.168.41
+wei.gbba.usb.ve = 159.90.168.23
+cacheAngersINRA = 193.49.221.200
+soleilUVSQ = 193.51.24.1
+ancstoutINRA = 193.51.87.6
+brucherINH = 193.51.87.19
+symantecCom = 193.50.203.0
+wJnlsUchicagoEdu = 128.135.26.12
+KORNET_INFRA = 211.48.20.0
+pcLafMtplrCPU = 195.83.191.222
+pcAnlMtplrCPU = 195.83.191.238
+pcinterUVALENCiN = 193.50.193.6
+calvinENSEEIHT = 147.127.128.50
+hobbesENSEEIHT = 147.127.128.51
+crusoe.inria.fr = 138.96.90.41
+bionix.irisa.fr = 131.254.254.31
+naetapp2_assist = 213.62.115.178
+netappp1_assist = 213.62.115.177
+amsMUBielefeldDe = 129.70.14.32
+visio_brest = 193.54.252.179
+lolaIRISA = 131.254.50.31
+miniIRISA = 131.254.52.56
+parapluie = 131.254.70.24
+oumpapahIRISA = 131.254.52.61
+Adm_HIP4_DYNIX = 217.167.53.60
+Adm_HIP3_DYNIX = 217.167.53.59
+Adm_HIP2_DYNIX = 217.167.53.58
+Adm_HIP1_DYNIX = 193.50.202.68
+miranova = 131.254.10.57
+expasyUnigeCh = 129.194.96.23
+COBB2 = 212.234.71.246
+COBB1 = 212.234.71.245
+ilinux_rrbENSTB = 193.50.69.78
+fcnaENSTB = 193.52.74.102
+AdslPascalAubry = 81.56.142.118
+merIRISA = 131.254.50.55
+AdslVeroBiquand = 82.67.115.158
+AdslMoulKharoune = 81.56.139.38
+webopacUHB = 193.52.64.54
+tichkaUHB = 193.52.64.56
+RECHERCHE = 129.20.0.0
+ppp230TiscaliFr = 83.152.217.230
+rtAtlanticRF = 194.149.176.154
+webix.cnrs_imn = 193.52.97.16
+roc_vpn.inra = 192.93.1.113
+USTRASBOURG = 130.79.0.0
+afssaPloufragan = 81.255.204.130
+campanuleIRISA = 131.254.52.55
+rennes.inra.fr = 193.50.25.5
+netinary = 82.66.167.168
+vigieACRENNES = 195.221.67.51
+wwwNcbiNlmNihGo1 = 130.14.22.106
+visp_65.106 = 213.41.106.65
+atalantrf.dyn = 216.138.240.197
+new_vespaCRU = 195.220.94.161
+AdslArnaudDelay = 81.56.147.131
+gate.cru.fr = 195.220.94.33
+fradius.cru.fr = 195.220.94.186
+simppsFxPerUHB = 193.52.64.138
+pcCesMtplrAMUE = 195.83.191.223
+smtpIRISA = 131.254.254.26
+Renater147 = 193.49.159.147
+wwwNcbiNlmNihGo2 = 130.14.22.107
+rapideIRISA = 131.254.21.24
+zenIRISA = 131.254.21.5
+Archimed1 = 82.145.86.2
+Archimed2 = 82.233.190.148
+aspirineIRISA = 131.254.21.59
+marcharlIRISA = 131.254.21.47
+mult01EnsINSAREN = 193.52.95.64
+vpgirhaf_n_inria = 192.93.1.111
+pcFalentinINRA = 147.99.165.75
+lxFalentinINRA = 147.99.165.99
+CHEM1_NET = 130.37.144.0
+adm02INSAREN = 193.52.94.40
+smtps_ENST = 192.44.77.21
+usherb.ca = 132.210.221.1
+pc_cag_amue = 195.83.191.249
+pc_thp_amue = 195.83.191.230
+coquelicotIRISA = 131.254.51.56
+vpnulaval.ca = 132.203.244.151
+admin = 129.20.1.0
+irisIRISA = 131.254.250.3
+Adsl_Lyon = 82.225.63.106
+renassb1USTRASBG = 130.79.11.49
+pcPersoBStevant = 82.240.213.5
+test_dagorn = 82.234.174.154
+enoraIRISA = 131.254.11.193
+lagonIRISA = 131.254.11.194
+poppyIRISA = 131.254.11.189
+oceaniaIRISA = 131.254.11.181
+jessicaIRISA = 131.254.11.180
+fw1aThchUniBonnDE = 131.220.44.10
+renonculeIRISA = 131.254.11.190
+lilasIRISA = 131.254.11.195
+currifUSTRASBG = 130.79.130.84
+luke.sopragroup = 81.80.239.163
+AdslSocieteADE = 82.127.10.247
+AdslBenYahia = 85.68.22.86
+yannUnivParis4 = 195.220.117.60
+khaliliRennesINRA = 193.50.9.139
+bungalaAdmUHB = 193.49.222.247
+wismaelIRISA = 131.254.11.202
+SocitADE = 82.127.10.125
+IP_societe_ADE = 82.127.10.0
+SIIGStrasb. = 130.179.224.5
+wwwOupCoUk = 130.88.203.21
+serv_gm.cachan = 193.52.92.157
+point_etude1 = 217.128.81.11
+ARDARA_IETR = 82.67.109.82
+point_etude = 217.128.81.111
+inria = 131.254.231.0
+siigBenkirane2ST = 130.79.224.5
+siigSchwartz2ST = 130.79.224.30
+VPN_IRISA1 = 131.254.131.0
+VPN_IRISA2 = 131.254.132.0
+poit_etude2 = 193.251.184.50
+tcl9ErlangenDe = 131.188.123.109
+cnrslabintel2 = 193.48.104.61
+cnrslabintel1 = 193.55.87.53
+cassis_gwUBREST = 195.83.247.29
+luminyUMARSEILLE = 139.124.100.7
+mail2DcsWiscEdu = 144.92.139.13
+point_etude3 = 193.51.20.250
+point_etud4 = 81.53.131.102
+www.vrvs.org = 131.215.116.52
+reverseCmpltlNet = 83.145.111.40
+vrvs_parisRENAT = 193.51.182.217
+as1200ErlangenDe = 131.188.128.5
+vrvs_lyonRENAT = 193.51.183.190
+natSanteUNANTES = 193.52.115.162
+pcpersopriour = 82.67.109.74
+cnam_vnc1 = 194.214.232.185
+cnam_vnc2 = 194.214.232.182
+LEROY_PCIO = 193.52.39.208
+enst_brest = 192.44.76.192
+cse35_1 = 82.236.140.45
+frtlsvr1a.hydro = 212.157.97.209
+vlad.cnam.fr = 163.173.128.215
+jagAwUErlangenDe = 131.188.129.10
+EvodiaServiware = 87.90.88.88
+AdslPierreDeleporte = 62.147.175.111
+rennes2_2 = 193.49.222.0
+ipcopLinaUNANTES = 193.52.99.103
+oslv01HydroCom = 62.92.82.4
+thalamusIRISA = 131.254.41.80
+CRU_WIFI = 195.220.94.192
+ta_122IFREMER = 134.246.88.122
+clusterDfiUchileCL = 200.9.100.137
+maharetJUSSIEU = 134.157.173.82
+IRISA = 131.254.0.0
+renassUSTRASBG = 130.79.9.130
+thefroidUSTRASBG = 130.79.9.145
+rad1CRU = 195.220.94.129
+SteEtiam = 194.2.206.192
+serveur_ivisit = 82.67.191.163
+cnam_ivisit1 = 194.214.232.181
+cnam_ivisit2 = 194.214.232.184
+MoretBailly = 62.147.156.22
+ADSL2 = 64.0.0.0
+stagiairSymbiose = 147.8.183.231
+solutreIRISA = 131.254.13.40
+bacchusIRISA = 131.254.10.148
+INHanger = 147.99.116.176
+mailKappaFR = 62.212.99.50
+AdslEdfClamart = 82.234.15.26
+Thomas_Derrien = 82.242.133.151
+NAT_UnivNantes = 193.52.109.12
+inra_rennes = 194.254.140.238
+idm2IRISA = 131.254.12.187
+hypophyse_157IRISA = 131.254.157.36
+gw_roscoff = 193.52.39.1
+mowgliIRISA = 131.254.13.55
+frozone = 131.254.11.229
+jules = 131.254.11.201
+pfontaineARES = 83.206.23.225
+rebusCRU = 195.220.94.80
+futur_saCRU = 195.220.94.73
+tiareIRISA = 131.254.11.151
+esp29UNILIM = 164.81.70.29
+esp28UNILIM = 164.81.70.28
+loligoENS_LYON = 140.77.2.167
+mail2CecUchileCL = 200.9.100.13
+exponentielIRISA = 131.254.13.92
+AdslAntunes = 86.68.90.13
+logosapience = 82.127.82.132
+login_ng1.rc.sara7.nl = 145.100.29.219
+wwwINRA = 193.50.25.17
+puceronINRA = 193.50.25.20
+globeJcdecauxFR = 62.160.220.19
+CRU_PUBLIC = 195.220.94.128
+AdslVeroPrevet = 88.163.42.16
+idm2_157IRISA = 131.254.157.28
+hypophyseIRISA = 131.254.13.67
+microcosmeIRISA = 131.254.60.31
+catToulouseINRA = 147.99.96.240
+firewallProteome = 193.52.12.33
+medvisioUBREST = 195.83.245.36
+medvisioUNANTES = 195.83.33.2
+AdslJerome = 82.236.140.152
+parkinsonIRISA = 131.254.14.4
+Amue1 = 195.83.191.185
+Amue2 = 195.83.191.233
+Amue3 = 195.83.191.241
+soleilIRISA = 131.254.11.119
+pimRpIRISA = 131.254.180.5
+Ste_ipdiva = 193.251.20.107
+AdslCRI = 90.25.150.134
+wwwCivxOrg = 88.191.33.191
+apogeeUHB = 193.52.64.252
+depan3IRISA = 131.254.13.173
+irisAgro_Rennes = 147.99.160.13
+RussianBusinessN = 81.95.144.0
+ACRENNES = 195.221.67.0
+JRES = 233.8.211.0
+pix_515ACRENNES = 195.221.66.4
+w3extIRISA = 131.254.254.10
+playetpauseNerim = 213.41.173.179
+chronosCRU = 195.220.94.163
+crivideoUBREST = 195.83.247.208
+AdslOlGuillou = 82.231.149.208
+vitalit2UnilCH = 130.223.128.12
+zonebac1 = 85.17.221.2
+zonebac2 = 88.80.7.66
+patCostelFxUHB = 154.64.52.193
+patCostelFx_eUHB = 193.52.64.154
+inwicast = 82.243.147.101
+semt2SmtsCEA = 132.166.138.6
+pat.uhb.fr = 193.52.64.145
+vpnssl_fw.vpnssl.uhb.fr = 193.52.64.243
+c65n180.fx_per.uhb.fr = 193.52.65.180
+SVI_Solutions = 66.38.210.97
+Presid_Nantes = 193.52.112.0
+Sifac_admUBS = 194.167.195.0
+Sifac_admUHB = 193.52.64.157
+keemunUSTRASBG = 130.79.9.146
+seismeUSTRASBG = 130.79.9.147
+mx_testCRU = 195.220.94.140
+stlaurentUlavaCa = 132.203.14.29
+loginOscarAolCom = 64.12.0.0
+DMZ_PIX = 192.168.2.0
+AdslGuizouarn = 88.189.193.26
+blueAolCom = 205.188.153.0
+NotreAdslWanadoo = 80.13.223.191
+aguila.qi.ub.es = 161.116.75.24
+rad2EduroamFr = 130.79.200.23
+rad1EduroamFr = 193.51.182.121
+aventureIRISA = 131.254.10.23
+GeoscMontpellier = 162.38.142.0
+dhcp14164UlavaCa = 132.203.14.164
+hydrasaPoitiers1 = 195.220.223.243
+hydrasaPoitiers2 = 195.220.223.244
+AdslOctavioPena = 93.182.199.218
+csd_ext.inist.fr = 193.54.107.65
+AdslMarcZonzon = 78.242.40.2
+dhcp14169UlavaCa = 132.203.14.169
+CIVIL_MCGILL_CA = 132.206.0.0
+PcikImeNrcCa = 132.246.96.42
+wwwCistiNrcCa = 132.246.156.39
+StuttgartMpgDe = 134.105.152.159
+UNIV_LYON1 = 134.214.0.0
+nymphea1IFREMER = 134.246.166.6
+nymphea0IFREMER = 134.246.166.10
+sciDirectCom = 138.12.4.51
+wSciencDirectCom = 138.12.4.53
+mig200JouyINRA = 138.102.22.200
+gate1KnmiNl = 145.23.254.158
+wwwElsevierNl = 145.36.5.30
+OBSERV_MEUDON = 145.238.0.0
+gwVschtCz = 147.33.1.2
+amsImpaBr = 147.65.1.17
+ETUDIANTS = 148.60.0.0
+domfeCscsCh = 148.187.3.85
+serveurvpnLORIA = 152.81.144.40
+intlPnasOrg = 167.216.165.78
+pmolnaENSTB = 192.108.115.77
+caredisENSTB = 192.108.118.195
+brmeaProx1SunCOM = 192.18.98.62
+brmeaProx2SunCOM = 192.18.98.63
+brmeaProx3SunCOM = 192.18.98.64
+IDRIS160 = 192.54.160.0
+IDRIS161 = 192.54.161.0
+ojpsAipOrg = 192.58.150.35
+klymMpimBonnMpDe = 192.68.254.190
+wwwRennesINRA = 192.93.79.9
+servicesINIST = 192.93.250.53
+epubsSiamOrg = 192.108.225.3
+CAC_CHR = 193.49.40.0
+pcplardUANGERS = 193.49.146.33
+mach71UANGERS = 193.49.146.71
+titanInfoUANGERS = 193.49.146.121
+beaulieuRenINRA = 193.50.9.1
+cacheRenINRA = 193.50.25.11
+lerheuRenINRA = 193.50.25.18
+titanUVALENCiN = 193.50.192.38
+passerl1EPIXTECH = 193.50.202.100
+fredextEPIXTECH = 193.50.202.105
+liNtwforge2ENSAM = 193.51.48.147
+RESO_INCUBATEUR = 193.52.12.0
+PROTEOME_INNOVA = 193.52.12.32
+nacaratSdocABES = 193.52.26.1
+carminSdocABES = 193.52.26.5
+cramoisiSdocABES = 193.52.26.20
+bartROSCOFF = 193.52.39.23
+pc3InfoROSCOFF = 193.52.39.71
+homerROSCOFF = 193.52.39.101
+pc10ABES = 193.52.69.10
+cardioNtesINSERM = 193.52.115.30
+E33NantesINSERM = 193.52.118.24
+wwwMtdocUjfGRENO = 193.54.238.202
+klopToulouseINRA = 193.54.96.54
+medamphi4aUBO = 193.54.252.128
+mongeUMLV = 193.55.63.80
+S_any2pcDmedMed = '{www, https, 8080}'
+S_any2Breeze = '{sip, www, 1935, https, 1433, 27003, 41703}'
+S_any2neurobase = '{3085, 5517, 3060, www, ssh, 8080}'
+S_any2eco234 = '{8001, rtsp}'
+S_iChatAV2 = '{sip, 16384:16403, 5190}'
+S_NeuroBretagne = '{www, 1024:1025}'
+S_any2netmeting = '{www, 522, h323, 1731, 1503, ldap}'
+S_Ext2NABUCO = '{sqlnet}'
+S_Sifac = '{lotusnotes, 3200:3303}'
+S_pc_Eric_Gicquel = '{6881:6889, 100, 90, www}'
+S_VNC = '{5800:5801, 5900:5901}'
+S_Ext2Sifac = '{$S_Sifac, $S_VNC, ssh}'
+S_streamsit = '{1234, 1755, 8080, www, https, rtsp}'
+S_ARCGIS = '{6346:6347, 22150, 27000:27004}'
+S_SVI = '{1935, 5008}'
+S_cerisier_tcp = '{www, https, 8080, 548, 8008, ssh}'
+S_cerisier_udp = '{sip, 5678, 16384, 16403, 1701, 4500}'
+S_smtpDnsHttp = '{smtp, domain, www}'
+S_any2IbmAbretASSO = '{ftp, imap4, 993, www, 8081:8082, lotusnotes, 1533, 5900}'
+S_Irisa2Nsat = '{telnet, lpd, ftp, exec, login, rsh, 6000, 6001, 8000}'
+S_Ext2Nsat192 = '{ftp, pop3}'
+S_any_ftpHttpHttps = '{1935, ftp, www, https}'
+S_HttpHttpsAny = '{ssh, www, https}'
+S_any2ebiSxLtsi = '{ftp, www, 4899, 5500, 9500:9509}'
+S_any2DSPMed = '{ftp, www, 4899, https, 3030}'
+S_any2CrittMed = '{8888, ldap, 1503, h323, 1731, 1023}'
+S_any_sshHttpHttps = '{8888, ssh, www, https}'
+S_Kazaa = '{imap4, 412, 1214, 4661:4665, 6346:6347, 6699, 3531, 6881:6889, 4672}'
+S_Ade = '{6001, 1099:1100, 2099:2101, 3402:3403, 4402:4404, 32767:65535, 8802}'
+M_any_ldap = '{129.20.138.0/24, 129.20.128.3/32, 129.20.128.7/32, 129.20.128.15/32, 129.20.128.16/32, 129.20.128.27/32}'
+M_cheneUR1_8080 = '{$idm2_157IRISA/32, $pcinterUVALENCiN, $calvinENSEEIHT, $hobbesENSEEIHT}'
+M_ADE = '{$adm02INSAREN/32, $IRISA/16, $AdslSocieteADE}'
+M_DYNIX = '{$esp28UNILIM, $passerl1EPIXTECH/32}'
+M_HIP = '{$titusINIST, 129.20.128.51/32, 129.20.128.65/32}'
+M_COBB = '{129.20.128.2, 194.242.162.154/32, 194.242.162.155/32, $COBB1/32, $COBB2/32}'
+M_Ext2Servix = '{$adm02INSAREN/32, $pc3InfoROSCOFF/32, $fraiseUBO/32, $cacaoUBO/32, $freewindUBO/32, $ilinux_rrbENSTB/32, $fcnaENSTB/32}'
+M_any_pop3pop3s = '{129.20.167.1, $RESO_INCUBATEUR/24, 129.20.155.18, 129.20.131.32, 129.20.131.1, 129.20.128.32/32}'
+M_any_imapimaps = '{129.20.27.1, 129.20.155.18, 129.20.131.30, 129.20.131.1, 129.20.128.10/32, 129.20.128.30/32}'
+M_any_https = '{$nwtIopPubshinCom/32, 148.60.223.67/32, 129.20.153.102, 129.20.153.52, 129.20.217.195/32, 129.20.217.197/32, 129.20.217.196/32, 129.20.126.102, 129.20.131.151, 129.20.131.152, 129.20.131.153, 129.20.131.154, 129.20.131.155, 129.20.229.1, 129.20.230.169, 148.60.51.41, 129.20.126.126}'
+M_P2P = '{$rad1EduroamFr/32, 129.20.155.21/32, 129.20.88.131/32, 148.60.239.48/32, 129.20.83.77/32, 129.20.53.33/32}'
+M_BLOQUEES = '{194.167.34.215, 129.20.161.181, 129.20.48.233, 129.20.75.187}'
+M_sf1staff_IRISA = '{$zenIRISA/32, $rapideIRISA/32, $marcharlIRISA/32, $aspirineIRISA/32, $coquelicotIRISA/32, $nonameIRISA/32, $miniIRISA/32, $lolaIRISA/32, $jessicaIRISA/32, $oceaniaIRISA/32, $renonculeIRISA/32, $enoraIRISA/32, $frozone/32, $jules/32, $tiareIRISA/32, $soleilIRISA, $depan3IRISA, 131.254.14.122, 131.254.11.161, 131.254.15.32, $aventureIRISA, 131.254.13.175}'
+M_Apogee = '{$miniIRISA/32, $enoraIRISA/32, $poppyIRISA/32, $lagonIRISA/32, $bungalaAdmUHB/32, $renonculeIRISA/32, $apogeeUHB, 131.254.11.161, 131.254.13.175}'
+M_any_5900 = '{129.20.88.11, 129.20.88.42, 129.20.88.134, 129.20.161.211, 129.20.89.12/32}'
+M_any_http = '{129.20.88.149/32, 129.20.27.75/32, 129.20.153.53/32, 129.20.153.52/32, 129.20.76.106/32, 129.20.186.77/32, 148.60.24.1/32, 129.20.73.154/32, 129.20.88.50/32, 129.20.48.132/32, 129.20.155.25/32, 129.20.155.74/32, 129.20.161.163/32, 129.20.161.150/32, 129.20.55.13/32, 148.60.51.41/32, 129.20.161.160/32, 148.60.211.3/32, 193.52.60.14/32, 193.52.60.18/32, 193.52.60.50/32, 129.20.49.56/32, 129.20.49.147/32, 129.20.131.200/32, 129.20.222.63/32, 129.20.230.139, 129.20.230.150, 129.20.25.45/32, 129.20.131.22/32, 129.20.155.70/32, 129.20.129.35, 129.20.128.50, 129.20.153.29, 129.20.131.1, 129.20.128.65, 129.20.131.28, 129.20.131.142, 129.20.131.166, 129.20.130.250, 129.20.131.103, 129.20.167.1, 148.60.52.153, 129.20.131.97, 129.20.167.2, 129.20.44.5, 129.20.94.16, 129.20.174.3, 129.20.174.4, 129.20.230.161, 129.20.210.210, 129.20.39.100, 129.20.167.4, 129.20.211.2, 129.20.161.137, 129.20.131.71, 129.20.126.18, 129.20.126.19, 129.20.126.119, 129.20.230.140, 129.20.131.189, 129.20.131.190, 129.20.94.150, 129.20.131.151, 129.20.233.80, 148.60.233.245, 129.20.94.163, 148.60.216.16, 129.20.233.247, 129.20.230.169}'
+M_NABUCO = '{$reblochonAMUE/32, $luke.sopragroup/32, $pc_thp_amue/32, $pc_cag_amue/32, $crivideoUBREST}'
+M_catia_milesant = '{129.20.88.131/32, 129.20.75.148, 129.20.75.149, 148.60.52.121, 148.60.52.122, 148.60.52.123, 148.60.52.124, 148.60.52.125, 148.60.52.126, 148.60.52.127, 148.60.52.128, 148.60.52.129, 148.60.52.130, 148.60.52.131, 148.60.52.132, 148.60.108.21, 148.60.108.24, 148.60.108.25, 148.60.108.32, 148.60.108.33, 148.60.108.34, 148.60.52.16/32, 148.60.108.42, 148.60.108.41, 148.60.108.8, 148.60.52.133, 129.20.84.12, 148.60.108.19, 148.60.108.18, 148.60.108.9, 148.60.108.35, 148.60.108.36, 148.60.108.37, 148.60.108.38, 148.60.108.39, 129.20.80.157}'
+M_T_120 = '{129.20.192.139/32, 129.20.192.153/32, 129.20.192.154/32, 129.20.192.200/32, 129.20.192.236/32, 129.20.192.237/32}'
+M_any_X_Window = '{129.20.75.31/32, 129.20.75.75/32, 129.20.75.6/32, 129.20.16.159, 129.20.76.85, 129.20.76.147}'
+M_bioinfo = '{129.20.138.0/24, 129.20.133.16/30}'
+M_StarDicom = '{129.20.82.58, $thalamusIRISA, $idm2IRISA, $hypophyse_157IRISA, $idm2_157IRISA/32, $hypophyseIRISA, $parkinsonIRISA}'
+M_ssh_pctheo13 = '{$loligoENS_LYON, 140.77.2.170, $mail2CecUchileCL, $clusterDfiUchileCL, $esp29UNILIM, $esp28UNILIM, $login_ng1.rc.sara7.nl/32}'
+M_6000_pctheo13 = '{$titusINIST, $clusterDfiUchileCL, 200.9.100.136}'
+M_DNS = '{129.20.128.2, 129.20.128.39}'
+M_syslogserver = '{129.20.254.1, 129.20.254.200, 129.20.253.254}'
+M_balsa_sqlnet = '{$AdslSocieteADE, $Amue1, $Amue2, $Amue3, $crivideoUBREST, 194.214.218.175, 134.157.79.0/24}'
+M_Simpps = '{129.20.82.67, $simppsFxPerUHB, $bungalaAdmUHB}'
+M_Ext2Sifac = '{$Sifac_admUHB, $Sifac_admUBS/24, $rennes2_2/24, 193.49.223.0/24, 194.146.51.248, 81.252.39.148, 81.252.39.149, 195.83.191.161, 81.252.39.248, 81.252.39.249, 192.134.240.0/24, 192.134.241.0/24, 195.83.191.21, 193.49.224.0/24}'
+M_SIFAC = '{129.20.136.16, 129.20.136.17, 129.20.136.72, 129.20.136.73, 129.20.136.20, 129.20.131.195, 129.20.136.18}'
+M_bbacqSpm_ssh = '{$renassUSTRASBG, $renassb1USTRASBG, $keemunUSTRASBG, $seismeUSTRASBG}'
+M_bbacqSpm_www = '{$keemunUSTRASBG, $seismeUSTRASBG}'
+M_sqlnet_migren = '{$IRISA/16}'
+M_China_IE7 = '{121.12.173.218, 61.143.211.187}'
+M_SVI = '{129.20.131.189, 129.20.131.190, 129.20.131.71, 129.20.126.121, 129.20.126.122, 129.20.126.123}'
+M_SMTP_Renater = '{129.20.131.111, 129.20.131.110, 129.20.131.120, 129.20.131.135, 129.20.131.219, 129.20.131.1, 129.20.128.10}'
+M_verConficker = '{159.226.7.162, 68.178.232.100, 69.64.147.18, 69.64.155.119, 74.213.179.178, 118.102.24.106, 121.198.43.78, 125.87.3.8, 143.215.143.11, 149.20.54.193, 149.20.56.32, 199.2.137.252, 204.13.67.131, 204.94.86.74, 205.188.161.4, 208.73.210.121, 209.62.20.195, 211.9.58.163, 212.158.162.5, 212.67.202.8, 213.188.129.184, 216.104.161.117, 216.104.161.217, 216.21.239.197, 216.239.143.29, 216.34.131.135, 216.39.58.112, 217.113.244.80, 217.20.163.71, 218.145.71.194, 218.244.147.129, 218.61.204.215, 221.130.201.9, 38.113.1.116, 60.29.240.76, 62.213.110.9, 63.111.67.9, 63.251.171.80, 63.251.171.81, 64.70.19.33, 66.150.161.136, 66.150.161.140, 66.150.161.141, 66.206.198.169, 66.246.235.42, 66.63.181.97, 66.96.130.122, 67.210.13.93, 69.10.155.222, 69.16.116.94, 69.25.27.170, 69.25.27.173, 69.46.228.32, 69.64.147.19, 69.64.147.20, 69.64.147.207, 69.64.147.208, 69.64.147.21, 69.64.147.210, 69.64.155.120, 69.64.155.121, 69.64.155.122, 69.64.155.123, 69.64.155.124, 69.64.155.125, 69.64.155.126, 69.64.155.127, 69.64.159.1, 69.89.17.9, 69.89.27.207, 70.85.228.70, 72.167.51.186, 72.169.32.33, 72.34.4.115, 72.45.124.23, 74.208.164.166, 74.208.167.98, 74.208.18.247, 74.208.26.102, 74.208.39.98, 74.208.64.145, 74.208.64.191, 74.55.100.7, 75.126.137.166, 75.126.238.193, 76.76.12.181, 77.94.248.183, 81.169.145.73, 82.134.30.37, 83.68.16.6, 85.10.197.167, 87.106.34.1, 87.106.86.28, 72.167.202.5}'
+M_ext_ssh_dolmen = '{$wwwCivxOrg, 82.236.137.104, 88.164.240.108, 194.167.34.215, 82.126.110.82, 213.182.150.42}'
+M_srvCaren_http = '{193.52.225.50, 193.51.170.9, 147.99.167.173, 147.99.167.175, 147.99.167.200}'
+M_srvCaren_ssh = '{193.52.225.50, 193.49.97.126}'
+vsapfrontaux = '{129.20.126.125, 129.20.126.4, 129.20.126.6}'
+M_ftp_hplusbd = '{$hydrasaPoitiers1, $hydrasaPoitiers2, $GeoscMontpellier/24, 162.38.140.63}'
+M_ExtiutLannion = '{72.233.104.124, 72.233.56.138, 72.233.56.139, 74.200.247.60, 76.74.254.126}'
+CCI_Fougeres = '{213.56.98.189, 217.108.101.172, 80.13.234.223}'
+M_MedVisio = '{193.52.60.12, 193.252.236.0/26, $UNANTES/24, $RainPont, $RainPasserelle, 217.109.171.179, 212.234.68.140}'
+M_any_telnet = '{129.20.131.221, 129.20.16.55, 129.20.88.11, 129.20.88.134, 129.20.94.5, 129.20.25.1, 129.20.25.11, 129.20.25.23, 129.20.25.55, 129.20.25.47, 129.20.25.86, 129.20.25.17, 129.20.25.56, 129.20.73.27, 129.20.73.74, 129.20.73.79, 129.20.82.33, 129.20.82.67, 129.20.82.82, 148.60.52.1, 129.20.82.58, 129.20.82.28, 129.20.82.3, 129.20.27.59, 129.20.27.52, 129.20.27.1, 129.20.27.3, 129.20.27.15, 129.20.27.51, 129.20.27.53, 129.20.27.72, 129.20.27.73, 129.20.82.2, 129.20.25.8, 129.20.25.70, 129.20.48.173, 129.20.76.109, 129.20.76.110, 129.20.76.15, 129.20.76.62, 129.20.76.64, $hepatoRenINSERM, 129.20.157.23, 129.20.157.31, 129.20.157.36, 129.20.157.37, 129.20.157.38, 129.20.157.70, 129.20.157.84, 129.20.161.137, 129.20.161.163, 148.60.161.78, 148.60.161.83, 129.20.88.42, 129.20.76.199/32}'
+M_Sauvegardees = '{129.20.126.126, 129.20.254.1, $rad1EduroamFr/32, $CRU/24, 129.20.254.4, 129.20.254.200, 129.20.254.5, 129.20.254.203}'
+M_Irisa2Nsat = '{129.20.216.0/21, 148.60.216.0/21, 129.20.224.0/21, 148.60.224.0/21, 193.52.60.0/24}'
+M_Ext2Nsat192 = '{$buckdannyUPARIS3, $dhcp14169UlavaCa, $dhcp14164UlavaCa, $stlaurentUlavaCa}'
+M_Ext2LimMed_ip = '{$diumediaULILLE2, 194.254.151.99, 193.51.86.57, 194.242.162.201, 194.242.162.133, 194.242.162.240}'
+M_any_ftp = '{193.52.56.0/24, 129.20.82.2, 129.20.25.160, 129.20.82.87, 129.20.88.50, 129.20.25.1, 129.20.49.39, 129.20.48.175, 129.20.131.132, 129.20.131.133, 129.20.131.134, 129.20.131.20/32, 129.20.76.147/32, 129.20.129.57, 129.20.76.220, 129.20.76.221, 129.20.230.135, 129.20.210.210, 129.20.95.20, 129.20.95.21, 129.20.94.16}'
+M_any_ssh = '{129.20.131.163, $RESO_INCUBATEUR/24, 129.20.16.193, 129.20.16.55, 129.20.36.174, 129.20.16.159, 129.20.25.57, 129.20.73.27, 129.20.73.74, 129.20.73.79, 148.60.24.1, 129.20.155.16, 129.20.73.157, 129.20.155.74, 129.20.155.24, 129.20.25.164, 129.20.75.11/32, 129.20.37.115, 129.20.16.224/32, 129.20.178.134, 129.20.153.52, 129.20.155.25/32, 129.20.155.50/32, 129.20.217.195/32, 129.20.25.45/32, 129.20.27.72/32, 129.20.27.75/32, 129.20.161.1/32, 129.20.161.7/32, 129.20.161.5/32, 129.20.49.193/32, 129.20.16.182, 129.20.179.179, 129.20.167.2, 129.20.167.1, 129.20.95.20/31, 129.20.230.160, 129.20.167.233, 129.20.167.4, 129.20.76.199, 129.20.76.240/30, 129.20.27.76, 148.60.231.225, 129.20.33.32}'
+M_any_cmd = '{129.20.25.70, 129.20.16.55, 129.20.76.85, 129.20.75.159, 129.20.75.160, 129.20.76.82, 129.20.76.15, 129.20.76.9, 129.20.76.48}'
+M_any_6000 = '{81.252.39.248, 129.20.76.9, 129.20.76.85, 129.20.75.159, 129.20.75.160, 129.20.76.147, 129.20.78.14}'
+M_any_8080 = '{148.60.161.78, 129.20.88.50, 129.20.82.67, 129.20.161.150, 129.20.161.3, 129.20.161.163, 129.20.161.28, 129.20.49.56/32, 129.20.161.4/32, 129.20.38.229, 129.20.88.134, 129.20.161.160, 129.20.76.106, 129.20.25.86, 148.60.231.225, 148.60.216.35}'
+M_any_httpHttps = '{148.60.52.127, 129.20.179.51, 148.60.16.59, 129.20.16.67, 129.20.25.160, 148.60.51.27, 129.20.16.193, 129.20.179.56/32, 129.20.179.57/32, 129.20.55.20, 129.20.155.18/32, 129.20.131.168/32, 129.20.131.137/32, 129.20.155.50, 129.20.233.16/30, 129.20.161.9/32, 129.20.161.4/32, 129.20.161.7, 129.20.161.5, 129.20.131.82, 129.20.131.85, 129.20.131.80/32, 129.20.131.87/32, 129.20.89.12/32, 129.20.126.100/32, 129.20.131.149, 129.20.131.136, 129.20.128.5, 129.20.128.8, 129.20.131.18, 129.20.131.9, 129.20.131.110, 129.20.131.111, 129.20.131.112, 129.20.131.113, 129.20.136.13, 129.20.131.19, 129.20.131.20, 129.20.131.114, 129.20.131.115, 129.20.131.116, 129.20.131.117, 129.20.136.12, 129.20.131.118, 129.20.131.119, 129.20.131.38, 129.20.131.39, 129.20.131.128, 129.20.131.129, 129.20.131.121, 129.20.131.126, 129.20.131.57, 129.20.131.55, 129.20.131.61, 129.20.131.135, 129.20.131.62, 129.20.131.31, 129.20.128.31, 129.20.131.41, 129.20.131.140, 129.20.131.162, 129.20.131.163, 129.20.131.164, 129.20.131.160, 129.20.131.64, 129.20.131.58, 129.20.131.56, 129.20.131.63, 129.20.131.59, 129.20.131.130, 129.20.131.8, 129.20.131.220, 129.20.131.221, 129.20.131.159, 129.20.131.219, 129.20.131.88, 129.20.131.89, 129.20.55.58, 129.20.131.49, 129.20.126.104, 129.20.126.111, 129.20.126.112, 129.20.126.113, 129.20.126.114, 129.20.126.115, 129.20.126.116, 129.20.126.117, 129.20.126.118, 129.20.131.120, 129.20.126.105, 129.20.131.138, $RESO_INCUBATEUR/24, 129.20.131.139, 129.20.126.23, 129.20.131.202, 129.20.131.201, 129.20.126.108, 129.20.131.92, 129.20.126.103, 129.20.78.71, 129.20.161.1, 129.20.126.120, 129.20.36.192/28, 129.20.88.134, 129.20.129.4, 129.20.126.120/30, 129.20.128.128}'
+M_any_ftpHttpHttps = '{192.215.8.13/32, 129.20.179.50, 129.20.179.9, 129.20.179.52, 129.20.25.47, 129.20.25.56, 129.20.94.5, 129.20.82.33, 129.20.153.17, 129.20.155.16, 129.20.16.55, 129.20.88.11, 129.20.88.134, 129.20.82.67, 129.20.82.82, 148.60.52.1, 148.60.161.78, 148.60.161.83, 129.20.88.42, 129.20.179.21/32, 129.20.167.233}'
+M_any_sshHttpHttps = '{129.20.53.33/32, 129.20.25.58, 129.20.25.89, 129.20.155.17, 129.20.25.95, 129.20.83.20, 148.60.40.1, 129.20.25.86}'
+M_any2ebiSxLtsi = '{129.20.25.161, 129.20.25.162, 129.20.25.163, 129.20.25.164, 129.20.25.165, 129.20.25.166, 129.20.25.167, 129.20.25.168}'
+M_any2DSPMed = '{129.20.157.23, 129.20.157.31, 129.20.157.36, 129.20.157.37, 129.20.157.38, 129.20.157.84}'
+M_any2CrittMed = '{129.20.153.42, 129.20.153.43}'
+M_any_9000 = '{129.20.75.6/32, 129.20.161.3, 129.20.161.137, 129.20.161.150, 129.20.161.4/32}'
+M_Idris161_cmd = '{129.20.27.75/32, 129.20.82.58, 129.20.82.28, 129.20.82.3, 129.20.82.48}'
+M_bbacqSpm_18000 = '{129.20.73.154/32, $keemunUSTRASBG, $seismeUSTRASBG}'
+M_h323 = '{129.20.155.74/32, 193.52.60.230, 193.52.60.134, 193.52.60.12, 129.20.129.128, 129.20.73.166/32, 129.20.85.44/32, 129.20.88.52/32, 129.20.88.173/32, 129.20.222.4/32, 193.52.56.0/24, 129.20.88.42, 129.20.184.109}'
+M_Ext2Simpa_cmd = '{129.20.129.35, $IDRIS161/24, $IDRIS160/24, $CINES/24, $UNIV_LYON1/16, $OBSERV_MEUDON/16}'
+M_DirectExt_http = '{129.20.27.72/32, $ipLexbase/32, $wwwIndexpresse/32, $wAnnuLaposteNet/32, $amsRiceEdu/32, $wJnlsUchicagoEdu/32, $amsMUBielefeldDe/32, $wwwNcbiNlmNihGo1/32, $wwwNcbiNlmNihGo2/32, $wwwOupCoUk/32, $wwwCistiNrcCa/32, $sciDirectCom/32, $wSciencDirectCom/32, $wwwElsevierNl/32, $amsImpaBr/32, $intlPnasOrg/32, $ojpsAipOrg/32, $klymMpimBonnMpDe/32, $wwwRennesINRA/32, $servicesINIST/32, $epubsSiamOrg/32, 192.215.8.13/32, $wwwMtdocUjfGRENO/32, $wwwLextensoCom/32, $nwtIopPublishCom/32, $nwtIopPubshinCom/32, $wwwPagesJaunesCo/32, $wwwPagesProCom/32, $wwwEdpscienceCom/32, $wwwEMATH/32, $OneSrchUkOclcOrg/32, $linkSpringerDe/32, $wwwCnamPAYSDLL/32, $wIntrsciWileyCom/32, $wwwEbscoCom/32, $wwwSocieteCom/32, $symantecCom/24}'
+M_ReseauxUR1_http = '{74.208.39.98, $RECHERCHE/16, 148.60.16.0/24, 148.60.52.0/24, 148.60.204.0/23, 148.60.216.0/21, 148.60.232.0/21, $r1935028ENSSAT/24, $PROTEOME_INNOVA/27, $r193CHR/24, 193.52.60.0/24, $INSERM_CHR/24, $r194ENSSAT/24, 193.52.56.0/24, 129.20.88.54/32, 148.60.25.0/24}'
+M_EtuIfsic = '{148.60.52.127, $ETUDIANTS/20}'
+M_CachesIfsic = '{148.60.52.130, 148.60.8.3/32, 148.60.8.4/32, 148.60.8.6/32}'
+M_ServUR1_smtp = '{148.60.108.25, 129.20.131.1/32, 129.20.233.18/32, 148.60.223.66/32, 129.20.128.64/32, 129.20.128.10/32, 129.20.128.54/32, 129.20.222.60/32, 129.20.230.148/32, 129.20.128.66, 129.20.230.135}'
+M_ReseauxUR1_ip = '{213.56.98.189, $RECHERCHE/16, $ETUDIANTS/16, $r1935028ENSSAT/24, $PROTEOME_INNOVA/27, $r193CHR/24, 193.52.60.0/24, $INSERM_CHR/24, $r194ENSSAT/24, 193.52.56.0/24}'
+#pass in quick on $IPV4POINT6 inet proto icmp from any to any
+#pass in quick on $IPV4POINT6 from any to any
+#pass out quick on $IPV4POINT6 inet proto icmp from any to any
+#pass out quick on $IPV4POINT6 proto tcp from any to any port ack
+#pass out quick on $IPV4POINT6 proto udp from any to any port domain
+#pass out quick on $IPV4POINT6 proto tcp from any to any port domain
+#pass out quick on $IPV4POINT6 proto tcp from any to any port 22
+#pass out quick on $IPV4POINT6 proto tcp from any to any port www
+#pass out quick on $IPV4POINT6 proto udp from any to any port 1701
+#pass out quick on $IPV4POINT6 proto udp from any port domain to any
+#pass out quick on $IPV4POINT6 proto udp from any to 129.20.246.1 port 1812
+#block out quick on $IPV4POINT6 from any to any
+block out quick on $PUBLIC_CRU from 217.169.21.184 to any
+block out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.165 port 3306
+block out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port 32774
+block out quick on $PUBLIC_CRU proto tcp from 165.193.0.0/16 to 195.220.94.169 port www
+block out quick on $PUBLIC_CRU proto tcp from 165.193.0.0/16 to 195.220.94.169 port 443
+block out quick on $PUBLIC_CRU proto tcp from 208.111.154.15 to 195.220.94.169
+block out quick on $PUBLIC_CRU proto tcp from 208.111.154.16 to 195.220.94.169
+block out quick on $PUBLIC_CRU from 194.206.242.132 to 195.220.94.163
+block out quick on $PUBLIC_CRU from 85.93.198.89 to 195.220.94.163
+block out quick on $PUBLIC_CRU from 195.25.225.72 to 195.220.94.163
+block out quick on $PUBLIC_CRU from 85.93.201.158 to 195.220.94.163
+block out quick on $PUBLIC_CRU from 217.128.65.19 to 195.220.94.163
+block out quick on $PUBLIC_CRU from 82.224.1.141 to 195.220.94.163
+block out quick on $PUBLIC_CRU from 83.99.34.181 to 195.220.94.163
+block out quick on $PUBLIC_CRU from 70.0.0.0/7 to 195.220.94.163
+block out quick on $PUBLIC_CRU from 72.0.0.0/8 to 195.220.94.163
+block out quick on $PUBLIC_CRU from 80.90.0.0/16 to 195.220.94.163
+block out quick on $PUBLIC_CRU from 81.52.142.3 to any
+block out quick on $PUBLIC_CRU from 81.52.143.15 to any
+block out quick on $PUBLIC_CRU from 81.52.143.16 to any
+block out quick on $PUBLIC_CRU from 81.52.143.26 to any
+block out quick on $PUBLIC_CRU from 193.252.149.15 to any
+block out quick on $PUBLIC_CRU from 193.252.149.16 to any
+block out quick on $PUBLIC_CRU from 193.252.149.72 to any
+#pass out quick on $PUBLIC_CRU proto tcp from any to any port ack
+pass out quick on $PUBLIC_CRU proto udp from any to 195.220.94.130 port 1812:1815
+pass out quick on $PUBLIC_CRU proto udp from any to 195.220.94.180 port 1194
+block out quick on $PUBLIC_CRU proto udp from any to 195.220.94.180 port ntp
+block out quick on $PUBLIC_CRU proto udp from any to 195.220.94.182 port ntp
+block out quick on $PUBLIC_CRU proto udp from any to 195.220.94.180 port syslog
+block out quick on $PUBLIC_CRU proto udp from any to 195.220.94.182 port syslog
+block out quick on $PUBLIC_CRU proto udp from any to 195.220.94.180 port 2526
+block out quick on $PUBLIC_CRU proto udp from any to 195.220.94.182 port 2526
+pass out quick on $PUBLIC_CRU proto udp from any to 195.220.94.180 port domain
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.180 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.180 port 443
+pass out quick on $PUBLIC_CRU proto udp from any to 195.220.94.180
+pass out quick on $PUBLIC_CRU proto udp from any to 195.220.94.182
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.183 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.183 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.183 port 8443
+pass out quick on $PUBLIC_CRU proto tcp from 129.20.128.60 to 195.220.94.128/26 port 2525
+pass out quick on $PUBLIC_CRU proto udp from 129.20.128.60 to 195.220.94.128/26 port 2526
+pass out quick on $PUBLIC_CRU proto udp from any port domain to 195.220.94.135 port domain
+pass out quick on $PUBLIC_CRU proto udp from any port domain to 195.220.94.165 port domain
+pass out quick on $PUBLIC_CRU proto udp from any port domain to 195.220.94.166 port domain
+pass out quick on $PUBLIC_CRU proto udp from any to 195.220.94.139 port domain
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.139 port domain
+pass out quick on $PUBLIC_CRU inet proto icmp from any to any icmp-type echoreq
+pass out quick on $PUBLIC_CRU inet proto icmp from any to any icmp-type echorep
+pass out quick on $PUBLIC_CRU inet proto icmp from any to any icmp-type timex
+pass out quick on $PUBLIC_CRU inet proto icmp from any to any icmp-type redir code needfrag
+pass out quick on $PUBLIC_CRU inet proto icmp from any to any icmp-type trace
+pass out quick on $PUBLIC_CRU inet proto icmp from any to any icmp-type echorep code net-unr
+block out quick on $PUBLIC_CRU inet proto icmp from any to any
+pass out quick on $PUBLIC_CRU proto tcp from 130.79.124.33 to 195.220.94.166 port 1873
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port ftp
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port ftp-data
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port 587
+pass out quick on $PUBLIC_CRU proto tcp from 134.206.1.196 to 195.220.94.166 port 604
+pass out quick on $PUBLIC_CRU proto tcp from 134.206.1.159 to 195.220.94.166 port 604
+pass out quick on $PUBLIC_CRU proto tcp from 134.206.1.151 to 195.220.94.166 port 604
+pass out quick on $PUBLIC_CRU proto tcp from 134.206.1.158 to 195.220.94.166 port 604
+pass out quick on $PUBLIC_CRU proto tcp from 134.206.1.217 to 195.220.94.166 port 604
+pass out quick on $PUBLIC_CRU proto tcp from 134.206.1.199 to 195.220.94.166 port 604
+block out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port 32768
+block out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port 32769
+block out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port 32771
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port 10000:65535
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.165 port 389
+pass out quick on $PUBLIC_CRU proto tcp from 194.214.200.0/28 to 195.220.94.165 port 389
+pass out quick on $PUBLIC_CRU proto tcp from 194.214.201.0/28 to 195.220.94.165 port 389
+pass out quick on $PUBLIC_CRU proto tcp from 194.214.200.0/28 to 195.220.94.165 port 636
+pass out quick on $PUBLIC_CRU proto tcp from 194.214.201.0/28 to 195.220.94.165 port 636
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.161 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.161 port 8443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.185 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.185 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.184 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.184 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.178 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.178 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.179 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.179 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.162 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.165 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.165 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.170 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.170 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.171 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.171 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.172 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.172 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.173 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.173 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.175 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.175 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.176 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.176 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.169 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.169 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.177 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.177 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.188 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.188 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.143 port www
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.143 port 443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.177 port 8443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.180 port 8443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port 8443
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.166 port 8444
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.161 port 22
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.133 port smtp
+pass out quick on $PUBLIC_CRU proto tcp from any to 195.220.94.174 port www
+pass out quick on $PUBLIC_CRU proto tcp from 193.49.159.16 to 195.220.94.165 port smtp
+pass out quick on $PUBLIC_CRU proto tcp from 193.49.159.17 to 195.220.94.165 port smtp
+pass out quick on $PUBLIC_CRU proto tcp from 193.49.159.18 to 195.220.94.165 port smtp
+pass out quick on $PUBLIC_CRU proto udp from any to 195.220.94.163 port ntp
+pass out quick on $PUBLIC_CRU proto tcp from 195.220.94.0/24 to any port 22
+pass out quick on $PUBLIC_CRU proto tcp from 148.60.10.131 to 195.220.94.169 port 22
+pass out quick on $PUBLIC_CRU proto tcp from 81.56.142.118 to 195.220.94.169 port 22
+pass out quick on $PUBLIC_CRU proto tcp from 148.60.4.18 to 195.220.94.169 port 22
+block out quick on $PUBLIC_CRU from any to any
+pass out quick on $PUBLIC_UR1 inet proto icmp from any to any
+#pass out quick on $PUBLIC_UR1 proto tcp from any to any port ack
+pass out quick on $PUBLIC_UR1 proto tcp from any to 129.20.254.1 port domain
+pass out quick on $PUBLIC_UR1 proto udp from any to 129.20.254.1 port domain
+pass out quick on $PUBLIC_UR1 proto udp from any port domain to 129.20.254.1 port 1023:65535
+pass out quick on $PUBLIC_UR1 proto udp from any to 129.20.254.50 port isakmp
+pass out quick on $PUBLIC_UR1 proto esp from any to 129.20.254.50
+pass out quick on $PUBLIC_UR1 proto tcp from any to 129.20.254.50 port 443
+pass out quick on $PUBLIC_UR1 from 217.128.81.111 to 129.20.254.50
+pass out quick on $PUBLIC_UR1 from 129.20.55.60 to 129.20.254.50
+pass out quick on $PUBLIC_UR1 from 129.20.128.0/22 to any
+block out quick on $PUBLIC_UR1 from any to 129.20.254.207
+pass out quick on $PUBLIC_UR1 proto tcp from any to 129.20.254.200/29 port www
+pass out quick on $PUBLIC_UR1 proto tcp from any to 129.20.254.200/29 port 443
+pass out quick on $PUBLIC_UR1 proto tcp from 193.251.20.107 to 129.20.254.200 port 22
+pass out quick on $PUBLIC_UR1 proto udp from 193.252.62.95 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.71.211 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.14.125 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 80.13.55.69 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.119.107 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.253.249.64 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 80.13.61.161 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.254.246 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 80.11.11.7 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.81.111 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.51.20.250 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.251.34.5 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 194.2.178.132 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 80.14.96.227 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 86.64.163.242 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.251.27.190 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.141.58 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.137.128 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 82.127.43.220 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.251.186.219 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.251.33.207 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.89.160 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 62.161.112.102 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.144.171 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.252.221.204 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.71.111 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.99.161 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.234.222 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.71.110 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.254.166 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 80.13.135.87 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.251.181.199 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.235.136 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.175.192 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.98.157 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.90.235 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.251.186.218 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 90.80.27.226 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.175.195 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.252.58.153 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.134.154 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.175.93 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.252.211.169 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.251.186.223 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.96.52 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.67.146 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.172.156 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 80.13.128.67 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.95.126 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.252.176.152 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 80.13.20.154 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.253.178.24 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.96.204 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.175.196 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.71.64 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.175.194 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.105.206 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.175.191 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 77.74.213.76 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.252.63.108 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.195.147 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 195.221.66.4 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.248.222 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.41.79 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.251.16.60 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.252.206.234 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.124.228 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.253.62.52 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.171.208 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 62.160.182.9 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 81.80.29.75 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 81.53.23.116 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 217.128.177.172 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 81.252.186.116 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 212.234.175.173 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.253.201.24 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 213.56.52.182 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.253.236.125 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 129.20.55.200 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 194.214.150.19 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 195.83.247.242 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.52.64.248 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 193.52.32.144 to 129.20.254.3 port 1812:1814
+pass out quick on $PUBLIC_UR1 proto udp from 195.221.67.53 to 129.20.254.3 port 1812:1814
+block out quick on $PUBLIC_UR1 proto udp from any to 129.20.254.3
+pass out quick on $PUBLIC_UR1 proto tcp from 134.214.152.108 to 129.20.254.4 port 22
+pass out quick on $PUBLIC_UR1 proto tcp from 82.67.37.2 to 129.20.254.4 port 22
+pass out quick on $PUBLIC_UR1 proto tcp from 194.214.151.7 to 129.20.254.4 port 22
+pass out quick on $PUBLIC_UR1 proto tcp from 194.214.151.13 to 129.20.254.4 port 22
+pass out quick on $PUBLIC_UR1 proto tcp from 82.67.118.193 to 129.20.254.4 port 22
+pass out quick on $PUBLIC_UR1 proto tcp from 194.214.151.11 to 129.20.254.4 port 22
+pass out quick on $PUBLIC_UR1 proto tcp from 195.83.152.52 to 129.20.254.4 port 22
+pass out quick on $PUBLIC_UR1 proto tcp from 77.206.3.29 to 129.20.254.4 port 22
+pass out quick on $PUBLIC_UR1 proto tcp from 194.214.151.76 to 129.20.254.4 port 22
+pass out quick on $PUBLIC_UR1 proto tcp from 79.93.0.73 to 129.20.254.4 port 22
+pass out quick on $PUBLIC_UR1 proto tcp from any to 129.20.254.4 port www
+pass out quick on $PUBLIC_UR1 proto tcp from any to 129.20.254.4 port 443
+pass out quick on $PUBLIC_UR1 from 129.20.55.0/24 to 129.20.254.2
+pass out quick on $PUBLIC_UR1 proto tcp from any to 129.20.254.2 port 8080
+pass out quick on $PUBLIC_UR1 proto tcp from any to 129.20.254.2 port 554
+pass out quick on $PUBLIC_UR1 from 129.20.55.0/24 to 129.20.254.5
+pass out quick on $PUBLIC_UR1 proto tcp from any to 129.20.254.5 port 8080
+pass out quick on $PUBLIC_UR1 proto tcp from any to 129.20.254.5 port 554
+pass out quick on $PUBLIC_UR1 proto tcp from 129.20.126.9 to 129.20.254.5 port 2049
+pass out quick on $PUBLIC_UR1 proto udp from 129.20.126.9 to 129.20.254.5 port 2049
+pass out quick on $PUBLIC_UR1 proto tcp from 129.20.126.9 to 129.20.254.5 port sunrpc
+pass out quick on $PUBLIC_UR1 proto udp from 129.20.126.9 to 129.20.254.5 port sunrpc
+pass out quick on $PUBLIC_UR1 proto tcp from 129.20.126.9 to 129.20.254.5 port 731
+pass out quick on $PUBLIC_UR1 proto tcp from 129.20.126.9 to 129.20.254.5 port 968
+pass out quick on $PUBLIC_UR1 proto udp from 129.20.126.9 to 129.20.254.5 port 728
+pass out quick on $PUBLIC_UR1 proto udp from 129.20.126.9 to 129.20.254.5 port 965
+block out quick on $PUBLIC_UR1 from any to any
+block in quick on $RENATER from 127.0.0.0/8 to any
+block in quick on $RENATER from 10.0.0.0/8 to any
+block in quick on $RENATER from 172.16.0.0/12 to any
+block in quick on $RENATER from 192.168.0.0/16 to any
+block in quick on $RENATER from any to 0.0.0.255/32
+block in quick on $RENATER from any to 0.0.0.0/32
+block in quick on $RENATER from 129.20.0.0/16 to any
+block in quick on $RENATER from 148.60.0.0/16 to any
+block in quick on $RENATER from 195.220.94.0/24 to any
+pass in quick on $RENATER proto udp from any to any port domain
+pass in quick on $RENATER proto udp from any port domain to any port 1023:65535
+block in quick on $RENATER from 141.146.8.193 to any
+block in quick on $RENATER from 142.205.233.80 to any
+block in quick on $RENATER from 170.148.0.77 to any
+block in quick on $RENATER from 198.64.146.50 to any
+block in quick on $RENATER from 204.99.16.145 to any
+block in quick on $RENATER from 212.118.48.21 to any
+block in quick on $RENATER from 212.158.173.149 to any
+block in quick on $RENATER from 216.49.88.20 to any
+block in quick on $RENATER from 216.9.245.101 to any
+block in quick on $RENATER from 217.12.97.63 to any
+block in quick on $RENATER from 217.65.2.187 to any
+block in quick on $RENATER from 63.245.209.120 to any
+block in quick on $RENATER from 64.191.3.70 to any
+block in quick on $RENATER from 64.233.183.63 to any
+block in quick on $RENATER from 64.38.232.180 to any
+block in quick on $RENATER from 66.179.111.12 to any
+block in quick on $RENATER from 82.198.171.192 to any
+block in quick on $RENATER from 84.19.191.55 to any
+block in quick on $RENATER from 86.59.21.36 to any
+block in quick on $RENATER from 87.106.254.245 to any
+block in quick on $RENATER from 95.211.10.36 to any
+block in quick on $RENATER from 95.211.6.170 to any
+block in quick on $RENATER from 69.50.195.69 to any
+block in quick on $RENATER from 216.139.227.91 to any
+block in quick on $RENATER from 94.75.207.188 to any
+block in quick on $RENATER from 94.75.233.163 to any
+block in quick on $RENATER from 94.75.207.48 to any
+block in quick on $RENATER from 125.65.112.216 to any
+block in quick on $RENATER from 218.162.202.110 to any
+block in quick on $RENATER from 148.244.169.85 to any
+block in quick on $RENATER from 82.177.192.235 to any
+block in quick on $RENATER from 217.20.118.175 to any
+block in quick on $RENATER from 69.59.25.41 to any
+pass in quick on $RENATER proto udp from 87.249.123.6 to 129.20.91.149
+pass in quick on $RENATER proto udp from 213.160.213.86 to 129.20.91.149
+pass in quick on $RENATER proto udp from 87.249.123.6 to 129.20.160.37
+pass in quick on $RENATER proto udp from 213.160.213.86 to 129.20.160.37
+pass in quick on $RENATER from any to 129.20.144.0/23
+pass in quick on $RENATER from any to 148.60.144.0/23
+pass in quick on $RENATER inet proto icmp from any to any icmp-type echorep
+pass in quick on $RENATER inet proto icmp from any to 129.20.251.1 icmp-type echoreq
+block in quick on $RENATER from any to 129.20.251.0/24
+block in quick on $RENATER from any to 129.20.252.0/23
+block in quick on $RENATER from any to 129.20.0.254/31
+pass in quick on $RENATER from any to 193.52.12.33
+block in quick on $RENATER from any to 193.52.12.0/24
+pass in quick on $RENATER inet proto icmp from any to 148.60.239.0/24
+pass in quick on $RENATER inet proto icmp from any to 148.60.0.0/20
+pass in quick on $RENATER inet proto icmp from 195.6.238.186 to 148.60.206.0/23
+block in quick on $RENATER inet proto icmp from any to 148.60.0.0/16
+pass in quick on $RENATER inet proto icmp from any to any icmp-type echoreq
+pass in quick on $RENATER inet proto icmp from any to any icmp-type timex
+pass in quick on $RENATER inet proto icmp from any to any icmp-type redir code needfrag
+pass in quick on $RENATER inet proto icmp from any to any icmp-type trace
+pass in quick on $RENATER inet proto icmp from any to any icmp-type echorep code net-unr
+block in quick on $RENATER inet proto icmp from any to any
+pass in quick on $RENATER from any to 193.52.56.0/24
+block in quick on $RENATER proto tcp from any port 2967 to any
+pass in quick on $RENATER from 193.52.94.40 to 129.20.32.59
+pass in quick on $RENATER from 82.67.115.158 to 129.20.93.0/24
+pass in quick on $RENATER from 82.67.115.158 to 129.20.204.0/24
+block in quick on $RENATER proto udp from any to any port 135:netbios-ss
+block in quick on $RENATER proto tcp from any to any port 135:139
+block in quick on $RENATER proto tcp from any to any port 445
+block in quick on $RENATER proto tcp from any to any port 593
+block in quick on $RENATER proto udp from any port 135:netbios-ss to any
+block in quick on $RENATER proto tcp from any port 135:139 to any
+block in quick on $RENATER proto tcp from any port 445 to any
+block in quick on $RENATER proto tcp from any port 593 to any
+block in quick on $RENATER proto tcp from any to any port 412
+block in quick on $RENATER proto tcp from any to any port 1214
+block in quick on $RENATER proto tcp from any to any port 3531
+block in quick on $RENATER proto tcp from any to any port 4662:4665
+block in quick on $RENATER proto tcp from any to any port 4672
+block in quick on $RENATER proto tcp from any to any port 6346:6347
+block in quick on $RENATER proto tcp from any to any port 6699
+block in quick on $RENATER proto tcp from any to any port 6881:6889
+block in quick on $RENATER proto tcp from any to any port 4000
+block in quick on $RENATER proto tcp from any to any port 32459
+pass in quick on $RENATER from any to 148.60.239.0/24
+pass in quick on $RENATER from any to 129.20.222.4
+pass in quick on $RENATER proto udp from any to 129.20.254.50 port isakmp
+pass in quick on $RENATER proto udp from any to 129.20.254.3 port 1812:1814
+pass in quick on $RENATER proto udp from 193.51.182.121 to 129.20.131.101 port 1812:1814
+pass in quick on $RENATER proto udp from 193.51.182.121 to 129.20.129.2 port 1812:1814
+pass in quick on $RENATER proto udp from 193.51.182.121 to 129.20.128.60 port 2525:2526
+pass in quick on $RENATER proto udp from 130.79.200.23 to 129.20.131.101 port 1812:1814
+pass in quick on $RENATER proto udp from 130.79.200.23 to 129.20.129.2 port 1812:1814
+pass in quick on $RENATER proto udp from 195.115.77.125 to 129.20.210.134 port isakmp
+pass in quick on $RENATER proto udp from 212.157.97.209 to 129.20.48.127 port isakmp
+pass in quick on $RENATER proto udp from 152.81.144.40 to 129.20.0.0/16 port isakmp
+pass in quick on $RENATER proto udp from 128.93.1.111 to 129.20.0.0/16 port isakmp
+pass in quick on $RENATER proto udp from 128.93.1.113 to 129.20.0.0/16 port isakmp
+pass in quick on $RENATER proto udp from 132.203.244.151 to 148.60.0.0/16 port isakmp
+pass in quick on $RENATER proto udp from 213.41.106.65 to 148.60.186.200 port isakmp
+pass in quick on $RENATER proto udp from any port isakmp to any
+pass in quick on $RENATER proto udp from any port 10000 to any
+pass in quick on $RENATER proto udp from 193.175.73.100 port 1194 to any
+pass in quick on $RENATER proto udp from any port ntp to any
+pass in quick on $RENATER proto udp from any to 129.20.246.1 port 1701
+pass in quick on $RENATER proto udp from any to 129.20.246.1 port 1812
+pass in quick on $RENATER proto udp from any to 129.20.161.12
+pass in quick on $RENATER proto udp from any to 129.20.25.140
+pass in quick on $RENATER proto udp from any to 195.220.94.0/24
+pass in quick on $RENATER proto udp from 193.52.92.157 port 1515:1516 to any
+pass in quick on $RENATER from 193.52.92.157 to 129.20.80.83
+pass in quick on $RENATER proto udp from 81.56.187.30 to 129.20.233.52
+pass in quick on $RENATER proto udp from any to 129.20.0.0/16 port 9940
+pass in quick on $RENATER proto udp from any to 148.60.51.28
+pass in quick on $RENATER proto udp from 132.236.61.52 to 129.20.76.212
+pass in quick on $RENATER proto udp from any port 32767:65535 to any
+block in quick on $RENATER proto udp from any to any
+pass in quick on $RENATER from any to any
+block out quick on $RENATER from any to 141.146.8.193
+block out quick on $RENATER from any to 142.205.233.80
+block out quick on $RENATER from any to 170.148.0.77
+block out quick on $RENATER from any to 198.64.146.50
+block out quick on $RENATER from any to 204.99.16.145
+block out quick on $RENATER from any to 212.118.48.21
+block out quick on $RENATER from any to 212.158.173.149
+block out quick on $RENATER from any to 216.49.88.20
+block out quick on $RENATER from any to 216.9.245.101
+block out quick on $RENATER from any to 217.12.97.63
+block out quick on $RENATER from any to 217.65.2.187
+block out quick on $RENATER from any to 63.245.209.120
+block out quick on $RENATER from any to 64.191.3.70
+block out quick on $RENATER from any to 64.233.183.63
+block out quick on $RENATER from any to 64.38.232.180
+block out quick on $RENATER from any to 66.179.111.12
+block out quick on $RENATER from any to 82.198.171.192
+block out quick on $RENATER from any to 84.19.191.55
+block out quick on $RENATER from any to 86.59.21.36
+block out quick on $RENATER from any to 87.106.254.245
+block out quick on $RENATER from any to 95.211.10.36
+block out quick on $RENATER from any to 95.211.6.170
+block out quick on $RENATER from any to 69.50.195.69
+block out quick on $RENATER from any to 216.139.227.91
+block out quick on $RENATER from any to 94.75.207.188
+block out quick on $RENATER from any to 94.75.233.163
+block out quick on $RENATER from any to 94.75.207.48
+pass out quick on $RENATER from 129.20.32.59 to 193.52.94.40
+block out quick on $RENATER proto tcp from 193.52.56.0/24 to any port ftp-data:ftp
+pass out quick on $RENATER from 193.52.56.0/24 to any
+pass out quick on $RENATER inet proto icmp from any to any
+block out quick on $RENATER proto tcp from any to any port 2967
+block out quick on $RENATER proto tcp from any to any port 5599
+block out quick on $RENATER proto udp from any to any port 135:netbios-ss
+block out quick on $RENATER proto tcp from any to any port 135:139
+block out quick on $RENATER proto tcp from any to any port 445
+block out quick on $RENATER proto tcp from any to any port 593
+block out quick on $RENATER proto tcp from any to 128.121.4.0/24 port www
+block out quick on $RENATER proto tcp from any to 128.121.20.0/28 port www
+block out quick on $RENATER proto tcp from any to any port 412
+block out quick on $RENATER proto tcp from any to any port 1214
+block out quick on $RENATER proto tcp from any to any port 3531
+block out quick on $RENATER proto tcp from any to any port 4662:4665
+block out quick on $RENATER proto tcp from any to any port 4672
+block out quick on $RENATER proto tcp from any to any port 6346:6347
+block out quick on $RENATER proto tcp from any to any port 6699
+block out quick on $RENATER proto tcp from any to any port 6881:6889
+block out quick on $RENATER proto tcp from any to any port 4000
+block out quick on $RENATER proto tcp from any to any port 32459
+block out quick on $RENATER from any to 0.0.0.255/32
+block out quick on $RENATER from any to 217.128.239.42
+block out quick on $RENATER from any to 193.84.73.244
+block out quick on $RENATER from any to 151.189.20.30
+pass out quick on $RENATER proto udp from 129.20.254.3 to any port 1812:1813
+pass out quick on $RENATER from 129.20.0.0/16 to any
+pass out quick on $RENATER from 148.60.0.0/16 to any
+pass out quick on $RENATER from 195.220.94.0/24 to any
+pass out quick on $RENATER from 193.52.37.0/24 to any
+pass out quick on $RENATER from 193.52.60.0/24 to any
+pass out quick on $RENATER from 193.52.12.33 to any
+block out quick on $RENATER from any to any
+pass in quick on $VISIO inet proto icmp from any to any
+pass in quick on $VISIO proto igmp from any to any
+pass in quick on $VISIO proto tcp from any to any port domain
+pass in quick on $VISIO proto udp from any to any port domain
+pass in quick on $VISIO proto tcp from any to any port 1023:65535
+pass in quick on $VISIO proto udp from any to any port 1023:65535
+pass in quick on $VISIO proto tcp from any to any port www
+pass in quick on $VISIO proto tcp from any to any port 443
+pass in quick on $VISIO proto tcp from any to 129.20.55.20 port 8081
+pass in quick on $VISIO proto tcp from any to 129.20.131.0/24 port pop3
+#pass in quick on $VISIO proto tcp from any to 129.20.0.0/16 port ack
+block in quick on $VISIO from any to 129.20.0.0/16
+block in quick on $VISIO proto tcp from any to any port 42
+block in quick on $VISIO proto udp from any to any port 135:netbios-ss
+block in quick on $VISIO proto tcp from any to any port 135:139
+block in quick on $VISIO proto tcp from any to any port 445
+block in quick on $VISIO proto tcp from any to any port 593
+pass in quick on $VISIO from any to any
+block out quick on $VISIO from any to 193.52.56.14/32
+block out quick on $VISIO from any to 193.52.56.128
+block out quick on $VISIO from any to 193.52.56.191
+pass out quick on $VISIO inet proto icmp from any to any
+#pass out quick on $VISIO proto tcp from any to any port ack
+pass out quick on $VISIO proto tcp from any to any port 1503
+pass out quick on $VISIO proto tcp from any to any port 1718:1731
+pass out quick on $VISIO proto tcp from any to any port 3230:3243
+pass out quick on $VISIO proto udp from any to any port 3230:3285
+pass out quick on $VISIO proto udp from any to 193.52.56.0/24 port 32767:65535
+pass out quick on $VISIO proto tcp from 193.52.56.32/28 to 193.52.56.220 port www
+pass out quick on $VISIO proto tcp from 193.52.60.230 to 193.52.56.220 port www
+pass out quick on $VISIO proto tcp from 129.20.128.0/22 to 193.52.56.220 port www
+block out quick on $VISIO proto tcp from any to 193.52.56.220 port www
+pass out quick on $VISIO from any to 193.52.56.0/25
+pass out quick on $VISIO from any to 193.52.56.210
+pass out quick on $VISIO from any to 193.52.56.220
+pass out quick on $VISIO from 193.52.56.0/24 to any
+pass out quick on $VISIO from 195.220.94.0/26 to any
+pass out quick on $VISIO from 129.20.0.0/16 to any
+block out quick on $VISIO from any to any
+pass out quick on $INTERNE from 81.252.111.162 to 148.60.179.52
+pass out quick on $INTERNE proto gre from any to $RECHERCHE/16
+pass out quick on $INTERNE proto udp from $vrvs_parisRENAT to any port 51000:56000
+pass out quick on $INTERNE proto udp from $vrvs_lyonRENAT to any port 51000:56000
+pass out quick on $INTERNE proto tcp from $AdslOctavioPena to 129.20.73.201
+pass out quick on $INTERNE from any to $ETUDIANTS/20
+pass out quick on $INTERNE proto tcp from $AdslAntunes to 129.20.73.201 port pcanywhere-data:5632
+pass out quick on $INTERNE from any to 129.20.144.0/23
+pass out quick on $INTERNE from any to 148.60.144.0/23
+pass out quick on $INTERNE proto tcp from $AdslVeroPrevet to 129.20.160.123
+pass out quick on $INTERNE from $secCRU to any
+pass out quick on $INTERNE from $CRU_INTERNE/26 to any
+pass out quick on $INTERNE proto tcp from $CRU_WIFI/26 to 129.20.129.149 port 9100
+pass out quick on $INTERNE proto tcp from $CRU_PUBLIC/26 to 129.20.131.104 port www
+pass out quick on $INTERNE proto tcp from gate.cru.fr to 129.20.131.104
+pass out quick on $INTERNE proto tcp from any to 129.20.222.60 port smtp
+pass out quick on $INTERNE proto tcp from 129.20.254.1 to any port domain
+pass out quick on $INTERNE proto udp from 129.20.254.1 to any port domain
+pass out quick on $INTERNE proto udp from 129.20.254.250 to any port tftp
+pass out quick on $INTERNE proto udp from 193.52.56.208/28 to any port domain
+pass out quick on $INTERNE proto udp from $M_syslogserver to 129.20.128.67 port syslog
+pass out quick on $INTERNE proto udp from $rad1CRU to 129.20.129.2 port 1812:1814
+pass out quick on $INTERNE proto udp from $rad1EduroamFr to 129.20.129.2 port 1812:1814
+pass out quick on $INTERNE proto tcp from $patCostelFx_eUHB to 129.20.49.3
+pass out quick on $INTERNE proto tcp from 147.99.167.0/24 to 129.20.49.3
+pass out quick on $INTERNE proto tcp from $OBSERV_MEUDON/16 to 129.20.25.70 port 6000
+pass out quick on $INTERNE proto tcp from $blueAolCom/24 to 129.20.17.57
+pass out quick on $INTERNE from $loginOscarAolCom/16 to 129.20.17.57
+pass out quick on $INTERNE proto tcp from $StuttgartMpgDe to 129.20.16.67 port ftp
+pass out quick on $INTERNE proto tcp from $M_ext_ssh_dolmen to 129.20.86.22 port ssh
+pass out quick on $INTERNE proto tcp from $M_srvCaren_http to 129.20.49.172 port www
+block in quick on $INTERNE from 129.20.210.248 to any
+pass out quick on $INTERNE proto tcp from $M_srvCaren_ssh to 129.20.49.172 port ssh
+pass out quick on $INTERNE proto tcp from $inwicast to 129.20.126.119 port ssh
+pass out quick on $INTERNE proto tcp from 129.20.254.3 to 129.20.128.0/22 port ssh
+pass in quick on $INTERNE inet proto icmp from any to any icmp-type echoreq
+pass in quick on $INTERNE inet proto icmp from any to any icmp-type echorep
+pass in quick on $INTERNE inet proto icmp from any to any icmp-type timex
+pass in quick on $INTERNE inet proto icmp from any to any icmp-type trace
+pass in quick on $INTERNE inet proto icmp from any to any icmp-type echorep code net-unr
+block in quick on $INTERNE inet proto icmp from any to any
+pass in quick on $INTERNE proto gre from 129.20.251.1 to 129.20.253.254
+block in quick on $INTERNE from any to $RussianBusinessN/20
+block in quick on $INTERNE from $M_BLOQUEES to any
+pass in quick on $INTERNE proto tcp from $M_CachesIfsic to any port www
+pass in quick on $INTERNE proto tcp from $M_EtuIfsic to any port www
+pass out quick on $INTERNE proto tcp from any to 129.20.161.4 port 104
+pass in quick on $INTERNE proto tcp from 148.60.188.240/29 to $symantecCom/24 port www
+block in quick on $INTERNE from 148.60.188.240/29 to any
+block in quick on $INTERNE proto tcp from any to $M_China_IE7
+pass out quick on $INTERNE proto tcp from $cnam_vnc2 to 129.20.77.85 port 5900
+block in quick on $INTERNE proto tcp from any to $M_verConficker
+pass in quick on $INTERNE proto tcp from $M_ReseauxUR1_http to any port www
+pass out quick on $INTERNE proto udp from $serveur_ivisit to any port 9940
+pass in quick on $INTERNE proto tcp from $ETUDIANTS/16 to any port www
+pass out quick on $INTERNE proto udp from $cnam_ivisit2 to any port 9940
+pass out quick on $INTERNE from 129.20.246.1 to 148.60.210.248
+pass in quick on $INTERNE proto tcp from any to $M_DirectExt_http port www
+block in quick on $INTERNE proto tcp from any to any port www
+pass out quick on $INTERNE proto tcp from any to 129.20.128.10 port 995
+pass in quick on $INTERNE proto tcp from $M_ServUR1_smtp to any port smtp
+pass out quick on $INTERNE from $titusINIST to 129.20.76.85
+pass in quick on $INTERNE proto tcp from any to $smtpIRISA port smtp
+pass in quick on $INTERNE proto tcp from any to $mx_testCRU port smtp
+block in quick on $INTERNE proto tcp from any to any port smtp
+pass out quick on $INTERNE proto tcp from $AdslSocieteADE to 129.20.131.25 port ssh
+block in quick on $INTERNE proto tcp from any to any port $S_Kazaa
+block in quick on $INTERNE proto udp from any port $S_Kazaa to any port $S_Kazaa
+block in quick on $INTERNE proto udp from 129.20.249.0/24 to any
+block in quick on $INTERNE proto udp from any to 85.85.170.170
+pass in quick on $INTERNE from 148.60.210.248 to 129.20.246.1
+#block in quick on $INTERNE from any to $DMZ_PIX/24
+pass out quick on $INTERNE proto tcp from any to 129.20.131.166 port 2048
+pass in quick on $INTERNE from $M_ReseauxUR1_ip to any
+pass in quick on $INTERNE proto udp from any to 224.2.127.254 port 9875
+block in quick on $INTERNE from any to any
+#pass in quick on $DMZ-PIX from 192.168.2.201 to any
+#pass in quick on $DMZ-PIX from 192.168.2.253 to any
+#pass in quick on $DMZ-PIX from 192.168.2.254 to any
+#block in quick on $DMZ-PIX from any to any
+#pass in quick on $FO-PIX from any to any
+#pass quick on $HTTP-MSS-LIST1 proto tcp from any port www to any port 1023:65535
+#pass quick on $HTTP-MSS-LIST1 proto tcp from any port https to any port 1023:65535
+#pass quick on $HTTP-MSS-LIST1 proto tcp from 129.20.131.18 port 8081 to any
+#pass quick on $HTTP-MSS-LIST1 proto tcp from any to any port www
+#pass quick on $HTTP-MSS-LIST1 proto tcp from any to any port https
+#pass quick on $HTTP-MSS-LIST1 proto tcp from any to 129.20.131.18 port 8081
+#pass quick on $HTTP-MSS-LIST1 proto tcp from any to any port 8060
+block out quick on $INTERNE inet proto icmp from 193.51.189.49 to any
+pass out quick on $INTERNE inet proto icmp from any to any icmp-type echoreq
+pass out quick on $INTERNE inet proto icmp from any to any icmp-type echorep
+pass out quick on $INTERNE inet proto icmp from any to any icmp-type timex
+pass out quick on $INTERNE inet proto icmp from any to any icmp-type trace
+pass out quick on $INTERNE inet proto icmp from any to any icmp-type echorep code net-unr
+block out quick on $INTERNE inet proto icmp from any to any
+pass out quick on $INTERNE from serv_gm.cachan to $M_catia_milesant
+pass out quick on $INTERNE proto udp from any to 224.0.0.0/4
+pass out quick on $INTERNE from any to 193.52.60.134
+pass out quick on $INTERNE from 131.254.215.19 to 129.20.165.12
+pass out quick on $INTERNE proto tcp from ar.gbba.usb.ve to 129.20.25.137 port ssh
+pass out quick on $INTERNE from 88.221.86.21 to 148.60.216.16
+pass out quick on $INTERNE from 217.86.148.30 to 129.20.174.9
+pass out quick on $INTERNE proto tcp from 159.84.201.128/26 to 148.60.178.99 port 7000
+pass out quick on $INTERNE proto tcp from 193.51.154.158/31 to 148.60.178.100 port 7000
+pass out quick on $INTERNE proto tcp from 193.51.154.158/31 to 148.60.178.99 port 7000
+pass out quick on $INTERNE proto tcp from 159.84.201.128/26 to 148.60.178.100 port 7000
+pass out quick on $INTERNE from 129.20.254.5 to 129.20.55.0/24
+pass out quick on $INTERNE from 129.20.254.2 to 129.20.55.0/24
+pass out quick on $INTERNE proto tcp from any to 129.20.155.50 port 9006
+pass out quick on $INTERNE proto tcp from $cacaoUBO to 129.20.131.86
+block out quick on $INTERNE from any to $M_BLOQUEES
+pass out quick on $INTERNE from $AdslJerome to 129.20.161.12
+#pass quick on $CAPTACL from any to 224.0.0.0/4
+pass out quick on $INTERNE from 193.52.56.208/28 to 193.52.56.0/24
+pass out quick on $INTERNE proto tcp from $caredisENSTB to 129.20.82.87 port 4660
+pass out quick on $INTERNE from 193.52.56.220 to any
+pass out quick on $INTERNE proto tcp from $pmolnaENSTB to 129.20.82.33 port 4660
+pass out quick on $INTERNE proto tcp from any to 193.52.56.0/24 port h323
+pass out quick on $INTERNE proto tcp from any to $M_h323 port h323
+pass out quick on $INTERNE proto tcp from any port h323 to 193.52.56.0/24
+pass out quick on $INTERNE proto tcp from any to 193.52.56.0/24 port 2253:2263
+pass out quick on $INTERNE proto udp from any to 193.52.56.0/24 port 32767:65535
+pass out quick on $INTERNE proto tcp from $csd_ext.inist.fr to $M_any_X_Window port 6000
+pass out quick on $INTERNE proto tcp from any to $M_T_120 port 1503
+pass out quick on $INTERNE proto tcp from any to $M_h323 port 1503
+pass out quick on $INTERNE proto tcp from $cse35_1 to 129.20.76.228 port ftp
+pass out quick on $INTERNE proto tcp from 193.252.51.77 to 129.20.211.2 port ftp
+pass out quick on $INTERNE proto tcp from $www.vrvs.org port 5900:5910 to any
+pass out quick on $INTERNE proto esp from any to any
+pass out quick on $INTERNE from any to 148.60.239.0/24
+pass out quick on $INTERNE from $CCI_Fougeres to 148.60.206.0/24
+pass out quick on $INTERNE proto tcp from $vrvs_parisRENAT to any port h323
+pass out quick on $INTERNE proto tcp from $vrvs_lyonRENAT to any port h323
+pass out quick on $INTERNE proto udp from $vrvs_parisRENAT to any port 51000:56000
+pass out quick on $INTERNE proto udp from $vrvs_lyonRENAT to any port 51000:56000
+pass out quick on $INTERNE proto tcp from $AdslOctavioPena to 129.20.73.201
+pass out quick on $INTERNE from any to $ETUDIANTS/20
+pass out quick on $INTERNE proto tcp from $AdslAntunes to 129.20.73.201 port pcanywhere-data:5632
+pass out quick on $INTERNE from any to 129.20.144.0/23
+pass out quick on $INTERNE from any to 148.60.144.0/23
+pass out quick on $INTERNE proto tcp from $AdslVeroPrevet to 129.20.160.123
+pass out quick on $INTERNE from $secCRU to any
+pass out quick on $INTERNE from $CRU_INTERNE/26 to any
+pass out quick on $INTERNE proto tcp from $CRU_WIFI/26 to 129.20.129.149 port 9100
+pass out quick on $INTERNE proto tcp from $CRU_PUBLIC/26 to 129.20.131.104 port www
+pass out quick on $INTERNE proto tcp from $gate.cru.fr to 129.20.131.104
+pass out quick on $INTERNE proto tcp from any to 129.20.222.60 port smtp
+pass out quick on $INTERNE proto tcp from 129.20.254.1 to any port domain
+pass out quick on $INTERNE proto udp from 129.20.254.1 to any port domain
+pass out quick on $INTERNE proto udp from 129.20.254.250 to any port tftp
+pass out quick on $INTERNE proto udp from 193.52.56.208/28 to any port domain
+pass out quick on $INTERNE proto udp from $M_syslogserver to 129.20.128.67 port syslog
+pass out quick on $INTERNE proto udp from $rad1CRU to 129.20.129.2 port 1812:1814
+pass out quick on $INTERNE proto tcp from any to $M_any_https port https
+pass out quick on $INTERNE proto udp from 129.20.253.254 to 129.20.129.1 port tftp
+pass out quick on $INTERNE proto udp from 129.20.253.254 to any port ntp
+pass out quick on $INTERNE proto udp from 129.20.254.201 to $M_DNS port domain
+pass out quick on $INTERNE proto udp from 129.20.254.200/29 to $M_DNS port domain
+pass out quick on $INTERNE proto tcp from 129.20.254.200/29 to 129.20.131.1 port smtp
+pass out quick on $INTERNE proto tcp from $StuttgartMpgDe to 129.20.16.67 port ftp
+pass out quick on $INTERNE from 129.20.254.1 to 129.20.129.1
+pass out quick on $INTERNE proto tcp from 129.20.254.3 to 129.20.129.1 port ftp
+pass out quick on $INTERNE proto udp from 129.20.9.254 to 129.20.129.3 port snmptrap
+pass out quick on $INTERNE proto udp from 129.20.253.254 to 129.20.129.3 port snmptrap
+pass out quick on $INTERNE proto tcp from 193.50.202.0/24 to 129.20.128.79 port ssh
+pass out quick on $INTERNE proto tcp from 193.50.202.0/24 to 129.20.128.79 port 2025
+pass out quick on $INTERNE proto tcp from 193.50.202.0/24 to 129.20.131.180 port 3389
+pass out quick on $INTERNE from $fredextEPIXTECH to 129.20.128.51
+pass in quick on $INTERNE inet proto icmp from any to any icmp-type timex
+pass out quick on $INTERNE proto tcp from $M_DYNIX to $M_HIP
+pass out quick on $INTERNE proto tcp from $carminSdocABES to 129.20.128.51 port ftp
+pass out quick on $INTERNE proto tcp from any to 129.20.222.130 port domain
+pass out quick on $INTERNE proto udp from any to 129.20.222.130 port domain
+block in quick on $INTERNE from any to $RussianBusinessN/20
+pass out quick on $INTERNE proto tcp from $M_Apogee to 129.20.136.5 port sqlnet
+pass out quick on $INTERNE proto tcp from $M_Simpps to 129.20.131.172 port sqlnet
+pass out quick on $INTERNE proto tcp from $M_Simpps to 129.20.131.173 port sqlnet
+pass out quick on $INTERNE proto tcp from 131.254.13.175 to 129.20.131.172 port sqlnet
+pass out quick on $INTERNE proto tcp from 131.254.13.175 to 129.20.131.173 port sqlnet
+pass out quick on $INTERNE proto tcp from $M_sqlnet_migren to 129.20.136.9 port sqlnet
+pass out quick on $INTERNE proto tcp from $crivideoUBREST to 129.20.128.23 port 3892
+pass out quick on $INTERNE proto tcp from $cnam_vnc2 to 129.20.77.85 port 5900
+pass out quick on $INTERNE proto tcp from $pix_515ACRENNES to 129.20.131.90 port sqlnet
+pass out quick on $INTERNE proto tcp from any to 129.20.128.68 port smtp
+pass out quick on $INTERNE proto tcp from any to 129.20.128.66 port 587
+pass out quick on $INTERNE proto tcp from any to 129.20.131.1 port ident
+pass out quick on $INTERNE proto tcp from 194.214.200.0/28 to 129.20.131.1 port 10025
+pass out quick on $INTERNE proto tcp from 194.214.201.0/28 to 129.20.131.1 port 10025
+pass out quick on $INTERNE proto tcp from 194.214.200.0/28 to 129.20.128.18 port ldap
+pass out quick on $INTERNE proto tcp from 194.214.201.0/28 to 129.20.128.18 port ldap
+pass out quick on $INTERNE proto tcp from 194.214.200.0/28 to 129.20.128.18 port ldaps
+pass out quick on $INTERNE proto tcp from 194.214.201.0/28 to 129.20.128.18 port ldaps
+pass out quick on $INTERNE proto tcp from 194.214.200.0/28 to 129.20.131.111 port smtp
+pass out quick on $INTERNE proto tcp from 194.214.201.0/28 to 129.20.131.111 port smtp
+pass out quick on $INTERNE proto tcp from 194.214.200.0/28 to 129.20.230.148 port smtp
+pass out quick on $INTERNE proto tcp from 194.214.201.0/28 to 129.20.230.148 port smtp
+pass out quick on $INTERNE proto tcp from 194.214.200.0/28 to 129.20.233.18 port smtp
+pass out quick on $INTERNE proto tcp from 194.214.201.0/28 to 129.20.233.18 port smtp
+pass out quick on $INTERNE proto tcp from 194.214.200.0/28 to $firewallProteome port smtp
+pass out quick on $INTERNE proto tcp from 194.214.201.0/28 to $firewallProteome port smtp
+pass out quick on $INTERNE proto tcp from 194.214.200.0/28 to 129.20.128.10 port 10025
+pass out quick on $INTERNE proto tcp from 194.214.201.0/28 to 129.20.128.10 port 10025
+pass out quick on $INTERNE proto tcp from any to 129.20.131.142 port 8000
+pass out quick on $INTERNE proto tcp from any to 129.20.131.166 port 2048
+pass out quick on $INTERNE proto tcp from any to 129.20.131.149 port 8090
+pass out quick on $INTERNE proto tcp from any to 129.20.131.149 port 8443
+pass out quick on $INTERNE proto tcp from any to 129.20.131.144 port 8090
+block out quick on $INTERNE proto tcp from 218.38.136.55 to 129.20.161.12 port ssh
+pass out quick on $INTERNE proto tcp from any to 129.20.161.12 port $S_cerisier_tcp
+pass out quick on $INTERNE proto udp from 87.249.123.6 to 129.20.91.149
+pass out quick on $INTERNE proto udp from 213.160.213.86 to 129.20.91.149
+pass out quick on $INTERNE proto tcp from 193.52.101.133 to 129.20.11.123 port ssh
+pass out quick on $INTERNE proto udp from 87.249.123.6 to 129.20.160.37
+pass out quick on $INTERNE proto udp from 213.160.213.86 to 129.20.160.37
+pass out quick on $INTERNE proto tcp from any to 129.20.48.163 port 591
+pass out quick on $INTERNE proto tcp from any to 129.20.131.164 port 8443
+pass out quick on $INTERNE proto tcp from $Ste_ipdiva to 129.20.133.133 port ssh
+pass out quick on $INTERNE proto tcp from $Ste_ipdiva to 129.20.133.134 port ssh
+pass out quick on $INTERNE proto tcp from any to 129.20.25.86 port 8008
+pass out quick on $INTERNE proto tcp from any to 129.20.155.50 port 16080
+pass out quick on $INTERNE inet proto icmp from any to any icmp-type echoreq
+pass out quick on $INTERNE proto tcp from any to 129.20.174.2 port 31250
+pass out quick on $INTERNE proto tcp from any to 129.20.131.18 port 8081:8082
+pass out quick on $INTERNE proto tcp from any to 129.20.131.2 port nntp
+pass out quick on $INTERNE proto tcp from any to 129.20.128.65 port 210
+pass out quick on $INTERNE proto tcp from 129.20.254.5 to 129.20.126.20 port ldap
+pass out quick on $INTERNE proto tcp from 129.20.254.5 to 129.20.126.21 port ldap
+pass out quick on $INTERNE proto tcp from 129.20.254.5 to 129.20.128.35 port ldap
+pass out quick on $INTERNE proto tcp from 129.20.254.5 to 129.20.128.50 port ldap
+pass out quick on $INTERNE proto tcp from 196.200.142.0/24 to 129.20.126.21 port ldap
+pass out quick on $INTERNE proto tcp from $IRISA/16 to 129.20.128.35 port ldap
+pass out quick on $INTERNE proto tcp from $IRISA/16 to 129.20.128.50 port ldap
+pass out quick on $INTERNE proto tcp from $wwwCRU to 129.20.128.3 port ldap
+pass out quick on $INTERNE proto tcp from $CRU/26 to 129.20.128.0/24 port ldaps
+pass out quick on $INTERNE proto tcp from $AdslOlGuillou to 129.20.128.19
+pass out quick on $INTERNE proto tcp from $AdslOlGuillou to 129.20.128.52 port 3891
+pass out quick on $INTERNE proto tcp from $passerl1EPIXTECH to 129.20.128.19 port 3893
+pass out quick on $INTERNE proto tcp from $AdslPascalAubry to $RECHERCHE/16 port ldap
+pass out quick on $INTERNE proto tcp from $AdslPascalAubry to 129.20.128.0/22 port ssh
+pass out quick on $INTERNE proto tcp from any to 129.20.126.11 port 3298:3299
+pass out quick on $INTERNE proto tcp from $M_Ext2Sifac to $M_SIFAC port $S_Ext2Sifac
+pass out quick on $INTERNE proto tcp from 194.167.195.16 to 129.20.136.16 port 3303
+pass out quick on $INTERNE proto tcp from 195.83.191.21 to 129.20.131.90 port ssh
+pass out quick on $INTERNE proto tcp from 195.83.191.21 to 129.20.131.158 port ssh
+pass out quick on $INTERNE proto tcp from 194.167.156.66 to 148.60.16.52/30 port 1935
+pass out quick on $INTERNE from 192.134.152.246 to 129.20.156.14
+pass out quick on $INTERNE proto tcp from 193.49.22.249 to 129.20.126.10 port ssh
+pass out quick on $INTERNE proto tcp from 194.167.195.16/29 to 129.20.126.6 port ssh
+pass out quick on $INTERNE proto tcp from $posteSteAde to 129.20.128.52 port ldap
+pass out quick on $INTERNE proto tcp from $M_Sauvegardees to 129.20.128.60 port 2525
+pass out quick on $INTERNE proto udp from $M_Sauvegardees to 129.20.128.60 port 2526
+pass out quick on $INTERNE from $IRISA/16 to 129.20.233.0/24
+pass out quick on $INTERNE proto tcp from $IRISA/16 to 148.60.233.0/24
+pass out quick on $INTERNE proto tcp from $AdslArnaudDelay to 129.20.233.0/24
+pass out quick on $INTERNE proto tcp from $AdslArnaudDelay to 148.60.233.0/24
+pass out quick on $INTERNE proto tcp from $AdslMoulKharoune to 129.20.233.0/24
+pass out quick on $INTERNE proto tcp from $AdslMoulKharoune to 148.60.233.0/24
+pass out quick on $INTERNE proto tcp from $AdslMarcZonzon to 129.20.233.0/24
+pass out quick on $INTERNE proto tcp from $M_ExtiutLannion to 129.20.233.247 port ftp-data
+pass out quick on $INTERNE proto tcp from $M_ExtiutLannion to 129.20.233.247 port ftp
+pass out quick on $INTERNE proto tcp from $AdslMarcZonzon to 148.60.233.0/24
+pass out quick on $INTERNE proto tcp from 81.56.144.36 to 129.20.232.0/21 port ssh
+pass out quick on $INTERNE proto tcp from $AdslPierreDeleporte to 129.20.204.73 port 5800:5900
+pass out quick on $INTERNE proto tcp from $AdslPierreDeleporte to 129.20.204.86 port 5800:5900
+pass out quick on $INTERNE proto tcp from any to 129.20.178.16 port 63148
+pass out quick on $INTERNE proto tcp from $AdslGuizouarn to 129.20.73.201 port pcanywhere-data:5632
+pass out quick on $INTERNE proto tcp from $AdslOctavioPena to 129.20.73.201
+pass out quick on $INTERNE from $netinary to 148.60.248.250
+pass out quick on $INTERNE proto tcp from $AdslAntunes to 129.20.73.201 port pcanywhere-data:5632
+pass out quick on $INTERNE proto tcp from $AdslVeroBiquand to 129.20.93.0/24
+pass out quick on $INTERNE proto tcp from $AdslVeroBiquand to 129.20.204.0/24
+pass out quick on $INTERNE proto tcp from $AdslVeroPrevet to 129.20.160.123
+pass out quick on $INTERNE proto tcp from any to 129.20.233.18 port $S_smtpDnsHttp
+pass out quick on $INTERNE proto udp from any to 129.20.233.18 port domain
+pass out quick on $INTERNE proto tcp from any to 148.60.233.18 port $S_smtpDnsHttp
+pass out quick on $INTERNE proto tcp from $playetpauseNerim to 129.20.232.17 port 41794:41795
+pass out quick on $INTERNE proto tcp from any to $M_any_5900 port 5900
+pass out quick on $INTERNE proto tcp from any to 129.20.222.60 port smtp
+pass out quick on $INTERNE proto tcp from any to 129.20.230.148 port smtp
+pass out quick on $INTERNE proto tcp from any to 129.20.230.135 port smtp
+pass out quick on $INTERNE proto tcp from $IRISA/16 to $M_Irisa2Nsat port $S_Irisa2Nsat
+pass out quick on $INTERNE proto tcp from any to 148.60.223.66 port $S_any2IbmAbretASSO
+pass out quick on $INTERNE proto gre from $pimRpIRISA to 193.52.60.1
+pass out quick on $INTERNE proto tcp from $M_StarDicom to 129.20.25.28 port 6000
+pass out quick on $INTERNE proto tcp from $M_StarDicom to 129.20.161.182 port 8005
+pass out quick on $INTERNE proto tcp from $IRISA/16 to 129.20.161.182 port www
+pass out quick on $INTERNE proto tcp from $SteEtiam to 129.20.161.182 port ssh
+pass out quick on $INTERNE proto tcp from $SteEtiam to 129.20.161.182 port www
+pass out quick on $INTERNE inet proto icmp from any to any icmp-type timex
+pass out quick on $INTERNE proto tcp from $solutreIRISA to 129.20.208.7 port www
+pass out quick on $INTERNE proto tcp from any to 129.20.128.65 port 210
+pass out quick on $INTERNE from 129.20.254.1 to 129.20.129.1
+pass out quick on $INTERNE from $VPN_IRISA1/24 to 129.20.217.0/24
+pass out quick on $INTERNE from $VPN_IRISA2/24 to 129.20.217.0/24
+pass out quick on $INTERNE from any to 148.60.25.0/24
+pass out quick on $INTERNE from $vpn1ACRENNES to 129.20.192.60
+pass out quick on $INTERNE from $racineACRENNES to 129.20.192.60
+pass out quick on $INTERNE proto tcp from 193.50.202.0/24 to 129.20.131.180 port 3389
+pass out quick on $INTERNE proto tcp from any to $M_any_http port www
+pass out quick on $INTERNE proto tcp from any to 148.60.52.153 port 5800:5900
+pass out quick on $INTERNE proto tcp from $M_DYNIX to $M_HIP
+pass out quick on $INTERNE proto tcp from any to $M_any_ftp port ftp
+pass out quick on $INTERNE proto tcp from $M_ftp_hplusbd to 129.20.49.56 port ftp
+pass out quick on $INTERNE proto udp from any to 129.20.222.130 port domain
+pass out quick on $INTERNE proto tcp from any to 148.60.52.62 port 1024:65535
+pass out quick on $INTERNE from $dirwdXs4allNl to 129.20.75.88
+pass out quick on $INTERNE from $HeartUclaEdu to 129.20.75.21
+pass out quick on $INTERNE proto tcp from $M_Simpps to 129.20.131.173 port sqlnet
+pass out quick on $INTERNE proto tcp from any to 129.20.36.174 port 2220:2229
+pass out quick on $INTERNE proto tcp from 131.254.13.175 to 129.20.131.173 port sqlnet
+pass out quick on $INTERNE proto tcp from 118.153.18.0/24 to 129.20.75.218 port ssh
+pass out quick on $INTERNE proto tcp from any to $M_any_ssh port ssh
+pass out quick on $INTERNE proto tcp from any to 129.20.76.199 port 9184
+pass out quick on $INTERNE proto tcp from any to 129.20.27.76 port 57727
+pass out quick on $INTERNE proto tcp from any to 129.20.128.68 port smtp
+pass out quick on $INTERNE proto tcp from any to $M_any_pop3pop3s port pop3
+pass out quick on $INTERNE proto tcp from any to 129.20.131.1 port ident
+pass out quick on $INTERNE proto tcp from any to $M_any_pop3pop3s port 995
+pass out quick on $INTERNE proto tcp from any to $M_any_imapimaps port imap4
+pass out quick on $INTERNE proto tcp from 194.214.200.0/28 to 129.20.128.18 port ldap
+pass out quick on $INTERNE proto tcp from any to $M_any_imapimaps port 993
+pass out quick on $INTERNE proto tcp from any to 129.20.128.10 port 995
+pass out quick on $INTERNE proto tcp from any to 129.20.131.30 port 2000
+pass out quick on $INTERNE proto tcp from any to 129.20.131.1 port 2000
+pass out quick on $INTERNE proto tcp from any to $M_any_cmd port rsh
+pass out quick on $INTERNE proto tcp from any to $RESO_INCUBATEUR/24 port smtp
+block out quick on $INTERNE proto tcp from 212.0.132.0/24 to 129.20.16.224
+pass out quick on $INTERNE proto tcp from any to 148.60.161.83 port 2401
+pass out quick on $INTERNE proto tcp from 194.214.201.0/28 to 129.20.233.18 port smtp
+block out quick on $INTERNE from 217.5.216.107 to any
+pass out quick on $INTERNE proto udp from $vrvs_parisRENAT to any port 51000:56000
+block out quick on $INTERNE from 213.91.131.248 to any
+pass out quick on $INTERNE proto tcp from $AdslOctavioPena to 129.20.73.201
+block out quick on $INTERNE from 195.250.148.253 to any
+pass out quick on $INTERNE proto tcp from $pix_515ACRENNES to 129.20.131.84 port 6400
+block out quick on $INTERNE from 89.19.15.18 to any
+pass out quick on $INTERNE proto tcp from $AdslSocieteADE to 129.20.128.20 port ldap
+block out quick on $INTERNE from 82.165.45.82 to any
+pass out quick on $INTERNE proto tcp from 150.185.128.201 to 129.20.25.26 port ssh
+block out quick on $INTERNE from 77.47.186.220 to any
+pass out quick on $INTERNE proto tcp from any to 129.20.73.157 port 115
+pass out quick on $INTERNE proto tcp from $M_ssh_pctheo13 to 129.20.75.140 port ssh
+pass out quick on $INTERNE proto tcp from any to $M_any_6000 port 6000
+pass out quick on $INTERNE proto udp from any to 129.20.94.184
+pass out quick on $INTERNE proto tcp from 193.51.76.187 to 129.20.94.16
+pass out quick on $INTERNE proto tcp from any to 129.20.48.163 port 591
+pass out quick on $INTERNE proto tcp from any to $M_any_8080 port 8080
+block out quick on $INTERNE from any to 129.20.36.193
+pass out quick on $INTERNE proto tcp from any to $M_any_httpHttps port www
+pass out quick on $INTERNE proto tcp from any to 129.20.48.132 port 3389
+pass out quick on $INTERNE proto tcp from any to 129.20.178.134 port 3389
+pass out quick on $INTERNE proto tcp from any to $M_any_ftpHttpHttps port $S_any_ftpHttpHttps
+pass out quick on $INTERNE proto tcp from any to $M_any_sshHttpHttps port $S_any_sshHttpHttps
+pass out quick on $INTERNE proto tcp from any to $M_any2ebiSxLtsi port $S_any2ebiSxLtsi
+pass out quick on $INTERNE proto tcp from any to $M_any2DSPMed port $S_any2DSPMed
+pass out quick on $INTERNE proto tcp from any to $M_any2CrittMed port $S_any2CrittMed
+pass out quick on $INTERNE proto udp from any to 129.20.131.186 port 9990
+pass out quick on $INTERNE proto tcp from any to 129.20.55.20 port 8081
+pass out quick on $INTERNE proto tcp from any to 129.20.83.20 port 8081
+pass out quick on $INTERNE proto tcp from any to 129.20.82.82 port 8082
+pass out quick on $INTERNE proto tcp from any to $M_any_httpHttps port https
+pass out quick on $INTERNE proto tcp from $IRISA/16 to 129.20.131.136 port 8080
+pass out quick on $INTERNE proto tcp from any to 129.20.153.52 port 8180
+pass out quick on $INTERNE proto tcp from any to 129.20.161.27 port $S_any2pcDmedMed
+pass out quick on $INTERNE proto tcp from any to 129.20.161.5 port 81
+pass out quick on $INTERNE proto tcp from any to 129.20.161.1 port 81
+pass out quick on $INTERNE proto tcp from any to 129.20.76.95 port lpd
+pass out quick on $INTERNE proto tcp from any to 129.20.76.149 port 531
+pass out quick on $INTERNE proto tcp from any to 129.20.161.5 port 1080
+pass out quick on $INTERNE proto tcp from any to 129.20.83.20 port 1099
+pass out quick on $INTERNE proto tcp from any to 129.20.161.5 port 1099:2000
+pass out quick on $INTERNE proto tcp from any to 129.20.88.134 port 1755
+pass out quick on $INTERNE proto udp from any to 148.60.52.62 port sunrpc
+pass out quick on $INTERNE proto tcp from any to 129.20.153.52 port 2401
+pass out quick on $INTERNE proto tcp from any to 129.20.83.20 port 3144
+pass out quick on $INTERNE proto tcp from any to 129.20.161.5 port 8090
+pass out quick on $INTERNE proto tcp from any to 129.20.161.5 port 3306
+pass out quick on $INTERNE proto tcp from 88.164.237.28 to 129.20.131.53 port 3306
+pass out quick on $INTERNE proto tcp from $listesCRU to 129.20.131.122 port 3307
+pass out quick on $INTERNE proto tcp from $listesCRU to 129.20.131.125 port 3307
+pass out quick on $INTERNE proto tcp from 195.220.94.170 to 129.20.131.122 port 3307
+pass out quick on $INTERNE proto tcp from 195.220.94.170 to 129.20.131.125 port 3307
+pass out quick on $INTERNE proto tcp from any to $M_any_9000 port 9000
+pass out quick on $INTERNE proto tcp from any to 129.20.157.39 port 4899
+pass out quick on $INTERNE proto tcp from any to 129.20.83.20 port 5307
+pass out quick on $INTERNE proto tcp from any to 129.20.76.149 port 5632
+pass out quick on $INTERNE proto tcp from any to 129.20.88.11 port 5800
+pass out quick on $INTERNE proto tcp from any to 129.20.88.42 port 5800
+pass out quick on $INTERNE proto tcp from any to 129.20.88.134 port 7007
+pass out quick on $INTERNE proto tcp from any to 129.20.161.4 port 9090
+pass out quick on $INTERNE proto tcp from any to 129.20.155.25 port 16080
+pass out quick on $INTERNE proto tcp from $irisIRISA to 129.20.129.60
+pass out quick on $INTERNE proto tcp from $IRISA/16 to 148.60.41.0/26 port ssh
+pass out quick on $INTERNE proto tcp from $IDRIS161/24 to $M_Idris161_cmd port rsh
+pass out quick on $INTERNE proto udp from any to 129.20.73.154 port 63148
+pass out quick on $INTERNE proto tcp from any to 129.20.178.16 port 63148
+pass out quick on $INTERNE proto tcp from any to 148.60.52.46 port 12405
+pass out quick on $INTERNE proto tcp from any to 129.20.178.68 port 63148
+pass out quick on $INTERNE from $netinary to 148.60.248.250
+pass out quick on $INTERNE proto tcp from $M_Ext2Simpa_cmd to 129.20.27.0/24 port rsh
+pass out quick on $INTERNE proto tcp from $OBSERV_MEUDON/16 to 129.20.27.0/24 port 6000
+pass out quick on $INTERNE proto tcp from $IDRIS161/24 to 129.20.16.67 port ftp
+pass out quick on $INTERNE proto tcp from $IDRIS161/24 to 129.20.16.20 port ftp
+pass out quick on $INTERNE proto tcp from $OBSERV_MEUDON/16 to 129.20.25.70 port rsh
+pass out quick on $INTERNE proto tcp from $OBSERV_MEUDON/16 to 129.20.25.8 port rsh
+pass out quick on $INTERNE proto tcp from $IRISA/16 to 129.20.54.9 port lpd
+pass out quick on $INTERNE proto tcp from $CRU_PUBLIC/26 to 129.20.131.104 port www
+pass out quick on $INTERNE proto tcp from 155.56.66.0/24 to 148.60.186.0/24 port https
+pass out quick on $INTERNE proto tcp from 155.56.66.0/24 to 148.60.186.0/24 port citrix-ica
+pass out quick on $INTERNE proto tcp from 155.56.66.0/24 to 148.60.188.0/24 port https
+pass out quick on $INTERNE proto tcp from 155.56.66.0/24 to 148.60.188.0/24 port citrix-ica
+pass out quick on $INTERNE proto tcp from $Archimed1 to 148.60.91.50 port 3389
+pass out quick on $INTERNE proto tcp from $Archimed2 to 148.60.91.50 port 3389
+pass out quick on $INTERNE proto tcp from $Archimed2 to 148.60.91.51
+pass out quick on $INTERNE proto tcp from $Archimed1 to 148.60.91.51
+pass out quick on $INTERNE proto tcp from $lnsThProxadNet to 129.20.48.175 port 3389
+pass out quick on $INTERNE proto tcp from $rtAtlanticRF to 129.20.83.67 port 3389
+pass out quick on $INTERNE proto tcp from $SteEtiam to 129.20.161.182 port ssh
+pass out quick on $INTERNE proto tcp from $OBSERV_MEUDON/16 to 129.20.25.70 port 6000
+pass out quick on $INTERNE proto tcp from $OBSERV_MEUDON/16 to 129.20.25.8 port 6000
+pass out quick on $INTERNE proto tcp from $solutreIRISA to 129.20.208.7 port www
+pass out quick on $INTERNE proto tcp from $StuttgartMpgDe to 129.20.16.67 port ftp
+pass out quick on $INTERNE proto tcp from $StuttgartMpgDe to 129.20.16.20 port ftp
+pass out quick on $INTERNE proto tcp from $kappaUTC to 129.20.76.106 port ssh
+pass out quick on $INTERNE proto tcp from $M_bbacqSpm_ssh to 129.20.48.63 port ssh
+pass out quick on $INTERNE proto tcp from $M_bbacqSpm_www to 129.20.48.63 port www
+pass out quick on $INTERNE proto tcp from kar.gbba.usb.ve to 129.20.25.137 port ssh
+pass out quick on $INTERNE proto tcp from wei.gbba.usb.ve to 129.20.25.137 port ssh
+pass out quick on $INTERNE from $adm02INSAREN to 129.20.32.59
+pass out quick on $INTERNE from $adm02INSAREN to 129.20.32.117
+pass out quick on $INTERNE proto tcp from $pareFeuMinFinanc to 129.20.192.60 port 261
+pass out quick on $INTERNE from $mult01EnsINSAREN to 129.20.83.106
+pass out quick on $INTERNE proto tcp from $StuttgartMpgDe to 129.20.16.67 port rsh
+pass out quick on $INTERNE proto tcp from $vigieACRENNES to 129.20.192.91 port lpd
+pass out quick on $INTERNE proto tcp from $StuttgartMpgDe to 129.20.16.20 port rsh
+pass out quick on $INTERNE proto tcp from $tigerChemUwEduPl to 129.20.27.0/24 port rsh
+pass out quick on $INTERNE proto tcp from $vigieACRENNES to 129.20.192.111 port lpd
+pass out quick on $INTERNE proto tcp from $dxcalcLnfInfnIt to 129.20.82.2 port rsh
+pass out quick on $INTERNE from $pchyper6INSAREN to 129.20.82.58
+pass out quick on $INTERNE proto tcp from 194.57.123.48 to 129.20.72.208 port 1547
+pass out quick on $INTERNE proto tcp from $pc10CaesCNRS to 129.20.72.208 port 1547
+pass out quick on $INTERNE proto tcp from $caredisENSTB to 129.20.82.87 port 4660
+pass out quick on $INTERNE proto tcp from 193.52.81.7 to 129.20.82.87 port 4660
+pass out quick on $INTERNE proto tcp from $pmolnaENSTB to 129.20.82.33 port 4660
+pass out quick on $INTERNE proto tcp from 131.254.254.16 to 129.20.87.41 port 6000
+pass out quick on $INTERNE proto tcp from $microcosmeIRISA to 129.20.54.103 port 6000
+pass out quick on $INTERNE proto tcp from $exponentielIRISA to 129.20.54.103 port 6000
+pass out quick on $INTERNE from $titusINIST to 129.20.16.159
+pass out quick on $INTERNE proto tcp from any to $M_any_pop3pop3s port 995
+pass out quick on $INTERNE proto tcp from csd_ext.inist.fr to $M_any_X_Window port 6000
+pass out quick on $INTERNE proto tcp from 194.214.200.0/28 to 129.20.128.18 port ldap
+pass out quick on $INTERNE proto tcp from $titusINIST to $M_any_X_Window port 6000
+pass out quick on $INTERNE proto tcp from any to 129.20.128.10 port 995
+pass out quick on $INTERNE proto tcp from 193.52.48.67 to 129.20.131.195 port 50100
+pass out quick on $INTERNE from $titusINIST to 129.20.76.85
+pass out quick on $INTERNE proto tcp from $M_bbacqSpm_18000 to 129.20.48.63 port 18000
+pass out quick on $INTERNE proto tcp from $M_ExtiutLannion to 129.20.233.247 port ftp
+pass out quick on $INTERNE proto tcp from $AdslSocieteADE to 129.20.131.10 port ssh
+pass out quick on $INTERNE proto tcp from $AdslSocieteADE to 129.20.131.25 port ssh
+pass out quick on $INTERNE proto tcp from $M_balsa_sqlnet to 129.20.131.141 port sqlnet
+pass out quick on $INTERNE proto tcp from $M_ADE to 129.20.131.25 port $S_Ade
+pass out quick on $INTERNE proto tcp from $M_ADE to 129.20.131.10 port $S_Ade
+pass out quick on $INTERNE from $netinary to 148.60.248.245
+pass out quick on $INTERNE from $netinary to 148.60.248.250
+pass out quick on $INTERNE from $netinary to 129.20.131.86
+pass out quick on $INTERNE proto tcp from any to 129.20.131.166 port 2048
+pass out quick on $INTERNE from $IRISA/16 to 129.20.54.118
+pass out quick on $INTERNE from $pcinterUVALENCiN to 129.20.136.13
+pass out quick on $INTERNE proto udp from 129.20.254.4 to any port domain
+pass out quick on $INTERNE proto udp from 129.20.254.3 to any port domain
+pass out quick on $INTERNE proto udp from 129.20.254.5 to any port domain
+pass out quick on $INTERNE proto tcp from 129.20.254.5 to any
+pass out quick on $INTERNE proto tcp from 129.20.254.5 to 129.20.131.104 port www
+pass out quick on $INTERNE proto tcp from $reverseCmpltlNet to 129.20.131.24 port www
+pass out quick on $INTERNE proto udp from 129.20.254.3 to 129.20.129.2 port 1812:1814
+pass out quick on $INTERNE proto udp from 129.20.254.3 to 129.20.131.101 port 1812:1814
+pass out quick on $INTERNE proto tcp from 129.20.254.3 to 129.20.131.53 port 3306
+pass out quick on $INTERNE proto tcp from any to 129.20.161.211 port 3283
+pass out quick on $INTERNE from $M_sf1staff_IRISA to 129.20.131.29
+pass out quick on $INTERNE proto udp from $rad1CRU to 129.20.129.2 port 1812:1814
+pass out quick on $INTERNE proto udp from $rad1EduroamFr to 129.20.129.2 port 1812:1814
+pass out quick on $INTERNE proto tcp from $rad1CRU to 129.20.129.2 port 1812:1814
+pass out quick on $INTERNE proto tcp from $rad1EduroamFr to 129.20.129.2 port 1812:1814
+pass out quick on $INTERNE proto udp from $rad2EduroamFr to 129.20.129.2 port 1812:1814
+pass out quick on $INTERNE proto tcp from $rad2EduroamFr to 129.20.129.2 port 1812:1814
+pass out quick on $INTERNE proto udp from $rad1EduroamFr to 129.20.131.101 port 1812:1814
+pass out quick on $INTERNE proto udp from $rad2EduroamFr to 129.20.131.101 port 1812:1814
+pass out quick on $INTERNE proto udp from serv_gm.cachan port 1515:1516 to $M_catia_milesant
+pass out quick on $INTERNE from serv_gm.cachan to $M_catia_milesant
+pass out quick on $INTERNE proto tcp from any to 129.20.167.233 port 1234
+pass out quick on $INTERNE from any to 193.52.60.134
+pass out quick on $INTERNE proto tcp from any to 148.60.51.37 port 4001:4002
+pass out quick on $INTERNE proto tcp from any to 129.20.55.20 port 9911
+pass out quick on $INTERNE proto tcp from $VPN_IRISA1/24 to 129.20.217.195 port 5800
+pass out quick on $INTERNE proto tcp from $VPN_IRISA2/24 to 129.20.217.195 port 5800
+pass out quick on $INTERNE proto tcp from $VPN_IRISA1/24 to 129.20.217.195 port 5900
+pass out quick on $INTERNE proto tcp from $VPN_IRISA2/24 to 129.20.217.195 port 5900
+pass out quick on $INTERNE proto tcp from any to 129.20.161.27 port 8091
+pass out quick on $INTERNE proto tcp from $enst_brest/27 to 148.60.178.99 port 700
+pass out quick on $INTERNE proto tcp from $enst_brest/27 to 148.60.178.99 port $S_any2netmeting
+pass out quick on $INTERNE from $cnrslabintel1 to 129.20.129.34
+pass out quick on $INTERNE proto tcp from $enst_brest/27 to 148.60.178.100 port $S_any2netmeting
+pass out quick on $INTERNE proto tcp from $enst_brest/27 to 148.60.178.100 port 700
+pass out quick on $INTERNE from $cnrslabintel2 to 129.20.129.34
+pass out quick on $INTERNE proto tcp from any to 129.20.161.4 port 104
+pass out quick on $INTERNE proto tcp from $cnam_vnc1 to 129.20.85.20 port 5900
+pass out quick on $INTERNE proto tcp from $cnam_vnc2 to 129.20.85.20 port 5900
+pass out quick on $INTERNE proto tcp from $cnam_vnc1 to 129.20.77.85 port 5900
+pass out quick on $INTERNE proto tcp from $cnam_vnc2 to 129.20.77.85 port 5900
+pass out quick on $INTERNE proto tcp from $cnam_vnc1 to 129.20.94.64 port 5900
+pass out quick on $INTERNE proto tcp from $cnam_vnc2 to 129.20.94.64 port 5900
+pass out quick on $INTERNE proto udp from $serveur_ivisit to any port 9940
+pass out quick on $INTERNE proto udp from $cnam_ivisit1 to any port 9940
+pass out quick on $INTERNE proto udp from $cnam_ivisit2 to any port 9940
+pass out quick on $INTERNE from 129.20.246.1 to 148.60.210.248
+pass out quick on $INTERNE proto tcp from any to 148.60.51.41 port 8080:8090
+pass out quick on $INTERNE proto tcp from any to 148.60.51.41 port domain
+pass out quick on $INTERNE proto tcp from $cse35_1 to 129.20.76.227 port ftp
+pass out quick on $INTERNE proto tcp from $cse35_1 to 129.20.76.228 port ftp
+pass out quick on $INTERNE proto tcp from 193.252.51.77 to 129.20.211.2 port ftp
+pass out quick on $INTERNE proto tcp from any to 129.20.179.50 port 7800
+pass out quick on $INTERNE proto esp from any to any
+pass out quick on $INTERNE proto udp from any to $RECHERCHE/16 port isakmp
+pass out quick on $INTERNE from $CCI_Fougeres to 148.60.206.0/24
+pass out quick on $INTERNE from 81.252.111.162 to 148.60.179.52
+pass out quick on $INTERNE proto gre from any to $RECHERCHE/16
+pass out quick on $INTERNE proto udp from $vrvs_parisRENAT to any port 51000:56000
+pass out quick on $INTERNE proto tcp from any to 129.20.161.6 port $S_any2Breeze
+pass out quick on $INTERNE proto tcp from $AdslOctavioPena to 129.20.73.201
+pass out quick on $INTERNE proto tcp from any to 129.20.167.7 port $S_any2Breeze
+pass out quick on $INTERNE proto tcp from $pix_515ACRENNES to 129.20.131.84 port 6400
+pass out quick on $INTERNE proto tcp from $pix_515ACRENNES to 129.20.131.84 port 32767:65535
+pass out quick on $INTERNE proto tcp from $AdslSocieteADE to 129.20.128.20 port ldap
+pass out quick on $INTERNE proto tcp from $AdslSocieteADE to 129.20.128.24 port ldap
+pass out quick on $INTERNE proto tcp from 150.185.128.201 to 129.20.25.26 port ssh
+pass out quick on $INTERNE proto tcp from 150.185.128.201 to 129.20.25.175 port ssh
+pass out quick on $INTERNE proto tcp from $AdslEdfClamart to 129.20.75.114 port ssh
+pass out quick on $INTERNE proto tcp from $M_ssh_pctheo13 to 129.20.75.140 port ssh
+pass out quick on $INTERNE proto tcp from $M_6000_pctheo13 to 129.20.75.140 port 6000
+pass out quick on $INTERNE proto tcp from 139.124.148.25 port $S_any2netmeting to 129.20.25.126
+pass out quick on $INTERNE proto tcp from 132.206.38.0/24 to 129.20.78.16 port ssh
+pass out quick on $INTERNE proto tcp from 132.206.38.0/24 to 129.20.78.73 port ssh
+pass out quick on $INTERNE proto tcp from 142.157.0.0/16 to 129.20.78.16 port ssh
+pass out quick on $INTERNE proto tcp from 142.157.0.0/16 to 129.20.78.73 port ssh
+pass out quick on $INTERNE proto tcp from 132.216.0.0/16 to 129.20.78.16 port ssh
+pass out quick on $INTERNE proto tcp from 132.216.0.0/16 to 129.20.78.73 port ssh
+pass out quick on $INTERNE from $Presid_Nantes/24 to 129.20.136.16
+pass out quick on $INTERNE proto tcp from $patCostelFx_eUHB to 129.20.49.3
+pass out quick on $INTERNE proto tcp from 147.99.167.0/24 to 129.20.49.3
+pass out quick on $INTERNE proto tcp from $OBSERV_MEUDON/16 to 129.20.25.70 port 6000
+pass out quick on $INTERNE proto tcp from $blueAolCom/24 to 129.20.17.57
+pass out quick on $INTERNE from $loginOscarAolCom/16 to 129.20.17.57
+pass out quick on $INTERNE proto tcp from $StuttgartMpgDe to 129.20.16.67 port ftp
+pass out quick on $INTERNE proto tcp from $M_ext_ssh_dolmen to 129.20.86.22 port ssh
+pass out quick on $INTERNE proto tcp from $M_srvCaren_http to 129.20.49.172 port www
+pass out quick on $INTERNE proto tcp from $M_srvCaren_http to 129.20.49.172 port 8080
+pass out quick on $INTERNE proto tcp from $M_srvCaren_ssh to 129.20.49.172 port ssh
+pass out quick on $INTERNE proto tcp from $inwicast to 129.20.126.119 port ssh
+pass out quick on $INTERNE proto tcp from 129.20.254.3 to 129.20.128.0/22 port ssh
+pass out quick on $INTERNE proto tcp from any to $M_SVI port $S_SVI
+pass out quick on $INTERNE proto tcp from any to 129.20.131.96 port 5222
+pass out quick on $INTERNE proto tcp from any to 129.20.131.96 port www
+pass out quick on $INTERNE proto udp from any to 129.20.128.66
+pass out quick on $INTERNE proto tcp from any to 129.20.64.21 port $S_pc_Eric_Gicquel
+pass out quick on $INTERNE proto tcp from any to 129.20.64.23 port 100
+pass out quick on $INTERNE proto tcp from any to 129.20.167.2 port 8180:8187
+pass out quick on $INTERNE proto tcp from any to 129.20.167.232 port $S_streamsit
+pass out quick on $INTERNE proto tcp from $cacaoUBO to 129.20.131.86
+pass out quick on $INTERNE from $NotreAdslWanadoo to any
+block out quick on $INTERNE from any to any
+#pass quick on $CAPTACL from any to 224.0.0.0/4

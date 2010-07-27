@@ -1,0 +1,11 @@
+# http://www.cisco.com/en/US/docs/security/asa/asa72/configuration/guide/ports.html
+citrix-ica			1494/tcp		# Citrix Independent Computing Architecture (ICA) protocol
+h323				1720/tcp		# H.323 call signalling 
+imap4				143/tcp			# Internet Message Access Protocol, version 4 
+lpd					515/tcp			# Line Printer Daemon - printer spooler
+netbios-ss			139/tcp			# NetBIOS Session Service 
+pcanywhere-data		5631/tcp		# pcAnywhere data
+pcanywhere-status	5632/udp		# pcAnywhere status 
+rsh					514/tcp			# Used by rsh, interactive shell without any logging (also rcp)
+sqlnet				1521/tcp		# Structured Query Language Network 
+lotusnotes			1352/tcp		# IBM Lotus Notes 

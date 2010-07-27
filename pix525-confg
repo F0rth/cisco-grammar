@@ -1,0 +1,3634 @@
+: Saved
+: Written by enable_15 at 14:00:48.792 CEDT Tue Jul 27 2010
+!
+PIX Version 7.2(4)33 
+!
+hostname PIX525
+domain-name univ-rennes1.fr
+enable password UpPT9IKxKJ/NFR/r encrypted
+passwd 2KFQnbNIdI.2KYOU encrypted
+multicast-routing
+names
+name 62.23.8.146 ipLexbase
+name 62.193.198.15 wwwIndexpresse
+name 81.56.219.41 lnsThProxadNet
+name 128.42.5.70 amsRiceEdu
+name 128.93.1.111 rocqrasINRIA
+name 128.97.89.198 HeartUclaEdu
+name 128.130.0.0 TUWIEN_AC_AT
+name 128.135.26.12 wJnlsUchicagoEdu
+name 129.70.14.32 amsMUBielefeldDe
+name 129.194.96.23 expasyUnigeCh
+name 129.20.0.0 RECHERCHE
+name 130.14.22.106 wwwNcbiNlmNihGo1
+name 130.14.22.107 wwwNcbiNlmNihGo2
+name 130.37.144.0 CHEM1_NET
+name 130.79.11.49 renassb1USTRASBG
+name 130.79.130.84 currifUSTRASBG
+name 130.88.203.21 wwwOupCoUk
+name 131.188.123.109 tcl9ErlangenDe
+name 131.188.128.5 as1200ErlangenDe
+name 131.188.129.10 jagAwUErlangenDe
+name 131.254.0.0 IRISA
+name 131.254.13.40 solutreIRISA
+name 131.254.13.55 mowgliIRISA
+name 131.254.13.92 exponentielIRISA
+name 131.254.60.31 microcosmeIRISA
+name 131.254.180.5 pimRpIRISA
+name 131.254.254.10 w3extIRISA
+name 132.166.138.6 semt2SmtsCEA
+name 132.203.14.29 stlaurentUlavaCa
+name 132.203.14.164 dhcp14164UlavaCa
+name 132.203.14.169 dhcp14169UlavaCa
+name 132.206.0.0 CIVIL_MCGILL_CA
+name 132.246.96.42 PcikImeNrcCa
+name 132.246.156.39 wwwCistiNrcCa
+name 134.105.152.159 StuttgartMpgDe
+name 134.214.0.0 UNIV_LYON1
+name 134.246.166.6 nymphea1IFREMER
+name 134.246.166.10 nymphea0IFREMER
+name 138.12.4.51 sciDirectCom
+name 138.12.4.53 wSciencDirectCom
+name 138.102.22.200 mig200JouyINRA
+name 145.23.254.158 gate1KnmiNl
+name 145.36.5.30 wwwElsevierNl
+name 145.238.0.0 OBSERV_MEUDON
+name 147.33.1.2 gwVschtCz
+name 147.65.1.17 amsImpaBr
+name 148.60.0.0 ETUDIANTS
+name 148.187.3.85 domfeCscsCh
+name 152.81.144.40 serveurvpnLORIA
+name 167.216.165.78 intlPnasOrg
+name 192.108.115.77 pmolnaENSTB
+name 192.108.118.195 caredisENSTB
+name 192.18.98.62 brmeaProx1SunCOM
+name 192.18.98.63 brmeaProx2SunCOM
+name 192.18.98.64 brmeaProx3SunCOM
+name 192.54.160.0 IDRIS160
+name 192.54.161.0 IDRIS161
+name 192.58.150.35 ojpsAipOrg
+name 192.68.254.190 klymMpimBonnMpDe
+name 192.93.79.9 wwwRennesINRA
+name 192.93.250.53 servicesINIST
+name 192.108.225.3 epubsSiamOrg
+name 193.49.40.0 CAC_CHR
+name 193.49.146.33 pcplardUANGERS
+name 193.49.146.71 mach71UANGERS
+name 193.49.146.121 titanInfoUANGERS
+name 193.50.9.1 beaulieuRenINRA
+name 193.50.25.11 cacheRenINRA
+name 193.50.25.18 lerheuRenINRA
+name 193.50.192.38 titanUVALENCiN
+name 193.50.202.105 fredextEPIXTECH
+name 193.51.48.147 liNtwforge2ENSAM
+name 193.52.12.0 RESO_INCUBATEUR
+name 193.52.12.32 PROTEOME_INNOVA
+name 193.52.26.1 nacaratSdocABES
+name 193.52.26.5 carminSdocABES
+name 193.52.26.20 cramoisiSdocABES
+name 193.52.39.23 bartROSCOFF
+name 193.52.39.71 pc3InfoROSCOFF
+name 193.52.39.101 homerROSCOFF
+name 193.52.69.10 pc10ABES
+name 193.52.115.30 cardioNtesINSERM
+name 193.52.118.24 E33NantesINSERM
+name 193.54.238.202 wwwMtdocUjfGRENO
+name 193.54.96.54 klopToulouseINRA
+name 193.54.252.128 medamphi4aUBO
+name 193.55.63.80 mongeUMLV
+name 193.55.108.10 buckdannyUPARIS3
+name 193.108.167.68 wwwLextensoCom
+name 193.131.119.1 nwtIopPublishCom
+name 193.131.119.3 nwtIopPubshinCom
+name 193.145.100.161 beowulfCsiUllEs
+name 193.206.84.36 dxcalcLnfInfnIt
+name 193.250.83.0 WANADOORENNES_1
+name 193.250.27.0 WANADOORENNES_2
+name 193.251.4.31 FontenayWANADOO
+name 193.251.66.60 RennesWANADOO
+name 193.252.242.142 wwwPagesJaunesCo
+name 193.252.242.160 wwwPagesProCom
+name 194.2.231.150 wwwEdpscienceCom
+name 194.2.231.153 wwwEMATH
+name 194.57.123.10 pc10CaesCNRS
+name 194.94.42.41 linkSpringerDe
+name 194.98.180.44 Retis
+name 194.109.27.62 dirwdXs4allNl
+name 194.167.73.70 labtechnoRenINRA
+name 194.167.74.214 gdindonRenINRA
+name 194.199.184.172 deserableINSA
+name 194.214.59.0 UNANTES
+name 194.214.232.115 wwwCnamPAYSDLL
+name 194.254.78.0 INSERM_CHR
+name 194.254.78.100 hepatoRenINSERM
+name 194.254.118.11 diumediaULILLE2
+name 195.6.68.93 pareFeuMinFinanc
+name 195.83.123.25 fraiseUBO
+name 195.83.155.15 epsilonUTC
+name 195.83.180.0 CINES
+name 195.83.191.20 reblochonAMUE
+name 195.83.191.35 tipunchMtplrCPU
+name 195.83.191.104 epoissesMtplrCPU
+name 195.83.191.217 pcChbMtplrCPU
+name 195.83.247.36 cacaoUBO
+name 195.83.247.90 freewindUBO
+name 195.220.94.0 CRU
+name 195.220.94.64 CRU_INTERNE
+name 195.220.94.79 homeCRU
+name 195.220.94.92 citrixCRU
+name 195.220.94.97 sparePkiCRU
+name 195.220.94.165 listesCRU
+name 195.220.94.166 wwwCRU
+name 195.220.94.169 sourcesupCRU
+name 195.220.94.180 secCRU
+name 195.221.66.5 vpn1ACRENNES
+name 195.221.66.10 racineACRENNES
+name 195.221.67.18 escal1ACRENNES
+name 195.221.122.120 icc120UCLERMONT
+name 208.215.179.82 wIntrsciWileyCom
+name 208.247.102.69 wwwEbscoCom
+name 212.27.33.29 wwwSocieteCom
+name 212.87.2.253 tigerChemUwEduPl
+name 212.234.68.18 RainPont
+name 212.234.68.19 RainPasserelle
+name 213.30.181.11 smtpLaposteNet
+name 81.80.188.145 wAnnuLaposteNet
+name 129.127.98.14 m14AdelaideEduAu
+name 129.127.98.196 m196AdelaidEduAu
+name 192.219.104.129 m129PlatfCompLSF
+name 192.219.104.130 m130PlatfCompLSF
+name 193.50.28.0 r1935028ENSSAT
+name 193.52.37.0 r193CHR
+name 194.81.79.156 OneSrchUkOclcOrg
+name 194.167.227.229 s227iuem229UBO
+name 194.254.124.0 r194ENSSAT
+name 200.136.226.37 m37LiecUfscarBr
+name 200.136.226.110 m110LiecUfscarBr
+name 200.136.226.111 m111LiecUfscarBr
+name 212.234.62.11 gateIntranodeCom
+name 195.220.138.40 tandbergUROUEN
+name 131.254.52.52 nonameIRISA
+name 131.254.21.69 pandragonIRISA
+name 193.54.110.3 titusINIST
+name 195.83.155.100 kappaUTC
+name 146.83.10.105 clustDfiUchileCl
+name 194.167.225.98 heleneUBREST
+name 194.167.225.95 lm2eUBREST
+name 193.52.94.36 pchyper6INSAREN
+name 194.167.225.88 biofluxUBREST
+name 81.255.59.1 posteSteAde
+name 195.83.159.219 preside1UBS
+name 138.102.22.194 mig194JouyINRA
+name 159.90.168.41 kar.gbba.usb.ve
+name 159.90.168.23 wei.gbba.usb.ve
+name 193.49.221.200 cacheAngersINRA
+name 193.51.24.1 soleilUVSQ
+name 193.51.87.6 ancstoutINRA
+name 193.51.87.19 brucherINH
+name 193.50.203.0 symantecCom
+name 211.48.20.0 KORNET-INFRA
+name 195.83.191.222 pcLafMtplrCPU
+name 195.83.191.238 pcAnlMtplrCPU
+name 193.50.193.6 pcinterUVALENCiN
+name 147.127.128.50 calvinENSEEIHT
+name 147.127.128.51 hobbesENSEEIHT
+name 138.96.90.41 crusoe.inria.fr
+name 131.254.254.31 bionix.irisa.fr
+name 213.62.115.178 naetapp2-assist
+name 213.62.115.177 netappp1-assist
+name 193.54.252.179 visio-brest
+name 131.254.50.31 lolaIRISA
+name 131.254.52.56 miniIRISA
+name 131.254.70.24 parapluie
+name 131.254.52.61 oumpapahIRISA
+name 217.167.53.60 Adm_HIP4_DYNIX
+name 217.167.53.59 Adm_HIP3_DYNIX
+name 217.167.53.58 Adm_HIP2_DYNIX
+name 193.50.202.68 Adm_HIP1_DYNIX
+name 131.254.10.57 miranova
+name 212.234.71.246 COBB2
+name 212.234.71.245 COBB1
+name 193.50.69.78 ilinux-rrbENSTB
+name 193.52.74.102 fcnaENSTB
+name 81.56.142.118 AdslPascalAubry
+name 131.254.50.55 merIRISA
+name 82.67.115.158 AdslVeroBiquand
+name 81.56.139.38 AdslMoulKharoune
+name 193.52.64.54 webopacUHB
+name 193.52.64.56 tichkaUHB
+name 83.152.217.230 ppp230TiscaliFr
+name 194.149.176.154 rtAtlanticRF
+name 193.52.97.16 webix.cnrs-imn
+name 192.93.1.113 roc-vpn.inra
+name 130.79.0.0 USTRASBOURG
+name 81.255.204.130 afssaPloufragan
+name 131.254.52.55 campanuleIRISA
+name 193.50.25.5 rennes.inra.fr
+name 82.66.167.168 netinary
+name 195.221.67.51 vigieACRENNES
+name 213.41.106.65 visp-65.106
+name 216.138.240.197 atalantrf.dyn
+name 195.220.94.161 new-vespaCRU
+name 81.56.147.131 AdslArnaudDelay
+name 195.220.94.33 gate.cru.fr
+name 195.220.94.186 fradius.cru.fr
+name 193.52.64.138 simppsFxPerUHB
+name 195.83.191.223 pcCesMtplrAMUE
+name 131.254.254.26 smtpIRISA
+name 193.49.159.147 Renater147
+name 131.254.21.24 rapideIRISA
+name 131.254.21.5 zenIRISA
+name 82.145.86.2 Archimed1
+name 82.233.190.148 Archimed2
+name 131.254.21.59 aspirineIRISA
+name 131.254.21.47 marcharlIRISA
+name 193.52.95.64 mult01EnsINSAREN
+name 192.93.1.111 vpgirhaf-n-inria
+name 147.99.165.75 pcFalentinINRA
+name 147.99.165.99 lxFalentinINRA
+name 193.52.94.40 adm02INSAREN
+name 192.44.77.21 smtps_ENST
+name 132.210.221.1 usherb.ca
+name 195.83.191.249 pc-cag_amue
+name 195.83.191.230 pc-thp_amue
+name 131.254.51.56 coquelicotIRISA
+name 132.203.244.151 vpnulaval.ca
+name 129.20.1.0 admin
+name 131.254.250.3 irisIRISA
+name 82.225.63.106 Adsl-Lyon
+name 82.240.213.5 pcPersoBStevant
+name 82.234.174.154 test-dagorn
+name 131.254.11.193 enoraIRISA
+name 131.254.11.194 lagonIRISA
+name 131.254.11.189 poppyIRISA
+name 131.254.11.181 oceaniaIRISA
+name 131.254.11.180 jessicaIRISA
+name 131.220.44.10 fw1aThchUniBonnDE
+name 131.254.11.190 renonculeIRISA
+name 131.254.11.195 lilasIRISA
+name 81.80.239.163 luke.sopragroup
+name 82.127.10.247 AdslSocieteADE
+name 85.68.22.86 AdslBenYahia
+name 195.220.117.60 yannUnivParis4
+name 193.50.9.139 khaliliRennesINRA
+name 193.49.222.247 bungalaAdmUHB
+name 131.254.11.202 wismaelIRISA
+name 82.127.10.125 SocitADE
+name 82.127.10.0 IP-societe-ADE
+name 130.179.224.5 SIIGStrasb.
+name 193.52.92.157 serv-gm.cachan
+name 217.128.81.11 point-etude1
+name 82.67.109.82 ARDARA_IETR
+name 217.128.81.111 point-etude
+name 131.254.231.0 inria
+name 130.79.224.5 siigBenkirane2ST
+name 130.79.224.30 siigSchwartz2ST
+name 131.254.131.0 VPN-IRISA1
+name 131.254.132.0 VPN-IRISA2
+name 193.251.184.50 poit-etude2
+name 193.48.104.61 cnrslabintel2
+name 193.55.87.53 cnrslabintel1
+name 195.83.247.29 cassis-gwUBREST
+name 139.124.100.7 luminyUMARSEILLE
+name 144.92.139.13 mail2DcsWiscEdu
+name 193.51.20.250 point-etude3
+name 81.53.131.102 point-etud4
+name 131.215.116.52 www.vrvs.org
+name 83.145.111.40 reverseCmpltlNet
+name 193.51.182.217 vrvs-parisRENAT
+name 193.51.183.190 vrvs-lyonRENAT
+name 193.52.115.162 natSanteUNANTES
+name 82.67.109.74 pcpersopriour
+name 194.214.232.185 cnam-vnc1
+name 194.214.232.182 cnam-vnc2
+name 193.52.39.208 LEROY_PCIO
+name 192.44.76.192 enst-brest
+name 82.236.140.45 cse35-1
+name 212.157.97.209 frtlsvr1a.hydro
+name 163.173.128.215 vlad.cnam.fr
+name 87.90.88.88 EvodiaServiware
+name 62.147.175.111 AdslPierreDeleporte
+name 193.49.222.0 rennes2-2
+name 193.52.99.103 ipcopLinaUNANTES
+name 62.92.82.4 oslv01HydroCom
+name 131.254.41.80 thalamusIRISA
+name 195.220.94.192 CRU_WIFI
+name 134.246.88.122 ta-122IFREMER
+name 200.9.100.137 clusterDfiUchileCL
+name 134.157.173.82 maharetJUSSIEU
+name 130.79.9.130 renassUSTRASBG
+name 130.79.9.145 thefroidUSTRASBG
+name 195.220.94.129 rad1CRU
+name 194.2.206.192 SteEtiam
+name 82.67.191.163 serveur_ivisit
+name 194.214.232.181 cnam-ivisit1
+name 194.214.232.184 cnam-ivisit2
+name 62.147.156.22 MoretBailly
+name 64.0.0.0 ADSL2
+name 147.8.183.231 stagiairSymbiose
+name 131.254.10.148 bacchusIRISA
+name 147.99.116.176 INHanger
+name 62.212.99.50 mailKappaFR
+name 82.234.15.26 AdslEdfClamart
+name 82.242.133.151 Thomas_Derrien
+name 193.52.109.12 NAT_UnivNantes
+name 194.254.140.238 inra-rennes
+name 131.254.12.187 idm2IRISA
+name 131.254.157.36 hypophyse-157IRISA
+name 193.52.39.1 gw-roscoff
+name 131.254.11.229 frozone
+name 131.254.11.201 jules
+name 83.206.23.225 pfontaineARES
+name 195.220.94.80 rebusCRU
+name 195.220.94.73 futur-saCRU
+name 131.254.11.151 tiareIRISA
+name 164.81.70.29 esp29UNILIM
+name 164.81.70.28 esp28UNILIM
+name 140.77.2.167 loligoENS-LYON
+name 200.9.100.13 mail2CecUchileCL
+name 86.68.90.13 AdslAntunes
+name 82.127.82.132 logosapience
+name 145.100.29.219 login-ng1.rc.sara7.nl
+name 193.50.25.17 wwwINRA
+name 193.50.25.20 puceronINRA
+name 62.160.220.19 globeJcdecauxFR
+name 195.220.94.128 CRU-PUBLIC
+name 88.163.42.16 AdslVeroPrevet
+name 131.254.157.28 idm2-157IRISA
+name 131.254.13.67 hypophyseIRISA
+name 147.99.96.240 catToulouseINRA
+name 193.52.12.33 firewallProteome
+name 195.83.245.36 medvisioUBREST
+name 195.83.33.2 medvisioUNANTES
+name 82.236.140.152 AdslJerome
+name 131.254.14.4 parkinsonIRISA
+name 195.83.191.185 Amue1
+name 195.83.191.233 Amue2
+name 195.83.191.241 Amue3
+name 131.254.11.119 soleilIRISA
+name 193.251.20.107 Ste-ipdiva
+name 90.25.150.134 AdslCRI
+name 88.191.33.191 wwwCivxOrg
+name 193.52.64.252 apogeeUHB
+name 131.254.13.173 depan3IRISA
+name 147.99.160.13 irisAgro-Rennes
+name 81.95.144.0 RussianBusinessN
+name 195.221.67.0 ACRENNES
+name 233.8.211.0 JRES
+name 195.221.66.4 pix-515ACRENNES
+name 213.41.173.179 playetpauseNerim
+name 195.220.94.163 chronosCRU
+name 195.83.247.208 crivideoUBREST
+name 82.231.149.208 AdslOlGuillou
+name 130.223.128.12 vitalit2UnilCH
+name 85.17.221.2 zonebac1
+name 88.80.7.66 zonebac2
+name 154.64.52.193 patCostelFxUHB
+name 193.52.64.154 patCostelFx-eUHB
+name 82.243.147.101 inwicast
+name 193.52.64.145 pat.uhb.fr
+name 193.52.64.243 vpnssl-fw.vpnssl.uhb.fr
+name 193.52.65.180 c65n180.fx-per.uhb.fr
+name 66.38.210.97 SVI_Solutions
+name 193.52.112.0 Presid_Nantes
+name 194.167.195.0 Sifac-admUBS
+name 193.52.64.157 Sifac-admUHB
+name 130.79.9.146 keemunUSTRASBG
+name 130.79.9.147 seismeUSTRASBG
+name 195.220.94.140 mx-testCRU
+name 64.12.0.0 loginOscarAolCom
+name 192.168.2.0 DMZ-PIX
+name 88.189.193.26 AdslGuizouarn
+name 205.188.153.0 blueAolCom
+name 80.13.223.191 NotreAdslWanadoo
+name 161.116.75.24 aguila.qi.ub.es
+name 130.79.200.23 rad2EduroamFr
+name 193.51.182.121 rad1EduroamFr
+name 131.254.10.23 aventureIRISA
+name 162.38.142.0 GeoscMontpellier
+name 195.220.223.243 hydrasaPoitiers1
+name 195.220.223.244 hydrasaPoitiers2
+name 93.182.199.218 AdslOctavioPena
+name 193.54.107.65 csd-ext.inist.fr
+name 78.242.40.2 AdslMarcZonzon
+name 148.60.51.40 Pc_Barbel
+name 194.57.79.205 Gateway_Besancon
+name 129.20.126.127 real-new
+name 129.20.131.72 vmsympa1
+name 129.20.131.130 mycluster3
+name 150.147.68.20 ericnt.inlex.dra.com
+!
+interface Ethernet0
+ description LAN/STATE Failover Interface
+!
+interface Ethernet1
+ nameif DMZ-PIX
+ security-level 90
+ ip address 192.168.2.254 255.255.255.0 standby 192.168.2.253 
+ no pim
+ no igmp
+!
+interface GigabitEthernet0
+ nameif inside
+ security-level 100
+ ip address 129.20.252.254 255.255.255.0 standby 129.20.252.253 
+ ipv6 address 2001:660:7307:1:2::f/80
+ ipv6 address fe80::203:47ff:fee3:fb33 link-local
+ ipv6 enable
+!
+interface GigabitEthernet1
+ nameif outside
+ security-level 0
+ ip address 129.20.253.1 255.255.255.0 standby 129.20.253.2 
+ ipv6 address 2001:660:7307:1:1::1/80
+ ipv6 address fe80::203:47ff:fee3:fba9 link-local
+ ipv6 enable
+!
+pim rp-address 131.254.180.5 
+boot system flash:/pix724-33.bin
+ftp mode passive
+clock timezone CEST 1
+clock summer-time CEDT recurring last Sun Mar 2:00 last Sun Oct 3:00
+dns server-group DefaultDNS
+ domain-name univ-rennes1.fr
+object-group network M-MedVisio
+ description machines du projet MedVisio
+ network-object 193.252.236.0 255.255.255.192
+ network-object UNANTES 255.255.255.0
+ network-object host RainPont
+ network-object host RainPasserelle
+ network-object host 217.109.171.179
+ network-object host 212.234.68.140
+object-group network M-any-telnet
+ description machines acceptant telnet depuis Any
+ network-object host 129.20.16.55
+ network-object host 129.20.88.11
+ network-object host 129.20.88.134
+ network-object host 129.20.94.5
+ network-object host 129.20.25.1
+ network-object host 129.20.25.11
+ network-object host 129.20.25.23
+ network-object host 129.20.25.55
+ network-object host 129.20.25.47
+ network-object host 129.20.25.86
+ network-object host 129.20.25.17
+ network-object host 129.20.25.56
+ network-object host 129.20.73.27
+ network-object host 129.20.73.74
+ network-object host 129.20.73.79
+ network-object host 129.20.82.33
+ network-object host 129.20.82.67
+ network-object host 129.20.82.82
+ network-object host 148.60.52.1
+ network-object host 129.20.82.58
+ network-object host 129.20.82.28
+ network-object host 129.20.82.3
+ network-object host 129.20.27.59
+ network-object host 129.20.27.52
+ network-object host 129.20.27.1
+ network-object host 129.20.27.3
+ network-object host 129.20.27.15
+ network-object host 129.20.27.51
+ network-object host 129.20.27.53
+ network-object host 129.20.27.72
+ network-object host 129.20.27.73
+ network-object host 129.20.82.2
+ network-object host 129.20.25.8
+ network-object host 129.20.25.70
+ network-object host 129.20.48.173
+ network-object host 129.20.76.109
+ network-object host 129.20.76.110
+ network-object host 129.20.76.15
+ network-object host 129.20.76.62
+ network-object host 129.20.76.64
+ network-object host hepatoRenINSERM
+ network-object host 129.20.157.23
+ network-object host 129.20.157.31
+ network-object host 129.20.157.36
+ network-object host 129.20.157.37
+ network-object host 129.20.157.38
+ network-object host 129.20.157.70
+ network-object host 129.20.157.84
+ network-object host 129.20.161.137
+ network-object host 129.20.161.163
+ network-object host 148.60.161.78
+ network-object host 148.60.161.83
+ network-object host 129.20.88.42
+ network-object 129.20.76.199 255.255.255.255
+object-group network M-Sauvegardees
+ description Les machines sauvegardees
+ network-object host 129.20.254.1
+ network-object rad1EduroamFr 255.255.255.255
+ network-object CRU 255.255.255.0
+ network-object host 129.20.254.4
+ network-object host 129.20.254.200
+ network-object host 129.20.254.5
+ network-object host 129.20.254.203
+ network-object host 129.20.254.205
+object-group service S-smtpDnsHttp tcp
+ port-object eq smtp
+ port-object eq domain
+ port-object eq www
+object-group service S-any2IbmAbretASSO tcp
+ port-object eq ftp
+ port-object eq imap4
+ port-object eq 993
+ port-object eq www
+ port-object range 8081 8082
+ port-object eq lotusnotes
+ port-object eq 1533
+ port-object eq 5900
+object-group network M-Irisa2Nsat
+ network-object 129.20.216.0 255.255.248.0
+ network-object 148.60.216.0 255.255.248.0
+ network-object 129.20.224.0 255.255.248.0
+ network-object 148.60.224.0 255.255.248.0
+ network-object 193.52.60.0 255.255.255.0
+object-group service S-Irisa2Nsat tcp
+ port-object eq telnet
+ port-object eq lpd
+ port-object eq ftp
+ port-object eq exec
+ port-object eq login
+ port-object eq rsh
+ port-object eq 6000
+ port-object eq 6001
+ port-object eq 8000
+object-group network M-Ext2Nsat192
+ network-object host buckdannyUPARIS3
+ network-object host dhcp14169UlavaCa
+ network-object host dhcp14164UlavaCa
+ network-object host stlaurentUlavaCa
+object-group service S-Ext2Nsat192 tcp
+ port-object eq ftp
+ port-object eq pop3
+object-group network M-Ext2LimMed-ip
+ network-object host diumediaULILLE2
+ network-object host 194.254.151.99
+ network-object host 193.51.86.57
+ network-object host 194.242.162.201
+ network-object host 194.242.162.133
+ network-object host 194.242.162.240
+object-group network M-any-ftp
+ description machines acceptant ftp depuis Any
+ network-object host 129.20.82.2
+ network-object host 129.20.25.160
+ network-object host 129.20.82.87
+ network-object host 129.20.88.50
+ network-object host 129.20.25.1
+ network-object host 129.20.49.39
+ network-object host 129.20.48.175
+ network-object host 129.20.131.132
+ network-object host 129.20.131.133
+ network-object host 129.20.131.134
+ network-object 129.20.131.20 255.255.255.255
+ network-object 129.20.76.147 255.255.255.255
+ network-object host 129.20.129.57
+ network-object host 129.20.76.220
+ network-object host 129.20.76.221
+ network-object host 129.20.230.135
+ network-object host 129.20.210.210
+ network-object host 129.20.95.20
+ network-object host 129.20.95.21
+ network-object host 129.20.94.16
+object-group network M-any-ssh
+ description machines acceptant ssh depuis Any
+ network-object RESO_INCUBATEUR 255.255.255.0
+ network-object host 129.20.16.193
+ network-object host 129.20.16.55
+ network-object host 129.20.36.174
+ network-object host 129.20.25.57
+ network-object host 129.20.73.27
+ network-object host 129.20.73.74
+ network-object host 129.20.73.79
+ network-object host 148.60.24.1
+ network-object host 129.20.155.16
+ network-object host 129.20.73.157
+ network-object host 129.20.155.74
+ network-object host 129.20.155.24
+ network-object host 129.20.25.164
+ network-object 129.20.75.11 255.255.255.255
+ network-object host 129.20.37.115
+ network-object 129.20.16.224 255.255.255.255
+ network-object host 129.20.178.134
+ network-object host 129.20.153.52
+ network-object 129.20.155.25 255.255.255.255
+ network-object 129.20.155.50 255.255.255.255
+ network-object 129.20.217.195 255.255.255.255
+ network-object 129.20.25.45 255.255.255.255
+ network-object 129.20.161.1 255.255.255.255
+ network-object 129.20.161.7 255.255.255.255
+ network-object 129.20.161.5 255.255.255.255
+ network-object 129.20.49.193 255.255.255.255
+ network-object host 129.20.16.182
+ network-object host 129.20.179.179
+ network-object host 129.20.167.2
+ network-object host 129.20.167.1
+ network-object 129.20.95.20 255.255.255.254
+ network-object host 129.20.230.160
+ network-object host 129.20.167.233
+ network-object host 129.20.167.4
+ network-object host 129.20.76.199
+ network-object 129.20.76.240 255.255.255.252
+ network-object host 129.20.27.76
+ network-object host 148.60.231.225
+ network-object host 129.20.33.32
+ network-object host 129.20.27.79
+object-group network M-any-cmd
+ description machines acceptant cmd depuis Any
+ network-object host 129.20.16.55
+ network-object host 129.20.76.85
+ network-object host 129.20.75.159
+ network-object host 129.20.75.160
+ network-object host 129.20.76.82
+ network-object host 129.20.76.15
+ network-object host 129.20.76.9
+ network-object host 129.20.76.48
+object-group network M-any-6000
+ description machines acceptant 6000 depuis Any
+ network-object host 129.20.76.9
+ network-object host 129.20.76.85
+ network-object host 129.20.75.159
+ network-object host 129.20.75.160
+ network-object host 129.20.76.147
+ network-object host 129.20.78.14
+object-group network M-any-8080
+ description machines acceptant 8080 depuis Any
+ network-object host 129.20.88.50
+ network-object host 129.20.82.67
+ network-object host 129.20.161.150
+ network-object host 129.20.161.3
+ network-object host 129.20.161.163
+ network-object host 129.20.161.28
+ network-object 129.20.49.56 255.255.255.255
+ network-object 129.20.161.4 255.255.255.255
+ network-object host 129.20.38.229
+ network-object host 129.20.88.134
+ network-object host 129.20.161.160
+ network-object host 129.20.76.106
+ network-object host 129.20.25.86
+ network-object host 148.60.231.225
+ network-object host 148.60.216.35
+object-group network M-any-httpHttps
+ description machines acceptant http, https depuis Any
+ network-object host 129.20.179.51
+ network-object host 148.60.16.59
+ network-object host 129.20.16.67
+ network-object host 129.20.25.160
+ network-object host 148.60.51.27
+ network-object host 129.20.16.193
+ network-object 129.20.179.56 255.255.255.255
+ network-object 129.20.179.57 255.255.255.255
+ network-object host 129.20.55.20
+ network-object 129.20.155.18 255.255.255.255
+ network-object 129.20.131.168 255.255.255.255
+ network-object 129.20.131.137 255.255.255.255
+ network-object host 129.20.155.50
+ network-object 129.20.233.16 255.255.255.252
+ network-object 129.20.161.9 255.255.255.255
+ network-object 129.20.161.4 255.255.255.255
+ network-object host 129.20.161.7
+ network-object host 129.20.161.5
+ network-object 129.20.89.12 255.255.255.255
+ network-object 129.20.126.100 255.255.255.255
+ network-object host 129.20.131.149
+ network-object host 129.20.131.136
+ network-object host 129.20.131.18
+ network-object host 129.20.131.9
+ network-object host 129.20.131.110
+ network-object host 129.20.131.112
+ network-object host 129.20.131.113
+ network-object host 129.20.136.13
+ network-object host 129.20.131.20
+ network-object host 129.20.131.115
+ network-object host 129.20.131.116
+ network-object host 129.20.136.12
+ network-object host 129.20.131.118
+ network-object host 129.20.131.119
+ network-object host 129.20.131.128
+ network-object host 129.20.131.121
+ network-object host 129.20.131.55
+ network-object host 129.20.131.61
+ network-object host 129.20.131.135
+ network-object host 129.20.131.62
+ network-object host 129.20.131.41
+ network-object host 129.20.131.140
+ network-object host 129.20.131.162
+ network-object host 129.20.131.160
+ network-object host 129.20.131.64
+ network-object host 129.20.131.63
+ network-object host 129.20.131.8
+ network-object host 129.20.131.219
+ network-object host 129.20.55.58
+ network-object host 129.20.126.104
+ network-object host 129.20.126.111
+ network-object host 129.20.126.112
+ network-object host 129.20.126.113
+ network-object host 129.20.126.114
+ network-object host 129.20.126.115
+ network-object host 129.20.126.116
+ network-object host 129.20.126.117
+ network-object host 129.20.126.118
+ network-object host 129.20.131.120
+ network-object host 129.20.126.105
+ network-object host 129.20.131.138
+ network-object RESO_INCUBATEUR 255.255.255.0
+ network-object host 129.20.131.139
+ network-object host 129.20.126.23
+ network-object host 129.20.131.202
+ network-object host 129.20.131.201
+ network-object host 129.20.126.108
+ network-object host 129.20.131.92
+ network-object host 129.20.126.103
+ network-object host 129.20.78.71
+ network-object host 129.20.161.1
+ network-object host 129.20.126.120
+ network-object 129.20.36.192 255.255.255.240
+ network-object host 129.20.88.134
+ network-object host 129.20.129.4
+ network-object 129.20.126.120 255.255.255.252
+ network-object host 129.20.128.128
+ network-object host vmsympa1
+ network-object host 129.20.131.111
+ network-object host 129.20.129.95
+ network-object host 129.20.126.14
+ network-object host 129.20.126.15
+object-group network M-any-ftpHttpHttps
+ description machines acceptant ftp, http, https depuis Any
+ network-object host 129.20.179.50
+ network-object host 129.20.179.9
+ network-object host 129.20.179.52
+ network-object host 129.20.25.47
+ network-object host 129.20.25.56
+ network-object host 129.20.94.5
+ network-object host 129.20.82.33
+ network-object host 129.20.153.17
+ network-object host 129.20.155.16
+ network-object host 129.20.16.55
+ network-object host 129.20.88.11
+ network-object host 129.20.88.134
+ network-object host 129.20.82.67
+ network-object host 129.20.82.82
+ network-object host 148.60.52.1
+ network-object host 148.60.161.78
+ network-object host 148.60.161.83
+ network-object host 129.20.88.42
+ network-object 129.20.179.21 255.255.255.255
+ network-object host 129.20.167.233
+object-group service S-any-ftpHttpHttps tcp
+ description ftp, http, https depuis Any
+ port-object eq ftp
+ port-object eq www
+ port-object eq https
+object-group network M-any-sshHttpHttps
+ description machines acceptant ssh, http, https depuis Any
+ network-object host 129.20.25.58
+ network-object host 129.20.25.89
+ network-object host 129.20.155.17
+ network-object host 129.20.25.95
+ network-object host 129.20.83.20
+ network-object host 148.60.40.1
+ network-object host 129.20.25.86
+ network-object host 129.20.27.75
+object-group service S-HttpHttpsAny tcp
+ description http, https depuis Any
+ port-object eq www
+ port-object eq https
+object-group network M-any2ebiSxLtsi
+ network-object host 129.20.25.161
+ network-object host 129.20.25.162
+ network-object host 129.20.25.163
+ network-object host 129.20.25.164
+ network-object host 129.20.25.165
+ network-object host 129.20.25.166
+ network-object host 129.20.25.167
+ network-object host 129.20.25.168
+object-group service S-any2ebiSxLtsi tcp
+ port-object eq ftp
+ port-object eq www
+ port-object eq 4899
+ port-object eq 5500
+ port-object range 9500 9509
+object-group network M-any2DSPMed
+ network-object host 129.20.157.23
+ network-object host 129.20.157.31
+ network-object host 129.20.157.36
+ network-object host 129.20.157.37
+ network-object host 129.20.157.38
+ network-object host 129.20.157.84
+object-group service S-any2DSPMed tcp
+ port-object eq ftp
+ port-object eq www
+ port-object eq 4899
+ port-object eq https
+ port-object eq 3030
+object-group network M-any2CrittMed
+ network-object host 129.20.153.42
+ network-object host 129.20.153.43
+object-group service S-any2CrittMed tcp
+ port-object eq 8888
+ port-object eq ldap
+ port-object eq 1503
+ port-object eq h323
+ port-object eq 1731
+ port-object eq 1023
+object-group network M-any-9000
+ description 9000 depuis Any
+ network-object host 129.20.161.3
+ network-object host 129.20.161.137
+ network-object host 129.20.161.150
+ network-object 129.20.161.4 255.255.255.255
+object-group network M-Idris161-cmd
+ description cmd depuis l'IDRIS
+ network-object host 129.20.82.58
+ network-object host 129.20.82.28
+ network-object host 129.20.82.3
+ network-object host 129.20.82.48
+object-group network M-bbacqSpm-18000
+ description 18000 vers bbacqPcSpmUR1
+ network-object host keemunUSTRASBG
+ network-object host seismeUSTRASBG
+object-group network M-h323
+ description machines internes acceptant H323
+ network-object host 193.52.60.230
+ network-object host 193.52.60.134
+ network-object host 193.52.60.12
+ network-object host 129.20.129.128
+ network-object 129.20.73.166 255.255.255.255
+ network-object 129.20.85.44 255.255.255.255
+ network-object 129.20.88.52 255.255.255.255
+ network-object 129.20.88.173 255.255.255.255
+ network-object 129.20.222.4 255.255.255.255
+ network-object 193.52.56.0 255.255.255.0
+ network-object host 129.20.88.42
+ network-object host 129.20.184.109
+object-group service S-any-sshHttpHttps tcp
+ description ssh, http, https depuis Any
+ port-object eq ssh
+ port-object eq www
+ port-object eq https
+object-group network M-Ext2Simpa-cmd
+ description cmd vers le Vlan SIMPA
+ network-object IDRIS161 255.255.255.0
+ network-object IDRIS160 255.255.255.0
+ network-object CINES 255.255.255.0
+ network-object UNIV_LYON1 255.255.0.0
+ network-object OBSERV_MEUDON 255.255.0.0
+object-group network M-DirectExt-http
+ description Machines ext. accessibles directement en http
+ network-object ipLexbase 255.255.255.255
+ network-object wwwIndexpresse 255.255.255.255
+ network-object wAnnuLaposteNet 255.255.255.255
+ network-object amsRiceEdu 255.255.255.255
+ network-object wJnlsUchicagoEdu 255.255.255.255
+ network-object amsMUBielefeldDe 255.255.255.255
+ network-object wwwNcbiNlmNihGo1 255.255.255.255
+ network-object wwwNcbiNlmNihGo2 255.255.255.255
+ network-object wwwOupCoUk 255.255.255.255
+ network-object wwwCistiNrcCa 255.255.255.255
+ network-object sciDirectCom 255.255.255.255
+ network-object wSciencDirectCom 255.255.255.255
+ network-object wwwElsevierNl 255.255.255.255
+ network-object amsImpaBr 255.255.255.255
+ network-object intlPnasOrg 255.255.255.255
+ network-object ojpsAipOrg 255.255.255.255
+ network-object klymMpimBonnMpDe 255.255.255.255
+ network-object wwwRennesINRA 255.255.255.255
+ network-object servicesINIST 255.255.255.255
+ network-object epubsSiamOrg 255.255.255.255
+ network-object 192.215.8.13 255.255.255.255
+ network-object wwwMtdocUjfGRENO 255.255.255.255
+ network-object wwwLextensoCom 255.255.255.255
+ network-object nwtIopPublishCom 255.255.255.255
+ network-object nwtIopPubshinCom 255.255.255.255
+ network-object wwwPagesJaunesCo 255.255.255.255
+ network-object wwwPagesProCom 255.255.255.255
+ network-object wwwEdpscienceCom 255.255.255.255
+ network-object wwwEMATH 255.255.255.255
+ network-object OneSrchUkOclcOrg 255.255.255.255
+ network-object linkSpringerDe 255.255.255.255
+ network-object wwwCnamPAYSDLL 255.255.255.255
+ network-object wIntrsciWileyCom 255.255.255.255
+ network-object wwwEbscoCom 255.255.255.255
+ network-object wwwSocieteCom 255.255.255.255
+ network-object symantecCom 255.255.255.0
+object-group network M-ReseauxUR1-http
+ description Reseaux UR1 autorisés à sortir en http
+ network-object RECHERCHE 255.255.0.0
+ network-object 148.60.16.0 255.255.255.0
+ network-object 148.60.52.0 255.255.255.0
+ network-object 148.60.204.0 255.255.254.0
+ network-object 148.60.216.0 255.255.248.0
+ network-object 148.60.232.0 255.255.248.0
+ network-object r1935028ENSSAT 255.255.255.0
+ network-object PROTEOME_INNOVA 255.255.255.224
+ network-object r193CHR 255.255.255.0
+ network-object 193.52.60.0 255.255.255.0
+ network-object INSERM_CHR 255.255.255.0
+ network-object r194ENSSAT 255.255.255.0
+ network-object 193.52.56.0 255.255.255.0
+ network-object 129.20.88.54 255.255.255.255
+ network-object 148.60.25.0 255.255.255.0
+object-group network M-EtuIfsic
+ description Réseau de l'IFSIC : 148.60.0-15
+ network-object ETUDIANTS 255.255.240.0
+object-group network M-CachesIfsic
+ description Caches de l'IFSIC
+ network-object 148.60.8.3 255.255.255.255
+ network-object 148.60.8.4 255.255.255.255
+ network-object 148.60.8.6 255.255.255.255
+object-group network M-ServUR1-smtp
+ description Serveurs SMTP autorises ? sortir en SMTP
+ network-object 129.20.131.1 255.255.255.255
+ network-object 129.20.233.18 255.255.255.255
+ network-object 148.60.223.66 255.255.255.255
+ network-object 129.20.128.64 255.255.255.255
+ network-object 129.20.128.10 255.255.255.255
+ network-object 129.20.128.54 255.255.255.255
+ network-object 129.20.222.60 255.255.255.255
+ network-object 129.20.230.148 255.255.255.255
+ network-object host 129.20.128.66
+ network-object host 129.20.230.135
+object-group service S-Kazaa tcp-udp
+ description ports Kazaa et Compagnie (tcp/udp)
+ port-object eq 412
+ port-object eq 1214
+ port-object range 4661 4665
+ port-object range 6346 6347
+ port-object eq 6699
+ port-object eq 3531
+ port-object range 6881 6889
+ port-object eq 4672
+object-group network M-ReseauxUR1-ip
+ description Reseaux de l'Universite autorises à sortir
+ network-object RECHERCHE 255.255.0.0
+ network-object ETUDIANTS 255.255.0.0
+ network-object r1935028ENSSAT 255.255.255.0
+ network-object PROTEOME_INNOVA 255.255.255.224
+ network-object r193CHR 255.255.255.0
+ network-object 193.52.60.0 255.255.255.0
+ network-object INSERM_CHR 255.255.255.0
+ network-object r194ENSSAT 255.255.255.0
+ network-object 193.52.56.0 255.255.255.0
+object-group service S-Ade tcp
+ description protocole RMI
+ port-object range 1099 1100
+ port-object range 2099 2101
+ port-object range 3402 3403
+ port-object range 4402 4404
+ port-object range 32767 65535
+ port-object eq 8802
+object-group network M-any-ldap
+ description Machines offrant le service LDAP
+ network-object 129.20.128.3 255.255.255.255
+ network-object 129.20.128.7 255.255.255.255
+ network-object 129.20.128.15 255.255.255.255
+ network-object 129.20.128.16 255.255.255.255
+ network-object 129.20.128.27 255.255.255.255
+object-group network M-cheneUR1-8080
+ description machines autorisees a acceder au port 8080 de chene
+ network-object host pcinterUVALENCiN
+ network-object host calvinENSEEIHT
+ network-object host hobbesENSEEIHT
+object-group network M-ADE
+ network-object adm02INSAREN 255.255.255.255
+ network-object IRISA 255.255.0.0
+ network-object host AdslSocieteADE
+object-group network M-HIP
+ description Serveurs Horizon/Sybase, ftp, web
+ network-object 129.20.128.51 255.255.255.255
+ network-object 129.20.128.65 255.255.255.255
+object-group network M-COBB
+ description Acces excalibur port 210 Z39.50
+ network-object 194.242.162.154 255.255.255.255
+ network-object 194.242.162.155 255.255.255.255
+ network-object COBB1 255.255.255.255
+ network-object COBB2 255.255.255.255
+object-group network M-Ext2Servix
+ network-object adm02INSAREN 255.255.255.255
+ network-object pc3InfoROSCOFF 255.255.255.255
+ network-object fraiseUBO 255.255.255.255
+ network-object cacaoUBO 255.255.255.255
+ network-object freewindUBO 255.255.255.255
+ network-object ilinux-rrbENSTB 255.255.255.255
+ network-object fcnaENSTB 255.255.255.255
+object-group service S-any2pcDmedMed tcp
+ port-object eq www
+ port-object eq https
+ port-object eq 8080
+object-group network M-any-pop3pop3s
+ description machines acceptant pop3 & pop3s depuis Any 
+ network-object RESO_INCUBATEUR 255.255.255.0
+ network-object host 129.20.155.18
+ network-object host 129.20.131.32
+ network-object host 129.20.131.1
+ network-object 129.20.128.32 255.255.255.255
+object-group network M-any-imapimaps
+ description machines acceptant imap & imaps depuis Any
+ network-object host 129.20.155.18
+ network-object host 129.20.131.30
+ network-object host 129.20.131.1
+ network-object 129.20.128.10 255.255.255.255
+ network-object 129.20.128.30 255.255.255.255
+object-group service S-any2Breeze tcp
+ description acces a mr161181 (Breeze)
+ port-object eq www
+ port-object eq 1935
+ port-object eq https
+ port-object eq 1433
+ port-object eq 27003
+ port-object eq 41703
+object-group network M-any-https
+ description serveur https
+ network-object 148.60.223.67 255.255.255.255
+ network-object host 129.20.153.102
+ network-object host 129.20.153.52
+ network-object 129.20.217.195 255.255.255.255
+ network-object 129.20.217.197 255.255.255.255
+ network-object 129.20.217.196 255.255.255.255
+ network-object host 129.20.126.102
+ network-object host 129.20.131.151
+ network-object host 129.20.131.152
+ network-object host 129.20.131.153
+ network-object host 129.20.131.154
+ network-object host 129.20.131.155
+ network-object host 129.20.229.1
+ network-object host 129.20.230.169
+ network-object host 148.60.51.41
+ network-object host 129.20.126.126
+object-group network M-P2P
+ description Machines qui font du peer-to-peer
+ network-object 129.20.155.21 255.255.255.255
+ network-object 129.20.88.131 255.255.255.255
+ network-object 148.60.239.48 255.255.255.255
+ network-object 129.20.83.77 255.255.255.255
+ network-object 129.20.53.33 255.255.255.255
+object-group service S-any2neurobase tcp
+ port-object eq 3085
+ port-object eq 5517
+ port-object eq 3060
+ port-object eq www
+ port-object eq ssh
+ port-object eq 8080
+object-group network M-BLOQUEES
+ description Machines bloquees pour raisons de securite (piratee, warez, P2P, etc)
+ network-object host 129.20.161.181
+ network-object host 129.20.48.233
+ network-object host 129.20.75.187
+ network-object host 129.20.167.1
+object-group service S-any2eco234 tcp
+ port-object eq 8001
+ port-object eq rtsp
+object-group network M-sf1staff-IRISA
+ network-object zenIRISA 255.255.255.255
+ network-object rapideIRISA 255.255.255.255
+ network-object marcharlIRISA 255.255.255.255
+ network-object aspirineIRISA 255.255.255.255
+ network-object coquelicotIRISA 255.255.255.255
+ network-object nonameIRISA 255.255.255.255
+ network-object miniIRISA 255.255.255.255
+ network-object lolaIRISA 255.255.255.255
+ network-object jessicaIRISA 255.255.255.255
+ network-object oceaniaIRISA 255.255.255.255
+ network-object renonculeIRISA 255.255.255.255
+ network-object enoraIRISA 255.255.255.255
+ network-object frozone 255.255.255.255
+ network-object jules 255.255.255.255
+ network-object tiareIRISA 255.255.255.255
+ network-object host soleilIRISA
+ network-object host depan3IRISA
+ network-object host 131.254.14.122
+ network-object host 131.254.11.161
+ network-object host 131.254.15.32
+ network-object host aventureIRISA
+ network-object host 131.254.13.175
+object-group network M-Apogee
+ network-object miniIRISA 255.255.255.255
+ network-object enoraIRISA 255.255.255.255
+ network-object poppyIRISA 255.255.255.255
+ network-object lagonIRISA 255.255.255.255
+ network-object bungalaAdmUHB 255.255.255.255
+ network-object renonculeIRISA 255.255.255.255
+ network-object host apogeeUHB
+ network-object host 131.254.11.161
+ network-object host 131.254.13.175
+object-group network M-any-5900
+ network-object host 129.20.88.11
+ network-object host 129.20.88.42
+ network-object host 129.20.88.134
+ network-object host 129.20.161.211
+ network-object 129.20.89.12 255.255.255.255
+object-group network M-any-http
+ network-object 129.20.88.149 255.255.255.255
+ network-object 129.20.153.53 255.255.255.255
+ network-object 129.20.153.52 255.255.255.255
+ network-object 129.20.76.106 255.255.255.255
+ network-object 129.20.186.77 255.255.255.255
+ network-object 148.60.24.1 255.255.255.255
+ network-object 129.20.73.154 255.255.255.255
+ network-object 129.20.88.50 255.255.255.255
+ network-object 129.20.48.132 255.255.255.255
+ network-object 129.20.155.25 255.255.255.255
+ network-object 129.20.155.74 255.255.255.255
+ network-object 129.20.161.163 255.255.255.255
+ network-object 129.20.161.150 255.255.255.255
+ network-object 129.20.55.13 255.255.255.255
+ network-object 148.60.51.41 255.255.255.255
+ network-object 129.20.161.160 255.255.255.255
+ network-object 148.60.211.3 255.255.255.255
+ network-object 193.52.60.14 255.255.255.255
+ network-object 193.52.60.18 255.255.255.255
+ network-object 193.52.60.50 255.255.255.255
+ network-object 129.20.49.56 255.255.255.255
+ network-object 129.20.49.147 255.255.255.255
+ network-object 129.20.131.200 255.255.255.255
+ network-object 129.20.222.63 255.255.255.255
+ network-object host 129.20.230.139
+ network-object host 129.20.230.150
+ network-object 129.20.25.45 255.255.255.255
+ network-object 129.20.131.22 255.255.255.255
+ network-object 129.20.155.70 255.255.255.255
+ network-object host 129.20.129.35
+ network-object host 129.20.128.50
+ network-object host 129.20.153.29
+ network-object host 129.20.131.1
+ network-object host 129.20.128.65
+ network-object host 129.20.131.28
+ network-object host 129.20.131.142
+ network-object host 129.20.131.166
+ network-object host 129.20.130.250
+ network-object host 129.20.131.103
+ network-object host 129.20.167.1
+ network-object host 148.60.52.153
+ network-object host 129.20.131.97
+ network-object host 129.20.167.2
+ network-object host 129.20.44.5
+ network-object host 129.20.94.16
+ network-object host 129.20.174.3
+ network-object host 129.20.174.4
+ network-object host 129.20.230.161
+ network-object host 129.20.210.210
+ network-object host 129.20.39.100
+ network-object host 129.20.167.4
+ network-object host 129.20.211.2
+ network-object host 129.20.161.137
+ network-object host 129.20.131.71
+ network-object host 129.20.126.18
+ network-object host 129.20.126.19
+ network-object host 129.20.126.119
+ network-object host 129.20.230.140
+ network-object host 129.20.131.189
+ network-object host 129.20.131.190
+ network-object host 129.20.94.150
+ network-object host 129.20.131.151
+ network-object host 129.20.233.80
+ network-object host 148.60.233.245
+ network-object host 129.20.94.163
+ network-object host 148.60.216.16
+ network-object host 129.20.233.247
+ network-object host 129.20.230.169
+ network-object host 129.20.174.12
+ network-object host 129.20.169.95
+object-group network M-NABUCO
+ network-object reblochonAMUE 255.255.255.255
+ network-object luke.sopragroup 255.255.255.255
+ network-object pc-thp_amue 255.255.255.255
+ network-object pc-cag_amue 255.255.255.255
+ network-object host crivideoUBREST
+object-group service S-iChatAV2 tcp-udp
+ port-object eq sip
+ port-object range 16384 16403
+ port-object eq 5190
+object-group service S-NeuroBretagne tcp
+ port-object eq www
+ port-object range 1024 1025
+object-group network M-catia-milesant
+ description le logiciel catia prend un jeton sur un serveur a ENS Cachan
+ network-object host 129.20.75.148
+ network-object host 148.60.52.121
+ network-object host 148.60.52.122
+ network-object host 148.60.52.123
+ network-object host 148.60.52.124
+ network-object host 148.60.52.125
+ network-object host 148.60.52.126
+ network-object host 148.60.52.127
+ network-object host 148.60.52.128
+ network-object host 148.60.52.129
+ network-object host 148.60.52.130
+ network-object host 148.60.52.131
+ network-object host 148.60.52.132
+ network-object host 148.60.108.21
+ network-object host 148.60.108.24
+ network-object host 148.60.108.25
+ network-object host 148.60.108.32
+ network-object host 148.60.108.33
+ network-object host 148.60.108.34
+ network-object 148.60.52.16 255.255.255.255
+ network-object host 148.60.108.42
+ network-object host 148.60.108.41
+ network-object host 148.60.108.8
+ network-object host 148.60.52.133
+ network-object host 129.20.84.12
+ network-object host 148.60.108.19
+ network-object host 148.60.108.18
+ network-object host 148.60.108.9
+ network-object host 148.60.108.35
+ network-object host 148.60.108.36
+ network-object host 148.60.108.37
+ network-object host 148.60.108.38
+ network-object host 148.60.108.39
+ network-object host 129.20.84.15
+ network-object host 129.20.84.16
+object-group network M-T.120
+ network-object 129.20.192.139 255.255.255.255
+ network-object 129.20.192.153 255.255.255.255
+ network-object 129.20.192.154 255.255.255.255
+ network-object 129.20.192.200 255.255.255.255
+ network-object 129.20.192.236 255.255.255.255
+ network-object 129.20.192.237 255.255.255.255
+object-group service S-any2netmeting tcp
+ description les ports pour netmeeting
+ port-object eq 522
+ port-object eq h323
+ port-object eq 1731
+ port-object eq 1503
+ port-object eq ldap
+object-group network M-any-X-Window
+ network-object 129.20.75.31 255.255.255.255
+ network-object 129.20.75.75 255.255.255.255
+ network-object 129.20.75.6 255.255.255.255
+ network-object host 129.20.16.159
+ network-object host 129.20.76.85
+ network-object host 129.20.76.147
+object-group network M-bioinfo
+ network-object 129.20.138.0 255.255.255.0
+ network-object 129.20.133.16 255.255.255.252
+object-group network M-StarDicom
+ description machines validees pour acces a LTSISTAR (et astan)
+ network-object host thalamusIRISA
+ network-object host idm2IRISA
+ network-object host hypophyse-157IRISA
+ network-object idm2-157IRISA 255.255.255.255
+ network-object host hypophyseIRISA
+ network-object host parkinsonIRISA
+object-group network M-ssh-pctheo13
+ network-object host loligoENS-LYON
+ network-object host 140.77.2.170
+ network-object host mail2CecUchileCL
+ network-object host clusterDfiUchileCL
+ network-object host esp29UNILIM
+ network-object host esp28UNILIM
+ network-object login-ng1.rc.sara7.nl 255.255.255.255
+object-group network M-6000-pctheo13
+ network-object host titusINIST
+ network-object host clusterDfiUchileCL
+ network-object host 200.9.100.136
+object-group network M-DNS
+ network-object host 129.20.128.2
+ network-object host 129.20.128.39
+object-group service S-Ext2NABUCO tcp
+ port-object eq sqlnet
+object-group network M-syslogserver
+ network-object host 129.20.254.1
+ network-object host 129.20.254.200
+ network-object host 129.20.253.254
+object-group network M-balsa-sqlnet
+ network-object host AdslSocieteADE
+ network-object host Amue1
+ network-object host Amue2
+ network-object host Amue3
+ network-object host crivideoUBREST
+ network-object host 194.214.218.175
+ network-object 134.157.79.0 255.255.255.0
+object-group network M-Simpps
+ description Base Simpps
+ network-object host simppsFxPerUHB
+ network-object host bungalaAdmUHB
+object-group service S-Sifac tcp
+ description 3200 - 3303
+ port-object range 3200 3303
+object-group service S-pc-Eric-Gicquel tcp
+ description les port duserveur d eric gicquel
+ port-object eq 100
+ port-object eq 90
+ port-object eq www
+object-group service S-VNC tcp
+ port-object range 5800 5801
+ port-object range 5900 5901
+object-group service S-Ext2Sifac tcp
+ group-object S-Sifac
+ group-object S-VNC
+ port-object eq ssh
+ port-object range 1527 1535
+object-group network M-Ext2Sifac
+ network-object host Sifac-admUHB
+ network-object Sifac-admUBS 255.255.255.0
+ network-object rennes2-2 255.255.255.0
+ network-object 193.49.223.0 255.255.255.0
+ network-object host 194.146.51.248
+ network-object 192.134.240.0 255.255.255.0
+ network-object 192.134.241.0 255.255.255.0
+ network-object 193.49.224.0 255.255.255.0
+ network-object host 195.83.162.218
+object-group network M-SIFAC
+ network-object host 129.20.136.16
+ network-object host 129.20.136.17
+ network-object host 129.20.136.72
+ network-object host 129.20.136.73
+ network-object host 129.20.136.20
+ network-object host 129.20.131.195
+ network-object host 129.20.136.18
+ network-object host 129.20.126.11
+object-group service S-streamsit tcp
+ port-object eq 1234
+ port-object eq 1755
+ port-object eq 8080
+ port-object eq www
+ port-object eq https
+ port-object eq rtsp
+object-group network M-bbacqSpm-ssh
+ network-object host renassUSTRASBG
+ network-object host renassb1USTRASBG
+ network-object host keemunUSTRASBG
+ network-object host seismeUSTRASBG
+object-group network M-bbacqSpm-www
+ network-object host keemunUSTRASBG
+ network-object host seismeUSTRASBG
+object-group network M-sqlnet-migren
+ network-object IRISA 255.255.0.0
+object-group service S-ARCGIS tcp
+ description Annick Battais
+ port-object eq 22150
+ port-object range 27000 27004
+object-group network M-China-IE7
+ network-object host 121.12.173.218
+ network-object host 61.143.211.187
+object-group network M-SVI
+ network-object host 129.20.131.189
+ network-object host 129.20.131.190
+ network-object host 129.20.131.71
+ network-object host 129.20.126.121
+ network-object host 129.20.126.122
+ network-object host 129.20.126.123
+object-group service S-SVI tcp
+ port-object eq 1935
+ port-object eq 5008
+object-group service S-cerisier-tcp tcp
+ port-object eq www
+ port-object eq https
+ port-object eq 8080
+ port-object eq 548
+ port-object eq 8008
+ port-object eq ssh
+object-group service S-cerisier-udp udp
+ port-object eq sip
+ port-object eq 5678
+ port-object eq 16384
+ port-object eq 16403
+ port-object eq 1701
+ port-object eq 4500
+object-group network M-SMTP-Renater
+ network-object host 129.20.131.111
+ network-object host 129.20.131.110
+ network-object host 129.20.131.120
+ network-object host 129.20.131.135
+ network-object host 129.20.131.219
+ network-object host 129.20.131.1
+ network-object host 129.20.128.10
+object-group network M-verConficker
+ network-object host 159.226.7.162
+ network-object host 68.178.232.100
+ network-object host 69.64.147.18
+ network-object host 69.64.155.119
+ network-object host 74.213.179.178
+ network-object host 118.102.24.106
+ network-object host 121.198.43.78
+ network-object host 125.87.3.8
+ network-object host 143.215.143.11
+ network-object host 149.20.54.193
+ network-object host 149.20.56.32
+ network-object host 199.2.137.252
+ network-object host 204.13.67.131
+ network-object host 204.94.86.74
+ network-object host 205.188.161.4
+ network-object host 208.73.210.121
+ network-object host 209.62.20.195
+ network-object host 211.9.58.163
+ network-object host 212.158.162.5
+ network-object host 212.67.202.8
+ network-object host 213.188.129.184
+ network-object host 216.104.161.117
+ network-object host 216.104.161.217
+ network-object host 216.21.239.197
+ network-object host 216.239.143.29
+ network-object host 216.34.131.135
+ network-object host 216.39.58.112
+ network-object host 217.113.244.80
+ network-object host 217.20.163.71
+ network-object host 218.145.71.194
+ network-object host 218.244.147.129
+ network-object host 218.61.204.215
+ network-object host 221.130.201.9
+ network-object host 38.113.1.116
+ network-object host 60.29.240.76
+ network-object host 62.213.110.9
+ network-object host 63.111.67.9
+ network-object host 63.251.171.80
+ network-object host 63.251.171.81
+ network-object host 64.70.19.33
+ network-object host 66.150.161.136
+ network-object host 66.150.161.140
+ network-object host 66.150.161.141
+ network-object host 66.206.198.169
+ network-object host 66.246.235.42
+ network-object host 66.63.181.97
+ network-object host 66.96.130.122
+ network-object host 67.210.13.93
+ network-object host 69.10.155.222
+ network-object host 69.16.116.94
+ network-object host 69.25.27.170
+ network-object host 69.25.27.173
+ network-object host 69.46.228.32
+ network-object host 69.64.147.19
+ network-object host 69.64.147.20
+ network-object host 69.64.147.207
+ network-object host 69.64.147.208
+ network-object host 69.64.147.21
+ network-object host 69.64.147.210
+ network-object host 69.64.155.120
+ network-object host 69.64.155.121
+ network-object host 69.64.155.122
+ network-object host 69.64.155.123
+ network-object host 69.64.155.124
+ network-object host 69.64.155.125
+ network-object host 69.64.155.126
+ network-object host 69.64.155.127
+ network-object host 69.64.159.1
+ network-object host 69.89.17.9
+ network-object host 69.89.27.207
+ network-object host 70.85.228.70
+ network-object host 72.167.51.186
+ network-object host 72.169.32.33
+ network-object host 72.34.4.115
+ network-object host 72.45.124.23
+ network-object host 74.208.164.166
+ network-object host 74.208.167.98
+ network-object host 74.208.18.247
+ network-object host 74.208.26.102
+ network-object host 74.208.39.98
+ network-object host 74.208.64.145
+ network-object host 74.208.64.191
+ network-object host 74.55.100.7
+ network-object host 75.126.137.166
+ network-object host 75.126.238.193
+ network-object host 76.76.12.181
+ network-object host 77.94.248.183
+ network-object host 81.169.145.73
+ network-object host 82.134.30.37
+ network-object host 83.68.16.6
+ network-object host 85.10.197.167
+ network-object host 87.106.34.1
+ network-object host 87.106.86.28
+ network-object host 72.167.202.5
+object-group network M-ext-ssh-dolmen
+ network-object host wwwCivxOrg
+ network-object host 82.236.137.104
+ network-object host 88.164.240.108
+ network-object host 194.167.34.215
+ network-object host 82.126.110.82
+ network-object host 213.182.150.42
+object-group network M-srvCaren-http
+ network-object host 193.52.225.50
+ network-object host 193.51.170.9
+ network-object host 147.99.167.173
+ network-object host 147.99.167.175
+ network-object host 147.99.167.200
+object-group network M-srvCaren-ssh
+ network-object host 193.52.225.50
+ network-object host 193.49.97.126
+object-group network vsapfrontaux
+ network-object host 129.20.126.125
+ network-object host 129.20.126.4
+ network-object host 129.20.126.6
+object-group network M-ftp-hplusbd
+ network-object host hydrasaPoitiers1
+ network-object host hydrasaPoitiers2
+ network-object GeoscMontpellier 255.255.255.0
+ network-object host 162.38.140.63
+object-group network M-ExtiutLannion
+ network-object host 72.233.104.124
+ network-object host 72.233.56.138
+ network-object host 72.233.56.139
+ network-object host 74.200.247.60
+ network-object host 76.74.254.126
+object-group network CCI-Fougeres
+ network-object host 213.56.98.189
+ network-object host 217.108.101.172
+ network-object host 80.13.234.223
+object-group network M-Netinary
+ network-object host 129.20.131.86
+ network-object host 148.60.248.245
+ network-object host 148.60.248.250
+ network-object host 148.60.248.251
+ network-object host 148.60.248.252
+object-group service S-Calcium tcp
+ description port pour application calcium
+ port-object range 8000 8001
+ port-object eq ssh
+object-group network Serveurs_sauvegarde
+ network-object host 129.20.128.130
+ network-object host 129.20.128.60
+object-group network M-Client-Radius
+ description Client Radius
+ network-object host 129.20.254.3
+ network-object host rad2EduroamFr
+ network-object host rad1EduroamFr
+object-group network M-Serveur-Radius
+ description Serveurs Radius
+ network-object host 129.20.128.95
+ network-object host 129.20.129.2
+ network-object host 129.20.131.101
+object-group network TEST6
+access-list outside_access_in remark ===== On aborde le problème ... mais cool
+access-list outside_access_in remark ===== On aborde le problÃ¨me ... mais cool
+access-list outside_access_in remark ===== On aborde le problÃƒÂ¨me ... mais cool
+access-list outside_access_in remark ===== Visio-conférence
+access-list outside_access_in remark ===== Accès UDP
+access-list outside_access_in remark ===== Accès Telnet
+access-list outside_access_in remark ===== Accès tout IP
+access-list outside_access_in remark ===== Accès any
+access-list outside_access_in remark ===== Accès any
+access-list outside_access_in remark ===== Accès any
+access-list outside_access_in remark ===== Accès sous-réseaux
+access-list outside_access_in remark ===== Accès machines
+access-list outside_access_in remark ===== On aborde le problème ... mais cool
+access-list outside_access_in remark ===== On aborde le problÃ¨me ... mais cool
+access-list outside_access_in remark ===== On aborde le problÃƒÂ¨me ... mais cool
+access-list outside_access_in remark ===== On aborde le problÃƒÂƒÃ‚Â¨me ... mais cool
+access-list outside_access_in remark ===== On aborde le problÃ¨me ... mais cool
+access-list outside_access_in remark ===== On aborde le problÃƒÂ¨me ... mais cool
+access-list outside_access_in remark ===== On aborde le problÃƒÂƒÃ‚Â¨me ... mais cool
+access-list outside_access_in remark ===== Visio-confÃ©rence
+access-list outside_access_in remark ===== On aborde le problÃƒÂ¨me ... mais cool
+access-list outside_access_in remark ===== Visio-conférence
+access-list outside_access_in remark ===== Accès UDP
+access-list outside_access_in remark ===== Accès Telnet
+access-list outside_access_in remark ===== Accès tout IP
+access-list outside_access_in remark ===== Accès any
+access-list outside_access_in remark ===== Accès any
+access-list outside_access_in remark ===== Accès any
+access-list outside_access_in remark ===== Accès sous-réseaux
+access-list outside_access_in remark ===== Accès machines
+access-list inside_access_in remark PB IUTSM
+access-list inside_access_in extended deny ip host 129.20.210.248 any 
+access-list inside_access_in remark ACL INSIDE (#8)
+access-list inside_access_in remark ICMP
+access-list inside_access_in remark Basculement des PIX ...
+access-list inside_access_in extended permit icmp any any echo 
+access-list inside_access_in extended permit icmp any any echo-reply 
+access-list inside_access_in extended permit icmp any any time-exceeded 
+access-list inside_access_in extended permit icmp any any traceroute 
+access-list inside_access_in extended permit icmp any any unreachable 
+access-list inside_access_in extended deny icmp any any 
+access-list inside_access_in extended permit gre host 129.20.251.1 host 129.20.253.254 
+access-list inside_access_in extended deny ip any RussianBusinessN 255.255.240.0 
+access-list inside_access_in extended deny ip object-group M-BLOQUEES any 
+access-list inside_access_in extended permit tcp object-group M-CachesIfsic any eq www 
+access-list inside_access_in extended permit tcp object-group M-EtuIfsic any eq www 
+access-list inside_access_in remark Bornes etu-centre en acces restreint a Internet (148.60.188.240-247)
+access-list inside_access_in extended permit tcp 148.60.188.240 255.255.255.248 symantecCom 255.255.255.0 eq www 
+access-list inside_access_in extended deny ip 148.60.188.240 255.255.255.248 any 
+access-list inside_access_in extended deny tcp any object-group M-China-IE7 
+access-list inside_access_in remark detection machines infectees par W32/Conficker
+access-list inside_access_in extended deny tcp any object-group M-verConficker 
+access-list inside_access_in extended permit tcp object-group M-ReseauxUR1-http any eq www 
+access-list inside_access_in remark === Reseau etudiant : ouverture tant que le cache ne suit pas (RN)
+access-list inside_access_in extended permit tcp ETUDIANTS 255.255.0.0 any eq www 
+access-list inside_access_in remark === Lors de la fermeture, verifier que tous les
+access-list inside_access_in remark === elements de M-DirectExt-http sont autorises par proxy.pac
+access-list inside_access_in extended permit tcp any object-group M-DirectExt-http eq www 
+access-list inside_access_in extended deny tcp any any eq www 
+access-list inside_access_in remark === autorisation de sortie SMTP pour les mailhost
+access-list inside_access_in extended permit tcp object-group M-ServUR1-smtp any eq smtp 
+access-list inside_access_in remark Pour Pascal Aubry (mobile)
+access-list inside_access_in extended permit tcp any host smtpIRISA eq smtp 
+access-list inside_access_in extended permit tcp any host mx-testCRU eq smtp 
+access-list inside_access_in extended deny tcp any any eq smtp 
+access-list inside_access_in remark === KAZAA & consorts : recommandations Renater
+access-list inside_access_in extended deny tcp any any object-group S-Kazaa 
+access-list inside_access_in extended deny udp any object-group S-Kazaa any object-group S-Kazaa 
+access-list inside_access_in extended deny udp 129.20.249.0 255.255.255.0 any 
+access-list inside_access_in extended deny udp any host 85.85.170.170 
+access-list inside_access_in extended permit ip host 148.60.210.248 host 129.20.246.1 
+access-list inside_access_in extended deny ip any DMZ-PIX 255.255.255.0 
+access-list inside_access_in remark === Autorisation des reseaux routes
+access-list inside_access_in extended permit ip object-group M-ReseauxUR1-ip any 
+access-list inside_access_in extended permit udp any host 224.2.127.254 eq 9875 
+access-list inside_access_in extended deny ip any any 
+access-list DMZ-PIX_access_in extended permit ip host 192.168.2.201 any 
+access-list DMZ-PIX_access_in extended permit ip host 192.168.2.253 any 
+access-list DMZ-PIX_access_in extended permit ip host 192.168.2.254 any 
+access-list DMZ-PIX_access_in extended deny ip any any 
+access-list FO-PIX_access_in extended permit ip any any 
+access-list http-mss-list1 extended permit tcp any eq www any gt 1023 
+access-list http-mss-list1 extended permit tcp any eq https any gt 1023 
+access-list http-mss-list1 extended permit tcp host 129.20.131.18 eq 8081 any 
+access-list http-mss-list1 extended permit tcp any any eq www 
+access-list http-mss-list1 extended permit tcp any any eq https 
+access-list http-mss-list1 extended permit tcp any host 129.20.131.18 eq 8081 
+access-list http-mss-list1 extended permit tcp any any eq 8060 
+access-list outside_acl_in extended deny icmp host 193.51.189.49 any inactive 
+access-list outside_acl_in extended permit icmp any any echo 
+access-list outside_acl_in extended permit icmp any any echo-reply 
+access-list outside_acl_in extended permit icmp any any time-exceeded 
+access-list outside_acl_in extended permit icmp any any traceroute 
+access-list outside_acl_in extended permit icmp any any unreachable 
+access-list outside_acl_in extended deny icmp any any 
+access-list outside_acl_in remark udp pour multicast
+access-list outside_acl_in extended permit udp any 224.0.0.0 240.0.0.0 
+access-list outside_acl_in extended permit tcp host simppsFxPerUHB host 129.20.128.144 object-group S-Calcium 
+access-list outside_acl_in remark ticket 49468
+access-list outside_acl_in extended permit ip host 131.254.215.19 host 129.20.165.12 
+access-list outside_acl_in remark Test Flux video armorTV Michel Guillou le 23/02/2010
+access-list outside_acl_in extended permit ip host 88.221.86.21 host 148.60.216.16 
+access-list outside_acl_in remark Visio Docteur Antoine Lucas a villejean: ticket 54999
+access-list outside_acl_in extended permit ip host 194.250.11.162 host 129.20.167.141 
+access-list outside_acl_in extended permit ip host 217.86.148.30 host 129.20.174.9 
+access-list outside_acl_in extended permit tcp 159.84.201.128 255.255.255.192 host 148.60.178.99 eq 7000 inactive 
+access-list outside_acl_in extended permit tcp 193.51.154.158 255.255.255.254 host 148.60.178.100 eq 7000 inactive 
+access-list outside_acl_in extended permit tcp 193.51.154.158 255.255.255.254 host 148.60.178.99 eq 7000 inactive 
+access-list outside_acl_in extended permit tcp 159.84.201.128 255.255.255.192 host 148.60.178.100 eq 7000 inactive 
+access-list outside_acl_in extended permit ip host 129.20.254.5 129.20.55.0 255.255.255.0 
+access-list outside_acl_in extended permit tcp host 129.20.254.2 host 129.20.131.104 eq www 
+access-list outside_acl_in extended permit tcp host 129.20.254.2 host 129.20.131.104 eq https 
+access-list outside_acl_in extended permit tcp any host 129.20.155.50 eq 9006 
+access-list outside_acl_in remark ===== Machines Bloquees
+access-list outside_acl_in extended deny ip any object-group M-BLOQUEES 
+access-list outside_acl_in extended permit ip host AdslJerome host 129.20.161.12 
+access-list outside_acl_in remark sorin cf ticket: 38348
+access-list outside_acl_in extended permit ip 193.52.56.208 255.255.255.240 193.52.56.0 255.255.255.0 inactive 
+access-list outside_acl_in remark ===== Visio-conference
+access-list outside_acl_in extended permit ip host 193.52.56.220 any inactive 
+access-list outside_acl_in remark ===== Visio-conference
+access-list outside_acl_in extended permit tcp any 193.52.56.0 255.255.255.0 eq h323 inactive 
+access-list outside_acl_in extended permit tcp any object-group M-h323 eq h323 
+access-list outside_acl_in extended permit tcp any eq h323 193.52.56.0 255.255.255.0 inactive 
+access-list outside_acl_in extended permit tcp any 193.52.56.0 255.255.255.0 range 2253 2263 inactive 
+access-list outside_acl_in extended permit udp any 193.52.56.0 255.255.255.0 gt 32767 inactive 
+access-list outside_acl_in remark T120
+access-list outside_acl_in extended permit tcp any object-group M-T.120 eq 1503 
+access-list outside_acl_in extended permit tcp any object-group M-h323 eq 1503 
+access-list outside_acl_in remark ===== Visio-conference
+access-list outside_acl_in remark VNC partage ecran / VRVS
+access-list outside_acl_in extended permit tcp host www.vrvs.org range 5900 5910 any inactive 
+access-list outside_acl_in remark ===== Visio-conference
+access-list outside_acl_in extended permit ip any 148.60.239.0 255.255.255.0 
+access-list outside_acl_in remark reflectors VRVS
+access-list outside_acl_in extended permit tcp host vrvs-parisRENAT any eq h323 inactive 
+access-list outside_acl_in extended permit tcp host vrvs-lyonRENAT any eq h323 inactive 
+access-list outside_acl_in extended permit udp host vrvs-parisRENAT any range 51000 56000 inactive 
+access-list outside_acl_in extended permit udp host vrvs-lyonRENAT any range 51000 56000 inactive 
+access-list outside_acl_in remark ===== Ifsic : protection sur leur routeur
+access-list outside_acl_in extended permit ip any ETUDIANTS 255.255.240.0 
+access-list outside_acl_in remark ===== IEP : protection sur leur Pix
+access-list outside_acl_in extended permit ip any 129.20.144.0 255.255.254.0 
+access-list outside_acl_in extended permit ip any 148.60.144.0 255.255.254.0 
+access-list outside_acl_in remark ===== Le CRU
+access-list outside_acl_in extended permit ip host secCRU any 
+access-list outside_acl_in extended permit ip CRU_INTERNE 255.255.255.192 any 
+access-list outside_acl_in extended permit tcp CRU_WIFI 255.255.255.192 host 129.20.129.149 eq 9100 
+access-list outside_acl_in extended permit tcp CRU-PUBLIC 255.255.255.192 host 129.20.131.104 eq www 
+access-list outside_acl_in extended permit tcp host gate.cru.fr host 129.20.131.104 
+access-list outside_acl_in remark ===== Acces UDP
+access-list outside_acl_in extended permit tcp host 129.20.254.1 any eq domain 
+access-list outside_acl_in extended permit udp host 129.20.254.1 any eq domain 
+access-list outside_acl_in extended permit tcp host 129.20.254.1 host 129.20.128.54 eq 10025 
+access-list outside_acl_in extended permit udp host 129.20.254.250 any eq tftp 
+access-list outside_acl_in extended permit udp 193.52.56.208 255.255.255.240 any eq domain 
+access-list outside_acl_in extended permit udp object-group M-syslogserver host 129.20.128.67 eq syslog 
+access-list outside_acl_in remark ===== https
+access-list outside_acl_in extended permit tcp any object-group M-any-https eq https 
+access-list outside_acl_in extended permit udp host 129.20.253.254 host 129.20.129.1 eq tftp 
+access-list outside_acl_in extended permit udp host 129.20.253.254 any eq ntp 
+access-list outside_acl_in extended permit udp host 129.20.254.201 object-group M-DNS eq domain 
+access-list outside_acl_in extended permit udp 129.20.254.200 255.255.255.248 object-group M-DNS eq domain 
+access-list outside_acl_in extended permit tcp 129.20.254.200 255.255.255.248 host 129.20.131.1 eq smtp 
+access-list outside_acl_in remark ===== VLan CRI-SERVEURS
+access-list outside_acl_in extended permit ip host 129.20.254.1 host 129.20.129.1 inactive 
+access-list outside_acl_in extended permit tcp host 129.20.254.3 host 129.20.129.1 eq ftp 
+access-list outside_acl_in extended permit udp host 129.20.9.254 host 129.20.129.3 eq snmptrap 
+access-list outside_acl_in extended permit udp host 129.20.253.254 host 129.20.129.3 eq snmptrap 
+access-list outside_acl_in remark Acces DYNIX pour HIP ( Horizon )
+access-list outside_acl_in extended permit tcp 217.108.50.0 255.255.255.0 object-group M-HIP 
+access-list outside_acl_in extended permit tcp host carminSdocABES host 129.20.128.51 eq ftp 
+access-list outside_acl_in extended permit tcp host ericnt.inlex.dra.com host 129.20.128.51 eq sqlnet 
+access-list outside_acl_in extended permit tcp host ericnt.inlex.dra.com host 129.20.128.51 eq 2025 
+access-list outside_acl_in extended permit tcp host ericnt.inlex.dra.com host 129.20.128.51 eq 5100 
+access-list outside_acl_in extended permit tcp host 192.206.158.10 host 129.20.128.51 eq 5100 
+access-list outside_acl_in extended permit tcp host 192.206.158.10 host 129.20.128.51 eq ssh 
+access-list outside_acl_in extended permit tcp host ericnt.inlex.dra.com host 129.20.128.51 eq ssh 
+access-list outside_acl_in extended permit tcp any host 129.20.222.130 eq domain 
+access-list outside_acl_in extended permit udp any host 129.20.222.130 eq domain 
+access-list outside_acl_in remark ===== Acces sqlnet
+access-list outside_acl_in extended permit tcp object-group M-Apogee host 129.20.136.5 eq sqlnet 
+access-list outside_acl_in extended permit tcp object-group M-Simpps host 129.20.131.172 eq sqlnet 
+access-list outside_acl_in extended permit tcp object-group M-Simpps host 129.20.131.173 eq sqlnet 
+access-list outside_acl_in extended permit tcp host 131.254.13.175 host 129.20.131.95 eq 7779 
+access-list outside_acl_in extended permit tcp host 131.254.13.175 host 129.20.131.172 eq sqlnet 
+access-list outside_acl_in extended permit tcp host 131.254.13.175 host 129.20.131.173 eq sqlnet 
+access-list outside_acl_in extended permit tcp object-group M-sqlnet-migren host 129.20.136.9 eq sqlnet 
+access-list outside_acl_in extended permit tcp host crivideoUBREST host 129.20.128.23 eq 3892 
+access-list outside_acl_in remark regle permanente
+access-list outside_acl_in extended permit tcp host pix-515ACRENNES host 129.20.131.90 eq sqlnet 
+access-list outside_acl_in extended permit tcp any host 129.20.128.68 eq smtp 
+access-list outside_acl_in extended permit tcp any host 129.20.128.66 eq 587 
+access-list outside_acl_in extended permit tcp any host 129.20.131.1 eq ident 
+access-list outside_acl_in extended permit tcp 194.214.200.0 255.255.255.240 host 129.20.131.1 eq 10025 
+access-list outside_acl_in extended permit tcp 194.214.201.0 255.255.255.240 host 129.20.131.1 eq 10025 
+access-list outside_acl_in extended permit tcp 194.214.200.0 255.255.255.240 host 129.20.128.18 eq ldap 
+access-list outside_acl_in extended permit tcp 194.214.201.0 255.255.255.240 host 129.20.128.18 eq ldap 
+access-list outside_acl_in extended permit tcp 194.214.200.0 255.255.255.240 host 129.20.128.18 eq ldaps 
+access-list outside_acl_in extended permit tcp 194.214.201.0 255.255.255.240 host 129.20.128.18 eq ldaps 
+access-list outside_acl_in extended permit tcp 194.214.200.0 255.255.255.240 host 129.20.131.111 eq smtp 
+access-list outside_acl_in extended permit tcp 194.214.200.0 255.255.255.240 host vmsympa1 eq smtp 
+access-list outside_acl_in extended permit tcp 194.214.201.0 255.255.255.240 host 129.20.131.111 eq smtp 
+access-list outside_acl_in extended permit tcp 194.214.201.0 255.255.255.240 host vmsympa1 eq smtp 
+access-list outside_acl_in extended permit tcp 194.214.200.0 255.255.255.240 host 129.20.230.148 eq smtp 
+access-list outside_acl_in extended permit tcp 194.214.201.0 255.255.255.240 host 129.20.230.148 eq smtp 
+access-list outside_acl_in extended permit tcp 194.214.200.0 255.255.255.240 host 129.20.233.18 eq smtp 
+access-list outside_acl_in extended permit tcp 194.214.201.0 255.255.255.240 host 129.20.233.18 eq smtp 
+access-list outside_acl_in extended permit tcp 194.214.200.0 255.255.255.240 host firewallProteome eq smtp 
+access-list outside_acl_in extended permit tcp 194.214.201.0 255.255.255.240 host firewallProteome eq smtp 
+access-list outside_acl_in extended permit tcp 194.214.200.0 255.255.255.240 host 129.20.128.10 eq 10025 
+access-list outside_acl_in extended permit tcp 194.214.201.0 255.255.255.240 host 129.20.128.10 eq 10025 
+access-list outside_acl_in extended permit tcp any host 129.20.131.142 eq 8000 
+access-list outside_acl_in extended permit tcp any host 129.20.131.166 eq 2048 
+access-list outside_acl_in extended permit tcp any host 129.20.131.149 eq 8090 
+access-list outside_acl_in extended permit tcp any host 129.20.131.149 eq 8443 
+access-list outside_acl_in extended permit tcp any host 129.20.131.144 eq 8090 
+access-list outside_acl_in extended deny tcp host 218.38.136.55 host 129.20.161.12 eq ssh 
+access-list outside_acl_in extended permit tcp any host 129.20.161.12 object-group S-cerisier-tcp 
+access-list outside_acl_in extended permit udp host 87.249.123.6 host 129.20.91.149 
+access-list outside_acl_in extended permit udp host 213.160.213.86 host 129.20.91.149 
+access-list outside_acl_in extended permit tcp host 193.52.101.133 host 129.20.11.123 eq ssh 
+access-list outside_acl_in extended permit udp host 87.249.123.6 host 129.20.160.37 
+access-list outside_acl_in extended permit udp host 213.160.213.86 host 129.20.160.37 
+access-list outside_acl_in remark acces pour sites web PHP ne pouvant pas utiliser le 80
+access-list outside_acl_in extended permit tcp any host 129.20.131.164 eq 8443 
+access-list outside_acl_in extended permit tcp host Ste-ipdiva host 129.20.133.133 eq ssh 
+access-list outside_acl_in extended permit tcp host Ste-ipdiva host 129.20.211.25 eq ssh 
+access-list outside_acl_in extended permit tcp host Ste-ipdiva host 129.20.133.134 eq ssh 
+access-list outside_acl_in extended permit tcp any host 129.20.25.86 eq 8008 
+access-list outside_acl_in extended permit tcp any host 129.20.155.50 eq 16080 
+access-list outside_acl_in remark machines de maintenance (congelateurs ...)
+access-list outside_acl_in extended permit tcp any host 129.20.174.2 eq 31250 
+access-list outside_acl_in remark machines de maintenance (congelateurs ...)
+access-list outside_acl_in extended permit tcp 134.217.3.0 255.255.255.0 host 129.20.174.13 eq https 
+access-list outside_acl_in extended permit tcp any host 129.20.131.18 range 8081 8082 
+access-list outside_acl_in extended permit tcp any host 129.20.131.2 eq nntp 
+access-list outside_acl_in extended permit tcp any host 129.20.128.65 eq 210 
+access-list outside_acl_in extended permit tcp host 129.20.254.5 host 129.20.126.20 eq ldap 
+access-list outside_acl_in extended permit tcp host 129.20.254.5 host 129.20.126.21 eq ldap 
+access-list outside_acl_in extended permit tcp host 129.20.254.5 host 129.20.128.35 eq ldap 
+access-list outside_acl_in extended permit tcp host 129.20.254.5 host 129.20.128.50 eq ldap 
+access-list outside_acl_in extended permit tcp 196.200.142.0 255.255.255.0 host 129.20.126.21 eq ldap 
+access-list outside_acl_in extended permit tcp IRISA 255.255.0.0 host 129.20.128.35 eq ldap 
+access-list outside_acl_in extended permit tcp IRISA 255.255.0.0 host 129.20.128.50 eq ldap 
+access-list outside_acl_in extended permit tcp host wwwCRU host 129.20.128.3 eq ldap 
+access-list outside_acl_in extended permit tcp CRU 255.255.255.192 129.20.128.0 255.255.255.0 eq ldaps 
+access-list outside_acl_in extended permit tcp host AdslOlGuillou host 129.20.128.19 inactive 
+access-list outside_acl_in extended permit tcp host AdslOlGuillou host 129.20.128.52 eq 3891 inactive 
+access-list outside_acl_in extended permit tcp host AdslPascalAubry RECHERCHE 255.255.0.0 eq ldap 
+access-list outside_acl_in extended permit tcp host AdslPascalAubry 129.20.128.0 255.255.252.0 eq ssh 
+access-list outside_acl_in extended permit tcp any host 129.20.126.11 range 3298 3299 
+access-list outside_acl_in extended permit tcp any host real-new eq 8080 
+access-list outside_acl_in extended permit tcp any host real-new eq rtsp 
+access-list outside_acl_in extended permit tcp object-group M-Ext2Sifac object-group M-SIFAC object-group S-Ext2Sifac 
+access-list outside_acl_in extended permit tcp host 194.167.195.16 host 129.20.136.16 eq 3303 
+access-list outside_acl_in extended permit tcp host 195.83.191.21 host 129.20.131.90 eq ssh inactive 
+access-list outside_acl_in extended permit tcp host 195.83.191.21 host 129.20.131.158 eq ssh inactive 
+access-list outside_acl_in extended permit tcp host 194.167.156.66 148.60.16.52 255.255.255.252 eq 1935 inactive 
+access-list outside_acl_in extended permit ip host 192.134.152.246 host 129.20.156.14 inactive 
+access-list outside_acl_in extended permit tcp host 193.49.22.249 host 129.20.126.10 eq ssh 
+access-list outside_acl_in extended permit tcp 194.167.195.16 255.255.255.248 host 129.20.126.6 eq ssh 
+access-list outside_acl_in extended permit tcp host posteSteAde host 129.20.128.52 eq ldap 
+access-list outside_acl_in extended permit tcp object-group M-Sauvegardees object-group Serveurs_sauvegarde eq 2525 
+access-list outside_acl_in extended permit udp object-group M-Sauvegardees host 129.20.128.60 eq 2526 
+access-list outside_acl_in extended permit ip IRISA 255.255.0.0 129.20.233.0 255.255.255.0 
+access-list outside_acl_in extended permit tcp IRISA 255.255.0.0 148.60.233.0 255.255.255.0 
+access-list outside_acl_in extended permit tcp host AdslArnaudDelay 129.20.233.0 255.255.255.0 inactive 
+access-list outside_acl_in extended permit tcp host AdslArnaudDelay 148.60.233.0 255.255.255.0 inactive 
+access-list outside_acl_in extended permit tcp host AdslMoulKharoune 129.20.233.0 255.255.255.0 
+access-list outside_acl_in extended permit tcp host AdslMoulKharoune 148.60.233.0 255.255.255.0 
+access-list outside_acl_in extended permit tcp host AdslMarcZonzon 129.20.233.0 255.255.255.0 
+access-list outside_acl_in extended permit tcp object-group M-ExtiutLannion host 129.20.233.247 eq ftp-data 
+access-list outside_acl_in extended permit tcp object-group M-ExtiutLannion host 129.20.233.247 eq ftp 
+access-list outside_acl_in extended permit tcp host AdslMarcZonzon 148.60.233.0 255.255.255.0 
+access-list outside_acl_in extended permit tcp host 81.56.144.36 129.20.232.0 255.255.248.0 eq ssh 
+access-list outside_acl_in extended permit tcp host AdslPierreDeleporte host 129.20.204.73 range 5800 5900 inactive 
+access-list outside_acl_in extended permit tcp host AdslPierreDeleporte host 129.20.204.86 range 5800 5900 inactive 
+access-list outside_acl_in remark T. Guizouarn pcanywhere
+access-list outside_acl_in extended permit tcp host AdslGuizouarn host 129.20.73.201 range pcanywhere-data 5632 
+access-list outside_acl_in extended permit tcp host AdslOctavioPena host 129.20.73.201 
+access-list outside_acl_in remark T. Guizouarn pcanywhere pour Arlei Borba Antunes
+access-list outside_acl_in extended permit tcp host AdslAntunes host 129.20.73.201 range pcanywhere-data 5632 
+access-list outside_acl_in extended permit tcp host AdslVeroBiquand 129.20.93.0 255.255.255.0 
+access-list outside_acl_in extended permit tcp host AdslVeroBiquand 129.20.204.0 255.255.255.0 
+access-list outside_acl_in extended permit tcp host AdslVeroPrevet host 129.20.160.123 
+access-list outside_acl_in extended permit tcp any host 129.20.233.18 object-group S-smtpDnsHttp 
+access-list outside_acl_in extended permit udp any host 129.20.233.18 eq domain 
+access-list outside_acl_in extended permit tcp any host 148.60.233.18 object-group S-smtpDnsHttp 
+access-list outside_acl_in extended permit tcp host playetpauseNerim host 129.20.232.17 range 41794 41795 inactive 
+access-list outside_acl_in extended permit tcp any object-group M-any-5900 eq 5900 
+access-list outside_acl_in extended permit tcp any host 129.20.222.60 eq smtp 
+access-list outside_acl_in extended permit tcp any host 129.20.230.148 eq smtp inactive 
+access-list outside_acl_in extended permit tcp any host 129.20.230.135 eq smtp 
+access-list outside_acl_in extended permit tcp IRISA 255.255.0.0 object-group M-Irisa2Nsat object-group S-Irisa2Nsat 
+access-list outside_acl_in extended permit tcp any host 148.60.223.66 object-group S-any2IbmAbretASSO 
+access-list outside_acl_in extended permit gre host pimRpIRISA host 193.52.60.1 
+access-list outside_acl_in extended permit tcp object-group M-StarDicom host 129.20.25.28 eq 6000 
+access-list outside_acl_in extended permit tcp object-group M-StarDicom host 129.20.161.182 eq 8005 
+access-list outside_acl_in extended permit tcp IRISA 255.255.0.0 host 129.20.161.182 eq www 
+access-list outside_acl_in extended permit tcp host SteEtiam host 129.20.161.182 eq ssh inactive 
+access-list outside_acl_in extended permit tcp host SteEtiam host 129.20.161.182 eq www 
+access-list outside_acl_in remark test pour debloquer la situation
+access-list outside_acl_in extended permit tcp host solutreIRISA host 129.20.208.7 eq www 
+access-list outside_acl_in remark ===== Utilisateurs =====
+access-list outside_acl_in remark ===== Acces tout IP
+access-list outside_acl_in extended permit ip VPN-IRISA1 255.255.255.0 129.20.217.0 255.255.255.0 
+access-list outside_acl_in extended permit ip VPN-IRISA2 255.255.255.0 129.20.217.0 255.255.255.0 
+access-list outside_acl_in extended permit ip any 148.60.25.0 255.255.255.0 
+access-list outside_acl_in extended permit ip host vpn1ACRENNES host 129.20.192.60 inactive 
+access-list outside_acl_in extended permit ip host racineACRENNES host 129.20.192.60 inactive 
+access-list outside_acl_in remark ===== Acces any
+access-list outside_acl_in extended permit tcp any object-group M-any-http eq www 
+access-list outside_acl_in extended permit tcp any host 148.60.52.153 range 5800 5900 
+access-list outside_acl_in remark ===== Acces any
+access-list outside_acl_in extended permit tcp any object-group M-any-ftp eq ftp 
+access-list outside_acl_in extended permit tcp object-group M-ftp-hplusbd host 129.20.49.56 eq ftp 
+access-list outside_acl_in remark ===== Acces any
+access-list outside_acl_in extended permit tcp any host 148.60.52.62 gt 1024 
+access-list outside_acl_in extended permit ip host dirwdXs4allNl host 129.20.75.88 
+access-list outside_acl_in extended permit ip host HeartUclaEdu host 129.20.75.21 
+access-list outside_acl_in remark ===== Acces any
+access-list outside_acl_in extended permit tcp any host 129.20.36.174 range 2220 2229 
+access-list outside_acl_in remark ===== Acces any
+access-list outside_acl_in extended permit tcp 118.153.18.0 255.255.255.0 host 129.20.75.218 eq ssh log errors 
+access-list outside_acl_in extended permit tcp any object-group M-any-ssh eq ssh 
+access-list outside_acl_in extended permit tcp any host 129.20.76.199 eq 9184 
+access-list outside_acl_in remark ===== Acces any
+access-list outside_acl_in extended permit tcp any object-group M-any-pop3pop3s eq pop3 
+access-list outside_acl_in remark ===== Acces any
+access-list outside_acl_in extended permit tcp any object-group M-any-pop3pop3s eq 995 
+access-list outside_acl_in extended permit tcp any object-group M-any-imapimaps eq imap4 
+access-list outside_acl_in remark Acces au futur serveur Breeze
+access-list outside_acl_in extended permit tcp any object-group M-any-imapimaps eq 993 
+access-list outside_acl_in extended permit tcp any host 129.20.128.10 eq 995 
+access-list outside_acl_in extended permit tcp any host 129.20.131.30 eq 2000 
+access-list outside_acl_in extended permit tcp any host 129.20.131.1 eq 2000 
+access-list outside_acl_in extended permit tcp any object-group M-any-cmd eq rsh 
+access-list outside_acl_in extended permit tcp any RESO_INCUBATEUR 255.255.255.0 eq smtp 
+access-list outside_acl_in extended deny tcp 212.0.132.0 255.255.255.0 host 129.20.16.224 
+access-list outside_acl_in extended permit tcp any host 148.60.161.83 eq 2401 
+access-list outside_acl_in remark ticket 40955
+access-list outside_acl_in extended deny ip host 217.5.216.107 any 
+access-list outside_acl_in remark ticket 40955
+access-list outside_acl_in extended deny ip host 213.91.131.248 any 
+access-list outside_acl_in remark ticket 40955
+access-list outside_acl_in extended deny ip host 195.250.148.253 any 
+access-list outside_acl_in remark ticket 40955
+access-list outside_acl_in extended deny ip host 89.19.15.18 any 
+access-list outside_acl_in remark ticket 40955
+access-list outside_acl_in extended deny ip host 82.165.45.82 any 
+access-list outside_acl_in remark ticket 40955
+access-list outside_acl_in extended deny ip host 77.47.186.220 any 
+access-list outside_acl_in extended permit tcp any host 129.20.73.157 eq 115 
+access-list outside_acl_in remark Ports et IP filtres par cs7204
+access-list outside_acl_in extended permit tcp any object-group M-any-6000 eq 6000 
+access-list outside_acl_in extended permit udp any host 129.20.94.184 
+access-list outside_acl_in extended permit tcp host 193.51.76.187 host 129.20.94.16 
+access-list outside_acl_in extended permit tcp any host 129.20.48.163 eq 591 
+access-list outside_acl_in extended permit tcp any object-group M-any-8080 eq 8080 
+access-list outside_acl_in extended deny ip any host 129.20.36.193 
+access-list outside_acl_in extended permit tcp any object-group M-any-httpHttps eq www 
+access-list outside_acl_in extended permit tcp any host 129.20.48.132 eq 3389 
+access-list outside_acl_in extended permit tcp any host 129.20.178.134 eq 3389 
+access-list outside_acl_in extended permit tcp any object-group M-any-ftpHttpHttps object-group S-any-ftpHttpHttps 
+access-list outside_acl_in extended permit tcp any object-group M-any-sshHttpHttps object-group S-any-sshHttpHttps 
+access-list outside_acl_in extended permit tcp any object-group M-any2ebiSxLtsi object-group S-any2ebiSxLtsi 
+access-list outside_acl_in extended permit tcp any object-group M-any2DSPMed object-group S-any2DSPMed 
+access-list outside_acl_in extended permit tcp any object-group M-any2CrittMed object-group S-any2CrittMed 
+access-list outside_acl_in extended permit udp any host 129.20.131.186 eq 9990 
+access-list outside_acl_in extended permit tcp any host 129.20.55.20 eq 8081 
+access-list outside_acl_in extended permit tcp any host 129.20.83.20 eq 8081 inactive 
+access-list outside_acl_in extended permit tcp any host 129.20.82.82 eq 8082 
+access-list outside_acl_in extended permit tcp any object-group M-any-httpHttps eq https 
+access-list outside_acl_in extended permit tcp IRISA 255.255.0.0 host 129.20.131.136 eq 8080 
+access-list outside_acl_in extended permit tcp any host 129.20.153.52 eq 8180 
+access-list outside_acl_in extended permit tcp any host 129.20.161.27 object-group S-any2pcDmedMed 
+access-list outside_acl_in extended permit tcp any host 129.20.161.5 eq 81 
+access-list outside_acl_in extended permit tcp any host 129.20.161.1 eq 81 
+access-list outside_acl_in extended permit tcp any host 129.20.76.95 eq lpd 
+access-list outside_acl_in extended permit tcp any host 129.20.76.149 eq 531 
+access-list outside_acl_in extended permit tcp any host 129.20.161.5 eq 1080 
+access-list outside_acl_in extended permit tcp any host 129.20.83.20 eq 1099 inactive 
+access-list outside_acl_in extended permit tcp any host 129.20.161.5 range 1099 2000 
+access-list outside_acl_in extended permit tcp any host 129.20.88.134 eq 1755 
+access-list outside_acl_in extended permit udp any host 148.60.52.62 eq sunrpc 
+access-list outside_acl_in extended permit tcp any host 129.20.153.52 eq 2401 
+access-list outside_acl_in extended permit tcp any host 129.20.83.20 eq 3144 inactive 
+access-list outside_acl_in extended permit tcp any host 129.20.161.5 eq 8090 
+access-list outside_acl_in extended permit tcp any host 129.20.161.5 eq 3306 
+access-list outside_acl_in extended permit tcp host 88.164.237.28 host 129.20.131.53 eq 3306 
+access-list outside_acl_in extended permit tcp host 88.164.237.28 host mycluster3 eq 3306 
+access-list outside_acl_in extended permit tcp host listesCRU host 129.20.131.122 eq 3307 
+access-list outside_acl_in extended permit tcp host listesCRU host 129.20.131.125 eq 3307 
+access-list outside_acl_in extended permit tcp host 195.220.94.170 host 129.20.131.122 eq 3307 
+access-list outside_acl_in extended permit tcp host 195.220.94.170 host 129.20.131.125 eq 3307 
+access-list outside_acl_in extended permit tcp any object-group M-any-9000 eq 9000 
+access-list outside_acl_in extended permit tcp any host 129.20.157.39 eq 4899 
+access-list outside_acl_in extended permit tcp any host 129.20.83.20 eq 5307 inactive 
+access-list outside_acl_in extended permit tcp any host 129.20.76.149 eq 5632 inactive 
+access-list outside_acl_in extended permit tcp any host 129.20.88.11 eq 5800 
+access-list outside_acl_in extended permit tcp any host 129.20.88.42 eq 5800 
+access-list outside_acl_in extended permit tcp any host 129.20.88.134 eq 7007 
+access-list outside_acl_in extended permit tcp any host 129.20.161.4 eq 9090 
+access-list outside_acl_in extended permit tcp any host 129.20.155.25 eq 16080 
+access-list outside_acl_in extended permit tcp host irisIRISA host 129.20.129.60 
+access-list outside_acl_in extended permit tcp IRISA 255.255.0.0 148.60.41.0 255.255.255.192 eq ssh inactive 
+access-list outside_acl_in extended permit tcp IDRIS161 255.255.255.0 object-group M-Idris161-cmd eq rsh 
+access-list outside_acl_in extended permit udp any host 129.20.73.154 eq 63148 
+access-list outside_acl_in extended permit tcp any host 129.20.178.16 eq 63148 
+access-list outside_acl_in extended permit tcp any host 148.60.52.46 eq 12405 
+access-list outside_acl_in extended permit tcp any host 129.20.178.68 eq 63148 
+access-list outside_acl_in extended permit tcp IDRIS161 255.255.255.0 host 129.20.16.67 eq ftp 
+access-list outside_acl_in extended permit tcp IDRIS161 255.255.255.0 host 129.20.16.20 eq ftp 
+access-list outside_acl_in extended permit tcp OBSERV_MEUDON 255.255.0.0 host 129.20.25.70 eq rsh inactive 
+access-list outside_acl_in extended permit tcp OBSERV_MEUDON 255.255.0.0 host 129.20.25.8 eq rsh 
+access-list outside_acl_in extended permit tcp IRISA 255.255.0.0 host 129.20.54.9 eq lpd 
+access-list outside_acl_in remark logiciel SAP, ports TCP 443 et TCP 1494 vers 148.60.188.0 et 148.60.186.0
+access-list outside_acl_in extended permit tcp 155.56.66.0 255.255.255.0 148.60.186.0 255.255.255.0 eq https 
+access-list outside_acl_in remark ports TCP 443
+access-list outside_acl_in extended permit tcp any host 129.20.169.96 eq https 
+access-list outside_acl_in extended permit tcp 155.56.66.0 255.255.255.0 148.60.186.0 255.255.255.0 eq citrix-ica 
+access-list outside_acl_in extended permit tcp 155.56.66.0 255.255.255.0 148.60.188.0 255.255.255.0 eq https 
+access-list outside_acl_in extended permit tcp 155.56.66.0 255.255.255.0 148.60.188.0 255.255.255.0 eq citrix-ica 
+access-list outside_acl_in extended permit tcp host Archimed1 host 148.60.91.50 eq 3389 
+access-list outside_acl_in extended permit tcp host Archimed2 host 148.60.91.50 eq 3389 
+access-list outside_acl_in extended permit tcp host Archimed2 host 148.60.91.51 
+access-list outside_acl_in extended permit tcp host Archimed1 host 148.60.91.51 
+access-list outside_acl_in extended permit tcp host lnsThProxadNet host 129.20.48.175 eq 3389 
+access-list outside_acl_in extended permit tcp host rtAtlanticRF host 129.20.83.67 eq 3389 
+access-list outside_acl_in remark ===== Acces machines
+access-list outside_acl_in extended permit tcp OBSERV_MEUDON 255.255.0.0 host 129.20.25.70 eq 6000 inactive 
+access-list outside_acl_in extended permit tcp OBSERV_MEUDON 255.255.0.0 host 129.20.25.8 eq 6000 
+access-list outside_acl_in remark ===== Acces machines
+access-list outside_acl_in extended permit tcp host StuttgartMpgDe host 129.20.16.67 eq ftp 
+access-list outside_acl_in extended permit tcp host StuttgartMpgDe host 129.20.16.20 eq ftp 
+access-list outside_acl_in extended permit tcp host kappaUTC host 129.20.76.106 eq ssh inactive 
+access-list outside_acl_in extended permit tcp object-group M-bbacqSpm-ssh host 129.20.48.63 eq ssh 
+access-list outside_acl_in extended permit tcp object-group M-bbacqSpm-www host 129.20.48.63 eq www 
+access-list outside_acl_in extended permit tcp host kar.gbba.usb.ve host 129.20.25.137 eq ssh inactive 
+access-list outside_acl_in extended permit tcp host wei.gbba.usb.ve host 129.20.25.137 eq ssh inactive 
+access-list outside_acl_in extended permit ip host adm02INSAREN host 129.20.32.59 
+access-list outside_acl_in extended permit ip host adm02INSAREN host 129.20.32.117 
+access-list outside_acl_in extended permit tcp host pareFeuMinFinanc host 129.20.192.60 eq 261 inactive 
+access-list outside_acl_in extended permit ip host mult01EnsINSAREN host 129.20.83.106 inactive 
+access-list outside_acl_in extended permit tcp host StuttgartMpgDe host 129.20.16.67 eq rsh 
+access-list outside_acl_in extended permit tcp host vigieACRENNES host 129.20.192.91 eq lpd 
+access-list outside_acl_in extended permit tcp host StuttgartMpgDe host 129.20.16.20 eq rsh 
+access-list outside_acl_in extended permit tcp host vigieACRENNES host 129.20.192.111 eq lpd 
+access-list outside_acl_in extended permit tcp host dxcalcLnfInfnIt host 129.20.82.2 eq rsh 
+access-list outside_acl_in extended permit ip host pchyper6INSAREN host 129.20.82.58 
+access-list outside_acl_in extended permit tcp host 194.57.123.48 host 129.20.72.208 eq 1547 
+access-list outside_acl_in extended permit tcp host pc10CaesCNRS host 129.20.72.208 eq 1547 
+access-list outside_acl_in extended permit tcp host caredisENSTB host 129.20.82.87 eq 4660 
+access-list outside_acl_in extended permit tcp host 193.52.81.7 host 129.20.82.87 eq 4660 
+access-list outside_acl_in extended permit tcp host pmolnaENSTB host 129.20.82.33 eq 4660 
+access-list outside_acl_in extended permit tcp host 131.254.254.16 host 129.20.87.41 eq 6000 
+access-list outside_acl_in extended permit tcp host microcosmeIRISA host 129.20.54.103 eq 6000 
+access-list outside_acl_in extended permit tcp host exponentielIRISA host 129.20.54.103 eq 6000 
+access-list outside_acl_in extended permit ip host titusINIST host 129.20.16.159 log inactive 
+access-list outside_acl_in remark X Windows
+access-list outside_acl_in extended permit tcp host csd-ext.inist.fr object-group M-any-X-Window eq 6000 inactive 
+access-list outside_acl_in remark X Windows
+access-list outside_acl_in extended permit tcp host titusINIST object-group M-any-X-Window eq 6000 inactive 
+access-list outside_acl_in remark Acces provisoire pour p-sapubs
+access-list outside_acl_in extended permit tcp host 193.52.48.67 host 129.20.131.195 eq 50100 
+access-list outside_acl_in extended permit ip host titusINIST host 129.20.76.85 log debugging inactive 
+access-list outside_acl_in extended permit tcp object-group M-bbacqSpm-18000 host 129.20.48.63 eq 18000 
+access-list outside_acl_in remark FTP UDP sur port 20-21
+access-list outside_acl_in extended permit tcp host AdslSocieteADE host 129.20.131.10 eq ssh inactive 
+access-list outside_acl_in extended permit tcp host AdslSocieteADE host 129.20.131.25 eq ssh 
+access-list outside_acl_in extended permit tcp object-group M-balsa-sqlnet host 129.20.131.141 eq sqlnet 
+access-list outside_acl_in extended permit tcp object-group M-ADE host 129.20.131.25 object-group S-Ade 
+access-list outside_acl_in extended permit tcp object-group M-ADE host 129.20.131.10 object-group S-Ade 
+access-list outside_acl_in extended permit ip host netinary object-group M-Netinary 
+access-list outside_acl_in remark IRISA vers imprimante bat repro
+access-list outside_acl_in extended permit ip IRISA 255.255.0.0 host 129.20.54.118 
+access-list outside_acl_in extended permit ip host pcinterUVALENCiN host 129.20.136.13 
+access-list outside_acl_in extended permit udp host 129.20.254.4 any eq domain 
+access-list outside_acl_in extended permit udp host 129.20.254.3 any eq domain 
+access-list outside_acl_in extended permit udp host 129.20.254.5 any eq domain 
+access-list outside_acl_in extended permit tcp host 129.20.254.5 any inactive 
+access-list outside_acl_in extended permit tcp host 129.20.254.5 host 129.20.131.104 eq www 
+access-list outside_acl_in extended permit tcp host reverseCmpltlNet host 129.20.131.24 eq www inactive 
+access-list outside_acl_in extended permit udp object-group M-Client-Radius object-group M-Serveur-Radius range 1812 1814 
+access-list outside_acl_in extended permit tcp host 129.20.254.3 host 129.20.131.53 eq 3306 
+access-list outside_acl_in extended permit tcp host 129.20.254.3 host mycluster3 eq 3306 
+access-list outside_acl_in extended permit tcp any host 129.20.161.211 eq 3283 
+access-list outside_acl_in extended permit ip object-group M-sf1staff-IRISA host 129.20.131.29 
+access-list outside_acl_in extended permit udp host serv-gm.cachan range 1515 1516 object-group M-catia-milesant 
+access-list outside_acl_in extended permit ip host serv-gm.cachan object-group M-catia-milesant log emergencies 
+access-list outside_acl_in extended permit tcp any host 129.20.167.233 eq 1234 
+access-list outside_acl_in extended permit ip any host 193.52.60.134 
+access-list outside_acl_in extended permit tcp any host 148.60.51.37 range 4001 4002 
+access-list outside_acl_in extended permit tcp any host 129.20.55.20 eq 9911 
+access-list outside_acl_in extended permit tcp VPN-IRISA1 255.255.255.0 host 129.20.217.195 eq 5800 
+access-list outside_acl_in extended permit tcp VPN-IRISA2 255.255.255.0 host 129.20.217.195 eq 5800 
+access-list outside_acl_in extended permit tcp VPN-IRISA1 255.255.255.0 host 129.20.217.195 eq 5900 
+access-list outside_acl_in extended permit tcp VPN-IRISA2 255.255.255.0 host 129.20.217.195 eq 5900 
+access-list outside_acl_in extended permit tcp any host 129.20.161.27 eq 8091 
+access-list outside_acl_in extended permit tcp enst-brest 255.255.255.224 host 148.60.178.99 eq 700 
+access-list outside_acl_in extended permit tcp enst-brest 255.255.255.224 host 148.60.178.99 object-group S-any2netmeting 
+access-list outside_acl_in extended permit ip host cnrslabintel1 host 129.20.129.34 
+access-list outside_acl_in extended permit tcp enst-brest 255.255.255.224 host 148.60.178.100 object-group S-any2netmeting inactive 
+access-list outside_acl_in extended permit tcp enst-brest 255.255.255.224 host 148.60.178.100 eq 700 
+access-list outside_acl_in extended permit ip host cnrslabintel2 host 129.20.129.34 
+access-list outside_acl_in extended permit tcp any host 129.20.161.4 eq 104 
+access-list outside_acl_in extended permit tcp host cnam-vnc1 host 129.20.85.20 eq 5900 
+access-list outside_acl_in extended permit tcp host cnam-vnc2 host 129.20.85.20 eq 5900 
+access-list outside_acl_in extended permit tcp host cnam-vnc1 host 129.20.77.85 eq 5900 
+access-list outside_acl_in extended permit tcp host cnam-vnc2 host 129.20.77.85 eq 5900 
+access-list outside_acl_in extended permit tcp host cnam-vnc1 host 129.20.94.64 eq 5900 
+access-list outside_acl_in extended permit tcp host cnam-vnc2 host 129.20.94.64 eq 5900 
+access-list outside_acl_in extended permit udp host serveur_ivisit any eq 9940 inactive 
+access-list outside_acl_in extended permit udp host cnam-ivisit1 any eq 9940 inactive 
+access-list outside_acl_in extended permit udp host cnam-ivisit2 any eq 9940 inactive 
+access-list outside_acl_in extended permit ip host 129.20.246.1 host 148.60.210.248 
+access-list outside_acl_in extended permit tcp any host 148.60.51.41 range 8080 8090 
+access-list outside_acl_in extended permit tcp any host 148.60.51.41 eq domain 
+access-list outside_acl_in extended permit tcp host cse35-1 host 129.20.76.227 eq ftp 
+access-list outside_acl_in extended permit tcp host cse35-1 host 129.20.76.228 eq ftp 
+access-list outside_acl_in extended permit tcp host 193.252.51.77 host 129.20.211.2 eq ftp 
+access-list outside_acl_in extended permit tcp any host 129.20.179.50 eq 7800 
+access-list outside_acl_in extended permit esp any any 
+access-list outside_acl_in extended permit udp any RECHERCHE 255.255.0.0 eq isakmp 
+access-list outside_acl_in extended permit ip object-group CCI-Fougeres 148.60.206.0 255.255.255.0 
+access-list outside_acl_in extended permit ip host 81.252.111.162 host 148.60.179.52 
+access-list outside_acl_in extended permit gre any RECHERCHE 255.255.0.0 
+access-list outside_acl_in remark ===== Acces any
+access-list outside_acl_in extended permit tcp any host 129.20.161.6 object-group S-any2Breeze 
+access-list outside_acl_in remark ===== Acces any
+access-list outside_acl_in extended permit tcp any host 129.20.167.7 object-group S-any2Breeze 
+access-list outside_acl_in extended permit tcp host pix-515ACRENNES host 129.20.131.84 eq 6400 
+access-list outside_acl_in extended permit tcp host pix-515ACRENNES host 129.20.131.84 gt 32767 
+access-list outside_acl_in extended permit tcp host AdslSocieteADE host 129.20.128.20 eq ldap 
+access-list outside_acl_in extended permit tcp host AdslSocieteADE host 129.20.128.24 eq ldap 
+access-list outside_acl_in extended permit tcp host 150.185.128.201 host 129.20.25.26 eq ssh 
+access-list outside_acl_in extended permit tcp host 150.185.128.201 host 129.20.25.175 eq ssh inactive 
+access-list outside_acl_in extended permit tcp host AdslEdfClamart host 129.20.75.114 eq ssh inactive 
+access-list outside_acl_in extended permit tcp object-group M-ssh-pctheo13 host 129.20.75.140 eq ssh 
+access-list outside_acl_in extended permit tcp object-group M-6000-pctheo13 host 129.20.75.140 eq 6000 
+access-list outside_acl_in extended permit tcp host 139.124.148.25 object-group S-any2netmeting host 129.20.25.126 inactive 
+access-list outside_acl_in extended permit tcp 132.206.38.0 255.255.255.0 host 129.20.78.16 eq ssh 
+access-list outside_acl_in extended permit tcp 132.206.38.0 255.255.255.0 host 129.20.78.73 eq ssh 
+access-list outside_acl_in extended permit tcp 142.157.0.0 255.255.0.0 host 129.20.78.16 eq ssh 
+access-list outside_acl_in extended permit tcp 142.157.0.0 255.255.0.0 host 129.20.78.73 eq ssh 
+access-list outside_acl_in extended permit tcp 132.216.0.0 255.255.0.0 host 129.20.78.16 eq ssh 
+access-list outside_acl_in extended permit tcp 132.216.0.0 255.255.0.0 host 129.20.78.73 eq ssh 
+access-list outside_acl_in extended permit ip Presid_Nantes 255.255.255.0 host 129.20.136.16 inactive 
+access-list outside_acl_in extended permit tcp host patCostelFx-eUHB host 129.20.49.3 
+access-list outside_acl_in extended permit tcp 147.99.167.0 255.255.255.0 host 129.20.49.3 
+access-list outside_acl_in remark ichat pour login.oscar.aol.com vers ENSCR
+access-list outside_acl_in extended permit tcp blueAolCom 255.255.255.0 host 129.20.17.57 log errors inactive 
+access-list outside_acl_in extended permit ip loginOscarAolCom 255.255.0.0 host 129.20.17.57 log errors inactive 
+access-list outside_acl_in remark acces ssh pour Image Science Software GmbH
+access-list outside_acl_in extended permit tcp object-group M-ext-ssh-dolmen host 129.20.86.22 eq ssh 
+access-list outside_acl_in extended permit tcp object-group M-srvCaren-http host 129.20.49.172 eq www 
+access-list outside_acl_in extended permit tcp object-group M-srvCaren-http host 129.20.49.172 eq 8080 
+access-list outside_acl_in extended permit tcp object-group M-srvCaren-ssh host 129.20.49.172 eq ssh inactive 
+access-list outside_acl_in extended permit tcp host inwicast host 129.20.126.119 eq ssh 
+access-list outside_acl_in extended permit tcp host 129.20.254.3 129.20.128.0 255.255.252.0 eq ssh 
+access-list outside_acl_in extended permit tcp any object-group M-SVI object-group S-SVI 
+access-list outside_acl_in extended permit tcp any host 129.20.131.96 eq 5222 
+access-list outside_acl_in extended permit tcp any host 129.20.131.96 eq www 
+access-list outside_acl_in extended permit tcp any host 148.60.210.249 eq www 
+access-list outside_acl_in extended permit udp any host 129.20.128.66 inactive 
+access-list outside_acl_in extended permit tcp any host 129.20.64.21 object-group S-pc-Eric-Gicquel 
+access-list outside_acl_in extended permit tcp any host 129.20.64.23 eq 100 
+access-list outside_acl_in extended permit tcp any host 129.20.167.2 range 8180 8187 
+access-list outside_acl_in extended permit tcp any host 129.20.167.232 object-group S-streamsit 
+access-list outside_acl_in extended permit tcp host cacaoUBO host 129.20.131.86 log emergencies 
+access-list outside_acl_in extended permit ip host NotreAdslWanadoo any log errors inactive 
+access-list outside_acl_in extended deny ip any any 
+!
+tcp-map mss-map
+!
+pager lines 24
+logging enable
+logging timestamp
+logging standby
+logging list cfghfg level debugging class config
+logging list cfghfg level warnings class session
+logging list cfghfg message 106001
+logging buffer-size 8192
+logging monitor warnings
+logging buffered errors
+logging trap warnings
+logging history critical
+logging asdm errors
+logging host inside 129.20.128.67
+logging message 106011 level warnings
+logging message 106023 level notifications
+mtu DMZ-PIX 1500
+mtu inside 1500
+mtu outside 1500
+ip audit name test-info info action alarm
+ip audit name test attack action drop
+ip audit interface outside test-info
+ip audit interface outside test
+ipv6 neighbor 2001:660:7307:1:2::1 inside 000d.6522.e700
+ipv6 neighbor 2001:660:7307:1:1::f outside 000b.fc9b.101b
+ipv6 icmp permit any inside
+ipv6 icmp permit any outside
+ipv6 route outside 2001:660:7307:3::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:4::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:5::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:6::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:7::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:8::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:9::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:a::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:b::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:c::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:d::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:e::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:f::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:22::/64 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:31:129:20:254:0/112 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:1100::/56 2001:660:7307:1:1::f 
+ipv6 route outside 2001:660:7307:6000::/52 2001:660:7307:1:1::f 
+ipv6 route inside 2001:660:7307::/48 2001:660:7307:1:2::1 
+ipv6 route outside ::/0 2001:660:7307:1:1::f 
+ipv6 access-list V6-INSIDE-ACCESS-IN remark On filtre sur la FWSM
+ipv6 access-list V6-INSIDE-ACCESS-IN permit icmp6 any any 
+ipv6 access-list V6-INSIDE-ACCESS-IN permit ip any any 
+ipv6 access-list V6-OUTSIDE-ACCESS-IN remark On filtre sur la FWSM
+ipv6 access-list V6-OUTSIDE-ACCESS-IN permit icmp6 any any 
+ipv6 access-list V6-OUTSIDE-ACCESS-IN permit ip any any 
+ipv6 access-list V6-OUTSIDE-ACCESS-IN deny ip any any 
+failover
+failover lan interface FO-PIX Ethernet0
+failover lan enable
+failover polltime interface 3 holdtime 15
+failover key retis
+failover replication http
+failover link FO-PIX Ethernet0
+failover interface ip FO-PIX 192.168.1.254 255.255.255.0 standby 192.168.1.253
+icmp unreachable rate-limit 1 burst-size 1
+icmp permit any DMZ-PIX
+icmp permit any inside
+icmp permit any outside
+asdm image flash:/asdm522-58.bin
+asdm location 129.20.130.1 255.255.255.255 inside
+asdm location 129.20.130.2 255.255.255.255 inside
+asdm location 129.20.128.0 255.255.252.0 inside
+asdm location 129.20.2.0 255.255.255.0 inside
+asdm location 129.20.3.0 255.255.255.0 inside
+asdm location 129.20.7.0 255.255.255.0 inside
+asdm location 129.20.8.0 255.255.255.0 inside
+asdm location 129.20.10.0 255.255.255.0 inside
+asdm location 129.20.16.0 255.255.255.0 inside
+asdm location 129.20.17.0 255.255.255.0 inside
+asdm location 129.20.25.0 255.255.255.0 inside
+asdm location 129.20.27.0 255.255.255.0 inside
+asdm location 129.20.40.0 255.255.255.0 inside
+asdm location 129.20.41.0 255.255.255.0 inside
+asdm location 129.20.42.0 255.255.255.0 inside
+asdm location 129.20.43.0 255.255.255.0 inside
+asdm location 129.20.44.0 255.255.255.0 inside
+asdm location 129.20.45.0 255.255.255.0 inside
+asdm location 129.20.48.0 255.255.255.0 inside
+asdm location 129.20.49.0 255.255.255.0 inside
+asdm location 129.20.50.0 255.255.255.0 inside
+asdm location 129.20.51.0 255.255.255.0 inside
+asdm location 129.20.52.0 255.255.255.0 inside
+asdm location 129.20.53.0 255.255.255.0 inside
+asdm location 129.20.54.0 255.255.255.0 inside
+asdm location 129.20.61.0 255.255.255.0 inside
+asdm location 129.20.64.0 255.255.255.0 inside
+asdm location 129.20.67.0 255.255.255.0 inside
+asdm location 129.20.71.0 255.255.255.0 inside
+asdm location 129.20.72.0 255.255.255.0 inside
+asdm location 129.20.73.0 255.255.255.0 inside
+asdm location 129.20.74.0 255.255.255.0 inside
+asdm location 129.20.75.0 255.255.255.0 inside
+asdm location 129.20.76.0 255.255.255.0 inside
+asdm location 129.20.77.0 255.255.255.0 inside
+asdm location 129.20.79.0 255.255.255.0 inside
+asdm location 129.20.82.0 255.255.255.0 inside
+asdm location 129.20.83.0 255.255.255.0 inside
+asdm location 129.20.84.0 255.255.255.0 inside
+asdm location 129.20.85.0 255.255.255.0 inside
+asdm location 129.20.87.0 255.255.255.0 inside
+asdm location 129.20.88.0 255.255.255.0 inside
+asdm location 129.20.91.0 255.255.255.0 inside
+asdm location 129.20.94.0 255.255.255.0 inside
+asdm location 129.20.95.0 255.255.255.0 inside
+asdm location 129.20.97.0 255.255.255.0 inside
+asdm location 129.20.98.0 255.255.255.0 inside
+asdm location 129.20.100.0 255.255.255.0 inside
+asdm location 129.20.106.0 255.255.255.0 inside
+asdm location 129.20.107.0 255.255.255.0 inside
+asdm location 129.20.108.0 255.255.255.0 inside
+asdm location 129.20.109.0 255.255.255.0 inside
+asdm location 129.20.110.0 255.255.255.0 inside
+asdm location 129.20.111.0 255.255.255.0 inside
+asdm location 129.20.112.0 255.255.255.0 inside
+asdm location 129.20.132.0 255.255.255.0 inside
+asdm location 129.20.135.0 255.255.255.0 inside
+asdm location 129.20.136.0 255.255.255.0 inside
+asdm location 129.20.152.0 255.255.255.0 inside
+asdm location 129.20.153.0 255.255.255.0 inside
+asdm location 129.20.154.0 255.255.255.0 inside
+asdm location 129.20.155.0 255.255.255.0 inside
+asdm location 129.20.156.0 255.255.255.0 inside
+asdm location 129.20.157.0 255.255.255.0 inside
+asdm location 129.20.158.0 255.255.255.0 inside
+asdm location 129.20.159.0 255.255.255.0 inside
+asdm location 129.20.160.0 255.255.255.0 inside
+asdm location 129.20.161.0 255.255.255.0 inside
+asdm location 129.20.163.0 255.255.255.0 inside
+asdm location 129.20.165.0 255.255.255.0 inside
+asdm location 129.20.166.0 255.255.255.0 inside
+asdm location 129.20.178.0 255.255.255.0 inside
+asdm location 129.20.179.0 255.255.255.0 inside
+asdm location 129.20.180.0 255.255.255.0 inside
+asdm location 129.20.182.0 255.255.255.0 inside
+asdm location 129.20.183.0 255.255.255.0 inside
+asdm location 129.20.186.0 255.255.255.0 inside
+asdm location 129.20.187.0 255.255.255.0 inside
+asdm location 129.20.188.0 255.255.255.0 inside
+asdm location 129.20.190.0 255.255.255.0 inside
+asdm location 129.20.191.0 255.255.255.0 inside
+asdm location 129.20.192.0 255.255.255.0 inside
+asdm location 129.20.194.0 255.255.255.0 inside
+asdm location 129.20.196.0 255.255.255.0 inside
+asdm location 129.20.198.0 255.255.255.0 inside
+asdm location 129.20.200.0 255.255.255.0 inside
+asdm location 148.60.16.0 255.255.255.0 inside
+asdm location 148.60.24.0 255.255.255.0 inside
+asdm location 148.60.30.0 255.255.255.0 inside
+asdm location 148.60.31.0 255.255.255.0 inside
+asdm location 148.60.40.0 255.255.255.0 inside
+asdm location 148.60.41.0 255.255.255.0 inside
+asdm location 148.60.43.0 255.255.255.0 inside
+asdm location 148.60.44.0 255.255.255.0 inside
+asdm location 148.60.45.0 255.255.255.0 inside
+asdm location 148.60.50.0 255.255.255.0 inside
+asdm location 148.60.51.0 255.255.255.0 inside
+asdm location 148.60.52.0 255.255.255.0 inside
+asdm location 148.60.61.0 255.255.255.0 inside
+asdm location 148.60.70.0 255.255.255.0 inside
+asdm location 148.60.71.0 255.255.255.0 inside
+asdm location 148.60.72.0 255.255.255.0 inside
+asdm location 148.60.91.0 255.255.255.0 inside
+asdm location 148.60.96.0 255.255.255.0 inside
+asdm location 148.60.97.0 255.255.255.0 inside
+asdm location 148.60.98.0 255.255.255.0 inside
+asdm location 148.60.106.0 255.255.255.0 inside
+asdm location 148.60.107.0 255.255.255.0 inside
+asdm location 148.60.108.0 255.255.255.0 inside
+asdm location 148.60.110.0 255.255.255.0 inside
+asdm location 148.60.111.0 255.255.255.0 inside
+asdm location 148.60.112.0 255.255.255.0 inside
+asdm location 148.60.128.0 255.255.255.0 inside
+asdm location 148.60.129.0 255.255.255.0 inside
+asdm location 148.60.152.0 255.255.255.0 inside
+asdm location 148.60.153.0 255.255.255.0 inside
+asdm location 148.60.154.0 255.255.255.0 inside
+asdm location 148.60.155.0 255.255.255.0 inside
+asdm location 148.60.156.0 255.255.255.0 inside
+asdm location 148.60.157.0 255.255.255.0 inside
+asdm location 148.60.158.0 255.255.255.0 inside
+asdm location 148.60.159.0 255.255.255.0 inside
+asdm location 148.60.160.0 255.255.255.0 inside
+asdm location 148.60.161.0 255.255.255.0 inside
+asdm location 148.60.178.0 255.255.255.0 inside
+asdm location 148.60.179.0 255.255.255.0 inside
+asdm location 148.60.180.0 255.255.255.0 inside
+asdm location 148.60.181.0 255.255.255.0 inside
+asdm location 148.60.182.0 255.255.255.0 inside
+asdm location 148.60.183.0 255.255.255.0 inside
+asdm location 148.60.186.0 255.255.255.0 inside
+asdm location 148.60.187.0 255.255.255.0 inside
+asdm location 148.60.190.0 255.255.255.0 inside
+asdm location 148.60.196.0 255.255.255.0 inside
+asdm location 148.60.198.0 255.255.255.0 inside
+asdm location 148.60.240.0 255.255.255.0 inside
+asdm location 192.168.10.0 255.255.255.0 inside
+asdm location CAC_CHR 255.255.255.0 inside
+asdm location 193.49.46.0 255.255.255.0 inside
+asdm location RESO_INCUBATEUR 255.255.255.0 inside
+asdm location 10.20.16.0 255.255.240.0 inside
+asdm location 10.20.32.0 255.255.240.0 inside
+asdm location 10.20.48.0 255.255.240.0 inside
+asdm location 10.20.192.0 255.255.240.0 inside
+asdm location 129.20.133.0 255.255.255.0 inside
+asdm location 129.20.134.0 255.255.255.0 inside
+asdm location 129.20.215.0 255.255.255.0 inside
+asdm location 10.20.112.0 255.255.240.0 inside
+asdm location 10.20.128.0 255.255.240.0 inside
+asdm location 10.20.144.0 255.255.240.0 inside
+asdm location 10.20.160.0 255.255.240.0 inside
+asdm location 10.20.176.0 255.255.240.0 inside
+asdm location 129.20.204.0 255.255.255.0 inside
+asdm location 129.20.205.0 255.255.255.0 inside
+asdm location 129.20.206.0 255.255.255.0 inside
+asdm location 129.20.207.0 255.255.255.0 inside
+asdm location 129.20.208.0 255.255.255.0 inside
+asdm location 129.20.209.0 255.255.255.0 inside
+asdm location 129.20.210.0 255.255.255.0 inside
+asdm location 129.20.211.0 255.255.255.0 inside
+asdm location 129.20.212.0 255.255.255.0 inside
+asdm location 129.20.213.0 255.255.255.0 inside
+asdm location 129.20.214.0 255.255.255.0 inside
+asdm location 129.20.216.0 255.255.255.0 inside
+asdm location 148.60.204.0 255.255.255.0 inside
+asdm location 148.60.205.0 255.255.255.0 inside
+asdm location 148.60.206.0 255.255.255.0 inside
+asdm location 148.60.207.0 255.255.255.0 inside
+asdm location 148.60.208.0 255.255.255.0 inside
+asdm location 148.60.209.0 255.255.255.0 inside
+asdm location 148.60.210.0 255.255.255.0 inside
+asdm location 148.60.211.0 255.255.255.0 inside
+asdm location 148.60.212.0 255.255.255.0 inside
+asdm location 148.60.213.0 255.255.255.0 inside
+asdm location 148.60.214.0 255.255.255.0 inside
+asdm location 148.60.215.0 255.255.255.0 inside
+asdm location 148.60.216.0 255.255.255.0 inside
+asdm location 148.60.232.0 255.255.255.0 inside
+asdm location 148.60.233.0 255.255.255.0 inside
+asdm location 148.60.234.0 255.255.255.0 inside
+asdm location 148.60.235.0 255.255.255.0 inside
+asdm location 148.60.236.0 255.255.255.0 inside
+asdm location 148.60.237.0 255.255.255.0 inside
+asdm location 148.60.238.0 255.255.255.0 inside
+asdm location 148.60.239.0 255.255.255.0 inside
+asdm location r1935028ENSSAT 255.255.255.0 inside
+asdm location 193.52.60.0 255.255.255.0 inside
+asdm location r194ENSSAT 255.255.255.0 inside
+asdm location 10.20.208.0 255.255.240.0 inside
+asdm location 10.20.224.0 255.255.240.0 inside
+asdm location 10.39.1.0 255.255.255.0 inside
+asdm location 129.20.189.0 255.255.255.0 inside
+asdm location 129.20.93.0 255.255.255.0 inside
+asdm location 129.20.65.0 255.255.255.0 inside
+asdm location 129.20.55.0 255.255.255.0 inside
+asdm location 148.60.140.0 255.255.255.0 inside
+asdm location 129.20.249.0 255.255.255.0 inside
+asdm location 129.20.36.0 255.255.252.0 inside
+asdm location 129.20.70.0 255.255.255.0 inside
+asdm location 10.20.64.0 255.255.240.0 inside
+asdm location 148.60.23.0 255.255.255.0 inside
+asdm location 148.60.75.0 255.255.255.0 inside
+asdm location 148.60.188.0 255.255.255.0 inside
+asdm location 148.60.189.0 255.255.255.0 inside
+asdm location INSERM_CHR 255.255.255.0 inside
+asdm location 129.20.251.0 255.255.255.0 inside
+asdm location 148.60.1.0 255.255.255.0 inside
+asdm location 148.60.2.0 255.255.255.0 inside
+asdm location 148.60.3.0 255.255.255.0 inside
+asdm location 148.60.4.0 255.255.255.0 inside
+asdm location 148.60.5.0 255.255.255.0 inside
+asdm location 148.60.6.0 255.255.255.0 inside
+asdm location 148.60.7.0 255.255.255.0 inside
+asdm location 148.60.8.0 255.255.255.0 inside
+asdm location 148.60.9.0 255.255.255.0 inside
+asdm location 148.60.10.0 255.255.255.0 inside
+asdm location 148.60.11.0 255.255.255.0 inside
+asdm location 148.60.12.0 255.255.255.0 inside
+asdm location 148.60.13.0 255.255.255.0 inside
+asdm location 148.60.14.0 255.255.255.0 inside
+asdm location 148.60.15.0 255.255.255.0 inside
+asdm location r193CHR 255.255.255.0 inside
+asdm location 129.20.129.1 255.255.255.255 inside
+asdm location 192.168.2.241 255.255.255.255 DMZ-PIX
+asdm location 129.20.129.129 255.255.255.255 inside
+asdm location 129.20.131.1 255.255.255.255 inside
+asdm location w3extIRISA 255.255.255.255 outside
+asdm location 194.167.114.0 255.255.255.0 outside
+asdm location 129.20.131.3 255.255.255.255 inside
+asdm location 129.20.251.1 255.255.255.255 inside
+asdm location fraiseUBO 255.255.255.255 outside
+asdm location 129.20.129.144 255.255.255.255 inside
+asdm location 129.20.129.128 255.255.255.255 inside
+asdm location 129.20.129.3 255.255.255.255 inside
+asdm location 129.20.184.0 255.255.255.0 inside
+asdm location amsMUBielefeldDe 255.255.255.255 outside
+asdm location 10.20.0.0 255.255.0.0 inside
+asdm location lnsThProxadNet 255.255.255.255 outside
+asdm location rocqrasINRIA 255.255.255.255 outside
+asdm location HeartUclaEdu 255.255.255.255 outside
+asdm location TUWIEN_AC_AT 255.255.0.0 outside
+asdm location expasyUnigeCh 255.255.255.255 outside
+asdm location RECHERCHE 255.255.0.0 inside
+asdm location 129.20.16.20 255.255.255.255 inside
+asdm location 129.20.16.55 255.255.255.255 inside
+asdm location 129.20.16.67 255.255.255.255 inside
+asdm location 129.20.16.159 255.255.255.255 inside
+asdm location 129.20.16.193 255.255.255.255 inside
+asdm location 129.20.25.1 255.255.255.255 inside
+asdm location 129.20.25.8 255.255.255.255 inside
+asdm location 129.20.25.11 255.255.255.255 inside
+asdm location 129.20.25.17 255.255.255.255 inside
+asdm location 129.20.25.23 255.255.255.255 inside
+asdm location 129.20.25.32 255.255.255.255 inside
+asdm location 129.20.25.47 255.255.255.255 inside
+asdm location 129.20.25.55 255.255.255.255 inside
+asdm location 129.20.25.56 255.255.255.255 inside
+asdm location 129.20.25.57 255.255.255.255 inside
+asdm location 129.20.25.58 255.255.255.255 inside
+asdm location 129.20.25.70 255.255.255.255 inside
+asdm location 129.20.25.86 255.255.255.255 inside
+asdm location 129.20.25.89 255.255.255.255 inside
+asdm location 129.20.25.95 255.255.255.255 inside
+asdm location 129.20.25.109 255.255.255.255 inside
+asdm location 129.20.25.117 255.255.255.255 inside
+asdm location 129.20.25.160 255.255.255.255 inside
+asdm location 129.20.25.161 255.255.255.255 inside
+asdm location 129.20.25.162 255.255.255.255 inside
+asdm location 129.20.25.163 255.255.255.255 inside
+asdm location 129.20.25.164 255.255.255.255 inside
+asdm location 129.20.25.165 255.255.255.255 inside
+asdm location 129.20.25.166 255.255.255.255 inside
+asdm location 129.20.25.167 255.255.255.255 inside
+asdm location 129.20.25.168 255.255.255.255 inside
+asdm location 129.20.27.1 255.255.255.255 inside
+asdm location 129.20.27.3 255.255.255.255 inside
+asdm location 129.20.27.15 255.255.255.255 inside
+asdm location 129.20.27.51 255.255.255.255 inside
+asdm location 129.20.27.52 255.255.255.255 inside
+asdm location 129.20.27.53 255.255.255.255 inside
+asdm location 129.20.27.59 255.255.255.255 inside
+asdm location 129.20.27.72 255.255.255.255 inside
+asdm location 129.20.27.73 255.255.255.255 inside
+asdm location 129.20.27.74 255.255.255.255 inside
+asdm location 129.20.27.75 255.255.255.255 inside
+asdm location 129.20.36.160 255.255.255.255 inside
+asdm location 129.20.36.164 255.255.255.255 inside
+asdm location 129.20.36.165 255.255.255.255 inside
+asdm location 129.20.36.174 255.255.255.255 inside
+asdm location 129.20.48.63 255.255.255.255 inside
+asdm location 129.20.48.132 255.255.255.255 inside
+asdm location 129.20.48.163 255.255.255.255 inside
+asdm location 129.20.48.173 255.255.255.255 inside
+asdm location 129.20.48.175 255.255.255.255 inside
+asdm location 129.20.48.227 255.255.255.255 inside
+asdm location 129.20.48.233 255.255.255.255 inside
+asdm location 129.20.49.39 255.255.255.255 inside
+asdm location 129.20.54.9 255.255.255.255 inside
+asdm location 129.20.54.103 255.255.255.255 inside
+asdm location 129.20.72.208 255.255.255.255 inside
+asdm location 129.20.73.27 255.255.255.255 inside
+asdm location 129.20.73.74 255.255.255.255 inside
+asdm location 129.20.73.79 255.255.255.255 inside
+asdm location 129.20.73.154 255.255.255.255 inside
+asdm location 129.20.73.157 255.255.255.255 inside
+asdm location 129.20.75.21 255.255.255.255 inside
+asdm location 129.20.75.72 255.255.255.255 inside
+asdm location 129.20.75.87 255.255.255.255 inside
+asdm location 129.20.75.88 255.255.255.255 inside
+asdm location 129.20.75.159 255.255.255.255 inside
+asdm location 129.20.75.160 255.255.255.255 inside
+asdm location 129.20.76.9 255.255.255.255 inside
+asdm location 129.20.76.15 255.255.255.255 inside
+asdm location 129.20.76.48 255.255.255.255 inside
+asdm location 129.20.76.62 255.255.255.255 inside
+asdm location 129.20.76.64 255.255.255.255 inside
+asdm location 129.20.76.82 255.255.255.255 inside
+asdm location 129.20.76.85 255.255.255.255 inside
+asdm location 129.20.76.93 255.255.255.255 inside
+asdm location 129.20.76.95 255.255.255.255 inside
+asdm location 129.20.76.106 255.255.255.255 inside
+asdm location 129.20.76.109 255.255.255.255 inside
+asdm location 129.20.76.110 255.255.255.255 inside
+asdm location 129.20.76.112 255.255.255.255 inside
+asdm location 129.20.76.118 255.255.255.255 inside
+asdm location 129.20.76.149 255.255.255.255 inside
+asdm location 129.20.79.41 255.255.255.255 inside
+asdm location 129.20.82.2 255.255.255.255 inside
+asdm location 129.20.82.3 255.255.255.255 inside
+asdm location 129.20.82.33 255.255.255.255 inside
+asdm location 129.20.82.28 255.255.255.255 inside
+asdm location 129.20.82.48 255.255.255.255 inside
+asdm location 129.20.82.58 255.255.255.255 inside
+asdm location 129.20.82.67 255.255.255.255 inside
+asdm location 129.20.82.82 255.255.255.255 inside
+asdm location 129.20.82.87 255.255.255.255 inside
+asdm location 129.20.83.20 255.255.255.255 inside
+asdm location 129.20.83.26 255.255.255.255 inside
+asdm location 129.20.83.49 255.255.255.255 inside
+asdm location 129.20.85.9 255.255.255.255 inside
+asdm location 129.20.87.41 255.255.255.255 inside
+asdm location 129.20.87.116 255.255.255.255 inside
+asdm location 129.20.88.9 255.255.255.255 inside
+asdm location 129.20.88.11 255.255.255.255 inside
+asdm location 129.20.88.50 255.255.255.255 inside
+asdm location 129.20.88.134 255.255.255.255 inside
+asdm location 129.20.88.149 255.255.255.255 inside
+asdm location 129.20.91.3 255.255.255.255 inside
+asdm location 129.20.91.51 255.255.255.255 inside
+asdm location 129.20.94.5 255.255.255.255 inside
+asdm location 129.20.94.150 255.255.255.255 inside
+asdm location 129.20.128.2 255.255.255.255 inside
+asdm location 129.20.128.3 255.255.255.255 inside
+asdm location 129.20.128.5 255.255.255.255 inside
+asdm location 129.20.128.8 255.255.255.255 inside
+asdm location 129.20.128.10 255.255.255.255 inside
+asdm location 129.20.128.12 255.255.255.255 inside
+asdm location 129.20.128.25 255.255.255.255 inside
+asdm location 129.20.128.27 255.255.255.255 inside
+asdm location 129.20.128.50 255.255.255.255 inside
+asdm location 129.20.128.51 255.255.255.255 inside
+asdm location 129.20.128.59 255.255.255.255 inside
+asdm location 129.20.128.60 255.255.255.255 inside
+asdm location 129.20.129.34 255.255.255.255 inside
+asdm location 129.20.129.35 255.255.255.255 inside
+asdm location 129.20.129.198 255.255.255.255 inside
+asdm location 129.20.131.2 255.255.255.255 inside
+asdm location 129.20.131.7 255.255.255.255 inside
+asdm location 129.20.131.8 255.255.255.255 inside
+asdm location 129.20.131.9 255.255.255.255 inside
+asdm location 129.20.131.11 255.255.255.255 inside
+asdm location 129.20.131.12 255.255.255.255 inside
+asdm location 129.20.131.14 255.255.255.255 inside
+asdm location 129.20.131.15 255.255.255.255 inside
+asdm location 129.20.131.18 255.255.255.255 inside
+asdm location 129.20.131.20 255.255.255.255 inside
+asdm location 129.20.131.21 255.255.255.255 inside
+asdm location 129.20.131.110 255.255.255.255 inside
+asdm location 129.20.131.111 255.255.255.255 inside
+asdm location 129.20.131.112 255.255.255.255 inside
+asdm location 129.20.131.113 255.255.255.255 inside
+asdm location 129.20.132.1 255.255.255.255 inside
+asdm location 129.20.132.2 255.255.255.255 inside
+asdm location 129.20.132.3 255.255.255.255 inside
+asdm location 129.20.132.5 255.255.255.255 inside
+asdm location 129.20.132.6 255.255.255.255 inside
+asdm location 129.20.132.16 255.255.255.255 inside
+asdm location 129.20.136.5 255.255.255.255 inside
+asdm location 129.20.136.9 255.255.255.255 inside
+asdm location 129.20.136.13 255.255.255.255 inside
+asdm location 129.20.136.14 255.255.255.255 inside
+asdm location 129.20.153.5 255.255.255.255 inside
+asdm location 129.20.153.17 255.255.255.255 inside
+asdm location 129.20.153.29 255.255.255.255 inside
+asdm location 129.20.153.42 255.255.255.255 inside
+asdm location 129.20.153.43 255.255.255.255 inside
+asdm location 129.20.153.52 255.255.255.255 inside
+asdm location 129.20.153.53 255.255.255.255 inside
+asdm location 129.20.155.16 255.255.255.255 inside
+asdm location 129.20.155.17 255.255.255.255 inside
+asdm location 129.20.155.18 255.255.255.255 inside
+asdm location 129.20.155.24 255.255.255.255 inside
+asdm location 129.20.155.25 255.255.255.255 inside
+asdm location 129.20.155.46 255.255.255.255 inside
+asdm location 129.20.155.74 255.255.255.255 inside
+asdm location 129.20.157.23 255.255.255.255 inside
+asdm location 129.20.157.31 255.255.255.255 inside
+asdm location 129.20.157.36 255.255.255.255 inside
+asdm location 129.20.157.37 255.255.255.255 inside
+asdm location 129.20.157.38 255.255.255.255 inside
+asdm location 129.20.157.39 255.255.255.255 inside
+asdm location 129.20.157.84 255.255.255.255 inside
+asdm location 129.20.160.204 255.255.255.255 inside
+asdm location 129.20.160.205 255.255.255.255 inside
+asdm location 129.20.161.3 255.255.255.255 inside
+asdm location 129.20.161.5 255.255.255.255 inside
+asdm location 129.20.161.13 255.255.255.255 inside
+asdm location 129.20.161.131 255.255.255.255 inside
+asdm location 129.20.161.137 255.255.255.255 inside
+asdm location 129.20.161.150 255.255.255.255 inside
+asdm location 129.20.161.160 255.255.255.255 inside
+asdm location 129.20.161.163 255.255.255.255 inside
+asdm location 129.20.178.200 255.255.255.255 inside
+asdm location 129.20.179.9 255.255.255.255 inside
+asdm location 129.20.179.50 255.255.255.255 inside
+asdm location 129.20.179.51 255.255.255.255 inside
+asdm location 129.20.179.52 255.255.255.255 inside
+asdm location 129.20.180.26 255.255.255.255 inside
+asdm location 129.20.186.77 255.255.255.255 inside
+asdm location 129.20.191.13 255.255.255.255 inside
+asdm location 129.20.192.6 255.255.255.255 inside
+asdm location 129.20.192.7 255.255.255.255 inside
+asdm location 129.20.192.91 255.255.255.255 inside
+asdm location 129.20.192.111 255.255.255.255 inside
+asdm location 129.20.208.7 255.255.255.255 inside
+asdm location 129.20.209.200 255.255.255.255 inside
+asdm location 129.20.216.116 255.255.255.255 inside
+asdm location 129.20.217.18 255.255.255.255 inside
+asdm location 129.20.233.18 255.255.255.255 inside
+asdm location 129.20.249.35 255.255.255.255 inside
+asdm location 129.20.250.13 255.255.255.255 outside
+asdm location CHEM1_NET 255.255.255.0 outside
+asdm location 130.79.11.31 255.255.255.255 outside
+asdm location 130.79.11.42 255.255.255.255 outside
+asdm location renassb1USTRASBG 255.255.255.255 outside
+asdm location currifUSTRASBG 255.255.255.255 outside
+asdm location tcl9ErlangenDe 255.255.255.255 outside
+asdm location as1200ErlangenDe 255.255.255.255 outside
+asdm location jagAwUErlangenDe 255.255.255.255 outside
+asdm location IRISA 255.255.0.0 outside
+asdm location solutreIRISA 255.255.255.255 outside
+asdm location mowgliIRISA 255.255.255.255 outside
+asdm location exponentielIRISA 255.255.255.255 outside
+asdm location microcosmeIRISA 255.255.255.255 outside
+asdm location pimRpIRISA 255.255.255.255 outside
+asdm location semt2SmtsCEA 255.255.255.255 outside
+asdm location stlaurentUlavaCa 255.255.255.255 outside
+asdm location dhcp14164UlavaCa 255.255.255.255 outside
+asdm location dhcp14169UlavaCa 255.255.255.255 outside
+asdm location CIVIL_MCGILL_CA 255.255.0.0 outside
+asdm location PcikImeNrcCa 255.255.255.255 outside
+asdm location StuttgartMpgDe 255.255.255.255 outside
+asdm location UNIV_LYON1 255.255.0.0 outside
+asdm location nymphea1IFREMER 255.255.255.255 outside
+asdm location nymphea0IFREMER 255.255.255.255 outside
+asdm location mig200JouyINRA 255.255.255.255 outside
+asdm location gate1KnmiNl 255.255.255.255 outside
+asdm location OBSERV_MEUDON 255.255.0.0 outside
+asdm location gwVschtCz 255.255.255.255 outside
+asdm location domfeCscsCh 255.255.255.255 outside
+asdm location ETUDIANTS 255.255.0.0 inside
+asdm location 148.60.16.59 255.255.255.255 inside
+asdm location 148.60.24.1 255.255.255.255 inside
+asdm location 148.60.40.1 255.255.255.255 inside
+asdm location 148.60.51.27 255.255.255.255 inside
+asdm location 148.60.52.1 255.255.255.255 inside
+asdm location 148.60.52.62 255.255.255.255 inside
+asdm location 148.60.91.26 255.255.255.255 inside
+asdm location 148.60.91.50 255.255.255.255 inside
+asdm location 148.60.140.3 255.255.255.255 inside
+asdm location 148.60.160.130 255.255.255.255 inside
+asdm location 148.60.160.139 255.255.255.255 inside
+asdm location 148.60.161.78 255.255.255.255 inside
+asdm location 148.60.161.83 255.255.255.255 inside
+asdm location 148.60.180.77 255.255.255.255 inside
+asdm location 148.60.180.90 255.255.255.255 inside
+asdm location 148.60.188.163 255.255.255.255 inside
+asdm location 148.60.196.32 255.255.255.255 inside
+asdm location 148.60.196.50 255.255.255.255 inside
+asdm location 148.60.206.10 255.255.255.255 inside
+asdm location 148.60.211.3 255.255.255.255 inside
+asdm location 148.60.223.66 255.255.255.255 inside
+asdm location 148.60.233.18 255.255.255.255 inside
+asdm location serveurvpnLORIA 255.255.255.255 outside
+asdm location 172.16.65.4 255.255.255.255 outside
+asdm location pmolnaENSTB 255.255.255.255 outside
+asdm location caredisENSTB 255.255.255.255 outside
+asdm location brmeaProx1SunCOM 255.255.255.255 outside
+asdm location brmeaProx2SunCOM 255.255.255.255 outside
+asdm location brmeaProx3SunCOM 255.255.255.255 outside
+asdm location IDRIS160 255.255.255.0 outside
+asdm location IDRIS161 255.255.255.0 outside
+asdm location 192.54.188.1 255.255.255.255 inside
+asdm location 192.54.188.6 255.255.255.255 inside
+asdm location 192.54.188.16 255.255.255.255 inside
+asdm location 192.54.188.28 255.255.255.255 inside
+asdm location 192.54.188.29 255.255.255.255 inside
+asdm location pcplardUANGERS 255.255.255.255 outside
+asdm location mach71UANGERS 255.255.255.255 outside
+asdm location titanInfoUANGERS 255.255.255.255 outside
+asdm location 193.49.146.244 255.255.255.255 outside
+asdm location beaulieuRenINRA 255.255.255.255 outside
+asdm location cacheRenINRA 255.255.255.255 outside
+asdm location 193.50.25.14 255.255.255.255 outside
+asdm location lerheuRenINRA 255.255.255.255 outside
+asdm location titanUVALENCiN 255.255.255.255 outside
+asdm location 193.50.202.100 255.255.255.255 outside
+asdm location fredextEPIXTECH 255.255.255.255 outside
+asdm location liNtwforge2ENSAM 255.255.255.255 outside
+asdm location nacaratSdocABES 255.255.255.255 outside
+asdm location carminSdocABES 255.255.255.255 outside
+asdm location cramoisiSdocABES 255.255.255.255 outside
+asdm location bartROSCOFF 255.255.255.255 outside
+asdm location 193.52.39.55 255.255.255.255 outside
+asdm location pc3InfoROSCOFF 255.255.255.255 outside
+asdm location homerROSCOFF 255.255.255.255 outside
+asdm location 193.52.39.107 255.255.255.255 outside
+asdm location 193.52.60.1 255.255.255.255 inside
+asdm location 193.52.60.12 255.255.255.255 inside
+asdm location 193.52.60.14 255.255.255.255 inside
+asdm location 193.52.60.18 255.255.255.255 inside
+asdm location 193.52.60.134 255.255.255.255 inside
+asdm location pc10ABES 255.255.255.255 outside
+asdm location adm02INSAREN 255.255.255.255 outside
+asdm location 193.52.115.6 255.255.255.255 outside
+asdm location cardioNtesINSERM 255.255.255.255 outside
+asdm location E33NantesINSERM 255.255.255.255 outside
+asdm location klopToulouseINRA 255.255.255.255 outside
+asdm location medamphi4aUBO 255.255.255.255 outside
+asdm location mongeUMLV 255.255.255.255 outside
+asdm location buckdannyUPARIS3 255.255.255.255 outside
+asdm location beowulfCsiUllEs 255.255.255.255 outside
+asdm location dxcalcLnfInfnIt 255.255.255.255 outside
+asdm location WANADOORENNES_1 255.255.255.0 outside
+asdm location WANADOORENNES_2 255.255.255.0 outside
+asdm location FontenayWANADOO 255.255.255.255 outside
+asdm location RennesWANADOO 255.255.255.255 outside
+asdm location pc10CaesCNRS 255.255.255.255 outside
+asdm location Retis 255.255.255.255 outside
+asdm location dirwdXs4allNl 255.255.255.255 outside
+asdm location labtechnoRenINRA 255.255.255.255 outside
+asdm location gdindonRenINRA 255.255.255.255 outside
+asdm location 194.167.114.19 255.255.255.255 outside
+asdm location biofluxUBREST 255.255.255.255 outside
+asdm location deserableINSA 255.255.255.255 outside
+asdm location UNANTES 255.255.255.0 outside
+asdm location diumediaULILLE2 255.255.255.255 outside
+asdm location pareFeuMinFinanc 255.255.255.255 outside
+asdm location epsilonUTC 255.255.255.255 outside
+asdm location CINES 255.255.255.0 outside
+asdm location reblochonAMUE 255.255.255.255 outside
+asdm location tipunchMtplrCPU 255.255.255.255 outside
+asdm location epoissesMtplrCPU 255.255.255.255 outside
+asdm location pcChbMtplrCPU 255.255.255.255 outside
+asdm location cacaoUBO 255.255.255.255 outside
+asdm location freewindUBO 255.255.255.255 outside
+asdm location CRU 255.255.255.0 outside
+asdm location CRU_INTERNE 255.255.255.192 outside
+asdm location homeCRU 255.255.255.255 outside
+asdm location citrixCRU 255.255.255.255 outside
+asdm location sparePkiCRU 255.255.255.255 outside
+asdm location listesCRU 255.255.255.255 outside
+asdm location wwwCRU 255.255.255.255 outside
+asdm location sourcesupCRU 255.255.255.255 outside
+asdm location secCRU 255.255.255.255 outside
+asdm location vpn1ACRENNES 255.255.255.255 outside
+asdm location racineACRENNES 255.255.255.255 outside
+asdm location escal1ACRENNES 255.255.255.255 outside
+asdm location icc120UCLERMONT 255.255.255.255 outside
+asdm location tigerChemUwEduPl 255.255.255.255 outside
+asdm location RainPont 255.255.255.255 outside
+asdm location RainPasserelle 255.255.255.255 outside
+asdm location ipLexbase 255.255.255.255 outside
+asdm location wwwIndexpresse 255.255.255.255 outside
+asdm location wAnnuLaposteNet 255.255.255.255 outside
+asdm location amsRiceEdu 255.255.255.255 outside
+asdm location wJnlsUchicagoEdu 255.255.255.255 outside
+asdm location 129.20.254.10 255.255.255.255 outside
+asdm location wwwNcbiNlmNihGo1 255.255.255.255 outside
+asdm location wwwNcbiNlmNihGo2 255.255.255.255 outside
+asdm location wwwOupCoUk 255.255.255.255 outside
+asdm location 131.254.130.26 255.255.255.255 outside
+asdm location wwwCistiNrcCa 255.255.255.255 outside
+asdm location sciDirectCom 255.255.255.255 outside
+asdm location wSciencDirectCom 255.255.255.255 outside
+asdm location wwwElsevierNl 255.255.255.255 outside
+asdm location amsImpaBr 255.255.255.255 outside
+asdm location 148.60.8.3 255.255.255.255 inside
+asdm location 148.60.8.4 255.255.255.255 inside
+asdm location 148.60.8.6 255.255.255.255 inside
+asdm location intlPnasOrg 255.255.255.255 outside
+asdm location ojpsAipOrg 255.255.255.255 outside
+asdm location klymMpimBonnMpDe 255.255.255.255 outside
+asdm location wwwRennesINRA 255.255.255.255 outside
+asdm location servicesINIST 255.255.255.255 outside
+asdm location epubsSiamOrg 255.255.255.255 outside
+asdm location 192.215.8.13 255.255.255.255 outside
+asdm location PROTEOME_INNOVA 255.255.255.224 inside
+asdm location wwwMtdocUjfGRENO 255.255.255.255 outside
+asdm location wwwLextensoCom 255.255.255.255 outside
+asdm location nwtIopPublishCom 255.255.255.255 outside
+asdm location nwtIopPubshinCom 255.255.255.255 outside
+asdm location wwwPagesJaunesCo 255.255.255.255 outside
+asdm location wwwPagesProCom 255.255.255.255 outside
+asdm location wwwEdpscienceCom 255.255.255.255 outside
+asdm location wwwEMATH 255.255.255.255 outside
+asdm location OneSrchUkOclcOrg 255.255.255.255 outside
+asdm location linkSpringerDe 255.255.255.255 outside
+asdm location wwwCnamPAYSDLL 255.255.255.255 outside
+asdm location wIntrsciWileyCom 255.255.255.255 outside
+asdm location wwwEbscoCom 255.255.255.255 outside
+asdm location wwwSocieteCom 255.255.255.255 outside
+asdm location smtpLaposteNet 255.255.255.255 outside
+asdm location m14AdelaideEduAu 255.255.255.255 outside
+asdm location 129.20.36.192 255.255.255.240 inside
+asdm location m129PlatfCompLSF 255.255.255.255 outside
+asdm location m130PlatfCompLSF 255.255.255.255 outside
+asdm location r193CHR 255.255.255.255 inside
+asdm location s227iuem229UBO 255.255.255.255 outside
+asdm location m37LiecUfscarBr 255.255.255.255 outside
+asdm location m110LiecUfscarBr 255.255.255.255 outside
+asdm location m111LiecUfscarBr 255.255.255.255 outside
+asdm location m196AdelaidEduAu 255.255.255.255 outside
+asdm location gateIntranodeCom 255.255.255.255 outside
+asdm location 129.20.161.0 255.255.255.248 inside
+asdm location ETUDIANTS 255.255.240.0 inside
+asdm location 193.52.60.230 255.255.255.255 inside
+asdm location 129.159.200.7 255.255.255.255 outside
+asdm location 132.166.136.95 255.255.255.255 outside
+asdm location 145.23.254.156 255.255.255.255 outside
+asdm location 145.23.254.157 255.255.255.255 outside
+asdm location 193.51.86.57 255.255.255.255 outside
+asdm location 193.52.117.6 255.255.255.255 outside
+asdm location 194.242.162.133 255.255.255.255 outside
+asdm location 194.242.162.201 255.255.255.255 outside
+asdm location 194.242.162.240 255.255.255.255 outside
+asdm location 194.254.140.127 255.255.255.255 outside
+asdm location 194.254.140.138 255.255.255.255 outside
+asdm location 194.254.151.99 255.255.255.255 outside
+asdm location 205.163.222.105 255.255.255.255 outside
+asdm location 212.234.68.140 255.255.255.255 outside
+asdm location 217.109.171.179 255.255.255.255 outside
+asdm location 129.20.129.50 255.255.255.255 inside
+asdm location 129.20.233.16 255.255.255.252 inside
+asdm location 139.100.0.37 255.255.255.255 outside
+asdm location labtechnoRenINRA 255.255.255.254 outside
+asdm location 194.242.162.154 255.255.255.255 outside
+asdm location 194.242.162.155 255.255.255.255 outside
+asdm location 212.234.221.178 255.255.255.255 outside
+asdm location 129.20.128.54 255.255.255.255 inside
+asdm location 129.20.132.0 255.255.255.248 inside
+asdm location 148.60.41.0 255.255.255.192 inside
+asdm location 148.60.204.0 255.255.254.0 inside
+asdm location 148.60.232.0 255.255.248.0 inside
+asdm location 131.254.254.16 255.255.255.255 outside
+asdm location 132.246.96.155 255.255.255.255 outside
+asdm location 145.23.254.152 255.255.255.252 outside
+asdm location 155.56.66.0 255.255.255.0 outside
+asdm location 193.52.81.7 255.255.255.255 outside
+asdm location 194.57.123.48 255.255.255.255 outside
+asdm location 194.242.162.128 255.255.255.128 outside
+asdm location kappaUTC 255.255.255.255 outside
+asdm location tandbergUROUEN 255.255.255.255 outside
+asdm location 129.20.136.12 255.255.255.255 inside
+asdm location 129.20.128.64 255.255.255.255 inside
+asdm location 129.20.217.24 255.255.255.255 inside
+asdm location 129.20.233.112 255.255.255.240 inside
+asdm location lm2eUBREST 255.255.255.255 outside
+asdm location 129.20.131.17 255.255.255.255 inside
+asdm location nonameIRISA 255.255.255.255 outside
+asdm location pandragonIRISA 255.255.255.255 outside
+asdm location 129.20.178.16 255.255.255.255 inside
+asdm location 129.20.178.68 255.255.255.255 inside
+asdm location 129.20.83.61 255.255.255.255 inside
+asdm location 194.167.147.134 255.255.255.255 outside
+asdm location 194.167.147.221 255.255.255.255 outside
+asdm location 129.20.88.42 255.255.255.255 inside
+asdm location titusINIST 255.255.255.255 outside
+asdm location 129.20.75.140 255.255.255.255 inside
+asdm location 129.20.87.2 255.255.255.255 inside
+asdm location 129.20.161.27 255.255.255.255 inside
+asdm location 129.20.161.28 255.255.255.255 inside
+asdm location 212.234.50.198 255.255.255.255 outside
+asdm location 129.20.129.11 255.255.255.255 inside
+asdm location 129.20.36.201 255.255.255.255 inside
+asdm location 129.20.55.13 255.255.255.255 inside
+asdm location 129.20.157.70 255.255.255.255 inside
+asdm location hepatoRenINSERM 255.255.255.255 inside
+asdm location 129.20.131.19 255.255.255.255 inside
+asdm location 129.20.131.114 255.255.255.255 inside
+asdm location 129.20.131.115 255.255.255.255 inside
+asdm location 129.20.131.116 255.255.255.255 inside
+asdm location 129.20.131.117 255.255.255.255 inside
+asdm location 129.20.73.206 255.255.255.255 inside
+asdm location clustDfiUchileCl 255.255.255.255 outside
+asdm location 129.20.129.38 255.255.255.255 inside
+asdm location 129.20.131.118 255.255.255.255 inside
+asdm location 129.20.75.11 255.255.255.255 inside
+asdm location heleneUBREST 255.255.255.255 outside
+asdm location pchyper6INSAREN 255.255.255.255 outside
+asdm location 148.60.51.41 255.255.255.255 inside
+asdm location 129.20.251.2 255.255.255.255 inside
+asdm location 129.20.251.3 255.255.255.255 inside
+asdm location 129.20.128.7 255.255.255.255 inside
+asdm location 129.20.128.15 255.255.255.255 inside
+asdm location 129.20.128.16 255.255.255.255 inside
+asdm location 129.20.129.54 255.255.255.255 inside
+asdm location 129.20.184.108 255.255.255.255 inside
+asdm location 129.20.252.1 255.255.255.255 inside
+asdm location posteSteAde 255.255.255.255 outside
+asdm location 129.20.128.52 255.255.255.255 inside
+asdm location 131.254.60.0 255.255.255.0 outside
+asdm location 148.60.52.46 255.255.255.255 inside
+asdm location preside1UBS 255.255.255.255 outside
+asdm location 129.20.54.118 255.255.255.255 inside
+asdm location 129.20.131.119 255.255.255.255 inside
+asdm location mig194JouyINRA 255.255.255.255 outside
+asdm location 148.60.222.21 255.255.255.255 inside
+asdm location 129.20.3.98 255.255.255.255 inside
+asdm location 129.20.25.137 255.255.255.255 inside
+asdm location wei.gbba.usb.ve 255.255.255.255 outside
+asdm location kar.gbba.usb.ve 255.255.255.255 outside
+asdm location 129.20.37.142 255.255.255.255 inside
+asdm location 129.20.157.96 255.255.255.255 inside
+asdm location 129.20.94.106 255.255.255.255 inside
+asdm location 129.20.153.97 255.255.255.255 inside
+asdm location 129.20.253.254 255.255.255.255 outside
+asdm location 129.20.254.1 255.255.255.255 outside
+asdm location 195.220.94.181 255.255.255.255 outside
+asdm location 129.20.129.99 255.255.255.255 inside
+asdm location cacheAngersINRA 255.255.255.255 outside
+asdm location 129.20.16.158 255.255.255.255 inside
+asdm location soleilUVSQ 255.255.255.255 outside
+asdm location 129.20.3.200 255.255.255.255 inside
+asdm location ancstoutINRA 255.255.255.255 outside
+asdm location 129.20.129.251 255.255.255.255 inside
+asdm location brucherINH 255.255.255.255 outside
+asdm location 129.20.93.21 255.255.255.255 inside
+asdm location 129.20.178.32 255.255.255.255 inside
+asdm location symantecCom 255.255.255.0 outside
+asdm location KORNET-INFRA 255.255.255.0 outside
+asdm location 129.20.131.37 255.255.255.255 inside
+asdm location 129.20.131.38 255.255.255.255 inside
+asdm location 129.20.131.39 255.255.255.255 inside
+asdm location 129.20.131.128 255.255.255.255 inside
+asdm location 129.20.37.115 255.255.255.255 inside
+asdm location 129.20.131.129 255.255.255.255 inside
+asdm location 129.20.131.121 255.255.255.255 inside
+asdm location 62.23.181.60 255.255.255.255 outside
+asdm location pcLafMtplrCPU 255.255.255.255 outside
+asdm location pcAnlMtplrCPU 255.255.255.255 outside
+asdm location pcinterUVALENCiN 255.255.255.255 outside
+asdm location calvinENSEEIHT 255.255.255.255 outside
+asdm location hobbesENSEEIHT 255.255.255.255 outside
+asdm location 129.20.162.0 255.255.255.0 inside
+asdm location 129.20.131.126 255.255.255.255 inside
+asdm location crusoe.inria.fr 255.255.255.255 outside
+asdm location bionix.irisa.fr 255.255.255.255 outside
+asdm location 129.20.131.55 255.255.255.255 inside
+asdm location 129.20.128.20 255.255.255.255 inside
+asdm location netappp1-assist 255.255.255.255 outside
+asdm location naetapp2-assist 255.255.255.255 outside
+asdm location 129.20.129.246 255.255.255.255 inside
+asdm location 129.20.3.201 255.255.255.255 inside
+asdm location 129.20.208.0 255.255.240.0 inside
+asdm location 129.20.224.0 255.255.240.0 inside
+asdm location 129.20.216.0 255.255.248.0 inside
+asdm location 129.20.233.0 255.255.255.0 inside
+asdm location 129.20.239.0 255.255.255.0 inside
+asdm location 148.60.216.0 255.255.248.0 inside
+asdm location 129.20.224.0 255.255.248.0 inside
+asdm location 148.60.224.0 255.255.248.0 inside
+asdm location 148.60.108.25 255.255.255.255 inside
+asdm location 129.20.131.57 255.255.255.255 inside
+asdm location 129.20.167.0 255.255.255.0 inside
+asdm location 129.20.129.57 255.255.255.255 inside
+asdm location 82.0.0.0 255.0.0.0 outside
+asdm location visio-brest 255.255.255.255 outside
+asdm location 129.20.129.172 255.255.255.255 inside
+asdm location lolaIRISA 255.255.255.255 outside
+asdm location miniIRISA 255.255.255.255 outside
+asdm location 129.20.27.82 255.255.255.255 inside
+asdm location 129.20.73.166 255.255.255.255 inside
+asdm location 129.20.85.44 255.255.255.255 inside
+asdm location 129.20.88.52 255.255.255.255 inside
+asdm location 129.20.88.173 255.255.255.255 inside
+asdm location 129.20.94.130 255.255.255.255 inside
+asdm location 129.20.94.177 255.255.255.255 inside
+asdm location 129.20.36.240 255.255.255.248 inside
+asdm location parapluie 255.255.255.255 outside
+asdm location 85.85.170.170 255.255.255.255 outside
+asdm location 129.20.77.48 255.255.255.255 inside
+asdm location 129.20.131.132 255.255.255.255 inside
+asdm location 129.20.131.133 255.255.255.255 inside
+asdm location 129.20.131.134 255.255.255.255 inside
+asdm location 82.64.180.94 255.255.255.255 outside
+asdm location oumpapahIRISA 255.255.255.255 outside
+asdm location AdslPascalAubry 255.255.255.255 outside
+asdm location Adm_HIP1_DYNIX 255.255.255.255 outside
+asdm location Adm_HIP2_DYNIX 255.255.255.255 outside
+asdm location Adm_HIP3_DYNIX 255.255.255.255 outside
+asdm location Adm_HIP4_DYNIX 255.255.255.255 outside
+asdm location 129.20.128.65 255.255.255.255 inside
+asdm location 129.20.131.61 255.255.255.255 inside
+asdm location miranova 255.255.255.255 outside
+asdm location 129.20.3.199 255.255.255.255 inside
+asdm location 129.20.217.0 255.255.255.0 inside
+asdm location VPN-IRISA2 255.255.255.0 outside
+asdm location COBB1 255.255.255.255 outside
+asdm location COBB2 255.255.255.255 outside
+asdm location ilinux-rrbENSTB 255.255.255.255 outside
+asdm location fcnaENSTB 255.255.255.255 outside
+asdm location 81.56.187.30 255.255.255.255 outside
+asdm location 129.20.131.135 255.255.255.255 inside
+asdm location 129.20.131.136 255.255.255.255 inside
+asdm location merIRISA 255.255.255.255 outside
+asdm location 129.20.77.166 255.255.255.255 inside
+asdm location 129.20.25.53 255.255.255.255 inside
+asdm location 129.20.131.62 255.255.255.255 inside
+asdm location 129.20.79.79 255.255.255.255 inside
+asdm location 129.20.155.50 255.255.255.255 inside
+asdm location 129.20.204.73 255.255.255.255 inside
+asdm location AdslVeroBiquand 255.255.255.255 outside
+asdm location AdslMoulKharoune 255.255.255.255 outside
+asdm location AdslArnaudDelay 255.255.255.255 outside
+asdm location webopacUHB 255.255.255.255 outside
+asdm location 129.20.76.199 255.255.255.255 inside
+asdm location 193.52.60.50 255.255.255.255 inside
+asdm location tichkaUHB 255.255.255.255 outside
+asdm location 129.20.131.58 255.255.255.255 inside
+asdm location 129.20.131.137 255.255.255.255 inside
+asdm location 129.20.83.67 255.255.255.255 inside
+asdm location ppp230TiscaliFr 255.255.255.255 outside
+asdm location 129.20.128.19 255.255.255.255 inside
+asdm location rtAtlanticRF 255.255.255.255 outside
+asdm location 172.16.135.238 255.255.255.255 outside
+asdm location 129.20.131.31 255.255.255.255 inside
+asdm location webix.cnrs-imn 255.255.255.255 outside
+asdm location 129.20.128.31 255.255.255.255 inside
+asdm location 129.20.131.30 255.255.255.255 inside
+asdm location 129.20.131.32 255.255.255.255 inside
+asdm location 129.20.222.43 255.255.255.255 inside
+asdm location 192.54.188.24 255.255.255.255 inside
+asdm location roc-vpn.inra 255.255.255.255 outside
+asdm location netinary 255.255.255.255 outside
+asdm location USTRASBOURG 255.255.0.0 outside
+asdm location 129.20.161.181 255.255.255.255 inside
+asdm location 129.20.153.113 255.255.255.255 inside
+asdm location afssaPloufragan 255.255.255.255 outside
+asdm location 148.60.20.0 255.255.255.0 inside
+asdm location campanuleIRISA 255.255.255.255 outside
+asdm location 82.126.99.15 255.255.255.255 outside
+asdm location 129.20.129.0 255.255.255.0 inside
+asdm location 129.20.129.4 255.255.255.255 inside
+asdm location rennes.inra.fr 255.255.255.255 outside
+asdm location 129.20.128.32 255.255.255.255 inside
+asdm location netinary 255.255.255.255 inside
+asdm location 129.20.161.211 255.255.255.255 inside
+asdm location 147.99.160.2 255.255.255.255 outside
+asdm location vigieACRENNES 255.255.255.255 outside
+asdm location 129.20.131.41 255.255.255.255 inside
+asdm location 129.20.131.140 255.255.255.255 inside
+asdm location 129.20.131.139 255.255.255.255 inside
+asdm location 129.20.77.127 255.255.255.255 inside
+asdm location 129.20.3.0 255.255.255.255 inside
+asdm location 129.20.210.248 255.255.255.255 inside
+asdm location 129.20.16.224 255.255.255.255 inside
+asdm location 148.60.223.67 255.255.255.255 inside
+asdm location visp-65.106 255.255.255.255 outside
+asdm location atalantrf.dyn 255.255.255.255 outside
+asdm location 129.20.129.72 255.255.255.255 inside
+asdm location new-vespaCRU 255.255.255.255 outside
+asdm location 129.20.131.10 255.255.255.255 inside
+asdm location 129.20.76.143 255.255.255.255 inside
+asdm location 129.20.76.158 255.255.255.255 inside
+asdm location 129.20.100.14 255.255.255.255 inside
+asdm location 129.20.155.21 255.255.255.255 inside
+asdm location 195.6.238.186 255.255.255.255 outside
+asdm location 148.60.248.250 255.255.255.255 inside
+asdm location 148.60.248.248 255.255.255.248 inside
+asdm location gate.cru.fr 255.255.255.255 outside
+asdm location 129.20.129.194 255.255.255.255 inside
+asdm location fradius.cru.fr 255.255.255.255 outside
+asdm location 172.17.34.126 255.255.255.255 outside
+asdm location 194.167.114.2 255.255.255.255 outside
+asdm location simppsFxPerUHB 255.255.255.255 outside
+asdm location pcCesMtplrAMUE 255.255.255.255 outside
+asdm location smtpIRISA 255.255.255.255 outside
+asdm location 129.20.131.28 255.255.255.255 inside
+asdm location Sifac-admUBS 255.255.255.0 outside
+asdm location 129.20.37.21 255.255.255.255 inside
+asdm location 129.20.88.131 255.255.255.255 inside
+asdm location 129.20.100.9 255.255.255.255 inside
+asdm location Renater147 255.255.255.255 outside
+asdm location 129.20.83.13 255.255.255.255 inside
+asdm location 148.60.178.204 255.255.255.255 inside
+asdm location 129.20.91.118 255.255.255.255 inside
+asdm location 82.236.136.121 255.255.255.255 outside
+asdm location 129.20.131.29 255.255.255.255 inside
+asdm location rapideIRISA 255.255.255.255 outside
+asdm location zenIRISA 255.255.255.255 outside
+asdm location 129.20.179.21 255.255.255.255 inside
+asdm location 129.20.193.0 255.255.255.0 inside
+asdm location 129.20.55.20 255.255.255.255 inside
+asdm location 129.20.161.12 255.255.255.255 inside
+asdm location 129.20.37.153 255.255.255.255 inside
+asdm location Archimed1 255.255.255.255 outside
+asdm location Archimed2 255.255.255.255 outside
+asdm location 129.20.179.56 255.255.255.255 inside
+asdm location 129.20.179.57 255.255.255.255 inside
+asdm location 129.20.128.30 255.255.255.255 inside
+asdm location marcharlIRISA 255.255.255.255 outside
+asdm location aspirineIRISA 255.255.255.255 outside
+asdm location mult01EnsINSAREN 255.255.255.255 outside
+asdm location 129.20.131.22 255.255.255.255 inside
+asdm location vpgirhaf-n-inria 255.255.255.255 outside
+asdm location 129.20.76.147 255.255.255.255 inside
+asdm location pcFalentinINRA 255.255.255.255 outside
+asdm location lxFalentinINRA 255.255.255.255 outside
+asdm location 129.20.131.143 255.255.255.255 inside
+asdm location 129.20.131.162 255.255.255.255 inside
+asdm location 129.20.131.163 255.255.255.255 inside
+asdm location 129.20.131.164 255.255.255.255 inside
+asdm location 129.20.129.76 255.255.255.255 inside
+asdm location smtps_ENST 255.255.255.255 outside
+asdm location 139.100.140.2 255.255.255.255 outside
+asdm location 129.20.98.21 255.255.255.255 inside
+asdm location usherb.ca 255.255.255.255 outside
+asdm location 129.20.49.56 255.255.255.255 inside
+asdm location pc-thp_amue 255.255.255.255 outside
+asdm location pc-cag_amue 255.255.255.255 outside
+asdm location 129.20.128.66 255.255.255.255 inside
+asdm location 129.20.129.2 255.255.255.255 inside
+asdm location coquelicotIRISA 255.255.255.255 outside
+asdm location 129.20.178.134 255.255.255.255 inside
+asdm location 148.60.239.48 255.255.255.255 inside
+asdm location 129.20.75.120 255.255.255.255 inside
+asdm location 129.20.36.232 255.255.255.255 inside
+asdm location 129.20.131.142 255.255.255.255 inside
+asdm location 129.20.254.200 255.255.255.255 outside
+asdm location 129.20.54.250 255.255.255.255 inside
+asdm location 148.60.16.54 255.255.255.255 inside
+asdm location 212.23.170.4 255.255.255.255 outside
+asdm location 129.20.131.166 255.255.255.255 inside
+asdm location 129.20.102.0 255.255.255.0 inside
+asdm location 129.20.192.60 255.255.255.255 inside
+asdm location 129.20.82.78 255.255.255.255 inside
+asdm location 129.20.169.0 255.255.255.0 inside
+asdm location 129.20.155.148 255.255.255.255 inside
+asdm location vpnulaval.ca 255.255.255.255 outside
+asdm location 193.52.56.140 255.255.255.255 inside
+asdm location 129.20.129.85 255.255.255.255 inside
+asdm location 82.224.202.188 255.255.255.255 outside
+asdm location RECHERCHE 255.255.252.0 inside
+asdm location 129.20.129.60 255.255.255.255 inside
+asdm location irisIRISA 255.255.255.255 outside
+asdm location 129.20.48.75 255.255.255.255 inside
+asdm location 129.20.153.102 255.255.255.255 inside
+asdm location 129.20.131.23 255.255.255.255 inside
+asdm location 129.20.222.130 255.255.255.255 inside
+asdm location 129.20.131.168 255.255.255.255 inside
+asdm location 148.60.21.0 255.255.255.0 inside
+asdm location 148.60.22.0 255.255.255.0 inside
+asdm location Adsl-Lyon 255.255.255.255 outside
+asdm location jessicaIRISA 255.255.255.255 outside
+asdm location oceaniaIRISA 255.255.255.255 outside
+asdm location 129.20.130.250 255.255.255.255 inside
+asdm location pcPersoBStevant 255.255.255.255 outside
+asdm location 129.20.53.33 255.255.255.255 inside
+asdm location test-dagorn 255.255.255.255 outside
+asdm location 129.20.131.160 255.255.255.255 inside
+asdm location 129.20.247.0 255.255.255.0 inside
+asdm location enoraIRISA 255.255.255.255 outside
+asdm location poppyIRISA 255.255.255.255 outside
+asdm location lagonIRISA 255.255.255.255 outside
+asdm location 129.20.131.56 255.255.255.255 inside
+asdm location 129.20.131.59 255.255.255.255 inside
+asdm location 129.20.131.63 255.255.255.255 inside
+asdm location 129.20.131.64 255.255.255.255 inside
+asdm location 129.20.131.151 255.255.255.255 inside
+asdm location 129.20.131.152 255.255.255.255 inside
+asdm location 129.20.131.153 255.255.255.255 inside
+asdm location 129.20.131.154 255.255.255.255 inside
+asdm location 129.20.131.155 255.255.255.255 inside
+asdm location 193.50.9.150 255.255.255.255 outside
+asdm location VPN-IRISA1 255.255.255.0 outside
+asdm location 193.252.236.0 255.255.255.192 outside
+asdm location 129.20.131.24 255.255.255.255 inside
+asdm location 129.20.131.25 255.255.255.255 inside
+asdm location 129.20.131.120 255.255.255.255 inside
+asdm location 129.20.131.131 255.255.255.255 inside
+asdm location renonculeIRISA 255.255.255.255 outside
+asdm location lilasIRISA 255.255.255.255 outside
+asdm location luke.sopragroup 255.255.255.255 outside
+asdm location mycluster3 255.255.255.255 inside
+asdm location AdslSocieteADE 255.255.255.255 outside
+asdm location 129.20.131.174 255.255.255.255 inside
+asdm location yannUnivParis4 255.255.255.255 outside
+asdm location 212.0.132.0 255.255.255.0 outside
+asdm location 193.52.56.220 255.255.255.255 outside
+asdm location 148.60.52.103 255.255.255.255 inside
+asdm location 129.20.73.201 255.255.255.255 inside
+asdm location 82.240.214.35 255.255.255.255 outside
+asdm location 193.52.56.0 255.255.255.0 inside
+asdm location 193.52.56.208 255.255.255.240 outside
+asdm location 129.20.83.77 255.255.255.255 inside
+asdm location 129.20.49.147 255.255.255.255 inside
+asdm location bungalaAdmUHB 255.255.255.255 outside
+asdm location 129.20.131.200 255.255.255.255 inside
+asdm location wismaelIRISA 255.255.255.255 outside
+asdm location 192.168.240.2 255.255.255.255 DMZ-PIX
+asdm location 192.54.188.10 255.255.255.255 inside
+asdm location 194.199.59.172 255.255.255.255 outside
+asdm location 129.20.48.4 255.255.255.255 inside
+asdm location SocitADE 255.255.255.255 outside
+asdm location IP-societe-ADE 255.255.255.0 outside
+asdm location 129.20.131.144 255.255.255.255 inside
+asdm location 129.20.138.0 255.255.255.0 inside
+asdm location 129.20.37.160 255.255.255.255 inside
+asdm location SIIGStrasb. 255.255.255.255 outside
+asdm location 129.20.161.6 255.255.255.255 inside
+asdm location 129.20.161.61 255.255.255.255 inside
+asdm location 148.60.52.132 255.255.255.255 inside
+asdm location serv-gm.cachan 255.255.255.255 outside
+asdm location point-etude1 255.255.255.255 outside
+asdm location ARDARA_IETR 255.255.255.255 outside
+asdm location 129.20.87.10 255.255.255.255 inside
+asdm location 81.255.153.122 255.255.255.255 outside
+asdm location 129.20.94.184 255.255.255.255 inside
+asdm location 148.60.51.37 255.255.255.255 inside
+asdm location point-etude 255.255.255.255 outside
+asdm location 129.20.118.55 255.255.255.255 outside
+asdm location 129.20.217.195 255.255.255.255 inside
+asdm location inria 255.255.255.0 outside
+asdm location 129.20.76.28 255.255.255.255 inside
+asdm location 129.20.75.148 255.255.255.255 inside
+asdm location 129.20.75.149 255.255.255.255 inside
+asdm location 148.60.52.121 255.255.255.255 inside
+asdm location 148.60.52.122 255.255.255.255 inside
+asdm location 148.60.52.123 255.255.255.255 inside
+asdm location 148.60.52.124 255.255.255.255 inside
+asdm location 148.60.52.125 255.255.255.255 inside
+asdm location 148.60.52.126 255.255.255.255 inside
+asdm location 148.60.52.127 255.255.255.255 inside
+asdm location 148.60.52.128 255.255.255.255 inside
+asdm location 148.60.52.129 255.255.255.255 inside
+asdm location 148.60.52.130 255.255.255.255 inside
+asdm location 148.60.52.131 255.255.255.255 inside
+asdm location 148.60.108.21 255.255.255.255 inside
+asdm location 148.60.108.24 255.255.255.255 inside
+asdm location 148.60.108.32 255.255.255.255 inside
+asdm location 148.60.108.33 255.255.255.255 inside
+asdm location 148.60.108.34 255.255.255.255 inside
+asdm location 129.20.131.141 255.255.255.255 inside
+asdm location siigBenkirane2ST 255.255.255.255 outside
+asdm location siigSchwartz2ST 255.255.255.255 outside
+asdm location poit-etude2 255.255.255.255 outside
+asdm location 148.60.23.126 255.255.255.255 inside
+asdm location cnrslabintel2 255.255.255.255 outside
+asdm location cnrslabintel1 255.255.255.255 outside
+asdm location 129.20.133.16 255.255.255.252 inside
+asdm location 129.20.138.2 255.255.255.255 inside
+asdm location luminyUMARSEILLE 255.255.255.255 outside
+asdm location cassis-gwUBREST 255.255.255.255 outside
+asdm location mail2DcsWiscEdu 255.255.255.255 outside
+asdm location 139.124.0.0 255.255.0.0 outside
+asdm location 195.83.247.0 255.255.255.0 outside
+asdm location 129.20.222.140 255.255.255.255 inside
+asdm location 129.20.222.0 255.255.255.0 inside
+asdm location 148.60.224.10 255.255.255.254 inside
+asdm location 148.60.224.0 255.255.255.0 inside
+asdm location 148.60.222.140 255.255.255.255 inside
+asdm location 129.20.254.3 255.255.255.255 outside
+asdm location point-etude3 255.255.255.255 outside
+asdm location point-etud4 255.255.255.255 outside
+asdm location 129.20.138.0 255.255.255.248 inside
+asdm location 172.18.33.1 255.255.255.255 inside
+asdm location 172.18.33.1 255.255.255.255 outside
+asdm location www.vrvs.org 255.255.255.255 outside
+asdm location 212.234.68.16 255.255.255.248 outside
+asdm location 195.6.238.185 255.255.255.255 outside
+asdm location 129.20.222.4 255.255.255.255 inside
+asdm location 148.60.23.133 255.255.255.255 inside
+asdm location reverseCmpltlNet 255.255.255.255 outside
+asdm location vrvs-parisRENAT 255.255.255.255 outside
+asdm location vrvs-lyonRENAT 255.255.255.255 outside
+asdm location 129.20.76.220 255.255.255.255 inside
+asdm location 129.20.76.221 255.255.255.255 inside
+asdm location natSanteUNANTES 255.255.255.255 outside
+asdm location 129.20.161.9 255.255.255.255 inside
+asdm location 84.37.23.210 255.255.255.255 outside
+asdm location 148.60.178.99 255.255.255.255 inside
+asdm location 148.60.178.100 255.255.255.255 inside
+asdm location pcpersopriour 255.255.255.255 outside
+asdm location 129.20.184.109 255.255.255.255 inside
+asdm location 129.20.213.100 255.255.255.255 inside
+asdm location 129.20.161.4 255.255.255.255 inside
+asdm location 129.20.7.128 255.255.255.255 inside
+asdm location Ste-ipdiva 255.255.255.255 outside
+asdm location 129.20.77.85 255.255.255.255 inside
+asdm location 129.20.85.20 255.255.255.255 inside
+asdm location cnam-vnc2 255.255.255.255 outside
+asdm location cnam-vnc1 255.255.255.255 outside
+asdm location 148.60.210.248 255.255.255.255 inside
+asdm location 129.20.246.1 255.255.255.255 outside
+asdm location 129.20.17.41 255.255.255.255 inside
+asdm location 129.20.192.81 255.255.255.255 inside
+asdm location 129.20.192.84 255.255.255.255 inside
+asdm location 129.20.192.133 255.255.255.255 inside
+asdm location 129.20.192.139 255.255.255.255 inside
+asdm location 129.20.192.144 255.255.255.255 inside
+asdm location 129.20.192.153 255.255.255.255 inside
+asdm location 129.20.192.154 255.255.255.255 inside
+asdm location 129.20.192.164 255.255.255.255 inside
+asdm location 129.20.192.199 255.255.255.255 inside
+asdm location 129.20.192.200 255.255.255.255 inside
+asdm location 129.20.192.236 255.255.255.255 inside
+asdm location 129.20.192.237 255.255.255.255 inside
+asdm location LEROY_PCIO 255.255.255.255 outside
+asdm location enst-brest 255.255.255.224 outside
+asdm location 129.20.4.0 255.255.255.0 outside
+asdm location 148.60.51.28 255.255.255.255 inside
+asdm location 129.20.246.0 255.255.255.0 outside
+asdm location 129.20.217.196 255.255.255.255 inside
+asdm location 129.20.217.197 255.255.255.255 inside
+asdm location 129.20.75.4 255.255.255.255 inside
+asdm location 129.20.75.6 255.255.255.255 inside
+asdm location 129.20.75.31 255.255.255.255 inside
+asdm location 129.20.75.75 255.255.255.255 inside
+asdm location 129.20.129.125 255.255.255.255 inside
+asdm location 129.20.222.60 255.255.255.255 inside
+asdm location 129.20.222.63 255.255.255.255 inside
+asdm location 129.20.222.64 255.255.255.255 inside
+asdm location 129.20.222.65 255.255.255.255 inside
+asdm location 129.20.230.135 255.255.255.255 inside
+asdm location 129.20.230.139 255.255.255.255 inside
+asdm location 129.20.230.140 255.255.255.255 inside
+asdm location 129.20.230.148 255.255.255.255 inside
+asdm location 129.20.230.150 255.255.255.255 inside
+asdm location 129.20.25.45 255.255.255.255 inside
+asdm location 129.20.76.227 255.255.255.255 inside
+asdm location 129.20.76.228 255.255.255.255 inside
+asdm location cse35-1 255.255.255.255 outside
+asdm location 129.20.27.76 255.255.255.255 inside
+asdm location AdslAntunes 255.255.255.255 outside
+asdm location 129.20.48.127 255.255.255.255 inside
+asdm location frtlsvr1a.hydro 255.255.255.255 outside
+asdm location 148.60.230.6 255.255.255.255 inside
+asdm location rennes2-2 255.255.255.0 outside
+asdm location 193.49.223.0 255.255.255.0 outside
+asdm location 193.52.65.0 255.255.255.0 outside
+asdm location vlad.cnam.fr 255.255.255.255 outside
+asdm location 129.20.128.39 255.255.255.255 inside
+asdm location 129.20.161.1 255.255.255.255 inside
+asdm location 129.20.131.81 255.255.255.255 inside
+asdm location 129.20.131.83 255.255.255.255 inside
+asdm location 129.20.131.84 255.255.255.255 inside
+asdm location 129.20.161.7 255.255.255.255 inside
+asdm location 129.20.131.80 255.255.255.255 inside
+asdm location 129.20.131.86 255.255.255.255 inside
+asdm location 129.20.161.8 255.255.255.255 inside
+asdm location 129.20.131.87 255.255.255.255 inside
+asdm location 129.20.49.193 255.255.255.255 inside
+asdm location 62.147.191.46 255.255.255.255 outside
+asdm location 87.106.16.70 255.255.255.255 outside
+asdm location 129.20.150.0 255.255.255.0 outside
+asdm location bacchusIRISA 255.255.255.255 outside
+asdm location 129.20.155.70 255.255.255.255 inside
+asdm location INHanger 255.255.255.255 outside
+asdm location 129.20.128.128 255.255.255.255 inside
+asdm location 129.20.131.220 255.255.255.255 inside
+asdm location 129.20.131.221 255.255.255.255 inside
+asdm location NAT_UnivNantes 255.255.255.255 outside
+asdm location 129.20.78.0 255.255.255.0 inside
+asdm location inra-rennes 255.255.255.255 outside
+asdm location gw-roscoff 255.255.255.255 outside
+asdm location jules 255.255.255.255 outside
+asdm location frozone 255.255.255.255 outside
+asdm location 129.20.131.159 255.255.255.255 inside
+asdm location 129.20.131.194 255.255.255.255 inside
+asdm location 129.20.88.54 255.255.255.255 inside
+asdm location 194.167.114.20 255.255.255.255 outside
+asdm location pfontaineARES 255.255.255.255 outside
+asdm location 148.60.52.16 255.255.255.255 inside
+asdm location 129.20.89.12 255.255.255.255 inside
+asdm location login-ng1.rc.sara7.nl 255.255.255.255 outside
+asdm location 129.20.131.93 255.255.255.255 inside
+asdm location catToulouseINRA 255.255.255.255 outside
+asdm location idm2-157IRISA 255.255.255.255 outside
+asdm location puceronINRA 255.255.255.255 outside
+asdm location 129.20.126.100 255.255.255.255 inside
+asdm location 129.20.131.13 255.255.255.255 inside
+asdm group M-h323 inside
+asdm group M-Irisa2Nsat inside
+asdm group M-Ext2Nsat192 outside
+asdm group M-Ext2LimMed-ip outside
+asdm group M-Ext2Simpa-cmd outside
+asdm group M-ReseauxUR1-http inside
+asdm group M-EtuIfsic inside
+asdm group M-CachesIfsic inside
+asdm group M-ServUR1-smtp inside
+asdm group M-ReseauxUR1-ip inside
+asdm group M-any-telnet inside
+asdm group M-any-cmd inside
+asdm group M-any-6000 inside
+asdm group M-any-8080 inside
+asdm group M-any-ftpHttpHttps inside
+asdm group M-any-sshHttpHttps inside
+asdm group M-any2ebiSxLtsi inside
+asdm group M-any2DSPMed inside
+asdm group M-any2CrittMed inside
+asdm group M-any-9000 inside
+asdm group M-Idris161-cmd inside
+asdm group M-bbacqSpm-18000 outside
+asdm group M-DirectExt-http outside
+asdm group M-any-httpHttps inside
+asdm group M-any-ldap inside
+asdm group M-MedVisio outside
+asdm group M-Sauvegardees outside
+asdm group M-any-ftp inside
+asdm group M-any-ssh inside
+asdm group M-any-telnet_ref outside reference M-any-telnet
+asdm group M-any-ftp_ref outside reference M-any-ftp
+asdm group M-any-cmd_ref outside reference M-any-cmd
+asdm group M-any-6000_ref outside reference M-any-6000
+asdm group M-any-ftpHttpHttps_ref outside reference M-any-ftpHttpHttps
+asdm group M-any-sshHttpHttps_ref outside reference M-any-sshHttpHttps
+asdm group M-any2ebiSxLtsi_ref outside reference M-any2ebiSxLtsi
+asdm group M-any2DSPMed_ref outside reference M-any2DSPMed
+asdm group M-any2CrittMed_ref outside reference M-any2CrittMed
+asdm group M-any-9000_ref outside reference M-any-9000
+asdm group M-Idris161-cmd_ref outside reference M-Idris161-cmd
+asdm group M-Irisa2Nsat_ref outside reference M-Irisa2Nsat
+asdm group M-any-ssh_ref outside reference M-any-ssh
+asdm group M-cheneUR1-8080 outside
+asdm group M-any-8080_ref outside reference M-any-8080
+asdm group M-ADE outside
+asdm group M-DYNIX outside
+asdm group M-HIP inside
+asdm group M-HIP_ref outside reference M-HIP
+asdm group M-COBB outside
+asdm group M-Ext2Servix outside
+asdm group M-any-pop3pop3s inside
+asdm group M-any-imapimaps inside
+asdm group M-any-pop3pop3s_ref outside reference M-any-pop3pop3s
+asdm group M-any-imapimaps_ref outside reference M-any-imapimaps
+asdm group M-any-https inside
+asdm group M-any-https_ref outside reference M-any-https
+asdm group M-P2P inside
+asdm group M-BLOQUEES inside
+asdm group M-any-httpHttps_ref outside reference M-any-httpHttps
+asdm group M-sf1staff-IRISA outside
+asdm group M-Apogee outside
+asdm group M-any-5900 inside
+asdm group M-any-5900_ref outside reference M-any-5900
+asdm group M-BLOQUEES_ref outside reference M-BLOQUEES
+asdm group M-any-http inside
+asdm group M-NABUCO outside
+asdm group M-catia-milesant inside
+asdm group M-catia-milesant_ref_1 outside reference M-catia-milesant
+asdm group M-any-http_ref outside reference M-any-http
+asdm group M-h323_ref outside reference M-h323
+asdm group M-T.120 inside
+asdm group M-T.120_ref outside reference M-T.120
+asdm group M-any-X-Window inside
+asdm group M-any-X-Window_ref outside reference M-any-X-Window
+asdm group M-bioinfo inside
+asdm group M-bioinfo_ref outside reference M-bioinfo
+asdm group M-Ext2genocluster outside
+asdm group M-Ext2genoweb outside
+asdm group M-StarDicom outside
+asdm group M-ssh-pctheo13 outside
+asdm group M-6000-pctheo13 outside
+asdm history enable
+arp timeout 14400
+nat-control
+nat (DMZ-PIX) 0 10.20.112.0 255.255.240.0
+static (inside,outside) r1935028ENSSAT r1935028ENSSAT netmask 255.255.255.0 
+static (inside,outside) 193.52.60.0 193.52.60.0 netmask 255.255.255.0 
+static (inside,outside) r194ENSSAT r194ENSSAT netmask 255.255.255.0 
+static (inside,outside) r193CHR r193CHR netmask 255.255.255.0 
+static (inside,outside) 193.52.56.0 193.52.56.0 netmask 255.255.255.0 
+static (inside,outside) RECHERCHE RECHERCHE netmask 255.255.0.0 
+static (inside,outside) ETUDIANTS ETUDIANTS netmask 255.255.0.0 
+static (inside,outside) RESO_INCUBATEUR RESO_INCUBATEUR netmask 255.255.255.0 
+static (DMZ-PIX,outside) DMZ-PIX DMZ-PIX netmask 255.255.255.0 
+static (inside,DMZ-PIX) 129.20.252.1 129.20.252.1 netmask 255.255.255.255 
+static (inside,DMZ-PIX) 129.20.251.1 129.20.251.1 netmask 255.255.255.255 
+no threat-detection statistics tcp-intercept
+access-group DMZ-PIX_access_in in interface DMZ-PIX
+access-group inside_access_in in interface inside
+access-group V6-INSIDE-ACCESS-IN in interface inside
+access-group outside_acl_in in interface outside
+access-group V6-OUTSIDE-ACCESS-IN in interface outside
+route inside r194ENSSAT 255.255.255.0 129.20.252.1 1
+route inside INSERM_CHR 255.255.255.0 129.20.252.1 1
+route inside 193.52.60.0 255.255.255.0 129.20.252.1 1
+route inside r193CHR 255.255.255.0 129.20.252.1 1
+route inside RESO_INCUBATEUR 255.255.255.0 129.20.252.1 1
+route inside r1935028ENSSAT 255.255.255.0 129.20.252.1 1
+route inside 192.168.10.0 255.255.255.0 129.20.252.1 1
+route inside ETUDIANTS 255.255.0.0 129.20.252.1 1
+route inside 10.39.1.0 255.255.255.0 129.20.252.1 1
+route inside RECHERCHE 255.255.0.0 129.20.252.1 1
+route inside 193.52.56.0 255.255.255.128 129.20.252.1 1
+route inside 193.52.56.128 255.255.255.192 129.20.252.1 1
+route outside 0.0.0.0 0.0.0.0 129.20.253.254 1
+route outside 129.20.9.0 255.255.255.0 129.20.253.254 1
+route outside 129.20.246.0 255.255.255.0 129.20.253.254 1
+route outside 129.20.250.0 255.255.255.0 129.20.253.254 1
+route outside 129.20.254.0 255.255.255.0 129.20.253.254 1
+timeout xlate 3:00:00
+timeout conn 8:00:00 half-closed 0:20:00 udp 0:02:00 icmp 0:00:02
+timeout sunrpc 3:00:00 h323 3:00:00 h225 6:00:00 mgcp 0:05:00 mgcp-pat 0:05:00
+timeout sip 0:00:00 sip_media 0:00:00 sip-invite 0:03:00 sip-disconnect 0:02:00
+timeout sip-provisional-media 0:02:00 uauth 0:05:00 absolute
+timeout tcp-proxy-reassembly 0:01:00
+aaa-server TACACS+ protocol tacacs+
+aaa-server RADIUS protocol radius
+ reactivation-mode timed
+ max-failed-attempts 1
+aaa-server RADIUS (inside) host 129.20.131.101
+ retry-interval 4
+ timeout 2
+ key le-passe-des-pix-firewall
+ authentication-port 1812
+ accounting-port 1813
+aaa-server RADIUS (inside) host 129.20.129.2
+ retry-interval 4
+ timeout 2
+ key le-passe-des-pix-firewall
+ authentication-port 1812
+ accounting-port 1813
+aaa authentication serial console LOCAL 
+aaa authentication telnet console LOCAL 
+aaa authentication http console RADIUS LOCAL
+aaa authentication ssh console RADIUS LOCAL
+aaa accounting enable console RADIUS
+aaa accounting serial console RADIUS
+aaa accounting ssh console RADIUS
+aaa accounting telnet console RADIUS
+http server enable
+http 129.20.128.0 255.255.252.0 inside
+http 129.20.129.2 255.255.255.255 inside
+snmp-server host inside 129.20.128.5 community ***r***
+snmp-server host inside 129.20.129.3 community ***r*** version 2c
+snmp-server host inside 129.20.131.185 community ***r*** version 2c
+snmp-server location Beaulieu/Bat 12D/1er etage/LT salle machine
+snmp-server contact CRI
+snmp-server community ***r***
+snmp-server enable traps snmp authentication linkup linkdown coldstart
+crypto ipsec transform-set ESP-AES-256-MD5 esp-aes-256 esp-md5-hmac 
+crypto ipsec transform-set ESP-AES-256-SHA esp-aes-256 esp-sha-hmac 
+crypto ipsec transform-set ESP-3DES-SHA esp-3des esp-sha-hmac 
+crypto ipsec security-association lifetime seconds 28800
+crypto ipsec security-association lifetime kilobytes 4608000
+crypto dynamic-map outside_dyn_map 100 set transform-set ESP-AES-256-SHA
+crypto dynamic-map outside_dyn_map 100 set security-association lifetime seconds 28800
+crypto dynamic-map outside_dyn_map 100 set security-association lifetime kilobytes 4608000
+crypto dynamic-map outside_dyn_map_1 100 set transform-set ESP-AES-256-MD5
+crypto dynamic-map outside_dyn_map_1 100 set security-association lifetime seconds 28800
+crypto dynamic-map outside_dyn_map_1 100 set security-association lifetime kilobytes 4608000
+crypto map outside_map 65535 ipsec-isakmp dynamic outside_dyn_map_1
+crypto map outside_map interface outside
+crypto isakmp identity address 
+crypto isakmp enable outside
+crypto isakmp policy 10
+ authentication pre-share
+ encryption aes-256
+ hash sha
+ group 2
+ lifetime 86400
+crypto isakmp policy 65535
+ authentication pre-share
+ encryption 3des
+ hash sha
+ group 2
+ lifetime 86400
+telnet 129.20.129.1 255.255.255.255 inside
+telnet 129.20.129.2 255.255.255.255 inside
+telnet 129.20.129.11 255.255.255.255 inside
+telnet 129.20.131.105 255.255.255.255 inside
+telnet 129.20.131.185 255.255.255.255 inside
+telnet 129.20.129.3 255.255.255.255 inside
+telnet timeout 5
+ssh 129.20.129.1 255.255.255.255 inside
+ssh 129.20.129.129 255.255.255.255 inside
+ssh 129.20.129.11 255.255.255.255 inside
+ssh 129.20.129.144 255.255.255.255 inside
+ssh timeout 60
+console timeout 0
+management-access inside
+ntp server 129.20.253.254 source outside
+ntp server 129.20.251.1 source inside prefer
+tftp-server inside 129.20.129.1 pix525-confg
+ssl encryption aes128-sha1 aes256-sha1 des-sha1 rc4-md5 3des-sha1
+username pix-res password kUJF4oFIWnjn4TE6 encrypted privilege 15
+username nedi password Sk4x429DbJXjXbMo encrypted privilege 15
+tunnel-group DefaultRAGroup general-attributes
+ authentication-server-group (outside) RADIUS
+!
+class-map inspection_default
+ match default-inspection-traffic
+class-map http-mss-map1
+ match access-list http-mss-list1
+!
+!
+policy-map type inspect dns migrated_dns_map_2
+ parameters
+  message-length maximum 1856
+policy-map global_policy
+ class inspection_default
+  inspect dns migrated_dns_map_2 
+  inspect ftp 
+  inspect h323 h225 
+  inspect h323 ras 
+  inspect netbios 
+  inspect rsh 
+  inspect rtsp 
+  inspect sqlnet 
+  inspect sunrpc 
+  inspect tftp 
+  inspect sip 
+  inspect xdmcp 
+ class http-mss-map1
+  set connection advanced-options mss-map
+!
+service-policy global_policy global
+prompt hostname context 
+Cryptochecksum:dbbab829878001635d514410e2a3a5b4
+: end
