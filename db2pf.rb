@@ -87,7 +87,7 @@ pix_services = s_pix.db.query { |q|
 
 @services_array.uniq.each{|service_name|
 
-pf = service_name.split(' ')[2].gsub('-','_') + ' = "{" '
+pf = service_name.split(' ')[2].gsub('-','_').gsub('.','_') + ' = "{" '
 
 service_children = s_pix.db.query { |q|
 			q.add_condition 'type', :equals, 'service'
@@ -125,7 +125,7 @@ pix_networks = s_pix.db.query { |q|
 
 @networks_array.uniq.each{|network_name|
 
-pf = network_name.split(' ')[2].gsub('-','_') + ' = "{" '
+pf = network_name.split(' ')[2].gsub('-','_').gsub('.','_') + ' = "{" '
 
 network_children = s_pix.db.query { |q|
 			q.add_condition 'type', :equals, 'network'

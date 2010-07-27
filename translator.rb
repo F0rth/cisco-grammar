@@ -21,21 +21,21 @@ module Translator
 			return 'any'
 		#contient "object-group"
 		elsif a_string.include?('object-group')
-			return '$' + a_string.gsub('object-group', '').strip.chomp.gsub('-','_')
+			return '$' + a_string.gsub('object-group', '').strip.chomp.gsub('-','_').gsub('.','_')
 		elsif a_string.include?('host') 
 			if clean_string.is_ipv4?
 				# contient une ip numérique
 				return clean_string
 			else
 				# contient un alias
-				return '$' + clean_string.gsub('-','_')
+				return '$' + clean_string.gsub('-','_').gsub('.','_')
 			end
 		
 		# contient un réseau
 		elsif splited_string[0].is_ipv4?
 			return addr_to_cidr(a_string)
 		else
-			return '$' + splited_string[0].strip.gsub('-','_') + '/' + netmask_to_cidr(splited_string[1]).to_s
+			return '$' + splited_string[0].strip.gsub('-','_').gsub('.','_') + '/' + netmask_to_cidr(splited_string[1]).to_s
 		end
 	end
 	
@@ -65,9 +65,9 @@ module Translator
 	def pix_port_translate(a_string)
 		splited_string = a_string.split(' ')
 		if splited_string[0].include?('object-group')
-			return '$' + a_string.gsub('object-group', '').strip.chomp.gsub('-','_')
+			return '$' + a_string.gsub('object-group', '').strip.chomp.gsub('-','_').gsub('.','_')
 		elsif splited_string[0].include?('group-object')
-			return '$' + a_string.gsub('group-object', '').strip.chomp.gsub('-','_')
+			return '$' + a_string.gsub('group-object', '').strip.chomp.gsub('-','_').gsub('.','_')
 		elsif splited_string[0].include?('range')
 			return splited_string[1] + ':' + splited_string[2]
 		elsif splited_string[0].include?('eq')
