@@ -162,7 +162,7 @@ ios_acl.each{|acl|
 	
 	
 	
-	if @interfaces.key? acl['parent'].split(' ')[3] 
+	if @interfaces.key? acl['parent'].split(' ')[3] and not acl['destination_port'] == "ack"
 		then begin
 		pf = @action[acl['action']] 
 		
@@ -189,10 +189,11 @@ ios_acl.each{|acl|
 
 	
 	
-	if acl['destination_port'] == "ack"
+	#if acl['destination_port'] == "ack"
 		# pf += ' ' + 'port' + ' ' + 'ack'
 	
-	elsif acl['proto'] == "icmp" and acl['destination_port'] != ""
+	#els
+	if acl['proto'] == "icmp" and acl['destination_port'] != ""
 		pf +=  ' ' + @icmp_table[acl['destination_port']]
 	elsif  acl['destination_port'] != "" and acl['destination_port'] != "log"
 		pf += ' ' + 'port' + ' ' + ios_port_translate(acl['destination_port'])
@@ -245,10 +246,11 @@ pix_acl.each{|acl|
 
 	
 	
-	if acl['destination_port'] == "ack"
+	#if acl['destination_port'] == "ack"
 		# pf += ' ' + 'port' + ' ' + 'ack'
 	
-	elsif acl['proto'] == "icmp" and acl['destination_port'] != ""
+	#els
+	if acl['proto'] == "icmp" and acl['destination_port'] != ""
 		pf +=  ' ' + @icmp_table[acl['destination_port']]
 	elsif  acl['destination_port'] != "" and acl['destination_port'] != "log"
 		pf += ' ' + 'port' + ' ' + pix_port_translate(acl['destination_port'])
