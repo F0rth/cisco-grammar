@@ -16,19 +16,19 @@ s_pix = Storage.new('pix.tct')
 ### CISCO
 #@interfaces.update({'IPV4POINT6_IN' => 'in quick on $IPV4POINT6'})
 #@interfaces.update({'IPV4POINT6_OUT' => 'out quick on $IPV4POINT6'})
-@interfaces.update({'PUBLIC_CRU_OUT' => 'out quick on $PUBLIC_CRU'})
-@interfaces.update({'PUBLIC_UR1_OUT' => 'out quick on $PUBLIC_UR1'})
-@interfaces.update({'RENATER_IN' => 'in quick on $RENATER'})
-@interfaces.update({'RENATER_OUT' => 'out quick on $RENATER'})
-@interfaces.update({'VISIO_IN' => 'in quick on $VISIO'})
-@interfaces.update({'VISIO_OUT' => 'out quick on $VISIO'})
+#@interfaces.update({'PUBLIC_CRU_OUT' => 'out quick on $PUBLIC_CRU'})
+@interfaces.update({'PUBLIC_UR1_OUT' => 'out log quick on $PUBLIC_UR1'})
+@interfaces.update({'RENATER_IN' => 'in log quick on $RENATER'})
+@interfaces.update({'RENATER_OUT' => 'out log quick on $RENATER'})
+@interfaces.update({'VISIO_IN' => 'in log quick on $VISIO'})
+@interfaces.update({'VISIO_OUT' => 'out log quick on $VISIO'})
 ### PIX
 #@interfaces.update({"DMZ-PIX_access_in" => "in quick on $DMZ-PIX"})
-#@interfaces.update({"FO-PIX_access_in" => "in quick on $FO-PIX"})
+#@interfaces.update({"FO-PIX_access_in" => "in quick on $FO_PF"})
 #@interfaces.update({"captacl" => "quick on $CAPTACL"})
 #@interfaces.update({"http-mss-list1" => "quick on $HTTP-MSS-LIST1"})
-@interfaces.update({"inside_access_in" => "in quick on $INTERNE"})
-@interfaces.update({"outside_acl_in" => "out quick on $INTERNE"})
+@interfaces.update({"inside_access_in" => "in log quick on $RI_PF_FWSM"})
+@interfaces.update({"outside_acl_in" => "out log quick on $RI_PF_FWSM"})
 
 
 @action = Hash.new
@@ -96,10 +96,10 @@ service_children = s_pix.db.query { |q|
 			}
 service_children.each{|child|
 	pf += pix_port_translate(child['service_object'].gsub('port-object ',''))
-	#if service_children.index(child) < (service_children.length)-1
+	if service_children.index(child) < (service_children.length)-1
 		#pf += ', '
 		pf += ' '
-	#end
+	end
 	}
 	pf += ' "}" '
 @file.puts pf
@@ -144,10 +144,10 @@ network_children.each{|child|
 		pf += pix_addr_translate(child['network_object'].gsub('port-object ',''))
 
 	end
-	#if network_children.index(child) < (network_children.length)-1
+	if network_children.index(child) < (network_children.length)-1
 		#pf += ', ' EVIL
 		pf += ' '
-	#end
+	end
 	}
 	pf += ' "}"'
 @file.puts pf

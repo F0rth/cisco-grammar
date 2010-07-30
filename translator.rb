@@ -5,14 +5,6 @@ module Translator
 	
 	#@rxp =  Regexp.new('\b(?:\d{1,3}\.){3}\d{1,3}\b')
 	
-	@icmp_table = Hash.new
-	@icmp_table.update({'echo-reply' =>'icmp-type echorep'})
-	@icmp_table.update({'echo' =>'icmp-type echoreq'})
-	@icmp_table.update({'time-exceeded' =>'icmp-type timex'})
-	@icmp_table.update({'packet-too-big' =>'icmp-type redir code needfrag'})
-	@icmp_table.update({'traceroute' =>'icmp-type trace'})
-	@icmp_table.update({'unreachable' =>'icmp-type echorep code net-unr'})
-	
 	
 	def pix_addr_translate(a_string)	
 		splited_string = a_string.split(' ')
@@ -77,7 +69,4 @@ module Translator
 		end
 	end	
 	
-	def icmp_translate(a_string)
-		return @icmp_table[a_string]	
-	end
 end
