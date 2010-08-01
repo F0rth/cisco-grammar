@@ -64,7 +64,7 @@ grammar Pix_acl
 	end
 	
 	rule log
-		'log' espace? text? / ''
+		'log' / 'log debugging' / 'log emergencies' / 'log errors' /   / ''
 	end
 	
 	rule destination_port
