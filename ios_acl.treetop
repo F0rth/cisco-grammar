@@ -9,7 +9,7 @@ grammar Ios_acl
 	end
 	
 	rule acl
-	 espace? action espace? proto espace? source_ip espace? source_port espace? destination_ip espace? destination_port espace? eol?
+	 espace? action espace? proto espace? source_ip espace? source_port espace? destination_ip espace? destination_port espace? log espace? eol?
 	end
 	
 	rule action
@@ -52,7 +52,7 @@ grammar Ios_acl
 	
 	
 	rule source_port
-	 single_port / port_range / icmp / other / ''
+		(!'log' (single_port / port_range / icmp / other)) / ''
 	end
 	
 	rule other
@@ -77,9 +77,12 @@ grammar Ios_acl
 	end
 	
 	rule port_name
-	 [0-9a-zA-Z\-\_]+
+		[0-9a-zA-Z\-\_]+
 	end
 	
+	rule log
+		'log debugging' / 'log emergencies' / 'log errors' / 'log' / ''
+	end
 	
 	
 	rule comment

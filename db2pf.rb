@@ -20,8 +20,8 @@ s_pix = Storage.new('pix.tct')
 @interfaces.update({'PUBLIC_UR1_OUT' => 'out log quick on $PUBLIC_UR1'})
 @interfaces.update({'RENATER_IN' => 'in log quick on $RENATER'})
 @interfaces.update({'RENATER_OUT' => 'out log quick on $RENATER'})
-@interfaces.update({'VISIO_IN' => 'in log quick on $VISIO'})
-@interfaces.update({'VISIO_OUT' => 'out log quick on $VISIO'})
+#@interfaces.update({'VISIO_IN' => 'in log quick on $VISIO'})
+#@interfaces.update({'VISIO_OUT' => 'out log quick on $VISIO'})
 ### PIX
 #@interfaces.update({"DMZ-PIX_access_in" => "in quick on $DMZ-PIX"})
 #@interfaces.update({"FO-PIX_access_in" => "in quick on $FO_PF"})
@@ -195,7 +195,7 @@ ios_acl.each{|acl|
 	#els
 	if acl['proto'] == "icmp" and acl['destination_port'] != ""
 		pf +=  ' ' + @icmp_table[acl['destination_port']]
-	elsif  acl['destination_port'] != "" and acl['destination_port'] != "log"
+	elsif  acl['destination_port'] != "" #and acl['destination_port'] != "log"
 		pf += ' ' + 'port' + ' ' + ios_port_translate(acl['destination_port'])
 	end
 		end
@@ -252,7 +252,7 @@ pix_acl.each{|acl|
 	#els
 	if acl['proto'] == "icmp" and acl['destination_port'] != ""
 		pf +=  ' ' + @icmp_table[acl['destination_port']]
-	elsif  acl['destination_port'] != "" and acl['destination_port'] != "log"
+	elsif  acl['destination_port'] != "" # and acl['destination_port'] != "log"
 		pf += ' ' + 'port' + ' ' + pix_port_translate(acl['destination_port'])
 	end
 	

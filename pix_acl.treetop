@@ -56,7 +56,7 @@ grammar Pix_acl
 	
 	
 	rule source_port
-	 single_port / port_range / icmp / other / object_group_service / ''
+	 (!'log' (single_port / port_range / icmp / other / object_group_service)) / ''
 	end
 	
 	rule other

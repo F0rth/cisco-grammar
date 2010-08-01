@@ -35,8 +35,26 @@ ios_test = s_ios.db.query { |q|
 			q.order_by 'index'
 			}
 
+pp ios_test
+
+ios_test = s_ios.db.query { |q|
+			q.add_condition 'index', :equals, '832'
+			q.order_by 'index'
+			}	
+			
+pp ios_test			
+
+
+ios_test = s_ios.db.query { |q|
+			q.add_condition 'log', :strinc, 'log'
+			q.order_by 'index'
+			}	
+			
+pp ios_test	
+
+
 s_ios.db.close
 
-pp ios_test
+
 
 
