@@ -87,7 +87,7 @@ pix_services = s_pix.db.query { |q|
 
 @services_array.uniq.each{|service_name|
 
-pf = service_name.split(' ')[2].gsub('-','_').gsub('.','_') + ' = "{" '
+pf = service_name.split(' ')[2].gsub('-','_').gsub('.','_') + ' = ' #"{" '
 
 service_children = s_pix.db.query { |q|
 			q.add_condition 'type', :equals, 'service'
@@ -101,7 +101,7 @@ service_children.each{|child|
 		pf += ' '
 	end
 	}
-	pf += ' "}" '
+	#pf += ' "}" '
 @file.puts pf
 }
 
@@ -125,7 +125,7 @@ pix_networks = s_pix.db.query { |q|
 
 @networks_array.uniq.each{|network_name|
 
-pf = network_name.split(' ')[2].gsub('-','_').gsub('.','_') + ' = "{" '
+pf = network_name.split(' ')[2].gsub('-','_').gsub('.','_') + ' = ' #"{" '
 
 network_children = s_pix.db.query { |q|
 			q.add_condition 'type', :equals, 'network'
@@ -149,7 +149,7 @@ network_children.each{|child|
 		pf += ' '
 	end
 	}
-	pf += ' "}"'
+	#pf += ' "}"'
 @file.puts pf
 }
 
@@ -178,13 +178,13 @@ ios_acl.each{|acl|
 	
 
 	
-	pf += ' ' + 'from' + ' ' + ios_addr_translate(acl['source_ip'])
+	pf += ' ' + 'from' + ' {' + ios_addr_translate(acl['source_ip']) + ' }'
 	
 	if acl['source_port'] != ""
-		pf += ' ' + 'port' +  ' ' + ios_port_translate(acl['source_port'])
+		pf += ' ' + 'port' +  ' { ' + ios_port_translate(acl['source_port']) + ' }'
 	end
 	
-	pf += ' ' + 'to' + ' ' + ios_addr_translate(acl['destination_ip'])
+	pf += ' ' + 'to' + '  {' + ios_addr_translate(acl['destination_ip']) + ' }'
 	
 
 	
@@ -196,7 +196,7 @@ ios_acl.each{|acl|
 	if acl['proto'] == "icmp" and acl['destination_port'] != ""
 		pf +=  ' ' + @icmp_table[acl['destination_port']]
 	elsif  acl['destination_port'] != "" #and acl['destination_port'] != "log"
-		pf += ' ' + 'port' + ' ' + ios_port_translate(acl['destination_port'])
+		pf += ' ' + 'port' + ' { ' + ios_port_translate(acl['destination_port']) + ' }'
 	end
 		end
 	
@@ -235,13 +235,13 @@ pix_acl.each{|acl|
 		pf += ' ' + 'proto'  + ' ' + acl['proto']
 	end
 	
-	pf += ' ' + 'from' + ' ' + pix_addr_translate(acl['source_ip'])
+	pf += ' ' + 'from' + ' {' + pix_addr_translate(acl['source_ip']) + ' }'
 	
 	if acl['source_port'] != ""
-		pf += ' ' + 'port' +  ' ' + pix_port_translate(acl['source_port'])
+		pf += ' ' + 'port' +  ' { ' + pix_port_translate(acl['source_port']) + ' }'
 	end
 	
-	pf += ' ' + 'to' + ' ' + pix_addr_translate(acl['destination_ip'])
+	pf += ' ' + 'to' + ' {' + pix_addr_translate(acl['destination_ip']) + ' }'
 	
 
 	
@@ -253,7 +253,7 @@ pix_acl.each{|acl|
 	if acl['proto'] == "icmp" and acl['destination_port'] != ""
 		pf +=  ' ' + @icmp_table[acl['destination_port']]
 	elsif  acl['destination_port'] != "" # and acl['destination_port'] != "log"
-		pf += ' ' + 'port' + ' ' + pix_port_translate(acl['destination_port'])
+		pf += ' ' + 'port' + ' { ' + pix_port_translate(acl['destination_port']) + ' }'
 	end
 	
 	end	
