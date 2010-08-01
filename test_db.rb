@@ -22,6 +22,21 @@ pix_names = s_pix.db.query { |q|
 			q.order_by 'index'
 			}
 
-s_pix.db.close
 
 pp pix_names
+
+
+s_pix.db.close
+
+s_ios = Storage.new('ios.tct')
+
+ios_test = s_ios.db.query { |q|
+			q.add_condition 'destination_port', :strinc, 'log'
+			q.order_by 'index'
+			}
+
+s_ios.db.close
+
+pp ios_test
+
+
